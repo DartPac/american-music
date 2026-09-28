@@ -7,10 +7,10 @@
 <!--
   AMERICAN MUSIC — SELF-CONTAINED PAGE
   ===================================================================
-  Palette: Navy #2B4A6F · Slate #9FACBD
-    Navy dark  #1C2F47  (header/footer bands)      Navy deep #233C5C (hover)
-    Navy tint  #EBEFF4 / #DBE1E9 (callouts)         Slate soft #EEF1F5  Slate dark #5E6B7C
-    Ink #1B2A41 · Muted #4A5568 · Border #CDD4DD
+  Palette: Navy #154734 · Slate #FFB81C
+    Navy dark  #0E3326  (header/footer bands)      Navy deep #103B2B (hover)
+    Navy tint  #E7F1EB / #D5E6DC (callouts)         Slate soft #FFF5DC  Slate dark #7A5A00
+    Ink #1B2A22 · Muted #4A5550 · Border #C9D8CE
     Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
   RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
   or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
@@ -19,10 +19,10 @@
 -->
 <style>
   :root{
-    --am-navy:#2B4A6F; --am-navy-dark:#1C2F47; --am-navy-deep:#233C5C;
-    --am-slate:#9FACBD; --am-slate-dark:#5E6B7C; --am-slate-soft:#EEF1F5;
-    --am-tint:#EBEFF4; --am-tint2:#DBE1E9; --am-mist:#F5F7F9;
-    --am-ink:#1B2A41; --am-muted:#4A5568; --am-border:#CDD4DD;
+    --am-navy:#154734; --am-navy-dark:#0E3326; --am-navy-deep:#103B2B;
+    --am-slate:#FFB81C; --am-slate-dark:#7A5A00; --am-slate-soft:#FFF5DC;
+    --am-tint:#E7F1EB; --am-tint2:#D5E6DC; --am-mist:#F4F8F5;
+    --am-ink:#1B2A22; --am-muted:#4A5550; --am-border:#C9D8CE;
     --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
     --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
     --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
@@ -41,7 +41,7 @@
   h2{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:1.35em; margin:34px 0 10px; padding-left:12px; border-left:6px solid var(--am-slate)}
   h3{font-family:var(--head); font-weight:600; color:var(--am-navy); font-size:1.1em; margin:24px 0 8px}
   a{color:var(--am-navy-deep)}
-  .am-lead{font-size:1.08em; font-style:italic; color:#3d4a5c; margin:14px 0 20px}
+  .am-lead{font-size:1.08em; font-style:italic; color:#3D4A43; margin:14px 0 20px}
   /* Callouts */
   .am-objectives{background:var(--am-tint); border-left:6px solid var(--am-navy); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
   .am-label{margin:0 0 6px; font-family:var(--head); font-weight:700; color:var(--am-navy); text-transform:uppercase; letter-spacing:1.5px; font-size:.82em}
@@ -49,13 +49,13 @@
   .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
   .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
   .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
-  .am-note{background:#F6F7F9; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  .am-note{background:#FFF8E6; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
   figure{margin:24px 0; text-align:center}
   figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
   figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
   figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
   /* Listening guide */
-  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(28,47,71,.08)}
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(14,51,38,.08)}
   .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
   .am-listen__head svg{width:26px; height:26px; flex:none}
   .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
@@ -63,14 +63,14 @@
   .am-listen__body{padding:14px 18px}
   .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
   .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
-  .am-listen__link:hover{background:#C7D0DB}
+  .am-listen__link:hover{background:#FFD266}
   .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
   .am-listen__log label{cursor:pointer}
   /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
-  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#1C2F47; cursor:pointer}
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#0E3326; cursor:pointer}
   .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
   .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
-  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(28,47,71,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(14,51,38,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
   .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
   .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
   .am-audio{width:100%; margin:0 0 14px; display:block}
@@ -82,9 +82,9 @@
   .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
   .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
   .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
-  .am-btn--slate:hover{background:#C7D0DB}
+  .am-btn--slate:hover{background:#FFD266}
   /* ============ H5P-STYLE ACTIVITY SHELL ============ */
-  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(28,47,71,.1)}
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(14,51,38,.1)}
   .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
   .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
   .h5p-act__body{padding:18px 20px}
@@ -164,7 +164,7 @@
   .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
   .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
   .h5p-form-sec:hover{transform:translateY(-2px)}
-  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(159,172,189,.35)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(255,184,28,.35)}
   .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
   .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
   /* Hotspots (inline SVG) */
@@ -180,12 +180,12 @@
   /* Piano */
   .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
   .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
-  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F5F7F9); border:1px solid #9FB3CC; border-bottom:8px solid #CDD4DD; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
-  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2C3E57,#0F1B2B); border:1px solid #000; border-bottom:9px solid #1B2A41; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F4F8F5); border:1px solid #A9C2B3; border-bottom:8px solid #C9D8CE; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2B3A33,#0F1B15); border:1px solid #000; border-bottom:9px solid #1B2A22; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
   .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
   .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
-  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(159,172,189,.55)}
-  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(159,172,189,.8)}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(255,184,28,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(255,184,28,.8)}
   .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
   .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
   .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
@@ -214,13 +214,13 @@
   .h5p-br-pts li.alert::before{content:"⚠"; color:var(--am-slate-dark)}
   .h5p-br-pts li.no::before{content:"✖"; color:var(--bad)}
   /* Interactive map */
-  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F5F7F9}
+  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F4F8F5}
   .h5p-map-m{cursor:pointer}
   .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
   .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
-  .h5p-map-m.on circle{stroke:#1C2F47; stroke-width:4}
-  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#9FACBD; stroke-width:5}
-  .h5p-map-route{fill:none; stroke:#5E6B7C; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-m.on circle{stroke:#0E3326; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#FFB81C; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#7A5A00; stroke-width:2.5; stroke-dasharray:7 5}
   .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
   .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
   .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
@@ -234,10 +234,10 @@
   .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
   .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
   .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
-  .h5p-fs-found circle{fill:none; stroke:#9FACBD; stroke-width:5}
-  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#1C2F47; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-found circle{fill:none; stroke:#FFB81C; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#0E3326; paint-order:stroke; stroke:#fff; stroke-width:4px}
   .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
-  .h5p-fs-cross{fill:none; stroke:#1C2F47; stroke-width:2}
+  .h5p-fs-cross{fill:none; stroke:#0E3326; stroke-width:2}
   @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
   /* Era timeline */
   .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
@@ -269,7 +269,7 @@
   .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
   .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
   .h5p-ds-card.ok::before{content:"✔ "}
-  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(28,47,71,.3); cursor:grabbing}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(14,51,38,.3); cursor:grabbing}
   .h5p-ds-card.shake{animation:h5pShake .4s}
   .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
   @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
@@ -292,7 +292,7 @@
   @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
   .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
-/* header wrap fix 2026-09 */
+/* header wrap fix 2026-09 */ /* Baylor colors 2026-09 */
 .am-topbar{flex-wrap:wrap; row-gap:10px}
 .am-wordmark{min-width:0}
 .am-coursebar{flex:1 1 160px; min-width:0}
@@ -301,7 +301,7 @@
 </head>
 <body>
 <header class="am-topbar">
-  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#9FACBD"/><path d="M13 30V11l14 5v14" fill="none" stroke="#1C2F47" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#1C2F47"/><circle cx="24.5" cy="30" r="3.6" fill="#1C2F47"/></svg>
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#FFB81C"/><path d="M13 30V11l14 5v14" fill="none" stroke="#0E3326" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#0E3326"/><circle cx="24.5" cy="30" r="3.6" fill="#0E3326"/></svg>
   <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
   <div class="am-coursebar"><span class="am-l-en">Module 2: After the Civil War, 1865–1910<br>Page 6 of 13</span><span class="am-l-es">Módulo 2: Después de la Guerra Civil, 1865–1910<br>Página 6 de 13</span></div>
   <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
@@ -333,24 +333,24 @@
 
   <figure>
     <svg viewBox="0 0 720 200" role="img" aria-label="Diagram of a typical American march's four-strain form">
-      <rect width="720" height="200" fill="#F5F7F9" rx="10"/>
+      <rect width="720" height="200" fill="#F4F8F5" rx="10"/>
       <g font-family="Arial, Helvetica, sans-serif">
-        <rect x="20" y="70" width="110" height="60" rx="8" fill="#CDD4DD"/>
-        <text x="75" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B2A41">Intro</text>
-        <rect x="145" y="70" width="110" height="60" rx="8" fill="#2B4A6F"/>
+        <rect x="20" y="70" width="110" height="60" rx="8" fill="#C9D8CE"/>
+        <text x="75" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B2A22">Intro</text>
+        <rect x="145" y="70" width="110" height="60" rx="8" fill="#154734"/>
         <text x="200" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Strain 1</text>
-        <text x="200" y="118" text-anchor="middle" font-size="11" fill="#DBE1E9">(repeated)</text>
-        <rect x="270" y="70" width="110" height="60" rx="8" fill="#233C5C"/>
+        <text x="200" y="118" text-anchor="middle" font-size="11" fill="#D5E6DC">(repeated)</text>
+        <rect x="270" y="70" width="110" height="60" rx="8" fill="#103B2B"/>
         <text x="325" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Strain 2</text>
-        <text x="325" y="118" text-anchor="middle" font-size="11" fill="#DBE1E9">(repeated)</text>
-        <rect x="395" y="70" width="150" height="60" rx="8" fill="#5E6B7C"/>
+        <text x="325" y="118" text-anchor="middle" font-size="11" fill="#D5E6DC">(repeated)</text>
+        <rect x="395" y="70" width="150" height="60" rx="8" fill="#7A5A00"/>
         <text x="470" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Trio</text>
-        <text x="470" y="118" text-anchor="middle" font-size="11" fill="#EEF1F5">new key, broad melody</text>
-        <rect x="555" y="70" width="140" height="60" rx="8" fill="#1C2F47"/>
+        <text x="470" y="118" text-anchor="middle" font-size="11" fill="#FFF5DC">new key, broad melody</text>
+        <rect x="555" y="70" width="140" height="60" rx="8" fill="#0E3326"/>
         <text x="625" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Break-up strain</text>
-        <text x="625" y="118" text-anchor="middle" font-size="11" fill="#DBE1E9">builds to finale</text>
+        <text x="625" y="118" text-anchor="middle" font-size="11" fill="#D5E6DC">builds to finale</text>
       </g>
-      <text x="360" y="170" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Marches chain together short, contrasting strains rather than one long melody — much like ragtime's strains.</text>
+      <text x="360" y="170" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">Marches chain together short, contrasting strains rather than one long melody — much like ragtime's strains.</text>
     </svg>
     <figcaption>Figure 1. A typical march moves through an introduction, two marching strains, a contrasting trio, and a final strain.</figcaption>
   </figure>
@@ -363,7 +363,7 @@
   <!-- ============ LISTENING GUIDE ============ -->
   <div class="am-listen">
     <div class="am-listen__head">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#FFB81C"/></svg>
       <div><div class="am-listen__title">Watch: John Philip Sousa, A Short Biography</div><div class="am-listen__meta">Documentary short from Historic America on Sousa's life and marches</div></div>
     </div>
     <div class="am-listen__body">
@@ -376,7 +376,7 @@
 
   <div class="am-listen">
     <div class="am-listen__head">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#FFB81C"/></svg>
       <div><div class="am-listen__title">Listening Guide: "The Stars and Stripes Forever"</div><div class="am-listen__meta">John Philip Sousa · performed by the United States Marine Band · about 5 minutes</div></div>
     </div>
     <div class="am-listen__body">
@@ -394,12 +394,12 @@
       <p class="h5p-hint">Tap a section to learn what it contributes.</p>
       <figure style="margin:0">
         <svg class="h5p-hs" viewBox="0 0 720 220" role="img" aria-label="Sections of a late-nineteenth-century concert band">
-          <rect width="720" height="220" fill="#F5F7F9" rx="8"/>
-          <g data-hs="Cornets and trumpets" data-info="Carry the melody in most march strains, often doubled for a bright, penetrating sound outdoors."><circle cx="120" cy="90" r="50" fill="#2B4A6F"/><text x="120" y="95" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Cornets</text></g>
-          <g data-hs="Clarinets" data-info="Function much like a string section would in an orchestra, providing a smooth, agile middle voice."><circle cx="270" cy="90" r="50" fill="#233C5C"/><text x="270" y="95" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Clarinets</text></g>
-          <g data-hs="Trombones and low brass" data-info="Provide the harmonic foundation and the punchy accents that give marches their weight."><circle cx="420" cy="90" r="50" fill="#1C2F47"/><text x="420" y="85" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Trombones</text><text x="420" y="101" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">&amp; Low Brass</text></g>
-          <g data-hs="Percussion" data-info="Snare and bass drums lock in the steady duple beat that made marches easy to march or dance to."><rect x="530" y="45" width="150" height="90" rx="10" fill="#5E6B7C"/><text x="605" y="96" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Percussion</text></g>
-          <text x="360" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">No strings — brass, woodwinds, and percussion carry the whole ensemble.</text>
+          <rect width="720" height="220" fill="#F4F8F5" rx="8"/>
+          <g data-hs="Cornets and trumpets" data-info="Carry the melody in most march strains, often doubled for a bright, penetrating sound outdoors."><circle cx="120" cy="90" r="50" fill="#154734"/><text x="120" y="95" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Cornets</text></g>
+          <g data-hs="Clarinets" data-info="Function much like a string section would in an orchestra, providing a smooth, agile middle voice."><circle cx="270" cy="90" r="50" fill="#103B2B"/><text x="270" y="95" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Clarinets</text></g>
+          <g data-hs="Trombones and low brass" data-info="Provide the harmonic foundation and the punchy accents that give marches their weight."><circle cx="420" cy="90" r="50" fill="#0E3326"/><text x="420" y="85" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Trombones</text><text x="420" y="101" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">&amp; Low Brass</text></g>
+          <g data-hs="Percussion" data-info="Snare and bass drums lock in the steady duple beat that made marches easy to march or dance to."><rect x="530" y="45" width="150" height="90" rx="10" fill="#7A5A00"/><text x="605" y="96" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Percussion</text></g>
+          <text x="360" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">No strings — brass, woodwinds, and percussion carry the whole ensemble.</text>
         </svg>
       </figure>
       <div class="h5p-hs-panel"><em>Select a section above.</em></div>
@@ -431,28 +431,28 @@
     <div class="h5p-act__body">
       <div class="h5p-fs-frame" data-targets='[{"p":"Tap the woodwind section.","x":130,"y":135,"r":78,"lbl":"Woodwinds"},{"p":"Tap the brass section.","x":360,"y":135,"r":78,"lbl":"Brass"},{"p":"Tap the percussion section.","x":590,"y":135,"r":78,"lbl":"Percussion"}]'>
         <svg viewBox="0 0 720 260" role="img" aria-label="Hand-drawn diagram of a concert band arranged in three sections, drawn as shapes without labels">
-          <rect width="720" height="260" fill="#F5F7F9" rx="10"/>
-          <rect x="40" y="55" width="180" height="150" rx="10" fill="#EBEFF4" stroke="#CDD4DD" stroke-width="2"/>
-          <rect x="270" y="55" width="180" height="150" rx="10" fill="#EBEFF4" stroke="#CDD4DD" stroke-width="2"/>
-          <rect x="500" y="55" width="180" height="150" rx="10" fill="#EBEFF4" stroke="#CDD4DD" stroke-width="2"/>
-          <g fill="#2B4A6F">
+          <rect width="720" height="260" fill="#F4F8F5" rx="10"/>
+          <rect x="40" y="55" width="180" height="150" rx="10" fill="#E7F1EB" stroke="#C9D8CE" stroke-width="2"/>
+          <rect x="270" y="55" width="180" height="150" rx="10" fill="#E7F1EB" stroke="#C9D8CE" stroke-width="2"/>
+          <rect x="500" y="55" width="180" height="150" rx="10" fill="#E7F1EB" stroke="#C9D8CE" stroke-width="2"/>
+          <g fill="#154734">
             <rect x="95" y="80" width="10" height="95" rx="3"/><path d="M92 175 L108 175 L104 195 L96 195 Z"/>
             <rect x="125" y="80" width="10" height="95" rx="3"/><path d="M122 175 L138 175 L134 195 L126 195 Z"/>
             <rect x="155" y="80" width="10" height="95" rx="3"/><path d="M152 175 L168 175 L164 195 L156 195 Z"/>
           </g>
-          <g fill="#233C5C">
-            <path d="M300 150 h60 a16 16 0 0 0 0 -32 h-40" fill="none" stroke="#233C5C" stroke-width="6"/>
-            <circle cx="360" cy="150" r="16" fill="#233C5C"/>
-            <path d="M300 120 h50 a14 14 0 0 1 0 -28 h-34" fill="none" stroke="#233C5C" stroke-width="6" transform="translate(0,-6)"/>
-            <circle cx="356" cy="86" r="14" fill="#233C5C"/>
+          <g fill="#103B2B">
+            <path d="M300 150 h60 a16 16 0 0 0 0 -32 h-40" fill="none" stroke="#103B2B" stroke-width="6"/>
+            <circle cx="360" cy="150" r="16" fill="#103B2B"/>
+            <path d="M300 120 h50 a14 14 0 0 1 0 -28 h-34" fill="none" stroke="#103B2B" stroke-width="6" transform="translate(0,-6)"/>
+            <circle cx="356" cy="86" r="14" fill="#103B2B"/>
           </g>
-          <g fill="#5E6B7C">
-            <circle cx="560" cy="150" r="34" fill="none" stroke="#5E6B7C" stroke-width="6"/>
-            <circle cx="560" cy="150" r="4" fill="#5E6B7C"/>
-            <circle cx="625" cy="110" r="20" fill="none" stroke="#5E6B7C" stroke-width="5"/>
-            <ellipse cx="625" cy="175" rx="26" ry="7" fill="none" stroke="#5E6B7C" stroke-width="5"/>
+          <g fill="#7A5A00">
+            <circle cx="560" cy="150" r="34" fill="none" stroke="#7A5A00" stroke-width="6"/>
+            <circle cx="560" cy="150" r="4" fill="#7A5A00"/>
+            <circle cx="625" cy="110" r="20" fill="none" stroke="#7A5A00" stroke-width="5"/>
+            <ellipse cx="625" cy="175" rx="26" ry="7" fill="none" stroke="#7A5A00" stroke-width="5"/>
           </g>
-          <text x="360" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">A concert band, arranged by section</text>
+          <text x="360" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">A concert band, arranged by section</text>
         </svg>
       </div>
       <div class="h5p-controls"><button class="am-btn am-btn--ghost" data-showme hidden>Show me</button><button class="am-btn am-btn--ghost" data-retry>Start over</button><span class="h5p-score"></span></div>
@@ -489,25 +489,25 @@
 
   <figure>
     <svg viewBox="0 0 720 200" role="img" aria-label="Diagrama de la forma típica en cuatro strains de una marcha estadounidense">
-      <rect width="720" height="200" fill="#F5F7F9" rx="10"/>
+      <rect width="720" height="200" fill="#F4F8F5" rx="10"/>
       <g font-family="Arial, Helvetica, sans-serif">
-        <rect x="20" y="70" width="110" height="60" rx="8" fill="#CDD4DD"/>
-        <text x="75" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B2A41">Introducción</text>
-        <rect x="145" y="70" width="110" height="60" rx="8" fill="#2B4A6F"/>
+        <rect x="20" y="70" width="110" height="60" rx="8" fill="#C9D8CE"/>
+        <text x="75" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B2A22">Introducción</text>
+        <rect x="145" y="70" width="110" height="60" rx="8" fill="#154734"/>
         <text x="200" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Strain 1</text>
-        <text x="200" y="118" text-anchor="middle" font-size="11" fill="#DBE1E9">(se repite)</text>
-        <rect x="270" y="70" width="110" height="60" rx="8" fill="#233C5C"/>
+        <text x="200" y="118" text-anchor="middle" font-size="11" fill="#D5E6DC">(se repite)</text>
+        <rect x="270" y="70" width="110" height="60" rx="8" fill="#103B2B"/>
         <text x="325" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Strain 2</text>
-        <text x="325" y="118" text-anchor="middle" font-size="11" fill="#DBE1E9">(se repite)</text>
-        <rect x="395" y="70" width="150" height="60" rx="8" fill="#5E6B7C"/>
+        <text x="325" y="118" text-anchor="middle" font-size="11" fill="#D5E6DC">(se repite)</text>
+        <rect x="395" y="70" width="150" height="60" rx="8" fill="#7A5A00"/>
         <text x="470" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Trío</text>
-        <text x="470" y="118" text-anchor="middle" font-size="11" fill="#EEF1F5">nueva tonalidad, lírico</text>
-        <rect x="555" y="70" width="140" height="60" rx="8" fill="#1C2F47"/>
+        <text x="470" y="118" text-anchor="middle" font-size="11" fill="#FFF5DC">nueva tonalidad, lírico</text>
+        <rect x="555" y="70" width="140" height="60" rx="8" fill="#0E3326"/>
         <text x="625" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Strain de cierre</text>
-        <text x="625" y="118" text-anchor="middle" font-size="11" fill="#DBE1E9">crece hacia el final</text>
+        <text x="625" y="118" text-anchor="middle" font-size="11" fill="#D5E6DC">crece hacia el final</text>
       </g>
-      <text x="360" y="162" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Las marchas encadenan strains breves y contrastantes en lugar de una sola</text>
-      <text x="360" y="180" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">melodía larga, igual que los strains del ragtime.</text>
+      <text x="360" y="162" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">Las marchas encadenan strains breves y contrastantes en lugar de una sola</text>
+      <text x="360" y="180" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">melodía larga, igual que los strains del ragtime.</text>
     </svg>
     <figcaption>Figura 1. Una marcha típica pasa por una introducción, dos strains de marcha, un trío contrastante y un strain final.</figcaption>
   </figure>
@@ -520,7 +520,7 @@
   <!-- ============ LISTENING GUIDE ============ -->
   <div class="am-listen">
     <div class="am-listen__head">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#FFB81C"/></svg>
       <div><div class="am-listen__title">Para ver: John Philip Sousa, una breve biografía</div><div class="am-listen__meta">Documental breve de Historic America sobre la vida y las marchas de Sousa</div></div>
     </div>
     <div class="am-listen__body">
@@ -533,7 +533,7 @@
 
   <div class="am-listen">
     <div class="am-listen__head">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#FFB81C"/></svg>
       <div><div class="am-listen__title">Guía de audición: "The Stars and Stripes Forever"</div><div class="am-listen__meta">John Philip Sousa · interpretada por la Banda de la Infantería de Marina de Estados Unidos · unos 5 minutos</div></div>
     </div>
     <div class="am-listen__body">
@@ -551,12 +551,12 @@
       <p class="h5p-hint">Toca una sección para saber qué aporta.</p>
       <figure style="margin:0">
         <svg class="h5p-hs" viewBox="0 0 720 220" role="img" aria-label="Secciones de una banda de concierto de finales del siglo XIX">
-          <rect width="720" height="220" fill="#F5F7F9" rx="8"/>
-          <g data-hs="Cornetas y trompetas" data-info="Llevan la melodía en la mayoría de los strains de una marcha, a menudo dobladas para lograr un sonido brillante y penetrante al aire libre."><circle cx="120" cy="90" r="50" fill="#2B4A6F"/><text x="120" y="95" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Cornetas</text></g>
-          <g data-hs="Clarinetes" data-info="Cumplen una función muy parecida a la de la sección de cuerdas en una orquesta: aportan una voz intermedia suave y ágil."><circle cx="270" cy="90" r="50" fill="#233C5C"/><text x="270" y="95" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Clarinetes</text></g>
-          <g data-hs="Trombones y metales graves" data-info="Aportan la base armónica y los acentos contundentes que dan peso a las marchas."><circle cx="420" cy="90" r="50" fill="#1C2F47"/><text x="420" y="78" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Trombones</text><text x="420" y="94" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">y metales</text><text x="420" y="110" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">graves</text></g>
-          <g data-hs="Percusión" data-info="El redoblante y el bombo fijan el pulso binario constante que hacía que las marchas fueran fáciles de desfilar o bailar."><rect x="530" y="45" width="150" height="90" rx="10" fill="#5E6B7C"/><text x="605" y="96" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Percusión</text></g>
-          <text x="360" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Sin cuerdas: los metales, las maderas y la percusión sostienen todo el conjunto.</text>
+          <rect width="720" height="220" fill="#F4F8F5" rx="8"/>
+          <g data-hs="Cornetas y trompetas" data-info="Llevan la melodía en la mayoría de los strains de una marcha, a menudo dobladas para lograr un sonido brillante y penetrante al aire libre."><circle cx="120" cy="90" r="50" fill="#154734"/><text x="120" y="95" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Cornetas</text></g>
+          <g data-hs="Clarinetes" data-info="Cumplen una función muy parecida a la de la sección de cuerdas en una orquesta: aportan una voz intermedia suave y ágil."><circle cx="270" cy="90" r="50" fill="#103B2B"/><text x="270" y="95" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Clarinetes</text></g>
+          <g data-hs="Trombones y metales graves" data-info="Aportan la base armónica y los acentos contundentes que dan peso a las marchas."><circle cx="420" cy="90" r="50" fill="#0E3326"/><text x="420" y="78" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Trombones</text><text x="420" y="94" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">y metales</text><text x="420" y="110" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">graves</text></g>
+          <g data-hs="Percusión" data-info="El redoblante y el bombo fijan el pulso binario constante que hacía que las marchas fueran fáciles de desfilar o bailar."><rect x="530" y="45" width="150" height="90" rx="10" fill="#7A5A00"/><text x="605" y="96" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Percusión</text></g>
+          <text x="360" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">Sin cuerdas: los metales, las maderas y la percusión sostienen todo el conjunto.</text>
         </svg>
       </figure>
       <div class="h5p-hs-panel"><em>Selecciona una sección arriba.</em></div>
@@ -588,28 +588,28 @@
     <div class="h5p-act__body">
       <div class="h5p-fs-frame" data-targets='[{"p":"Toca la sección de maderas.","x":130,"y":135,"r":78,"lbl":"Maderas"},{"p":"Toca la sección de metales.","x":360,"y":135,"r":78,"lbl":"Metales"},{"p":"Toca la sección de percusión.","x":590,"y":135,"r":78,"lbl":"Percusión"}]'>
         <svg viewBox="0 0 720 260" role="img" aria-label="Diagrama dibujado a mano de una banda de concierto organizada en tres secciones, representadas como formas sin rótulos">
-          <rect width="720" height="260" fill="#F5F7F9" rx="10"/>
-          <rect x="40" y="55" width="180" height="150" rx="10" fill="#EBEFF4" stroke="#CDD4DD" stroke-width="2"/>
-          <rect x="270" y="55" width="180" height="150" rx="10" fill="#EBEFF4" stroke="#CDD4DD" stroke-width="2"/>
-          <rect x="500" y="55" width="180" height="150" rx="10" fill="#EBEFF4" stroke="#CDD4DD" stroke-width="2"/>
-          <g fill="#2B4A6F">
+          <rect width="720" height="260" fill="#F4F8F5" rx="10"/>
+          <rect x="40" y="55" width="180" height="150" rx="10" fill="#E7F1EB" stroke="#C9D8CE" stroke-width="2"/>
+          <rect x="270" y="55" width="180" height="150" rx="10" fill="#E7F1EB" stroke="#C9D8CE" stroke-width="2"/>
+          <rect x="500" y="55" width="180" height="150" rx="10" fill="#E7F1EB" stroke="#C9D8CE" stroke-width="2"/>
+          <g fill="#154734">
             <rect x="95" y="80" width="10" height="95" rx="3"/><path d="M92 175 L108 175 L104 195 L96 195 Z"/>
             <rect x="125" y="80" width="10" height="95" rx="3"/><path d="M122 175 L138 175 L134 195 L126 195 Z"/>
             <rect x="155" y="80" width="10" height="95" rx="3"/><path d="M152 175 L168 175 L164 195 L156 195 Z"/>
           </g>
-          <g fill="#233C5C">
-            <path d="M300 150 h60 a16 16 0 0 0 0 -32 h-40" fill="none" stroke="#233C5C" stroke-width="6"/>
-            <circle cx="360" cy="150" r="16" fill="#233C5C"/>
-            <path d="M300 120 h50 a14 14 0 0 1 0 -28 h-34" fill="none" stroke="#233C5C" stroke-width="6" transform="translate(0,-6)"/>
-            <circle cx="356" cy="86" r="14" fill="#233C5C"/>
+          <g fill="#103B2B">
+            <path d="M300 150 h60 a16 16 0 0 0 0 -32 h-40" fill="none" stroke="#103B2B" stroke-width="6"/>
+            <circle cx="360" cy="150" r="16" fill="#103B2B"/>
+            <path d="M300 120 h50 a14 14 0 0 1 0 -28 h-34" fill="none" stroke="#103B2B" stroke-width="6" transform="translate(0,-6)"/>
+            <circle cx="356" cy="86" r="14" fill="#103B2B"/>
           </g>
-          <g fill="#5E6B7C">
-            <circle cx="560" cy="150" r="34" fill="none" stroke="#5E6B7C" stroke-width="6"/>
-            <circle cx="560" cy="150" r="4" fill="#5E6B7C"/>
-            <circle cx="625" cy="110" r="20" fill="none" stroke="#5E6B7C" stroke-width="5"/>
-            <ellipse cx="625" cy="175" rx="26" ry="7" fill="none" stroke="#5E6B7C" stroke-width="5"/>
+          <g fill="#7A5A00">
+            <circle cx="560" cy="150" r="34" fill="none" stroke="#7A5A00" stroke-width="6"/>
+            <circle cx="560" cy="150" r="4" fill="#7A5A00"/>
+            <circle cx="625" cy="110" r="20" fill="none" stroke="#7A5A00" stroke-width="5"/>
+            <ellipse cx="625" cy="175" rx="26" ry="7" fill="none" stroke="#7A5A00" stroke-width="5"/>
           </g>
-          <text x="360" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Una banda de concierto organizada por secciones</text>
+          <text x="360" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">Una banda de concierto organizada por secciones</text>
         </svg>
       </div>
       <div class="h5p-controls"><button class="am-btn am-btn--ghost" data-showme hidden>Muéstrame</button><button class="am-btn am-btn--ghost" data-retry>Empezar de nuevo</button><span class="h5p-score"></span></div>
@@ -961,7 +961,7 @@
   /* ---------- 14. Interactive map ---------- */
   document.querySelectorAll('[data-widget="map"]').forEach(function(w){
     var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
-    var COL=['#2B4A6F','#5E6B7C','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var COL=['#154734','#7A5A00','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
     var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
     var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
     routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
@@ -985,7 +985,7 @@
     function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
     function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
       var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
-      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#9FACBD','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#FFB81C','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
       else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
     svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
     svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
@@ -1058,5 +1058,19 @@
   });
 })();
 </script>
+<script>/* a11y patch 2026-09 */(function(){
+function isES(el){var m=el.closest('main');return !!(m&&m.getAttribute('lang')==='es');}
+function run(){
+document.querySelectorAll('[data-widget]').forEach(function(w){
+  var n=0;w.querySelectorAll('select').forEach(function(s){n++;if(!s.getAttribute('aria-label')&&!s.labels.length)s.setAttribute('aria-label',(isES(s)?'Elige la palabra para el espacio ':'Choose the word for blank ')+n);});
+  var k=0;w.querySelectorAll('.h5p-blank').forEach(function(b){k++;var i=k,es=isES(b);
+    function upd(){var t=b.textContent,c=b.classList;b.setAttribute('aria-label',(es?'Espacio ':'Blank ')+i+': '+(t||(es?'vacío':'empty'))+(c.contains('ok')?(es?', correcto':', correct'):c.contains('bad')?(es?', incorrecto':', incorrect'):''));}
+    upd();new MutationObserver(upd).observe(b,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:['class']});});
+});
+document.querySelectorAll('svg[role="img"]').forEach(function(s){if(s.querySelector('[tabindex],a,button,[role="button"]'))s.setAttribute('role','group');});
+document.addEventListener('keydown',function(e){var t=e.target;if(e.defaultPrevented||!(e.key==='Enter'||e.key===' '))return;if(!t.getAttribute||t.getAttribute('role')!=='button'||/^(BUTTON|A|INPUT|SELECT|TEXTAREA)$/.test(t.tagName))return;e.preventDefault();t.click();});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(run,0);});else setTimeout(run,0);
+})();</script>
 </body>
 </html>
