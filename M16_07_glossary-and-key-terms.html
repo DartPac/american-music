@@ -7,10 +7,10 @@
 <!--
   AMERICAN MUSIC — SELF-CONTAINED PAGE
   ===================================================================
-  Palette: Navy #2B4A6F · Slate #9FACBD
-    Navy dark  #1C2F47  (header/footer bands)      Navy deep #233C5C (hover)
-    Navy tint  #EBEFF4 / #DBE1E9 (callouts)         Slate soft #EEF1F5  Slate dark #5E6B7C
-    Ink #1B2A41 · Muted #4A5568 · Border #CDD4DD
+  Palette: Navy #154734 · Slate #FFB81C
+    Navy dark  #0E3326  (header/footer bands)      Navy deep #103B2B (hover)
+    Navy tint  #E7F1EB / #D5E6DC (callouts)         Slate soft #FFF5DC  Slate dark #7A5A00
+    Ink #1B2A22 · Muted #4A5550 · Border #C9D8CE
     Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
   RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
   or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
@@ -19,10 +19,10 @@
 -->
 <style>
   :root{
-    --am-navy:#2B4A6F; --am-navy-dark:#1C2F47; --am-navy-deep:#233C5C;
-    --am-slate:#9FACBD; --am-slate-dark:#5E6B7C; --am-slate-soft:#EEF1F5;
-    --am-tint:#EBEFF4; --am-tint2:#DBE1E9; --am-mist:#F5F7F9;
-    --am-ink:#1B2A41; --am-muted:#4A5568; --am-border:#CDD4DD;
+    --am-navy:#154734; --am-navy-dark:#0E3326; --am-navy-deep:#103B2B;
+    --am-slate:#FFB81C; --am-slate-dark:#7A5A00; --am-slate-soft:#FFF5DC;
+    --am-tint:#E7F1EB; --am-tint2:#D5E6DC; --am-mist:#F4F8F5;
+    --am-ink:#1B2A22; --am-muted:#4A5550; --am-border:#C9D8CE;
     --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
     --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
     --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
@@ -41,7 +41,7 @@
   h2{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:1.35em; margin:34px 0 10px; padding-left:12px; border-left:6px solid var(--am-slate)}
   h3{font-family:var(--head); font-weight:600; color:var(--am-navy); font-size:1.1em; margin:24px 0 8px}
   a{color:var(--am-navy-deep)}
-  .am-lead{font-size:1.08em; font-style:italic; color:#3d4a5c; margin:14px 0 20px}
+  .am-lead{font-size:1.08em; font-style:italic; color:#3D4A43; margin:14px 0 20px}
   /* Callouts */
   .am-objectives{background:var(--am-tint); border-left:6px solid var(--am-navy); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
   .am-label{margin:0 0 6px; font-family:var(--head); font-weight:700; color:var(--am-navy); text-transform:uppercase; letter-spacing:1.5px; font-size:.82em}
@@ -49,13 +49,13 @@
   .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
   .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
   .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
-  .am-note{background:#F6F7F9; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  .am-note{background:#FFF8E6; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
   figure{margin:24px 0; text-align:center}
   figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
   figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
   figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
   /* Listening guide */
-  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(28,47,71,.08)}
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(14,51,38,.08)}
   .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
   .am-listen__head svg{width:26px; height:26px; flex:none}
   .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
@@ -63,14 +63,14 @@
   .am-listen__body{padding:14px 18px}
   .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
   .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
-  .am-listen__link:hover{background:#C7D0DB}
+  .am-listen__link:hover{background:#FFD266}
   .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
   .am-listen__log label{cursor:pointer}
   /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
-  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#1C2F47; cursor:pointer}
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#0E3326; cursor:pointer}
   .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
   .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
-  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(28,47,71,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(14,51,38,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
   .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
   .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
   .am-audio{width:100%; margin:0 0 14px; display:block}
@@ -82,9 +82,9 @@
   .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
   .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
   .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
-  .am-btn--slate:hover{background:#C7D0DB}
+  .am-btn--slate:hover{background:#FFD266}
   /* ============ H5P-STYLE ACTIVITY SHELL ============ */
-  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(28,47,71,.1)}
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(14,51,38,.1)}
   .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
   .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
   .h5p-act__body{padding:18px 20px}
@@ -164,7 +164,7 @@
   .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
   .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
   .h5p-form-sec:hover{transform:translateY(-2px)}
-  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(159,172,189,.35)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(255,184,28,.35)}
   .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
   .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
   /* Hotspots (inline SVG) */
@@ -180,12 +180,12 @@
   /* Piano */
   .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
   .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
-  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F5F7F9); border:1px solid #9FB3CC; border-bottom:8px solid #CDD4DD; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
-  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2C3E57,#0F1B2B); border:1px solid #000; border-bottom:9px solid #1B2A41; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F4F8F5); border:1px solid #A9C2B3; border-bottom:8px solid #C9D8CE; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2B3A33,#0F1B15); border:1px solid #000; border-bottom:9px solid #1B2A22; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
   .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
   .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
-  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(159,172,189,.55)}
-  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(159,172,189,.8)}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(255,184,28,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(255,184,28,.8)}
   .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
   .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
   .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
@@ -214,13 +214,13 @@
   .h5p-br-pts li.alert::before{content:"⚠"; color:var(--am-slate-dark)}
   .h5p-br-pts li.no::before{content:"✖"; color:var(--bad)}
   /* Interactive map */
-  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F5F7F9}
+  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F4F8F5}
   .h5p-map-m{cursor:pointer}
   .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
   .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
-  .h5p-map-m.on circle{stroke:#1C2F47; stroke-width:4}
-  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#9FACBD; stroke-width:5}
-  .h5p-map-route{fill:none; stroke:#5E6B7C; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-m.on circle{stroke:#0E3326; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#FFB81C; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#7A5A00; stroke-width:2.5; stroke-dasharray:7 5}
   .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
   .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
   .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
@@ -234,10 +234,10 @@
   .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
   .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
   .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
-  .h5p-fs-found circle{fill:none; stroke:#9FACBD; stroke-width:5}
-  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#1C2F47; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-found circle{fill:none; stroke:#FFB81C; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#0E3326; paint-order:stroke; stroke:#fff; stroke-width:4px}
   .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
-  .h5p-fs-cross{fill:none; stroke:#1C2F47; stroke-width:2}
+  .h5p-fs-cross{fill:none; stroke:#0E3326; stroke-width:2}
   @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
   /* Era timeline */
   .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
@@ -269,7 +269,7 @@
   .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
   .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
   .h5p-ds-card.ok::before{content:"✔ "}
-  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(28,47,71,.3); cursor:grabbing}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(14,51,38,.3); cursor:grabbing}
   .h5p-ds-card.shake{animation:h5pShake .4s}
   .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
   @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
@@ -292,7 +292,7 @@
   @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
   .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
-/* header wrap fix 2026-09 */
+/* header wrap fix 2026-09 */ /* Baylor colors 2026-09 */
 .am-topbar{flex-wrap:wrap; row-gap:10px}
 .am-wordmark{min-width:0}
 .am-coursebar{flex:1 1 160px; min-width:0}
@@ -301,7 +301,7 @@
 </head>
 <body>
 <header class="am-topbar">
-  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#9FACBD"/><path d="M13 30V11l14 5v14" fill="none" stroke="#1C2F47" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#1C2F47"/><circle cx="24.5" cy="30" r="3.6" fill="#1C2F47"/></svg>
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#FFB81C"/><path d="M13 30V11l14 5v14" fill="none" stroke="#0E3326" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#0E3326"/><circle cx="24.5" cy="30" r="3.6" fill="#0E3326"/></svg>
   <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
   <div class="am-coursebar"><span class="am-l-en">Module 16: Course Review<br>Page 8 of 8</span><span class="am-l-es">Módulo 16: Repaso del curso<br>Página 8 de 8</span></div>
   <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
@@ -328,24 +328,24 @@
 
   <figure>
     <svg viewBox="0 0 720 230" role="img" aria-label="Diagram grouping glossary terms into five broad eras of the course">
-      <rect width="720" height="230" fill="#F5F7F9" rx="10"/>
-      <text x="360" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#2B4A6F">Where the glossary's terms come from</text>
+      <rect width="720" height="230" fill="#F4F8F5" rx="10"/>
+      <text x="360" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#154734">Where the glossary's terms come from</text>
       <g font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#fff">
-        <rect x="15" y="45" width="132" height="40" rx="7" fill="#2B4A6F"/><text x="81" y="70" text-anchor="middle">Roots &amp; 1865–1910</text>
-        <rect x="157" y="45" width="132" height="40" rx="7" fill="#233C5C"/><text x="223" y="70" text-anchor="middle">Jazz Age &amp; Swing</text>
-        <rect x="299" y="45" width="132" height="40" rx="7" fill="#1C2F47"/><text x="365" y="70" text-anchor="middle">Postwar &amp; Rock</text>
-        <rect x="441" y="45" width="132" height="40" rx="7" fill="#5E6B7C"/><text x="507" y="70" text-anchor="middle">Soul, Funk &amp; 70s</text>
-        <rect x="583" y="45" width="122" height="40" rx="7" fill="#2B4A6F"/><text x="644" y="70" text-anchor="middle">80s–Today</text>
+        <rect x="15" y="45" width="132" height="40" rx="7" fill="#154734"/><text x="81" y="70" text-anchor="middle">Roots &amp; 1865–1910</text>
+        <rect x="157" y="45" width="132" height="40" rx="7" fill="#103B2B"/><text x="223" y="70" text-anchor="middle">Jazz Age &amp; Swing</text>
+        <rect x="299" y="45" width="132" height="40" rx="7" fill="#0E3326"/><text x="365" y="70" text-anchor="middle">Postwar &amp; Rock</text>
+        <rect x="441" y="45" width="132" height="40" rx="7" fill="#7A5A00"/><text x="507" y="70" text-anchor="middle">Soul, Funk &amp; 70s</text>
+        <rect x="583" y="45" width="122" height="40" rx="7" fill="#154734"/><text x="644" y="70" text-anchor="middle">80s–Today</text>
       </g>
-      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1B2A41">
+      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1B2A22">
         <text x="81" y="105" text-anchor="middle">syncopation</text><text x="81" y="121" text-anchor="middle">minstrelsy</text><text x="81" y="137" text-anchor="middle">race record</text>
         <text x="223" y="105" text-anchor="middle">bebop</text><text x="223" y="121" text-anchor="middle">crooning</text><text x="223" y="137" text-anchor="middle">boogie-woogie</text>
         <text x="365" y="105" text-anchor="middle">multitrack</text><text x="365" y="121" text-anchor="middle">cover version</text><text x="365" y="137" text-anchor="middle">rockabilly</text>
         <text x="507" y="105" text-anchor="middle">Motown sound</text><text x="507" y="121" text-anchor="middle">fusion</text><text x="507" y="137" text-anchor="middle">clave</text>
         <text x="644" y="105" text-anchor="middle">sampling</text><text x="644" y="121" text-anchor="middle">MTV</text><text x="644" y="137" text-anchor="middle">streaming</text>
       </g>
-      <text x="360" y="180" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">A representative sample from each era — the full alphabetical glossary follows below.</text>
-      <text x="360" y="200" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Many terms, like “crossover” and “syncopation,” recur in more than one era.</text>
+      <text x="360" y="180" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5550">A representative sample from each era — the full alphabetical glossary follows below.</text>
+      <text x="360" y="200" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5550">Many terms, like “crossover” and “syncopation,” recur in more than one era.</text>
     </svg>
     <figcaption>Figure 1. The glossary's fifty terms sorted loosely by the era of the course where each first appeared.</figcaption>
   </figure>
@@ -353,78 +353,78 @@
   <h2>Alphabetical glossary</h2>
   <div style="columns:1; font-size:.96em">
     <dl style="margin:0">
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">AABA form</dt><dd style="margin:2px 0 0 0">A thirty-two-bar popular-song chorus built from two matching A sections, a contrasting bridge, and a final A section.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">A&amp;R</dt><dd style="margin:2px 0 0 0">Artists and repertoire; the record-company role responsible for finding and signing new talent.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Album-oriented rock (AOR)</dt><dd style="margin:2px 0 0 0">A 1970s FM radio format built around full rock albums rather than singles, aimed at a young audience.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Alternative</dt><dd style="margin:2px 0 0 0">A marketing category the industry applied to guitar-based, "underground"-identified rock once it became commercially viable.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Bebop</dt><dd style="margin:2px 0 0 0">A small-combo jazz style built for attentive listening rather than dancing, pioneered by Charlie Parker and Dizzy Gillespie.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Blue note</dt><dd style="margin:2px 0 0 0">A pitch, often the third, fifth, or seventh scale degree, deliberately bent or flattened for expressive effect.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Bluegrass</dt><dd style="margin:2px 0 0 0">A fast, virtuosic string-band style that crystallized around Bill Monroe's band in the mid-1940s.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Boogie-woogie</dt><dd style="margin:2px 0 0 0">A piano style with a repeating, driving left-hand bass pattern under improvised right-hand figures.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Call and response</dt><dd style="margin:2px 0 0 0">A musical conversation in which a leader's phrase is answered by a group — central to the African-American stream.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Clave</dt><dd style="margin:2px 0 0 0">A short, repeating rhythmic pattern that organizes salsa and other Afro-Cuban and Latin American music.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Classic blues</dt><dd style="margin:2px 0 0 0">A theatrical, jazz-band-accompanied blues style popularized on record in the 1920s by singers such as Bessie Smith.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Compact disc (CD)</dt><dd style="margin:2px 0 0 0">A digital audio format, introduced commercially in 1982, that stores sound as data read by a laser.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Countrypolitan (Nashville Sound)</dt><dd style="margin:2px 0 0 0">A polished, pop-oriented country style of the late 1950s and 1960s built on strings and smooth vocals.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Cover version</dt><dd style="margin:2px 0 0 0">A recording of a song already recorded by another artist, often made to profit from an existing hit.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Crooning</dt><dd style="margin:2px 0 0 0">An intimate, conversational singing style made possible by the microphone, starting in the mid-1920s.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Crossover</dt><dd style="margin:2px 0 0 0">A recording that succeeds on the mainstream pop chart after first, or simultaneously, succeeding on a specialized chart.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Dynamics</dt><dd style="margin:2px 0 0 0">The element of music describing how loud or soft a passage is.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Electrical recording</dt><dd style="margin:2px 0 0 0">Capturing sound through a microphone and electrical amplification rather than an acoustic horn, standard by the mid-1920s.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Elements of music</dt><dd style="margin:2px 0 0 0">Tempo, rhythm, pitch, timbre, melody, dynamics, texture, and form — the eight building blocks of any piece of music.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Fusion (jazz fusion)</dt><dd style="margin:2px 0 0 0">A style combining jazz improvisation with the electric instrumentation and rhythmic drive of rock and funk.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Gangsta rap</dt><dd style="margin:2px 0 0 0">A hip-hop style describing street life, crime, and police conflict in blunt, often graphic language.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Gospel</dt><dd style="margin:2px 0 0 0">A religious vocal tradition built on spirituals, call and response, and expressive vocal intensity.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Grunge</dt><dd style="margin:2px 0 0 0">A Seattle-based rock style combining punk's raw attitude with the heavy, distorted guitar sound of metal.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Hardcore punk</dt><dd style="margin:2px 0 0 0">A faster, more stripped-down, more confrontational extension of punk, developed on the West Coast in the early 1980s.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Hip-hop's four elements</dt><dd style="margin:2px 0 0 0">DJing, MCing, breaking, and graffiti art — the founding practices of hip-hop culture.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Honky-tonk</dt><dd style="margin:2px 0 0 0">A hard-driving, electrified country style associated with Texas and Oklahoma dance halls and blunt lyrics about hard living.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Melisma</dt><dd style="margin:2px 0 0 0">Singing a single syllable of text across several pitches, a hallmark of gospel and soul vocal style.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Minstrelsy</dt><dd style="margin:2px 0 0 0">A racist blackface stage entertainment and America's first mass popular art form, remembered today with embarrassment and anger.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Motown sound</dt><dd style="margin:2px 0 0 0">The polished, pop-oriented rhythm-and-blues style developed at Motown Records for a broad, racially mixed audience.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">MTV</dt><dd style="margin:2px 0 0 0">A cable channel launched in 1981 that broadcast music videos around the clock, making video central to marketing a hit.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Multitrack recording</dt><dd style="margin:2px 0 0 0">Building a recording from multiple separate performances layered together, pioneered on tape by Les Paul.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Neotraditional country</dt><dd style="margin:2px 0 0 0">A 1980s movement returning country music to honky-tonk roots, reacting against pop-oriented countrypolitan production.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">New wave</dt><dd style="margin:2px 0 0 0">A late-1970s umbrella term for bands sharing punk's independent origins but favoring more art-conscious, eclectic sounds.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Phonograph</dt><dd style="margin:2px 0 0 0">Thomas Edison's 1877 sound-recording and playback device, the first practical technology of its kind.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Polyrhythm</dt><dd style="margin:2px 0 0 0">Two or more independent rhythmic patterns played at the same time.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Race record</dt><dd style="margin:2px 0 0 0">The industry's marketing term for recordings by African American musicians, produced mainly for sale to Black listeners.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Ragtime</dt><dd style="margin:2px 0 0 0">A syncopated piano style built on repeated sixteen-bar strains, popularized by Scott Joplin.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Rock and roll</dt><dd style="margin:2px 0 0 0">A mid-1950s fusion of rhythm and blues, country, gospel, and pop, aimed at a newly powerful teenage market.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Sampling</dt><dd style="margin:2px 0 0 0">Digitally reusing a short segment of an existing recording as a building block of a new song.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Soul music</dt><dd style="margin:2px 0 0 0">A style built by applying gospel's vocal intensity and call-and-response patterns to secular rhythm and blues.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Streaming</dt><dd style="margin:2px 0 0 0">Delivering audio on demand over the internet rather than through a purchased physical or downloaded copy.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Strain</dt><dd style="margin:2px 0 0 0">A self-contained, usually sixteen-bar section of a rag or march, typically repeated before the music moves on.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Syncopation</dt><dd style="margin:2px 0 0 0">Accenting beats, or parts of beats, that the meter normally leaves weak.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Syncretism</dt><dd style="margin:2px 0 0 0">The thorough blending of separate musical traditions into a genuinely new whole.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Texture</dt><dd style="margin:2px 0 0 0">How many independent musical layers sound at once: monophonic, homophonic, or polyphonic.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Timbre</dt><dd style="margin:2px 0 0 0">The tone color that distinguishes one instrument or voice from another, even at the same pitch.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Tin Pan Alley</dt><dd style="margin:2px 0 0 0">New York's popular-song publishing business and the songwriting tradition it produced from the 1890s through the 1950s.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Twelve-bar blues</dt><dd style="margin:2px 0 0 0">A twelve-measure, three-phrase chord progression (I I I I / IV IV I I / V IV I I) underlying blues and early rock and roll.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Vernacular tradition</dt><dd style="margin:2px 0 0 0">Music created and transmitted mainly by ordinary people, outside the formal, notated concert tradition.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Wall of Sound</dt><dd style="margin:2px 0 0 0">Phil Spector's production technique of layering many instruments with heavy echo into one dense, unified sound.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">AABA form</dt><dd style="margin:2px 0 0 0">A thirty-two-bar popular-song chorus built from two matching A sections, a contrasting bridge, and a final A section.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">A&amp;R</dt><dd style="margin:2px 0 0 0">Artists and repertoire; the record-company role responsible for finding and signing new talent.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Album-oriented rock (AOR)</dt><dd style="margin:2px 0 0 0">A 1970s FM radio format built around full rock albums rather than singles, aimed at a young audience.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Alternative</dt><dd style="margin:2px 0 0 0">A marketing category the industry applied to guitar-based, "underground"-identified rock once it became commercially viable.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Bebop</dt><dd style="margin:2px 0 0 0">A small-combo jazz style built for attentive listening rather than dancing, pioneered by Charlie Parker and Dizzy Gillespie.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Blue note</dt><dd style="margin:2px 0 0 0">A pitch, often the third, fifth, or seventh scale degree, deliberately bent or flattened for expressive effect.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Bluegrass</dt><dd style="margin:2px 0 0 0">A fast, virtuosic string-band style that crystallized around Bill Monroe's band in the mid-1940s.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Boogie-woogie</dt><dd style="margin:2px 0 0 0">A piano style with a repeating, driving left-hand bass pattern under improvised right-hand figures.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Call and response</dt><dd style="margin:2px 0 0 0">A musical conversation in which a leader's phrase is answered by a group — central to the African-American stream.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Clave</dt><dd style="margin:2px 0 0 0">A short, repeating rhythmic pattern that organizes salsa and other Afro-Cuban and Latin American music.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Classic blues</dt><dd style="margin:2px 0 0 0">A theatrical, jazz-band-accompanied blues style popularized on record in the 1920s by singers such as Bessie Smith.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Compact disc (CD)</dt><dd style="margin:2px 0 0 0">A digital audio format, introduced commercially in 1982, that stores sound as data read by a laser.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Countrypolitan (Nashville Sound)</dt><dd style="margin:2px 0 0 0">A polished, pop-oriented country style of the late 1950s and 1960s built on strings and smooth vocals.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Cover version</dt><dd style="margin:2px 0 0 0">A recording of a song already recorded by another artist, often made to profit from an existing hit.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Crooning</dt><dd style="margin:2px 0 0 0">An intimate, conversational singing style made possible by the microphone, starting in the mid-1920s.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Crossover</dt><dd style="margin:2px 0 0 0">A recording that succeeds on the mainstream pop chart after first, or simultaneously, succeeding on a specialized chart.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Dynamics</dt><dd style="margin:2px 0 0 0">The element of music describing how loud or soft a passage is.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Electrical recording</dt><dd style="margin:2px 0 0 0">Capturing sound through a microphone and electrical amplification rather than an acoustic horn, standard by the mid-1920s.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Elements of music</dt><dd style="margin:2px 0 0 0">Tempo, rhythm, pitch, timbre, melody, dynamics, texture, and form — the eight building blocks of any piece of music.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Fusion (jazz fusion)</dt><dd style="margin:2px 0 0 0">A style combining jazz improvisation with the electric instrumentation and rhythmic drive of rock and funk.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Gangsta rap</dt><dd style="margin:2px 0 0 0">A hip-hop style describing street life, crime, and police conflict in blunt, often graphic language.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Gospel</dt><dd style="margin:2px 0 0 0">A religious vocal tradition built on spirituals, call and response, and expressive vocal intensity.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Grunge</dt><dd style="margin:2px 0 0 0">A Seattle-based rock style combining punk's raw attitude with the heavy, distorted guitar sound of metal.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Hardcore punk</dt><dd style="margin:2px 0 0 0">A faster, more stripped-down, more confrontational extension of punk, developed on the West Coast in the early 1980s.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Hip-hop's four elements</dt><dd style="margin:2px 0 0 0">DJing, MCing, breaking, and graffiti art — the founding practices of hip-hop culture.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Honky-tonk</dt><dd style="margin:2px 0 0 0">A hard-driving, electrified country style associated with Texas and Oklahoma dance halls and blunt lyrics about hard living.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Melisma</dt><dd style="margin:2px 0 0 0">Singing a single syllable of text across several pitches, a hallmark of gospel and soul vocal style.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Minstrelsy</dt><dd style="margin:2px 0 0 0">A racist blackface stage entertainment and America's first mass popular art form, remembered today with embarrassment and anger.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Motown sound</dt><dd style="margin:2px 0 0 0">The polished, pop-oriented rhythm-and-blues style developed at Motown Records for a broad, racially mixed audience.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">MTV</dt><dd style="margin:2px 0 0 0">A cable channel launched in 1981 that broadcast music videos around the clock, making video central to marketing a hit.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Multitrack recording</dt><dd style="margin:2px 0 0 0">Building a recording from multiple separate performances layered together, pioneered on tape by Les Paul.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Neotraditional country</dt><dd style="margin:2px 0 0 0">A 1980s movement returning country music to honky-tonk roots, reacting against pop-oriented countrypolitan production.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">New wave</dt><dd style="margin:2px 0 0 0">A late-1970s umbrella term for bands sharing punk's independent origins but favoring more art-conscious, eclectic sounds.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Phonograph</dt><dd style="margin:2px 0 0 0">Thomas Edison's 1877 sound-recording and playback device, the first practical technology of its kind.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Polyrhythm</dt><dd style="margin:2px 0 0 0">Two or more independent rhythmic patterns played at the same time.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Race record</dt><dd style="margin:2px 0 0 0">The industry's marketing term for recordings by African American musicians, produced mainly for sale to Black listeners.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Ragtime</dt><dd style="margin:2px 0 0 0">A syncopated piano style built on repeated sixteen-bar strains, popularized by Scott Joplin.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Rock and roll</dt><dd style="margin:2px 0 0 0">A mid-1950s fusion of rhythm and blues, country, gospel, and pop, aimed at a newly powerful teenage market.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Sampling</dt><dd style="margin:2px 0 0 0">Digitally reusing a short segment of an existing recording as a building block of a new song.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Soul music</dt><dd style="margin:2px 0 0 0">A style built by applying gospel's vocal intensity and call-and-response patterns to secular rhythm and blues.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Streaming</dt><dd style="margin:2px 0 0 0">Delivering audio on demand over the internet rather than through a purchased physical or downloaded copy.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Strain</dt><dd style="margin:2px 0 0 0">A self-contained, usually sixteen-bar section of a rag or march, typically repeated before the music moves on.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Syncopation</dt><dd style="margin:2px 0 0 0">Accenting beats, or parts of beats, that the meter normally leaves weak.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Syncretism</dt><dd style="margin:2px 0 0 0">The thorough blending of separate musical traditions into a genuinely new whole.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Texture</dt><dd style="margin:2px 0 0 0">How many independent musical layers sound at once: monophonic, homophonic, or polyphonic.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Timbre</dt><dd style="margin:2px 0 0 0">The tone color that distinguishes one instrument or voice from another, even at the same pitch.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Tin Pan Alley</dt><dd style="margin:2px 0 0 0">New York's popular-song publishing business and the songwriting tradition it produced from the 1890s through the 1950s.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Twelve-bar blues</dt><dd style="margin:2px 0 0 0">A twelve-measure, three-phrase chord progression (I I I I / IV IV I I / V IV I I) underlying blues and early rock and roll.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Vernacular tradition</dt><dd style="margin:2px 0 0 0">Music created and transmitted mainly by ordinary people, outside the formal, notated concert tradition.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Wall of Sound</dt><dd style="margin:2px 0 0 0">Phil Spector's production technique of layering many instruments with heavy echo into one dense, unified sound.</dd>
     </dl>
   </div>
 
   <figure>
     <svg viewBox="0 0 720 230" role="img" aria-label="Recap of the three streams that this course's whole glossary ultimately traces back to">
-      <rect width="720" height="230" fill="#F5F7F9" rx="10"/>
-      <defs><marker id="glo-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5568"/></marker></defs>
-      <text x="360" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#2B4A6F">Three streams, one glossary</text>
-      <rect x="30" y="45" width="200" height="55" rx="10" fill="#2B4A6F"/>
+      <rect width="720" height="230" fill="#F4F8F5" rx="10"/>
+      <defs><marker id="glo-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5550"/></marker></defs>
+      <text x="360" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#154734">Three streams, one glossary</text>
+      <rect x="30" y="45" width="200" height="55" rx="10" fill="#154734"/>
       <text x="130" y="70" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">European-American</text>
-      <text x="130" y="90" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="11">AABA, countrypolitan, honky-tonk</text>
-      <rect x="260" y="45" width="200" height="55" rx="10" fill="#233C5C"/>
+      <text x="130" y="90" text-anchor="middle" fill="#D5E6DC" font-family="Arial, Helvetica, sans-serif" font-size="11">AABA, countrypolitan, honky-tonk</text>
+      <rect x="260" y="45" width="200" height="55" rx="10" fill="#103B2B"/>
       <text x="360" y="70" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">African-American</text>
-      <text x="360" y="90" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="11">syncopation, call &amp; response, gospel</text>
-      <rect x="490" y="45" width="200" height="55" rx="10" fill="#1C2F47"/>
+      <text x="360" y="90" text-anchor="middle" fill="#D5E6DC" font-family="Arial, Helvetica, sans-serif" font-size="11">syncopation, call &amp; response, gospel</text>
+      <rect x="490" y="45" width="200" height="55" rx="10" fill="#0E3326"/>
       <text x="590" y="70" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Latin-American</text>
-      <text x="590" y="90" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="11">clave, syncretism, salsa</text>
-      <path d="M130 100 C130 140, 280 150, 320 175" fill="none" stroke="#4A5568" stroke-width="3" marker-end="url(#glo-arr)"/>
-      <path d="M360 100 L360 175" fill="none" stroke="#4A5568" stroke-width="3" marker-end="url(#glo-arr)"/>
-      <path d="M590 100 C590 140, 440 150, 400 175" fill="none" stroke="#4A5568" stroke-width="3" marker-end="url(#glo-arr)"/>
-      <rect x="210" y="180" width="300" height="40" rx="10" fill="#9FACBD"/>
-      <text x="360" y="205" text-anchor="middle" fill="#1C2F47" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Every term above traces back to one of these three</text>
+      <text x="590" y="90" text-anchor="middle" fill="#D5E6DC" font-family="Arial, Helvetica, sans-serif" font-size="11">clave, syncretism, salsa</text>
+      <path d="M130 100 C130 140, 280 150, 320 175" fill="none" stroke="#4A5550" stroke-width="3" marker-end="url(#glo-arr)"/>
+      <path d="M360 100 L360 175" fill="none" stroke="#4A5550" stroke-width="3" marker-end="url(#glo-arr)"/>
+      <path d="M590 100 C590 140, 440 150, 400 175" fill="none" stroke="#4A5550" stroke-width="3" marker-end="url(#glo-arr)"/>
+      <rect x="210" y="180" width="300" height="40" rx="10" fill="#FFB81C"/>
+      <text x="360" y="205" text-anchor="middle" fill="#0E3326" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Every term above traces back to one of these three</text>
     </svg>
     <figcaption>Figure 2. Whatever era or genre a glossary term comes from, it ultimately belongs to one of the three streams this course opened with.</figcaption>
   </figure>
@@ -488,24 +488,24 @@
 
   <figure>
     <svg viewBox="0 0 720 230" role="img" aria-label="Diagrama que agrupa los términos del glosario en cinco grandes épocas del curso">
-      <rect width="720" height="230" fill="#F5F7F9" rx="10"/>
-      <text x="360" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#2B4A6F">De dónde vienen los términos del glosario</text>
+      <rect width="720" height="230" fill="#F4F8F5" rx="10"/>
+      <text x="360" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#154734">De dónde vienen los términos del glosario</text>
       <g font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#fff">
-        <rect x="15" y="45" width="132" height="40" rx="7" fill="#2B4A6F"/><text x="81" y="70" text-anchor="middle">Raíces y 1865–1910</text>
-        <rect x="157" y="45" width="132" height="40" rx="7" fill="#233C5C"/><text x="223" y="70" text-anchor="middle">Jazz y swing</text>
-        <rect x="299" y="45" width="132" height="40" rx="7" fill="#1C2F47"/><text x="365" y="70" text-anchor="middle">Posguerra y rock</text>
-        <rect x="441" y="45" width="132" height="40" rx="7" fill="#5E6B7C"/><text x="507" y="70" text-anchor="middle">Soul, funk, años 70</text>
-        <rect x="583" y="45" width="122" height="40" rx="7" fill="#2B4A6F"/><text x="644" y="70" text-anchor="middle">Años 80 a hoy</text>
+        <rect x="15" y="45" width="132" height="40" rx="7" fill="#154734"/><text x="81" y="70" text-anchor="middle">Raíces y 1865–1910</text>
+        <rect x="157" y="45" width="132" height="40" rx="7" fill="#103B2B"/><text x="223" y="70" text-anchor="middle">Jazz y swing</text>
+        <rect x="299" y="45" width="132" height="40" rx="7" fill="#0E3326"/><text x="365" y="70" text-anchor="middle">Posguerra y rock</text>
+        <rect x="441" y="45" width="132" height="40" rx="7" fill="#7A5A00"/><text x="507" y="70" text-anchor="middle">Soul, funk, años 70</text>
+        <rect x="583" y="45" width="122" height="40" rx="7" fill="#154734"/><text x="644" y="70" text-anchor="middle">Años 80 a hoy</text>
       </g>
-      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1B2A41">
+      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1B2A22">
         <text x="81" y="105" text-anchor="middle">síncopa</text><text x="81" y="121" text-anchor="middle">minstrel shows</text><text x="81" y="137" text-anchor="middle">disco racial</text>
         <text x="223" y="105" text-anchor="middle">bebop</text><text x="223" y="121" text-anchor="middle">canto crooner</text><text x="223" y="137" text-anchor="middle">boogie-woogie</text>
         <text x="365" y="105" text-anchor="middle">multipista</text><text x="365" y="121" text-anchor="middle">versión (cover)</text><text x="365" y="137" text-anchor="middle">rockabilly</text>
         <text x="507" y="105" text-anchor="middle">sonido Motown</text><text x="507" y="121" text-anchor="middle">fusión</text><text x="507" y="137" text-anchor="middle">clave</text>
         <text x="644" y="105" text-anchor="middle">muestreo</text><text x="644" y="121" text-anchor="middle">MTV</text><text x="644" y="137" text-anchor="middle">streaming</text>
       </g>
-      <text x="360" y="180" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Una muestra representativa de cada época; el glosario alfabético completo aparece abajo.</text>
-      <text x="360" y="200" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Muchos términos, como “crossover” y “síncopa”, reaparecen en más de una época.</text>
+      <text x="360" y="180" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5550">Una muestra representativa de cada época; el glosario alfabético completo aparece abajo.</text>
+      <text x="360" y="200" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5550">Muchos términos, como “crossover” y “síncopa”, reaparecen en más de una época.</text>
     </svg>
     <figcaption>Figura 1. Los cincuenta términos del glosario, agrupados de forma aproximada según la época del curso en la que apareció cada uno por primera vez.</figcaption>
   </figure>
@@ -513,78 +513,78 @@
   <h2>Glosario alfabético</h2>
   <div style="columns:1; font-size:.96em">
     <dl style="margin:0">
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">A&amp;R (artistas y repertorio; artists and repertoire)</dt><dd style="margin:2px 0 0 0">La función, dentro de una disquera, encargada de encontrar y contratar nuevos talentos.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Alternativo (alternative)</dt><dd style="margin:2px 0 0 0">Una categoría de mercadeo que la industria aplicó al rock basado en guitarras e identificado con lo “underground” una vez que se volvió rentable.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Bebop</dt><dd style="margin:2px 0 0 0">Un estilo de jazz para grupos pequeños, pensado para la escucha atenta y no para el baile, desarrollado por Charlie Parker y Dizzy Gillespie.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Bluegrass</dt><dd style="margin:2px 0 0 0">Un estilo virtuoso y rápido de banda de cuerdas que se consolidó en torno a la banda de Bill Monroe a mediados de la década de 1940.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Blues clásico (classic blues)</dt><dd style="margin:2px 0 0 0">Un estilo de blues teatral, acompañado por una banda de jazz, que popularizaron en disco en la década de 1920 cantantes como Bessie Smith.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Blues de doce compases (twelve-bar blues)</dt><dd style="margin:2px 0 0 0">Una progresión de acordes de doce compases y tres frases (I I I I / IV IV I I / V IV I I) que sirve de base al blues y al primer rock and roll.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Boogie-woogie</dt><dd style="margin:2px 0 0 0">Un estilo de piano con un patrón de bajo repetitivo e insistente en la mano izquierda, bajo figuras improvisadas en la mano derecha.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Canto crooner (crooning)</dt><dd style="margin:2px 0 0 0">Un estilo de canto íntimo y conversacional que el micrófono hizo posible a partir de mediados de la década de 1920.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Clave</dt><dd style="margin:2px 0 0 0">Un patrón rítmico breve y repetitivo que organiza la salsa y otras músicas afrocubanas y latinoamericanas.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Country neotradicional (neotraditional country)</dt><dd style="margin:2px 0 0 0">Un movimiento de la década de 1980 que devolvió la música country a sus raíces honky-tonk, como reacción contra la producción countrypolitan orientada al pop.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Countrypolitan (Nashville Sound)</dt><dd style="margin:2px 0 0 0">Un estilo de country pulido y orientado al pop, de finales de la década de 1950 y de la de 1960, construido sobre cuerdas y voces suaves.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Crossover</dt><dd style="margin:2px 0 0 0">Una grabación que triunfa en la lista de éxitos del pop general después de triunfar, o al mismo tiempo que triunfa, en una lista especializada.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Cuatro elementos del hip-hop (hip-hop’s four elements)</dt><dd style="margin:2px 0 0 0">El DJing, el MCing, el breaking y el grafiti: las prácticas fundacionales de la cultura hip-hop.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Dinámica (dynamics)</dt><dd style="margin:2px 0 0 0">El elemento de la música que describe qué tan fuerte o suave suena un pasaje.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Disco compacto, CD (compact disc)</dt><dd style="margin:2px 0 0 0">Un formato de audio digital, lanzado comercialmente en 1982, que almacena el sonido como datos leídos por un láser.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Disco racial (race record)</dt><dd style="margin:2px 0 0 0">El término comercial de la industria para las grabaciones de músicos afroamericanos, producidas principalmente para venderse al público negro.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Elementos de la música (elements of music)</dt><dd style="margin:2px 0 0 0">Tempo, ritmo, altura, timbre, melodía, dinámica, textura y forma: los ocho componentes básicos de cualquier obra musical.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Fonógrafo (phonograph)</dt><dd style="margin:2px 0 0 0">El aparato de grabación y reproducción de sonido que Thomas Edison creó en 1877, la primera tecnología práctica de su tipo.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Forma AABA (AABA form)</dt><dd style="margin:2px 0 0 0">Un estribillo de canción popular de treinta y dos compases construido con dos secciones A iguales, un puente contrastante y una sección A final.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Fusión, jazz fusión (fusion, jazz fusion)</dt><dd style="margin:2px 0 0 0">Un estilo que combina la improvisación del jazz con la instrumentación eléctrica y el impulso rítmico del rock y el funk.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Gangsta rap</dt><dd style="margin:2px 0 0 0">Un estilo de hip-hop que describe la vida en la calle, el crimen y los conflictos con la policía en un lenguaje directo y a menudo crudo.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Gospel</dt><dd style="margin:2px 0 0 0">Una tradición vocal religiosa construida sobre los espirituales, la llamada y respuesta y una intensa expresividad vocal.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Grabación eléctrica (electrical recording)</dt><dd style="margin:2px 0 0 0">Captar el sonido mediante un micrófono y amplificación eléctrica en lugar de una bocina acústica; era la norma a mediados de la década de 1920.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Grabación multipista (multitrack recording)</dt><dd style="margin:2px 0 0 0">Construir una grabación a partir de varias interpretaciones separadas y superpuestas; Les Paul fue su pionero en cinta.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Grunge</dt><dd style="margin:2px 0 0 0">Un estilo de rock nacido en Seattle que combina la actitud cruda del punk con el sonido pesado y distorsionado de las guitarras del metal.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Hardcore punk</dt><dd style="margin:2px 0 0 0">Una extensión del punk más rápida, más despojada y más confrontativa, desarrollada en la Costa Oeste a principios de la década de 1980.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Honky-tonk</dt><dd style="margin:2px 0 0 0">Un estilo de country enérgico y electrificado, asociado con los salones de baile de Texas y Oklahoma y con letras directas sobre la vida dura.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Llamada y respuesta (call and response)</dt><dd style="margin:2px 0 0 0">Una conversación musical en la que un grupo responde a la frase de un solista; es central en la corriente afroamericana.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Melisma (melisma)</dt><dd style="margin:2px 0 0 0">Cantar una sola sílaba del texto a lo largo de varias alturas; es un sello del estilo vocal del gospel y el soul.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Minstrel shows (minstrelsy)</dt><dd style="margin:2px 0 0 0">Un espectáculo teatral racista con actores pintados de negro (blackface) y la primera forma de arte popular masivo de Estados Unidos, que hoy se recuerda con vergüenza e indignación.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">MTV</dt><dd style="margin:2px 0 0 0">Un canal de cable lanzado en 1981 que transmitía videoclips las veinticuatro horas, lo que hizo del video un elemento central en la promoción de un éxito.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Muestreo (sampling)</dt><dd style="margin:2px 0 0 0">Reutilizar digitalmente un fragmento breve de una grabación existente como componente de una canción nueva.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Música soul (soul music)</dt><dd style="margin:2px 0 0 0">Un estilo que aplica la intensidad vocal y los patrones de llamada y respuesta del gospel al rhythm and blues profano.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">New wave (nueva ola)</dt><dd style="margin:2px 0 0 0">Un término general de finales de la década de 1970 para bandas que compartían los orígenes independientes del punk, pero preferían sonidos más eclécticos y con mayor conciencia artística.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Nota blue (blue note)</dt><dd style="margin:2px 0 0 0">Una altura, a menudo el tercer, quinto o séptimo grado de la escala, que se dobla o se baja deliberadamente para lograr un efecto expresivo.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Polirritmia (polyrhythm)</dt><dd style="margin:2px 0 0 0">Dos o más patrones rítmicos independientes que suenan al mismo tiempo.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Ragtime</dt><dd style="margin:2px 0 0 0">Un estilo de piano sincopado construido sobre secciones (strains) de dieciséis compases que se repiten, popularizado por Scott Joplin.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Rock and roll</dt><dd style="margin:2px 0 0 0">Una fusión de rhythm and blues, country, gospel y pop, surgida a mediados de la década de 1950 y dirigida a un mercado adolescente con un nuevo poder adquisitivo.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Rock orientado al álbum, AOR (album-oriented rock)</dt><dd style="margin:2px 0 0 0">Un formato de radio FM de la década de 1970 construido en torno a álbumes completos de rock, y no a sencillos, dirigido a un público joven.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Síncopa (syncopation)</dt><dd style="margin:2px 0 0 0">Acentuar tiempos, o partes de tiempos, que el compás normalmente deja débiles.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Sincretismo (syncretism)</dt><dd style="margin:2px 0 0 0">La mezcla profunda de tradiciones musicales separadas en un todo verdaderamente nuevo.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Sonido Motown (Motown sound)</dt><dd style="margin:2px 0 0 0">El estilo de rhythm and blues pulido y orientado al pop que se desarrolló en Motown Records para un público amplio y racialmente mixto.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Strain (sección)</dt><dd style="margin:2px 0 0 0">Una sección autónoma de un rag o una marcha, generalmente de dieciséis compases, que suele repetirse antes de que la música avance.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Streaming</dt><dd style="margin:2px 0 0 0">La entrega de audio a pedido por internet, en lugar de mediante una copia física o descargada que se compra.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Textura (texture)</dt><dd style="margin:2px 0 0 0">Cuántas capas musicales independientes suenan a la vez: monofónica, homofónica o polifónica.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Timbre (timbre)</dt><dd style="margin:2px 0 0 0">El color del sonido que distingue un instrumento o una voz de otro, incluso con la misma altura.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Tin Pan Alley</dt><dd style="margin:2px 0 0 0">La industria editorial de canciones populares de Nueva York y la tradición de composición que produjo desde la década de 1890 hasta la de 1950.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Tradición vernácula (vernacular tradition)</dt><dd style="margin:2px 0 0 0">Música creada y transmitida principalmente por gente común, fuera de la tradición formal y escrita de la sala de conciertos.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Versión o cover (cover version)</dt><dd style="margin:2px 0 0 0">Una grabación de una canción que ya había grabado otro artista, a menudo hecha para sacar provecho de un éxito existente.</dd>
-      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#2B4A6F; margin-top:12px">Wall of Sound (muro de sonido)</dt><dd style="margin:2px 0 0 0">La técnica de producción de Phil Spector, que superponía muchos instrumentos con abundante eco en un solo sonido denso y unificado.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">A&amp;R (artistas y repertorio; artists and repertoire)</dt><dd style="margin:2px 0 0 0">La función, dentro de una disquera, encargada de encontrar y contratar nuevos talentos.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Alternativo (alternative)</dt><dd style="margin:2px 0 0 0">Una categoría de mercadeo que la industria aplicó al rock basado en guitarras e identificado con lo “underground” una vez que se volvió rentable.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Bebop</dt><dd style="margin:2px 0 0 0">Un estilo de jazz para grupos pequeños, pensado para la escucha atenta y no para el baile, desarrollado por Charlie Parker y Dizzy Gillespie.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Bluegrass</dt><dd style="margin:2px 0 0 0">Un estilo virtuoso y rápido de banda de cuerdas que se consolidó en torno a la banda de Bill Monroe a mediados de la década de 1940.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Blues clásico (classic blues)</dt><dd style="margin:2px 0 0 0">Un estilo de blues teatral, acompañado por una banda de jazz, que popularizaron en disco en la década de 1920 cantantes como Bessie Smith.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Blues de doce compases (twelve-bar blues)</dt><dd style="margin:2px 0 0 0">Una progresión de acordes de doce compases y tres frases (I I I I / IV IV I I / V IV I I) que sirve de base al blues y al primer rock and roll.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Boogie-woogie</dt><dd style="margin:2px 0 0 0">Un estilo de piano con un patrón de bajo repetitivo e insistente en la mano izquierda, bajo figuras improvisadas en la mano derecha.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Canto crooner (crooning)</dt><dd style="margin:2px 0 0 0">Un estilo de canto íntimo y conversacional que el micrófono hizo posible a partir de mediados de la década de 1920.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Clave</dt><dd style="margin:2px 0 0 0">Un patrón rítmico breve y repetitivo que organiza la salsa y otras músicas afrocubanas y latinoamericanas.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Country neotradicional (neotraditional country)</dt><dd style="margin:2px 0 0 0">Un movimiento de la década de 1980 que devolvió la música country a sus raíces honky-tonk, como reacción contra la producción countrypolitan orientada al pop.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Countrypolitan (Nashville Sound)</dt><dd style="margin:2px 0 0 0">Un estilo de country pulido y orientado al pop, de finales de la década de 1950 y de la de 1960, construido sobre cuerdas y voces suaves.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Crossover</dt><dd style="margin:2px 0 0 0">Una grabación que triunfa en la lista de éxitos del pop general después de triunfar, o al mismo tiempo que triunfa, en una lista especializada.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Cuatro elementos del hip-hop (hip-hop’s four elements)</dt><dd style="margin:2px 0 0 0">El DJing, el MCing, el breaking y el grafiti: las prácticas fundacionales de la cultura hip-hop.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Dinámica (dynamics)</dt><dd style="margin:2px 0 0 0">El elemento de la música que describe qué tan fuerte o suave suena un pasaje.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Disco compacto, CD (compact disc)</dt><dd style="margin:2px 0 0 0">Un formato de audio digital, lanzado comercialmente en 1982, que almacena el sonido como datos leídos por un láser.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Disco racial (race record)</dt><dd style="margin:2px 0 0 0">El término comercial de la industria para las grabaciones de músicos afroamericanos, producidas principalmente para venderse al público negro.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Elementos de la música (elements of music)</dt><dd style="margin:2px 0 0 0">Tempo, ritmo, altura, timbre, melodía, dinámica, textura y forma: los ocho componentes básicos de cualquier obra musical.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Fonógrafo (phonograph)</dt><dd style="margin:2px 0 0 0">El aparato de grabación y reproducción de sonido que Thomas Edison creó en 1877, la primera tecnología práctica de su tipo.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Forma AABA (AABA form)</dt><dd style="margin:2px 0 0 0">Un estribillo de canción popular de treinta y dos compases construido con dos secciones A iguales, un puente contrastante y una sección A final.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Fusión, jazz fusión (fusion, jazz fusion)</dt><dd style="margin:2px 0 0 0">Un estilo que combina la improvisación del jazz con la instrumentación eléctrica y el impulso rítmico del rock y el funk.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Gangsta rap</dt><dd style="margin:2px 0 0 0">Un estilo de hip-hop que describe la vida en la calle, el crimen y los conflictos con la policía en un lenguaje directo y a menudo crudo.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Gospel</dt><dd style="margin:2px 0 0 0">Una tradición vocal religiosa construida sobre los espirituales, la llamada y respuesta y una intensa expresividad vocal.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Grabación eléctrica (electrical recording)</dt><dd style="margin:2px 0 0 0">Captar el sonido mediante un micrófono y amplificación eléctrica en lugar de una bocina acústica; era la norma a mediados de la década de 1920.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Grabación multipista (multitrack recording)</dt><dd style="margin:2px 0 0 0">Construir una grabación a partir de varias interpretaciones separadas y superpuestas; Les Paul fue su pionero en cinta.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Grunge</dt><dd style="margin:2px 0 0 0">Un estilo de rock nacido en Seattle que combina la actitud cruda del punk con el sonido pesado y distorsionado de las guitarras del metal.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Hardcore punk</dt><dd style="margin:2px 0 0 0">Una extensión del punk más rápida, más despojada y más confrontativa, desarrollada en la Costa Oeste a principios de la década de 1980.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Honky-tonk</dt><dd style="margin:2px 0 0 0">Un estilo de country enérgico y electrificado, asociado con los salones de baile de Texas y Oklahoma y con letras directas sobre la vida dura.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Llamada y respuesta (call and response)</dt><dd style="margin:2px 0 0 0">Una conversación musical en la que un grupo responde a la frase de un solista; es central en la corriente afroamericana.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Melisma (melisma)</dt><dd style="margin:2px 0 0 0">Cantar una sola sílaba del texto a lo largo de varias alturas; es un sello del estilo vocal del gospel y el soul.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Minstrel shows (minstrelsy)</dt><dd style="margin:2px 0 0 0">Un espectáculo teatral racista con actores pintados de negro (blackface) y la primera forma de arte popular masivo de Estados Unidos, que hoy se recuerda con vergüenza e indignación.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">MTV</dt><dd style="margin:2px 0 0 0">Un canal de cable lanzado en 1981 que transmitía videoclips las veinticuatro horas, lo que hizo del video un elemento central en la promoción de un éxito.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Muestreo (sampling)</dt><dd style="margin:2px 0 0 0">Reutilizar digitalmente un fragmento breve de una grabación existente como componente de una canción nueva.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Música soul (soul music)</dt><dd style="margin:2px 0 0 0">Un estilo que aplica la intensidad vocal y los patrones de llamada y respuesta del gospel al rhythm and blues profano.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">New wave (nueva ola)</dt><dd style="margin:2px 0 0 0">Un término general de finales de la década de 1970 para bandas que compartían los orígenes independientes del punk, pero preferían sonidos más eclécticos y con mayor conciencia artística.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Nota blue (blue note)</dt><dd style="margin:2px 0 0 0">Una altura, a menudo el tercer, quinto o séptimo grado de la escala, que se dobla o se baja deliberadamente para lograr un efecto expresivo.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Polirritmia (polyrhythm)</dt><dd style="margin:2px 0 0 0">Dos o más patrones rítmicos independientes que suenan al mismo tiempo.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Ragtime</dt><dd style="margin:2px 0 0 0">Un estilo de piano sincopado construido sobre secciones (strains) de dieciséis compases que se repiten, popularizado por Scott Joplin.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Rock and roll</dt><dd style="margin:2px 0 0 0">Una fusión de rhythm and blues, country, gospel y pop, surgida a mediados de la década de 1950 y dirigida a un mercado adolescente con un nuevo poder adquisitivo.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Rock orientado al álbum, AOR (album-oriented rock)</dt><dd style="margin:2px 0 0 0">Un formato de radio FM de la década de 1970 construido en torno a álbumes completos de rock, y no a sencillos, dirigido a un público joven.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Síncopa (syncopation)</dt><dd style="margin:2px 0 0 0">Acentuar tiempos, o partes de tiempos, que el compás normalmente deja débiles.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Sincretismo (syncretism)</dt><dd style="margin:2px 0 0 0">La mezcla profunda de tradiciones musicales separadas en un todo verdaderamente nuevo.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Sonido Motown (Motown sound)</dt><dd style="margin:2px 0 0 0">El estilo de rhythm and blues pulido y orientado al pop que se desarrolló en Motown Records para un público amplio y racialmente mixto.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Strain (sección)</dt><dd style="margin:2px 0 0 0">Una sección autónoma de un rag o una marcha, generalmente de dieciséis compases, que suele repetirse antes de que la música avance.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Streaming</dt><dd style="margin:2px 0 0 0">La entrega de audio a pedido por internet, en lugar de mediante una copia física o descargada que se compra.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Textura (texture)</dt><dd style="margin:2px 0 0 0">Cuántas capas musicales independientes suenan a la vez: monofónica, homofónica o polifónica.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Timbre (timbre)</dt><dd style="margin:2px 0 0 0">El color del sonido que distingue un instrumento o una voz de otro, incluso con la misma altura.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Tin Pan Alley</dt><dd style="margin:2px 0 0 0">La industria editorial de canciones populares de Nueva York y la tradición de composición que produjo desde la década de 1890 hasta la de 1950.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Tradición vernácula (vernacular tradition)</dt><dd style="margin:2px 0 0 0">Música creada y transmitida principalmente por gente común, fuera de la tradición formal y escrita de la sala de conciertos.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Versión o cover (cover version)</dt><dd style="margin:2px 0 0 0">Una grabación de una canción que ya había grabado otro artista, a menudo hecha para sacar provecho de un éxito existente.</dd>
+      <dt style="font-family:'Montserrat','Segoe UI',Arial,sans-serif; font-weight:700; color:#154734; margin-top:12px">Wall of Sound (muro de sonido)</dt><dd style="margin:2px 0 0 0">La técnica de producción de Phil Spector, que superponía muchos instrumentos con abundante eco en un solo sonido denso y unificado.</dd>
     </dl>
   </div>
 
   <figure>
     <svg viewBox="0 0 720 230" role="img" aria-label="Resumen de las tres corrientes a las que, en última instancia, se remonta todo el glosario del curso">
-      <rect width="720" height="230" fill="#F5F7F9" rx="10"/>
-      <defs><marker id="glo-arr-es" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5568"/></marker></defs>
-      <text x="360" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#2B4A6F">Tres corrientes, un solo glosario</text>
-      <rect x="30" y="45" width="200" height="55" rx="10" fill="#2B4A6F"/>
+      <rect width="720" height="230" fill="#F4F8F5" rx="10"/>
+      <defs><marker id="glo-arr-es" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5550"/></marker></defs>
+      <text x="360" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#154734">Tres corrientes, un solo glosario</text>
+      <rect x="30" y="45" width="200" height="55" rx="10" fill="#154734"/>
       <text x="130" y="70" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Euroamericana</text>
-      <text x="130" y="90" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="11">AABA, countrypolitan, honky-tonk</text>
-      <rect x="260" y="45" width="200" height="55" rx="10" fill="#233C5C"/>
+      <text x="130" y="90" text-anchor="middle" fill="#D5E6DC" font-family="Arial, Helvetica, sans-serif" font-size="11">AABA, countrypolitan, honky-tonk</text>
+      <rect x="260" y="45" width="200" height="55" rx="10" fill="#103B2B"/>
       <text x="360" y="70" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Afroamericana</text>
-      <text x="360" y="90" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="11">síncopa, gospel, llamada y respuesta</text>
-      <rect x="490" y="45" width="200" height="55" rx="10" fill="#1C2F47"/>
+      <text x="360" y="90" text-anchor="middle" fill="#D5E6DC" font-family="Arial, Helvetica, sans-serif" font-size="11">síncopa, gospel, llamada y respuesta</text>
+      <rect x="490" y="45" width="200" height="55" rx="10" fill="#0E3326"/>
       <text x="590" y="70" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Latinoamericana</text>
-      <text x="590" y="90" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="11">clave, sincretismo, salsa</text>
-      <path d="M130 100 C130 140, 280 150, 320 175" fill="none" stroke="#4A5568" stroke-width="3" marker-end="url(#glo-arr-es)"/>
-      <path d="M360 100 L360 175" fill="none" stroke="#4A5568" stroke-width="3" marker-end="url(#glo-arr-es)"/>
-      <path d="M590 100 C590 140, 440 150, 400 175" fill="none" stroke="#4A5568" stroke-width="3" marker-end="url(#glo-arr-es)"/>
-      <rect x="210" y="180" width="300" height="40" rx="10" fill="#9FACBD"/>
-      <text x="360" y="205" text-anchor="middle" fill="#1C2F47" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Todo término viene de una de estas tres</text>
+      <text x="590" y="90" text-anchor="middle" fill="#D5E6DC" font-family="Arial, Helvetica, sans-serif" font-size="11">clave, sincretismo, salsa</text>
+      <path d="M130 100 C130 140, 280 150, 320 175" fill="none" stroke="#4A5550" stroke-width="3" marker-end="url(#glo-arr-es)"/>
+      <path d="M360 100 L360 175" fill="none" stroke="#4A5550" stroke-width="3" marker-end="url(#glo-arr-es)"/>
+      <path d="M590 100 C590 140, 440 150, 400 175" fill="none" stroke="#4A5550" stroke-width="3" marker-end="url(#glo-arr-es)"/>
+      <rect x="210" y="180" width="300" height="40" rx="10" fill="#FFB81C"/>
+      <text x="360" y="205" text-anchor="middle" fill="#0E3326" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Todo término viene de una de estas tres</text>
     </svg>
     <figcaption>Figura 2. Sea cual sea la época o el género del que provenga un término del glosario, en última instancia pertenece a una de las tres corrientes con las que comenzó este curso.</figcaption>
   </figure>
@@ -968,7 +968,7 @@
   /* ---------- 14. Interactive map ---------- */
   document.querySelectorAll('[data-widget="map"]').forEach(function(w){
     var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
-    var COL=['#2B4A6F','#5E6B7C','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var COL=['#154734','#7A5A00','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
     var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
     var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
     routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
@@ -992,7 +992,7 @@
     function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
     function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
       var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
-      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#9FACBD','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#FFB81C','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
       else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
     svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
     svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
@@ -1065,5 +1065,19 @@
   });
 })();
 </script>
+<script>/* a11y patch 2026-09 */(function(){
+function isES(el){var m=el.closest('main');return !!(m&&m.getAttribute('lang')==='es');}
+function run(){
+document.querySelectorAll('[data-widget]').forEach(function(w){
+  var n=0;w.querySelectorAll('select').forEach(function(s){n++;if(!s.getAttribute('aria-label')&&!s.labels.length)s.setAttribute('aria-label',(isES(s)?'Elige la palabra para el espacio ':'Choose the word for blank ')+n);});
+  var k=0;w.querySelectorAll('.h5p-blank').forEach(function(b){k++;var i=k,es=isES(b);
+    function upd(){var t=b.textContent,c=b.classList;b.setAttribute('aria-label',(es?'Espacio ':'Blank ')+i+': '+(t||(es?'vacío':'empty'))+(c.contains('ok')?(es?', correcto':', correct'):c.contains('bad')?(es?', incorrecto':', incorrect'):''));}
+    upd();new MutationObserver(upd).observe(b,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:['class']});});
+});
+document.querySelectorAll('svg[role="img"]').forEach(function(s){if(s.querySelector('[tabindex],a,button,[role="button"]'))s.setAttribute('role','group');});
+document.addEventListener('keydown',function(e){var t=e.target;if(e.defaultPrevented||!(e.key==='Enter'||e.key===' '))return;if(!t.getAttribute||t.getAttribute('role')!=='button'||/^(BUTTON|A|INPUT|SELECT|TEXTAREA)$/.test(t.tagName))return;e.preventDefault();t.click();});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(run,0);});else setTimeout(run,0);
+})();</script>
 </body>
 </html>

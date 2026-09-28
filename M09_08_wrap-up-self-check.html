@@ -7,10 +7,10 @@
 <!--
   AMERICAN MUSIC — SELF-CONTAINED PAGE
   ===================================================================
-  Palette: Navy #2B4A6F · Slate #9FACBD
-    Navy dark  #1C2F47  (header/footer bands)      Navy deep #233C5C (hover)
-    Navy tint  #EBEFF4 / #DBE1E9 (callouts)         Slate soft #EEF1F5  Slate dark #5E6B7C
-    Ink #1B2A41 · Muted #4A5568 · Border #CDD4DD
+  Palette: Navy #154734 · Slate #FFB81C
+    Navy dark  #0E3326  (header/footer bands)      Navy deep #103B2B (hover)
+    Navy tint  #E7F1EB / #D5E6DC (callouts)         Slate soft #FFF5DC  Slate dark #7A5A00
+    Ink #1B2A22 · Muted #4A5550 · Border #C9D8CE
     Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
   RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
   or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
@@ -19,10 +19,10 @@
 -->
 <style>
   :root{
-    --am-navy:#2B4A6F; --am-navy-dark:#1C2F47; --am-navy-deep:#233C5C;
-    --am-slate:#9FACBD; --am-slate-dark:#5E6B7C; --am-slate-soft:#EEF1F5;
-    --am-tint:#EBEFF4; --am-tint2:#DBE1E9; --am-mist:#F5F7F9;
-    --am-ink:#1B2A41; --am-muted:#4A5568; --am-border:#CDD4DD;
+    --am-navy:#154734; --am-navy-dark:#0E3326; --am-navy-deep:#103B2B;
+    --am-slate:#FFB81C; --am-slate-dark:#7A5A00; --am-slate-soft:#FFF5DC;
+    --am-tint:#E7F1EB; --am-tint2:#D5E6DC; --am-mist:#F4F8F5;
+    --am-ink:#1B2A22; --am-muted:#4A5550; --am-border:#C9D8CE;
     --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
     --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
     --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
@@ -41,7 +41,7 @@
   h2{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:1.35em; margin:34px 0 10px; padding-left:12px; border-left:6px solid var(--am-slate)}
   h3{font-family:var(--head); font-weight:600; color:var(--am-navy); font-size:1.1em; margin:24px 0 8px}
   a{color:var(--am-navy-deep)}
-  .am-lead{font-size:1.08em; font-style:italic; color:#3d4a5c; margin:14px 0 20px}
+  .am-lead{font-size:1.08em; font-style:italic; color:#3D4A43; margin:14px 0 20px}
   /* Callouts */
   .am-objectives{background:var(--am-tint); border-left:6px solid var(--am-navy); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
   .am-label{margin:0 0 6px; font-family:var(--head); font-weight:700; color:var(--am-navy); text-transform:uppercase; letter-spacing:1.5px; font-size:.82em}
@@ -49,13 +49,13 @@
   .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
   .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
   .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
-  .am-note{background:#F6F7F9; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  .am-note{background:#FFF8E6; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
   figure{margin:24px 0; text-align:center}
   figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
   figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
   figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
   /* Listening guide */
-  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(28,47,71,.08)}
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(14,51,38,.08)}
   .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
   .am-listen__head svg{width:26px; height:26px; flex:none}
   .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
@@ -63,14 +63,14 @@
   .am-listen__body{padding:14px 18px}
   .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
   .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
-  .am-listen__link:hover{background:#C7D0DB}
+  .am-listen__link:hover{background:#FFD266}
   .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
   .am-listen__log label{cursor:pointer}
   /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
-  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#1C2F47; cursor:pointer}
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#0E3326; cursor:pointer}
   .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
   .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
-  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(28,47,71,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(14,51,38,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
   .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
   .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
   .am-audio{width:100%; margin:0 0 14px; display:block}
@@ -82,9 +82,9 @@
   .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
   .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
   .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
-  .am-btn--slate:hover{background:#C7D0DB}
+  .am-btn--slate:hover{background:#FFD266}
   /* ============ H5P-STYLE ACTIVITY SHELL ============ */
-  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(28,47,71,.1)}
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(14,51,38,.1)}
   .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
   .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
   .h5p-act__body{padding:18px 20px}
@@ -164,7 +164,7 @@
   .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
   .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
   .h5p-form-sec:hover{transform:translateY(-2px)}
-  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(159,172,189,.35)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(255,184,28,.35)}
   .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
   .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
   /* Hotspots (inline SVG) */
@@ -180,12 +180,12 @@
   /* Piano */
   .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
   .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
-  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F5F7F9); border:1px solid #9FB3CC; border-bottom:8px solid #CDD4DD; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
-  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2C3E57,#0F1B2B); border:1px solid #000; border-bottom:9px solid #1B2A41; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F4F8F5); border:1px solid #A9C2B3; border-bottom:8px solid #C9D8CE; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2B3A33,#0F1B15); border:1px solid #000; border-bottom:9px solid #1B2A22; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
   .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
   .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
-  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(159,172,189,.55)}
-  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(159,172,189,.8)}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(255,184,28,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(255,184,28,.8)}
   .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
   .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
   .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
@@ -214,13 +214,13 @@
   .h5p-br-pts li.alert::before{content:"⚠"; color:var(--am-slate-dark)}
   .h5p-br-pts li.no::before{content:"✖"; color:var(--bad)}
   /* Interactive map */
-  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F5F7F9}
+  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F4F8F5}
   .h5p-map-m{cursor:pointer}
   .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
   .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
-  .h5p-map-m.on circle{stroke:#1C2F47; stroke-width:4}
-  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#9FACBD; stroke-width:5}
-  .h5p-map-route{fill:none; stroke:#5E6B7C; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-m.on circle{stroke:#0E3326; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#FFB81C; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#7A5A00; stroke-width:2.5; stroke-dasharray:7 5}
   .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
   .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
   .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
@@ -234,10 +234,10 @@
   .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
   .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
   .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
-  .h5p-fs-found circle{fill:none; stroke:#9FACBD; stroke-width:5}
-  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#1C2F47; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-found circle{fill:none; stroke:#FFB81C; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#0E3326; paint-order:stroke; stroke:#fff; stroke-width:4px}
   .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
-  .h5p-fs-cross{fill:none; stroke:#1C2F47; stroke-width:2}
+  .h5p-fs-cross{fill:none; stroke:#0E3326; stroke-width:2}
   @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
   /* Era timeline */
   .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
@@ -269,7 +269,7 @@
   .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
   .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
   .h5p-ds-card.ok::before{content:"✔ "}
-  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(28,47,71,.3); cursor:grabbing}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(14,51,38,.3); cursor:grabbing}
   .h5p-ds-card.shake{animation:h5pShake .4s}
   .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
   @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
@@ -292,7 +292,7 @@
   @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
   .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
-/* header wrap fix 2026-09 */
+/* header wrap fix 2026-09 */ /* Baylor colors 2026-09 */
 .am-topbar{flex-wrap:wrap; row-gap:10px}
 .am-wordmark{min-width:0}
 .am-coursebar{flex:1 1 160px; min-width:0}
@@ -301,7 +301,7 @@
 </head>
 <body>
 <header class="am-topbar">
-  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#9FACBD"/><path d="M13 30V11l14 5v14" fill="none" stroke="#1C2F47" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#1C2F47"/><circle cx="24.5" cy="30" r="3.6" fill="#1C2F47"/></svg>
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#FFB81C"/><path d="M13 30V11l14 5v14" fill="none" stroke="#0E3326" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#0E3326"/><circle cx="24.5" cy="30" r="3.6" fill="#0E3326"/></svg>
   <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
   <div class="am-coursebar"><span class="am-l-en">Module 9: The Early 1960s<br>Page 9 of 9</span><span class="am-l-es">Módulo 9: Los primeros años sesenta<br>Página 9 de 9</span></div>
   <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
@@ -337,77 +337,77 @@
   <div style="overflow-x:auto">
     <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:.95em">
       <thead>
-        <tr style="background:#2B4A6F; color:#fff">
-          <th style="text-align:left; padding:8px 12px; border:1px solid #CDD4DD">Name</th>
-          <th style="text-align:left; padding:8px 12px; border:1px solid #CDD4DD">Why they matter</th>
+        <tr style="background:#154734; color:#fff">
+          <th style="text-align:left; padding:8px 12px; border:1px solid #C9D8CE">Name</th>
+          <th style="text-align:left; padding:8px 12px; border:1px solid #C9D8CE">Why they matter</th>
         </tr>
       </thead>
       <tbody>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Chubby Checker</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Recorded the cover of "The Twist" that launched the dance-craze era in 1960.</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Phil Spector</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Producer at Philles Records who developed the Wall of Sound production technique.</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>The Ronettes &amp; the Crystals</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Philles Records vocal groups whose recordings define the Wall of Sound; "Be My Baby," "Uptown."</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Berry Gordy Jr.</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Founded Motown Records and organized it into an assembly-line hit-making operation.</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>The Temptations</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Motown male vocal group; "My Girl" (Smokey Robinson) and "Get Ready."</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>The Supremes</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Motown's most commercially successful act, led by Diana Ross; "Baby Love," "You Can't Hurry Love."</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Brian Wilson</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Beach Boys songwriter and producer behind "Surfin' USA" and "Fun, Fun, Fun."</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>The Beatles</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Liverpool group whose "I Want to Hold Your Hand" hit #1 in the U.S. in February 1964, triggering Beatlemania.</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Brian Epstein &amp; George Martin</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">The Beatles' manager and record producer, respectively, key to their British and American breakthroughs.</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Ray Barretto</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Puerto Rican American conga player whose "El Watusi" (1963) crossed onto the pop chart.</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Herb Alpert</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Trumpeter, co-founder of A&amp;M Records, led the mariachi-inspired Tijuana Brass.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Chubby Checker</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Recorded the cover of "The Twist" that launched the dance-craze era in 1960.</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Phil Spector</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Producer at Philles Records who developed the Wall of Sound production technique.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>The Ronettes &amp; the Crystals</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Philles Records vocal groups whose recordings define the Wall of Sound; "Be My Baby," "Uptown."</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Berry Gordy Jr.</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Founded Motown Records and organized it into an assembly-line hit-making operation.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>The Temptations</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Motown male vocal group; "My Girl" (Smokey Robinson) and "Get Ready."</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>The Supremes</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Motown's most commercially successful act, led by Diana Ross; "Baby Love," "You Can't Hurry Love."</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Brian Wilson</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Beach Boys songwriter and producer behind "Surfin' USA" and "Fun, Fun, Fun."</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>The Beatles</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Liverpool group whose "I Want to Hold Your Hand" hit #1 in the U.S. in February 1964, triggering Beatlemania.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Brian Epstein &amp; George Martin</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">The Beatles' manager and record producer, respectively, key to their British and American breakthroughs.</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Ray Barretto</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Puerto Rican American conga player whose "El Watusi" (1963) crossed onto the pop chart.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Herb Alpert</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Trumpeter, co-founder of A&amp;M Records, led the mariachi-inspired Tijuana Brass.</td></tr>
       </tbody>
     </table>
   </div>
 
   <figure>
     <svg viewBox="0 0 720 240" role="img" aria-label="Recap timeline of the module, 1960 to 1964" id="wrap9-tl">
-      <rect width="720" height="240" fill="#F5F7F9" rx="10"/>
-      <line x1="60" y1="125" x2="660" y2="125" stroke="#2B4A6F" stroke-width="4"/>
+      <rect width="720" height="240" fill="#F4F8F5" rx="10"/>
+      <line x1="60" y1="125" x2="660" y2="125" stroke="#154734" stroke-width="4"/>
       <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-        <circle cx="100" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="100" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">1960</text>
-        <text x="100" y="150" font-size="11" fill="#1B2A41"><tspan x="100" dy="0">"The Twist"</tspan><tspan x="100" dy="14">hits #1</tspan></text>
+        <circle cx="100" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="100" y="103" font-size="12" font-weight="bold" fill="#154734">1960</text>
+        <text x="100" y="150" font-size="11" fill="#1B2A22"><tspan x="100" dy="0">"The Twist"</tspan><tspan x="100" dy="14">hits #1</tspan></text>
 
-        <circle cx="235" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="235" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">1960-61</text>
-        <text x="235" y="150" font-size="11" fill="#1B2A41"><tspan x="235" dy="0">Motown &amp; Philles</tspan><tspan x="235" dy="14">Records launch</tspan></text>
+        <circle cx="235" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="235" y="103" font-size="12" font-weight="bold" fill="#154734">1960-61</text>
+        <text x="235" y="150" font-size="11" fill="#1B2A22"><tspan x="235" dy="0">Motown &amp; Philles</tspan><tspan x="235" dy="14">Records launch</tspan></text>
 
-        <circle cx="370" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="370" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">1962-63</text>
-        <text x="370" y="150" font-size="11" fill="#1B2A41"><tspan x="370" dy="0">Wall of Sound &amp;</tspan><tspan x="370" dy="14">"Surfin' USA"</tspan></text>
+        <circle cx="370" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="370" y="103" font-size="12" font-weight="bold" fill="#154734">1962-63</text>
+        <text x="370" y="150" font-size="11" fill="#1B2A22"><tspan x="370" dy="0">Wall of Sound &amp;</tspan><tspan x="370" dy="14">"Surfin' USA"</tspan></text>
 
-        <circle cx="505" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="505" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">1963-64</text>
-        <text x="505" y="150" font-size="11" fill="#1B2A41"><tspan x="505" dy="0">Motown hits;</tspan><tspan x="505" dy="14">"El Watusi"</tspan></text>
+        <circle cx="505" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="505" y="103" font-size="12" font-weight="bold" fill="#154734">1963-64</text>
+        <text x="505" y="150" font-size="11" fill="#1B2A22"><tspan x="505" dy="0">Motown hits;</tspan><tspan x="505" dy="14">"El Watusi"</tspan></text>
 
-        <circle cx="620" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="620" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">Feb. 1964</text>
-        <text x="620" y="150" font-size="11" fill="#1B2A41"><tspan x="620" dy="0">Beatles hit #1,</tspan><tspan x="620" dy="14">British Invasion begins</tspan></text>
+        <circle cx="620" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="620" y="103" font-size="12" font-weight="bold" fill="#154734">Feb. 1964</text>
+        <text x="620" y="150" font-size="11" fill="#1B2A22"><tspan x="620" dy="0">Beatles hit #1,</tspan><tspan x="620" dy="14">British Invasion begins</tspan></text>
       </g>
-      <text x="360" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Four years, five reinventions of American pop.</text>
+      <text x="360" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">Four years, five reinventions of American pop.</text>
     </svg>
     <figcaption>Figure 1. The module's full span at a glance, from the first dance craze to the start of the British Invasion.</figcaption>
   </figure>
 
   <figure>
     <svg viewBox="0 0 720 210" role="img" aria-label="Map comparing the geographic centers of this module's music scenes" id="wrap9-map">
-      <rect width="720" height="210" fill="#F5F7F9" rx="10"/>
+      <rect width="720" height="210" fill="#F4F8F5" rx="10"/>
       <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-        <rect x="20" y="40" width="150" height="90" rx="10" fill="#2B4A6F"/>
+        <rect x="20" y="40" width="150" height="90" rx="10" fill="#154734"/>
         <text x="95" y="80" fill="#fff" font-size="14" font-weight="bold">Detroit</text>
-        <text x="95" y="100" fill="#DBE1E9" font-size="12">Motown</text>
-        <rect x="195" y="40" width="150" height="90" rx="10" fill="#233C5C"/>
+        <text x="95" y="100" fill="#D5E6DC" font-size="12">Motown</text>
+        <rect x="195" y="40" width="150" height="90" rx="10" fill="#103B2B"/>
         <text x="270" y="80" fill="#fff" font-size="14" font-weight="bold">New York</text>
-        <text x="270" y="100" fill="#DBE1E9" font-size="12">Philles Records &amp;</text>
-        <text x="270" y="116" fill="#DBE1E9" font-size="12">Latin dance scene</text>
-        <rect x="370" y="40" width="150" height="90" rx="10" fill="#1C2F47"/>
+        <text x="270" y="100" fill="#D5E6DC" font-size="12">Philles Records &amp;</text>
+        <text x="270" y="116" fill="#D5E6DC" font-size="12">Latin dance scene</text>
+        <rect x="370" y="40" width="150" height="90" rx="10" fill="#0E3326"/>
         <text x="445" y="80" fill="#fff" font-size="14" font-weight="bold">Los Angeles</text>
-        <text x="445" y="100" fill="#DBE1E9" font-size="12">Beach Boys &amp;</text>
-        <text x="445" y="116" fill="#DBE1E9" font-size="12">Tijuana Brass</text>
-        <rect x="545" y="40" width="150" height="90" rx="10" fill="#5E6B7C"/>
+        <text x="445" y="100" fill="#D5E6DC" font-size="12">Beach Boys &amp;</text>
+        <text x="445" y="116" fill="#D5E6DC" font-size="12">Tijuana Brass</text>
+        <rect x="545" y="40" width="150" height="90" rx="10" fill="#7A5A00"/>
         <text x="620" y="80" fill="#fff" font-size="14" font-weight="bold">Liverpool</text>
-        <text x="620" y="100" fill="#EEF1F5" font-size="12">The Beatles</text>
+        <text x="620" y="100" fill="#FFF5DC" font-size="12">The Beatles</text>
       </g>
-      <text x="360" y="175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Four cities on two continents shaped this module's story.</text>
+      <text x="360" y="175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">Four cities on two continents shaped this module's story.</text>
     </svg>
     <figcaption>Figure 2. The music of this module came from four distinct scenes before American radio brought them all together.</figcaption>
   </figure>
@@ -571,77 +571,77 @@
   <div style="overflow-x:auto">
     <table style="width:100%; border-collapse:collapse; margin:10px 0; font-size:.95em">
       <thead>
-        <tr style="background:#2B4A6F; color:#fff">
-          <th style="text-align:left; padding:8px 12px; border:1px solid #CDD4DD">Nombre</th>
-          <th style="text-align:left; padding:8px 12px; border:1px solid #CDD4DD">Por qué es importante</th>
+        <tr style="background:#154734; color:#fff">
+          <th style="text-align:left; padding:8px 12px; border:1px solid #C9D8CE">Nombre</th>
+          <th style="text-align:left; padding:8px 12px; border:1px solid #C9D8CE">Por qué es importante</th>
         </tr>
       </thead>
       <tbody>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Chubby Checker</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Grabó la versión de "The Twist" que dio inicio a la era de las modas de baile en 1960.</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Phil Spector</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Productor de Philles Records que desarrolló la técnica de producción del muro de sonido.</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>The Ronettes y the Crystals</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Grupos vocales de Philles Records cuyas grabaciones definen el muro de sonido; "Be My Baby", "Uptown".</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Berry Gordy Jr.</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Fundó Motown Records y la organizó como una operación para fabricar éxitos en cadena.</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>The Temptations</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Grupo vocal masculino de Motown; "My Girl" (Smokey Robinson) y "Get Ready".</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>The Supremes</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">El grupo de mayor éxito comercial de Motown, encabezado por Diana Ross; "Baby Love", "You Can't Hurry Love".</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Brian Wilson</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Compositor y productor de los Beach Boys, detrás de "Surfin' USA" y "Fun, Fun, Fun".</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>The Beatles</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Grupo de Liverpool cuyo "I Want to Hold Your Hand" llegó al n.º 1 en EE. UU. en febrero de 1964 y desató la beatlemanía.</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Brian Epstein y George Martin</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">El mánager y el productor discográfico de los Beatles, respectivamente, claves en su despegue británico y estadounidense.</td></tr>
-        <tr><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Ray Barretto</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Conguero puertorriqueño-estadounidense cuyo "El Watusi" (1963) cruzó a la lista pop.</td></tr>
-        <tr style="background:#F5F7F9"><td style="padding:8px 12px; border:1px solid #CDD4DD"><strong>Herb Alpert</strong></td><td style="padding:8px 12px; border:1px solid #CDD4DD">Trompetista y cofundador de A&amp;M Records; dirigió the Tijuana Brass, inspirado en el mariachi.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Chubby Checker</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Grabó la versión de "The Twist" que dio inicio a la era de las modas de baile en 1960.</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Phil Spector</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Productor de Philles Records que desarrolló la técnica de producción del muro de sonido.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>The Ronettes y the Crystals</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Grupos vocales de Philles Records cuyas grabaciones definen el muro de sonido; "Be My Baby", "Uptown".</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Berry Gordy Jr.</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Fundó Motown Records y la organizó como una operación para fabricar éxitos en cadena.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>The Temptations</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Grupo vocal masculino de Motown; "My Girl" (Smokey Robinson) y "Get Ready".</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>The Supremes</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">El grupo de mayor éxito comercial de Motown, encabezado por Diana Ross; "Baby Love", "You Can't Hurry Love".</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Brian Wilson</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Compositor y productor de los Beach Boys, detrás de "Surfin' USA" y "Fun, Fun, Fun".</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>The Beatles</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Grupo de Liverpool cuyo "I Want to Hold Your Hand" llegó al n.º 1 en EE. UU. en febrero de 1964 y desató la beatlemanía.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Brian Epstein y George Martin</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">El mánager y el productor discográfico de los Beatles, respectivamente, claves en su despegue británico y estadounidense.</td></tr>
+        <tr><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Ray Barretto</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Conguero puertorriqueño-estadounidense cuyo "El Watusi" (1963) cruzó a la lista pop.</td></tr>
+        <tr style="background:#F4F8F5"><td style="padding:8px 12px; border:1px solid #C9D8CE"><strong>Herb Alpert</strong></td><td style="padding:8px 12px; border:1px solid #C9D8CE">Trompetista y cofundador de A&amp;M Records; dirigió the Tijuana Brass, inspirado en el mariachi.</td></tr>
       </tbody>
     </table>
   </div>
 
   <figure>
     <svg viewBox="0 0 720 240" role="img" aria-label="Línea de tiempo de repaso del módulo, de 1960 a 1964" id="wrap9-tl-es">
-      <rect width="720" height="240" fill="#F5F7F9" rx="10"/>
-      <line x1="60" y1="125" x2="660" y2="125" stroke="#2B4A6F" stroke-width="4"/>
+      <rect width="720" height="240" fill="#F4F8F5" rx="10"/>
+      <line x1="60" y1="125" x2="660" y2="125" stroke="#154734" stroke-width="4"/>
       <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-        <circle cx="100" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="100" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">1960</text>
-        <text x="100" y="150" font-size="11" fill="#1B2A41"><tspan x="100" dy="0">"The Twist"</tspan><tspan x="100" dy="14">llega al n.º 1</tspan></text>
+        <circle cx="100" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="100" y="103" font-size="12" font-weight="bold" fill="#154734">1960</text>
+        <text x="100" y="150" font-size="11" fill="#1B2A22"><tspan x="100" dy="0">"The Twist"</tspan><tspan x="100" dy="14">llega al n.º 1</tspan></text>
 
-        <circle cx="235" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="235" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">1960-61</text>
-        <text x="235" y="150" font-size="11" fill="#1B2A41"><tspan x="235" dy="0">Nacen Motown</tspan><tspan x="235" dy="14">y Philles Records</tspan></text>
+        <circle cx="235" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="235" y="103" font-size="12" font-weight="bold" fill="#154734">1960-61</text>
+        <text x="235" y="150" font-size="11" fill="#1B2A22"><tspan x="235" dy="0">Nacen Motown</tspan><tspan x="235" dy="14">y Philles Records</tspan></text>
 
-        <circle cx="370" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="370" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">1962-63</text>
-        <text x="370" y="150" font-size="11" fill="#1B2A41"><tspan x="370" dy="0">Muro de sonido y</tspan><tspan x="370" dy="14">"Surfin' USA"</tspan></text>
+        <circle cx="370" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="370" y="103" font-size="12" font-weight="bold" fill="#154734">1962-63</text>
+        <text x="370" y="150" font-size="11" fill="#1B2A22"><tspan x="370" dy="0">Muro de sonido y</tspan><tspan x="370" dy="14">"Surfin' USA"</tspan></text>
 
-        <circle cx="505" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="505" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">1963-64</text>
-        <text x="505" y="150" font-size="11" fill="#1B2A41"><tspan x="505" dy="0">Éxitos de Motown;</tspan><tspan x="505" dy="14">"El Watusi"</tspan></text>
+        <circle cx="505" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="505" y="103" font-size="12" font-weight="bold" fill="#154734">1963-64</text>
+        <text x="505" y="150" font-size="11" fill="#1B2A22"><tspan x="505" dy="0">Éxitos de Motown;</tspan><tspan x="505" dy="14">"El Watusi"</tspan></text>
 
-        <circle cx="620" cy="125" r="8" fill="#9FACBD" stroke="#1C2F47" stroke-width="2"/>
-        <text x="620" y="103" font-size="12" font-weight="bold" fill="#2B4A6F">feb. 1964</text>
-        <text x="620" y="150" font-size="11" fill="#1B2A41"><tspan x="620" dy="0">Beatles al n.º 1;</tspan><tspan x="620" dy="14">Invasión británica</tspan></text>
+        <circle cx="620" cy="125" r="8" fill="#FFB81C" stroke="#0E3326" stroke-width="2"/>
+        <text x="620" y="103" font-size="12" font-weight="bold" fill="#154734">feb. 1964</text>
+        <text x="620" y="150" font-size="11" fill="#1B2A22"><tspan x="620" dy="0">Beatles al n.º 1;</tspan><tspan x="620" dy="14">Invasión británica</tspan></text>
       </g>
-      <text x="360" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Cuatro años, cinco reinvenciones del pop estadounidense.</text>
+      <text x="360" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">Cuatro años, cinco reinvenciones del pop estadounidense.</text>
     </svg>
     <figcaption>Figura 1. Todo el período del módulo de un vistazo, desde la primera moda de baile hasta el comienzo de la Invasión británica.</figcaption>
   </figure>
 
   <figure>
     <svg viewBox="0 0 720 210" role="img" aria-label="Mapa que compara los centros geográficos de las escenas musicales de este módulo" id="wrap9-map-es">
-      <rect width="720" height="210" fill="#F5F7F9" rx="10"/>
+      <rect width="720" height="210" fill="#F4F8F5" rx="10"/>
       <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-        <rect x="20" y="40" width="150" height="90" rx="10" fill="#2B4A6F"/>
+        <rect x="20" y="40" width="150" height="90" rx="10" fill="#154734"/>
         <text x="95" y="80" fill="#fff" font-size="14" font-weight="bold">Detroit</text>
-        <text x="95" y="100" fill="#DBE1E9" font-size="12">Motown</text>
-        <rect x="195" y="40" width="150" height="90" rx="10" fill="#233C5C"/>
+        <text x="95" y="100" fill="#D5E6DC" font-size="12">Motown</text>
+        <rect x="195" y="40" width="150" height="90" rx="10" fill="#103B2B"/>
         <text x="270" y="80" fill="#fff" font-size="14" font-weight="bold">Nueva York</text>
-        <text x="270" y="100" fill="#DBE1E9" font-size="12">Philles Records y</text>
-        <text x="270" y="116" fill="#DBE1E9" font-size="12">escena bailable latina</text>
-        <rect x="370" y="40" width="150" height="90" rx="10" fill="#1C2F47"/>
+        <text x="270" y="100" fill="#D5E6DC" font-size="12">Philles Records y</text>
+        <text x="270" y="116" fill="#D5E6DC" font-size="12">escena bailable latina</text>
+        <rect x="370" y="40" width="150" height="90" rx="10" fill="#0E3326"/>
         <text x="445" y="80" fill="#fff" font-size="14" font-weight="bold">Los Ángeles</text>
-        <text x="445" y="100" fill="#DBE1E9" font-size="12">Beach Boys y</text>
-        <text x="445" y="116" fill="#DBE1E9" font-size="12">Tijuana Brass</text>
-        <rect x="545" y="40" width="150" height="90" rx="10" fill="#5E6B7C"/>
+        <text x="445" y="100" fill="#D5E6DC" font-size="12">Beach Boys y</text>
+        <text x="445" y="116" fill="#D5E6DC" font-size="12">Tijuana Brass</text>
+        <rect x="545" y="40" width="150" height="90" rx="10" fill="#7A5A00"/>
         <text x="620" y="80" fill="#fff" font-size="14" font-weight="bold">Liverpool</text>
-        <text x="620" y="100" fill="#EEF1F5" font-size="12">The Beatles</text>
+        <text x="620" y="100" fill="#FFF5DC" font-size="12">The Beatles</text>
       </g>
-      <text x="360" y="175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Cuatro ciudades en dos continentes marcaron la historia de este módulo.</text>
+      <text x="360" y="175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5550">Cuatro ciudades en dos continentes marcaron la historia de este módulo.</text>
     </svg>
     <figcaption>Figura 2. La música de este módulo surgió de cuatro escenas distintas antes de que la radio estadounidense las reuniera a todas.</figcaption>
   </figure>
@@ -1116,7 +1116,7 @@
   /* ---------- 14. Interactive map ---------- */
   document.querySelectorAll('[data-widget="map"]').forEach(function(w){
     var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
-    var COL=['#2B4A6F','#5E6B7C','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var COL=['#154734','#7A5A00','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
     var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
     var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
     routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
@@ -1140,7 +1140,7 @@
     function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
     function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
       var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
-      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#9FACBD','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#FFB81C','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
       else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
     svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
     svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
@@ -1213,5 +1213,19 @@
   });
 })();
 </script>
+<script>/* a11y patch 2026-09 */(function(){
+function isES(el){var m=el.closest('main');return !!(m&&m.getAttribute('lang')==='es');}
+function run(){
+document.querySelectorAll('[data-widget]').forEach(function(w){
+  var n=0;w.querySelectorAll('select').forEach(function(s){n++;if(!s.getAttribute('aria-label')&&!s.labels.length)s.setAttribute('aria-label',(isES(s)?'Elige la palabra para el espacio ':'Choose the word for blank ')+n);});
+  var k=0;w.querySelectorAll('.h5p-blank').forEach(function(b){k++;var i=k,es=isES(b);
+    function upd(){var t=b.textContent,c=b.classList;b.setAttribute('aria-label',(es?'Espacio ':'Blank ')+i+': '+(t||(es?'vacío':'empty'))+(c.contains('ok')?(es?', correcto':', correct'):c.contains('bad')?(es?', incorrecto':', incorrect'):''));}
+    upd();new MutationObserver(upd).observe(b,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:['class']});});
+});
+document.querySelectorAll('svg[role="img"]').forEach(function(s){if(s.querySelector('[tabindex],a,button,[role="button"]'))s.setAttribute('role','group');});
+document.addEventListener('keydown',function(e){var t=e.target;if(e.defaultPrevented||!(e.key==='Enter'||e.key===' '))return;if(!t.getAttribute||t.getAttribute('role')!=='button'||/^(BUTTON|A|INPUT|SELECT|TEXTAREA)$/.test(t.tagName))return;e.preventDefault();t.click();});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(run,0);});else setTimeout(run,0);
+})();</script>
 </body>
 </html>
