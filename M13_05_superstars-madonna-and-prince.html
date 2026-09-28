@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" class="am-bilingual" data-title-en="Superstars: Madonna and Prince — American Music" data-title-es="Superestrellas: Madonna y Prince — Música estadounidense">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Superstars: Madonna and Prince — American Music</title>
+<!--
+  AMERICAN MUSIC — SELF-CONTAINED PAGE
+  ===================================================================
+  Palette: Navy #2B4A6F · Slate #9FACBD
+    Navy dark  #1C2F47  (header/footer bands)      Navy deep #233C5C (hover)
+    Navy tint  #EBEFF4 / #DBE1E9 (callouts)         Slate soft #EEF1F5  Slate dark #5E6B7C
+    Ink #1B2A41 · Muted #4A5568 · Border #CDD4DD
+    Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
+  RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
+  or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
+  Every content page: objectives box, 2+ SVG figures, 2–3 widgets, Listening Guide(s),
+  key-term boxes, Page X of Y footer. Neutral textbook voice. No course code.
+-->
+<style>
+  :root{
+    --am-navy:#2B4A6F; --am-navy-dark:#1C2F47; --am-navy-deep:#233C5C;
+    --am-slate:#9FACBD; --am-slate-dark:#5E6B7C; --am-slate-soft:#EEF1F5;
+    --am-tint:#EBEFF4; --am-tint2:#DBE1E9; --am-mist:#F5F7F9;
+    --am-ink:#1B2A41; --am-muted:#4A5568; --am-border:#CDD4DD;
+    --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
+    --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
+    --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:var(--body); color:var(--am-ink); line-height:1.65; background:#fff; font-size:17px}
+  .am-topbar{background:var(--am-navy-dark); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:16px}
+  .am-mark{width:38px; height:38px; flex:none}
+  .am-wordmark{font-family:var(--head); font-weight:700; letter-spacing:1.5px; font-size:1.05em; text-transform:uppercase; white-space:nowrap; line-height:1.1}
+  .am-wordmark span{display:block; font-size:.6em; letter-spacing:4px; font-weight:400; color:var(--am-slate)}
+  .am-coursebar{margin-left:auto; font-size:.78em; letter-spacing:1.5px; text-transform:uppercase; opacity:.9; text-align:right; line-height:1.4}
+  .am-accentbar{height:6px; background:linear-gradient(90deg,var(--am-slate) 0 70%,var(--am-navy) 70% 100%)}
+  main{max-width:880px; margin:0 auto; padding:32px 24px 12px}
+  h1{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:2em; line-height:1.2; margin:0 0 6px; border-bottom:4px solid var(--am-slate); padding-bottom:10px}
+  h1 .am-kicker{display:block; font-size:.5em; letter-spacing:3px; text-transform:uppercase; color:var(--am-slate-dark); font-weight:600; margin-bottom:4px}
+  h2{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:1.35em; margin:34px 0 10px; padding-left:12px; border-left:6px solid var(--am-slate)}
+  h3{font-family:var(--head); font-weight:600; color:var(--am-navy); font-size:1.1em; margin:24px 0 8px}
+  a{color:var(--am-navy-deep)}
+  .am-lead{font-size:1.08em; font-style:italic; color:#3d4a5c; margin:14px 0 20px}
+  /* Callouts */
+  .am-objectives{background:var(--am-tint); border-left:6px solid var(--am-navy); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-label{margin:0 0 6px; font-family:var(--head); font-weight:700; color:var(--am-navy); text-transform:uppercase; letter-spacing:1.5px; font-size:.82em}
+  .am-keyterm{background:var(--am-mist); border:1px solid var(--am-border); border-left:6px solid var(--am-slate); padding:12px 16px; margin:16px 0; border-radius:8px}
+  .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
+  .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
+  .am-note{background:#F6F7F9; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  figure{margin:24px 0; text-align:center}
+  figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
+  figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
+  figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
+  /* Listening guide */
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(28,47,71,.08)}
+  .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
+  .am-listen__head svg{width:26px; height:26px; flex:none}
+  .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
+  .am-listen__meta{font-size:.82em; opacity:.9}
+  .am-listen__body{padding:14px 18px}
+  .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
+  .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
+  .am-listen__link:hover{background:#C7D0DB}
+  .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
+  .am-listen__log label{cursor:pointer}
+  /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#1C2F47; cursor:pointer}
+  .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
+  .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(28,47,71,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
+  .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
+  .am-audio{width:100%; margin:0 0 14px; display:block}
+  .am-yt-frame{width:100%; aspect-ratio:16/9; border:0; border-radius:8px; display:block; margin:0 0 14px; background:#000}
+  /* Buttons */
+  .am-btn{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em; background:var(--am-navy); color:#fff; border:0; padding:10px 18px; cursor:pointer; border-radius:6px}
+  .am-btn:hover{background:var(--am-navy-deep)}
+  .am-btn[disabled]{opacity:.45; cursor:default}
+  .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
+  .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
+  .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-btn--slate:hover{background:#C7D0DB}
+  /* ============ H5P-STYLE ACTIVITY SHELL ============ */
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(28,47,71,.1)}
+  .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
+  .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
+  .h5p-act__body{padding:18px 20px}
+  .h5p-feedback{margin-top:12px; padding:10px 14px; border-radius:6px; font-weight:600; display:none}
+  .h5p-feedback.ok{display:block; background:var(--ok-bg); color:var(--ok)}
+  .h5p-feedback.bad{display:block; background:var(--bad-bg); color:var(--bad)}
+  .h5p-feedback.info{display:block; background:var(--am-tint); color:var(--am-navy)}
+  .h5p-controls{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+  .h5p-score{margin-left:auto; font-family:var(--head); color:var(--am-navy); font-weight:700}
+  .h5p-hint{margin:0 0 10px; font-style:italic; color:var(--am-muted); font-size:.93em}
+  /* MCQ */
+  .h5p-mcq .h5p-q{margin-bottom:18px}
+  .h5p-mcq .h5p-stem{font-weight:600; margin:0 0 8px}
+  .h5p-opt{display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:10px 14px; margin:6px 0; cursor:pointer; font-family:var(--body); font-size:.95em; color:var(--am-ink)}
+  .h5p-opt:hover{border-color:var(--am-navy)}
+  .h5p-opt.sel{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-opt.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-opt.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-why{font-size:.9em; color:var(--am-muted); margin:4px 0 0 4px}
+  /* Drag the words (click-to-place) */
+  .h5p-bank{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px}
+  .h5p-word{background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 12px; cursor:pointer; font-weight:600; color:var(--am-navy-dark); font-family:var(--body); font-size:.95em}
+  .h5p-word.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-word.used{opacity:.3; pointer-events:none}
+  .h5p-blank{display:inline-block; min-width:110px; border-bottom:3px solid var(--am-navy); padding:2px 8px; margin:0 2px; cursor:pointer; text-align:center; font-weight:600; color:var(--am-navy); background:var(--am-tint); line-height:1.5}
+  .h5p-blank.ok{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-blank.bad{background:var(--bad-bg); border-color:var(--bad)}
+  /* Flashcards & dialog cards */
+  .h5p-flash{perspective:900px; max-width:460px; margin:0 auto}
+  .h5p-card{position:relative; width:100%; min-height:180px; transform-style:preserve-3d; transition:transform .5s; cursor:pointer}
+  .h5p-card.flip{transform:rotateY(180deg)}
+  .h5p-face{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px; border-radius:10px}
+  .h5p-face--front{background:var(--am-navy); color:#fff; font-family:var(--head); font-size:1.2em; font-weight:600; border-bottom:5px solid var(--am-slate)}
+  .h5p-face--back{background:var(--am-tint); border:2px solid var(--am-navy); color:var(--am-ink); transform:rotateY(180deg); font-size:.97em}
+  .h5p-dlg-ctrl{display:none; justify-content:center; gap:10px; margin-top:12px}
+  .h5p-dlg-ctrl.show{display:flex}
+  .h5p-progress{height:8px; background:var(--am-tint2); border-radius:4px; overflow:hidden; margin:10px 0}
+  .h5p-progress span{display:block; height:100%; background:var(--am-slate); width:0; transition:width .3s}
+  /* Order steps */
+  .h5p-order{padding-left:0; margin:0}
+  .h5p-order li{background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; margin:7px 0; display:flex; align-items:center; gap:10px; list-style:none}
+  .h5p-order li.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-order li.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-move{border:1px solid var(--am-navy); background:#fff; color:var(--am-navy); border-radius:4px; width:30px; height:28px; cursor:pointer; font-weight:700; flex:none}
+  .h5p-move:hover{background:var(--am-tint)}
+  /* Sort (drag-and-drop categorize, click-to-bin) */
+  .h5p-sort-pool{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px; min-height:40px; padding:10px; border:2px dashed var(--am-border); border-radius:8px}
+  .h5p-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+  .h5p-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:110px; padding:8px; cursor:pointer; background:#fff}
+  .h5p-bin.hot{background:var(--am-tint)}
+  .h5p-bin__title{font-family:var(--head); font-weight:700; color:#fff; background:var(--am-navy); margin:-8px -8px 8px; padding:6px 10px; border-radius:6px 6px 0 0; font-size:.88em; letter-spacing:.5px}
+  .h5p-item{display:inline-block; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 10px; margin:3px; cursor:pointer; font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-item.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-item.ok{border-color:var(--ok); background:var(--ok-bg); color:var(--ok)}
+  .h5p-item.bad{border-color:var(--bad); background:var(--bad-bg); color:var(--bad)}
+  /* Mark the words */
+  .h5p-mtw{line-height:2}
+  .h5p-tok{cursor:pointer; padding:2px 3px; border-radius:4px; border-bottom:2px dotted transparent}
+  .h5p-tok:hover{background:var(--am-tint)}
+  .h5p-tok.sel{background:var(--am-slate-soft); border-bottom-color:var(--am-slate-dark)}
+  .h5p-tok.ok{background:var(--ok-bg); border-bottom-color:var(--ok)}
+  .h5p-tok.bad{background:var(--bad-bg); border-bottom-color:var(--bad); text-decoration:line-through}
+  .h5p-tok.missed{outline:2px dashed var(--am-slate-dark)}
+  /* Dropdown cloze */
+  .h5p-dd{font:inherit; font-weight:600; color:var(--am-navy); border:0; border-bottom:3px solid var(--am-navy); background:var(--am-tint); padding:2px 6px; border-radius:4px 4px 0 0; margin:0 2px}
+  .h5p-dd.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok)}
+  .h5p-dd.bad{background:var(--bad-bg); border-color:var(--bad); color:var(--bad)}
+  /* Timeline stepper */
+  .h5p-tl-nav{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-tl-btn{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:20px; padding:5px 12px; cursor:pointer}
+  .h5p-tl-btn.on{background:var(--am-navy); color:#fff}
+  .h5p-tl-track{height:6px; background:var(--am-tint2); border-radius:3px; position:relative; margin:4px 0 16px}
+  .h5p-tl-track span{position:absolute; top:-5px; width:16px; height:16px; border-radius:50%; background:var(--am-slate); border:3px solid var(--am-navy); transform:translateX(-50%); transition:left .3s}
+  .h5p-tl-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:14px 18px; min-height:90px}
+  .h5p-tl-panel h4{margin:0 0 6px; font-family:var(--head); color:var(--am-navy); font-size:1.05em}
+  /* Song form explorer */
+  .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
+  .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
+  .h5p-form-sec:hover{transform:translateY(-2px)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(159,172,189,.35)}
+  .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
+  .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
+  /* Hotspots (inline SVG) */
+  .h5p-hs [data-hs]{cursor:pointer; transition:opacity .15s}
+  .h5p-hs [data-hs]:hover{opacity:.75}
+  .h5p-hs [data-hs].on{stroke:var(--am-slate); stroke-width:4}
+  .h5p-hs [data-hs].on text{stroke:none}
+  .h5p-hs-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:60px; margin-top:10px}
+  .h5p-hs-panel h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy)}
+  /* ============ ADDED 2026-09: piano, branching, map, find-the-spot, era timeline, drag sort ============ */
+  .am-sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+  .h5p-act :focus-visible{outline:3px solid var(--am-slate); outline-offset:2px; box-shadow:0 0 0 5px var(--am-navy-dark)}
+  /* Piano */
+  .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
+  .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F5F7F9); border:1px solid #9FB3CC; border-bottom:8px solid #CDD4DD; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2C3E57,#0F1B2B); border:1px solid #000; border-bottom:9px solid #1B2A41; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
+  .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(159,172,189,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(159,172,189,.8)}
+  .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
+  .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+  .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
+  .h5p-pno-task h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy); font-size:1em}
+  .h5p-pno-played{font-size:.9em; color:var(--am-muted); margin-top:4px}
+  /* Branching scenario */
+  .h5p-br-trail{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px; padding:0; list-style:none; font-size:.82em}
+  .h5p-br-trail li{background:var(--am-tint); color:var(--am-navy-dark); border-radius:14px; padding:3px 10px; font-weight:600}
+  .h5p-br-trail li:first-child{background:var(--am-navy); color:#fff}
+  .h5p-br-card h4{font-family:var(--head); color:var(--am-navy); font-size:1.12em; margin:0 0 8px}
+  .h5p-br-card p{margin:0 0 10px}
+  .h5p-br-opts{display:grid; gap:10px; margin-top:12px}
+  .h5p-br-opt{display:flex; gap:12px; align-items:flex-start; text-align:left; width:100%; background:#fff; border:2px solid var(--am-border); border-radius:10px; padding:12px 14px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink)}
+  .h5p-br-opt:hover{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-br-opt b.tag{flex:none; width:30px; height:30px; border-radius:50%; background:var(--am-slate); color:var(--am-navy-dark); display:flex; align-items:center; justify-content:center; font-family:var(--head)}
+  .h5p-br-opt small{display:block; color:var(--am-muted); font-size:.88em; margin-top:2px}
+  .h5p-br-end{border-radius:10px; padding:14px 18px; border:2px solid}
+  .h5p-br-end.good{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-br-end.ok{background:var(--am-slate-soft); border-color:var(--am-slate-dark)}
+  .h5p-br-end.review{background:var(--bad-bg); border-color:var(--bad)}
+  .h5p-br-end .tone{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em}
+  .h5p-br-pts{list-style:none; padding:0; margin:10px 0}
+  .h5p-br-pts li{margin:6px 0; padding-left:28px; position:relative}
+  .h5p-br-pts li::before{position:absolute; left:0; top:0; font-weight:700}
+  .h5p-br-pts li.ok::before{content:"✔"; color:var(--ok)}
+  .h5p-br-pts li.alert::before{content:"⚠"; color:var(--am-slate-dark)}
+  .h5p-br-pts li.no::before{content:"✖"; color:var(--bad)}
+  /* Interactive map */
+  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F5F7F9}
+  .h5p-map-m{cursor:pointer}
+  .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
+  .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
+  .h5p-map-m.on circle{stroke:#1C2F47; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#9FACBD; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#5E6B7C; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
+  .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
+  .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-map-list button.on{border-color:var(--am-navy); background:var(--am-navy); color:#fff}
+  .h5p-map-legend{display:flex; flex-wrap:wrap; gap:14px; font-size:.86em; margin:8px 0 0; color:var(--am-muted)}
+  .h5p-map-legend i{display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:5px; vertical-align:-1px}
+  .h5p-map-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px; margin-top:10px}
+  .h5p-map-panel h4{margin:0 0 2px; font-family:var(--head); color:var(--am-navy)}
+  .h5p-map-panel .cat{font-size:.8em; text-transform:uppercase; letter-spacing:1.2px; color:var(--am-slate-dark); font-weight:700}
+  /* Find the spot */
+  .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
+  .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
+  .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
+  .h5p-fs-found circle{fill:none; stroke:#9FACBD; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#1C2F47; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
+  .h5p-fs-cross{fill:none; stroke:#1C2F47; stroke-width:2}
+  @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
+  /* Era timeline */
+  .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-era-tab{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:8px; padding:6px 12px; cursor:pointer; text-align:left; line-height:1.25}
+  .h5p-era-tab small{display:block; font-weight:400; opacity:.85}
+  .h5p-era-tab.on{background:var(--am-navy); color:#fff}
+  .h5p-era-tab.done::after{content:" ✔"; color:var(--ok)}
+  .h5p-era-tab.on.done::after{color:var(--am-slate)}
+  .h5p-era-spine{position:relative; margin:0; padding:0 0 0 34px; list-style:none}
+  .h5p-era-spine::before{content:""; position:absolute; left:12px; top:6px; bottom:6px; width:4px; background:var(--am-tint2); border-radius:2px}
+  .h5p-era-ev{position:relative; margin:0 0 10px}
+  .h5p-era-ev::before{content:""; position:absolute; left:-29px; top:12px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--am-navy)}
+  .h5p-era-ev.seen::before{background:var(--am-slate)}
+  .h5p-era-ev button{width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink); display:flex; gap:10px; align-items:baseline}
+  .h5p-era-ev button:hover{border-color:var(--am-navy)}
+  .h5p-era-ev button b{font-family:var(--head); color:var(--am-navy); flex:none; min-width:58px}
+  .h5p-era-ev button::after{content:"+"; margin-left:auto; font-weight:700; color:var(--am-navy)}
+  .h5p-era-ev.open button::after{content:"–"}
+  .h5p-era-ev .body{display:none; background:var(--am-mist); border-left:4px solid var(--am-slate); border-radius:0 0 8px 8px; padding:10px 14px; margin-top:-2px; font-size:.95em}
+  .h5p-era-ev.open .body{display:block}
+  /* Drag sort (pointer drag + tap fallback) */
+  .h5p-ds-tray{display:flex; flex-wrap:wrap; gap:8px; min-height:52px; padding:10px; border:2px dashed var(--am-border); border-radius:8px; margin:10px 0 14px}
+  .h5p-ds-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px}
+  .h5p-ds-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:120px; padding:8px; background:#fff}
+  .h5p-ds-bin.hot{background:var(--am-tint); box-shadow:0 0 0 3px var(--am-slate)}
+  .h5p-ds-bin h5{margin:-8px -8px 8px; padding:6px 10px; background:var(--am-navy); color:#fff; font-family:var(--head); font-size:.88em; border-radius:6px 6px 0 0}
+  .h5p-ds-bin .zone{display:flex; flex-wrap:wrap; gap:6px; min-height:60px}
+  .h5p-ds-card{touch-action:none; user-select:none; -webkit-user-select:none; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:6px 10px; cursor:grab; font-family:var(--body); font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
+  .h5p-ds-card.ok::before{content:"✔ "}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(28,47,71,.3); cursor:grabbing}
+  .h5p-ds-card.shake{animation:h5pShake .4s}
+  .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
+  @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+  /* ============ BILINGUAL (EN/ES) ============ */
+  html:not([data-lang="es"]) .am-l-es, html[data-lang="es"] .am-l-en{display:none}
+  html[data-lang="es"] main[lang="en"], html:not([data-lang="es"]) main[lang="es"]{display:none}
+  .am-langtoggle{display:none; flex:none; margin-left:12px; border:2px solid var(--am-slate); border-radius:20px; overflow:hidden}
+  html.am-bilingual .am-langtoggle{display:flex}
+  .am-langtoggle button{font-family:var(--head); font-weight:700; font-size:.74em; letter-spacing:1px; text-transform:uppercase; background:transparent; color:#fff; border:0; padding:6px 12px; cursor:pointer}
+  .am-langtoggle button[aria-pressed="true"]{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-langtoggle button:focus-visible{outline:3px solid #fff; outline-offset:-3px}
+  @media (max-width:600px){ .am-langtoggle{margin-left:auto} .am-wordmark{white-space:normal} }
+  /* Footer */
+  .am-pagefoot{max-width:880px; margin:36px auto 0; padding:0 24px}
+  .am-pagefoot .rule{height:4px; background:var(--am-slate)}
+  .am-footband{background:var(--am-navy-dark); color:#fff; padding:16px 24px; text-align:center; font-size:.78em; letter-spacing:1.8px; text-transform:uppercase}
+  .am-footband .pg{color:var(--am-slate)}
+  details.am-answer{margin-top:8px}
+  details.am-answer summary{cursor:pointer; color:var(--am-navy); font-weight:600}
+  @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
+</style>
+</head>
+<body>
+<header class="am-topbar">
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#9FACBD"/><path d="M13 30V11l14 5v14" fill="none" stroke="#1C2F47" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#1C2F47"/><circle cx="24.5" cy="30" r="3.6" fill="#1C2F47"/></svg>
+  <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
+  <div class="am-coursebar"><span class="am-l-en">Module 13: The 1980s<br>Page 6 of 9</span><span class="am-l-es">Módulo 13: La década de 1980<br>Página 6 de 9</span></div>
+  <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
+</header>
+<div class="am-accentbar"></div>
+
+<main lang="en">
+  <h1><span class="am-kicker">Module 13 · Page 6 of 9</span>Superstars: Madonna and Prince</h1>
+  <p class="am-lead">Mass media let two of the decade's biggest stars build careers that felt intensely personal to millions of strangers at once.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">On this page you will</p>
+    <ul style="margin:6px 0 0">
+      <li>Explain how mass media created a new model of music celebrity in the 1980s.</li>
+      <li>Describe Madonna's breakthrough with Like a Virgin and her strategy of image reinvention.</li>
+      <li>Describe Prince's prolific output and his hit "When Doves Cry."</li>
+      <li>Compare how Madonna and Prince each used stardom differently.</li>
+    </ul>
+  </div>
+
+  <h2>A new kind of celebrity</h2>
+  <p>The idea of building a performer's public image for mass consumption was not new to the 1980s; dancers Irene and Vernon Castle had already pioneered a version of modern celebrity in the 1910s and 1920s, turning their dance partnership into a media-driven brand. What was new in the 1980s was the sheer reach and intimacy of the media available. Magazine profiles, television interviews and specials, unauthorized biographies, and increasingly aggressive celebrity photography all worked together to make superstar performers feel personally known to audiences who had never met them. That paradox, a mass-produced image standing in for a private relationship, became central to how the era's biggest stars built and sustained their fame. Few artists understood and exploited that dynamic as fully as Madonna and Prince.</p>
+
+  <figure>
+    <svg viewBox="0 0 720 220" role="img" aria-label="Media channels feeding 1980s superstar celebrity">
+      <defs><marker id="sp-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5568"/></marker></defs>
+      <rect width="720" height="220" fill="#F5F7F9" rx="10"/>
+      <rect x="20" y="20" width="150" height="55" rx="10" fill="#2B4A6F"/>
+      <text x="95" y="53" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Magazines</text>
+      <rect x="190" y="20" width="150" height="55" rx="10" fill="#233C5C"/>
+      <text x="265" y="53" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Television</text>
+      <rect x="360" y="20" width="150" height="55" rx="10" fill="#1C2F47"/>
+      <text x="435" y="53" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Biographies</text>
+      <rect x="530" y="20" width="170" height="55" rx="10" fill="#5E6B7C"/>
+      <text x="615" y="53" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Paparazzi</text>
+      <path d="M95 75 C95 110, 300 120, 340 145" fill="none" stroke="#4A5568" stroke-width="2.5" marker-end="url(#sp-arr)"/>
+      <path d="M265 75 C265 110, 320 120, 350 145" fill="none" stroke="#4A5568" stroke-width="2.5" marker-end="url(#sp-arr)"/>
+      <path d="M435 75 C435 110, 400 120, 380 145" fill="none" stroke="#4A5568" stroke-width="2.5" marker-end="url(#sp-arr)"/>
+      <path d="M615 75 C615 110, 440 120, 400 145" fill="none" stroke="#4A5568" stroke-width="2.5" marker-end="url(#sp-arr)"/>
+      <rect x="230" y="150" width="260" height="55" rx="12" fill="#9FACBD"/>
+      <text x="360" y="174" text-anchor="middle" fill="#1C2F47" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold">The 1980s Superstar</text>
+      <text x="360" y="194" text-anchor="middle" fill="#1C2F47" font-family="Arial, Helvetica, sans-serif" font-size="12">a mass-produced, seemingly personal image</text>
+    </svg>
+    <figcaption>Figure 1. Mass media channels combined to build a new, more intimate-feeling model of music stardom.</figcaption>
+  </figure>
+
+  <h2>Madonna: reinvention as strategy</h2>
+  <p>Madonna's 1984 album <em>Like a Virgin</em> was her commercial breakthrough, eventually selling more than ten million copies and producing several hit singles, most notably its title track. The song's frank treatment of sexuality and its accompanying music video, along with Madonna's provocative fashion choices, generated exactly the kind of controversy that kept her in magazines, on television, and in front of cameras. What distinguished Madonna over the following years was not just that first success but her repeated willingness to change her musical style and public image from one album to the next, a strategy of constant reinvention that kept her, rather than any single song, the center of public attention.</p>
+  <div class="am-keyterm"><strong>Image reinvention:</strong> a career strategy, closely associated with Madonna, of deliberately and repeatedly changing musical style, visual style, and public persona to sustain media attention.</div>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Listening Guide: "Like a Virgin"</div><div class="am-listen__meta">Madonna (1984), official music video</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Listen for:</strong></p>
+      <ol><li>The dance-pop production, built around a driving bassline and synthesizer textures.</li><li>Madonna's deliberately provocative visual presentation in the video.</li><li>How the song's frank subject matter contributed to its controversy and media coverage.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/s__rX_WL100" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I listened to this example</label></div>
+    </div>
+  </div>
+
+  <h2>Prince: prolific and genre-defying</h2>
+  <p>Prince built his stardom on a different foundation: extraordinary musical range and an extraordinary rate of output. Across the decade beginning in 1982, he placed multiple albums in the Top Ten of the Billboard chart, moving fluidly between funk, rock, pop, and R&amp;B, often playing most or all of the instruments on his own recordings. His 1984 hit "When Doves Cry," from the album and film <em>Purple Rain</em>, is a striking example of his approach: the track famously has no conventional bass line, an unusual choice for a dance-oriented hit, and it combines minimal, percussive electronic production with an intensely emotional vocal performance. Over his career, Prince sold tens of millions of albums worldwide, placing him among the best-selling and most influential recording artists of his generation.</p>
+  <div class="am-keyterm"><strong>Genre-defying:</strong> describing an artist or recording that combines elements of multiple styles, such as funk, rock, and pop, rather than staying within one established category.</div>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Listening Guide: "When Doves Cry"</div><div class="am-listen__meta">Prince (1984), from Purple Rain</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Listen for:</strong></p>
+      <ol><li>The absence of a conventional bass line, an unusual choice for a dance hit.</li><li>The sparse, percussive electronic production surrounding Prince's vocal.</li><li>The emotional intensity of the vocal performance against the minimal arrangement.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/UG3VcCAlUgE" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I listened to this example</label></div>
+    </div>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 200" role="img" aria-label="Comparison of Madonna and Prince as two contrasting models of 1980s superstardom">
+      <rect width="720" height="200" fill="#fff" rx="10" stroke="#CDD4DD"/>
+      <rect x="0" y="0" width="720" height="40" rx="10" fill="#2B4A6F"/>
+      <rect x="0" y="20" width="720" height="20" fill="#2B4A6F"/>
+      <text x="180" y="26" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Artist</text>
+      <text x="540" y="26" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Path to superstardom</text>
+      <line x1="0" y1="120" x2="720" y2="120" stroke="#CDD4DD"/>
+      <line x1="360" y1="40" x2="360" y2="200" stroke="#CDD4DD"/>
+      <text x="16" y="65" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#2B4A6F">Madonna</text>
+      <text x="16" y="85" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Like a Virgin, 1984</text>
+      <text x="375" y="65" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">Repeated reinvention of</text>
+      <text x="375" y="83" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">image and musical style</text>
+      <text x="375" y="103" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">across successive albums</text>
+      <text x="16" y="145" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#2B4A6F">Prince</text>
+      <text x="16" y="165" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">When Doves Cry, 1984</text>
+      <text x="375" y="145" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">Prolific, genre-defying output</text>
+      <text x="375" y="163" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">across funk, rock, pop, and R&amp;B</text>
+      <text x="375" y="183" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">on nine Top Ten albums</text>
+    </svg>
+    <figcaption>Figure 2. Two artists, two strategies for holding onto mass attention across a decade: constant reinvention versus constant, wide-ranging output.</figcaption>
+  </figure>
+
+  <!-- ============ DROPDOWN ============ -->
+  <div class="h5p-act" data-widget="dropdown">
+    <div class="h5p-act__head"><span>Choose the Right Word</span><span class="h5p-act__type">Dropdown cloze</span></div>
+    <div class="h5p-act__body">
+      <p>Madonna's breakthrough album was <select class="h5p-dd" data-answer="Like a Virgin"><option value="">…</option><option>Purple Rain</option><option>Like a Virgin</option><option>Private Dancer</option></select>, while Prince's 1984 hit "When Doves Cry" notably lacks a conventional <select class="h5p-dd" data-answer="bass line"><option value="">…</option><option>bass line</option><option>vocal track</option><option>drum pattern</option></select>. Both artists relied heavily on <select class="h5p-dd" data-answer="mass media"><option value="">…</option><option>live radio only</option><option>mass media</option><option>word of mouth alone</option></select> to build a seemingly personal connection with audiences.</p>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Check</button>
+        <button class="am-btn am-btn--ghost" data-retry>Retry</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ============ TIMELINE ============ -->
+  <div class="h5p-act" data-widget="timeline">
+    <div class="h5p-act__head"><span>Step Through Two Careers</span><span class="h5p-act__type">Timeline</span></div>
+    <div class="h5p-act__body">
+      <div class="h5p-tl-nav"></div>
+      <div class="h5p-tl-track"><span></span></div>
+      <div class="h5p-tl-panel" data-events='[{"y":"1982","t":"Prince begins his Top Ten run","d":"Prince starts a decade in which nine of his albums reach the Billboard Top Ten."},{"y":"1984","t":"Like a Virgin","d":"Madonna&#39;s breakthrough album sells more than ten million copies and establishes her as a media sensation."},{"y":"1984","t":"Purple Rain and \"When Doves Cry\"","d":"Prince releases the film and album Purple Rain; its lead single becomes one of his biggest hits."},{"y":"Later 1980s","t":"Reinvention continues","d":"Madonna repeatedly changes her sound and image with each new album, sustaining her celebrity across the decade."}]'></div>
+      <div class="h5p-controls" style="justify-content:center"><button class="am-btn am-btn--ghost" data-prev>&#8592; Earlier</button><button class="am-btn am-btn--ghost" data-next>Later &#8594;</button></div>
+    </div>
+  </div>
+
+  <h2>Putting It Together</h2>
+  <p>Madonna and Prince both used the 1980s media environment to become superstars, but in different ways: Madonna through calculated, repeated reinvention of her image and sound, and Prince through sheer musical range and productivity across genres. Both artists show how thoroughly stardom in this decade depended on mass media's ability to make a public figure feel personally knowable. The next page shifts away from the pop mainstream entirely to trace a genre building its own foundations largely outside of MTV and top-forty radio: hip-hop.</p>
+</main>
+
+<main lang="es">
+  <h1><span class="am-kicker">Módulo 13 · Página 6 de 9</span>Superestrellas: Madonna y Prince</h1>
+  <p class="am-lead">Los medios masivos permitieron a dos de las mayores estrellas de la década construir carreras que millones de desconocidos sentían como algo intensamente personal.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">En esta página vas a</p>
+    <ul style="margin:6px 0 0">
+      <li>Explicar cómo los medios masivos crearon un nuevo modelo de celebridad musical en la década de 1980.</li>
+      <li>Describir el gran éxito de Madonna con Like a Virgin y su estrategia de reinvención de la imagen.</li>
+      <li>Describir la producción prolífica de Prince y su éxito "When Doves Cry".</li>
+      <li>Comparar cómo Madonna y Prince usaron el estrellato de maneras distintas.</li>
+    </ul>
+  </div>
+
+  <h2>Un nuevo tipo de celebridad</h2>
+  <p>La idea de construir la imagen pública de un artista para el consumo masivo no era nueva en la década de 1980: los bailarines Irene y Vernon Castle ya habían sido pioneros de una versión de la celebridad moderna en las décadas de 1910 y 1920, al convertir su pareja de baile en una marca impulsada por los medios. Lo nuevo en la década de 1980 fue el enorme alcance y la intimidad de los medios disponibles. Los perfiles en revistas, las entrevistas y los especiales de televisión, las biografías no autorizadas y una fotografía de celebridades cada vez más agresiva se combinaron para que las superestrellas parecieran conocidas personalmente por un público que nunca las había visto en persona. Esa paradoja, una imagen producida en masa que ocupa el lugar de una relación privada, se volvió central en la forma en que las mayores estrellas de la época construyeron y sostuvieron su fama. Pocos artistas entendieron y aprovecharon esa dinámica tan a fondo como Madonna y Prince.</p>
+
+  <figure>
+    <svg viewBox="0 0 720 220" role="img" aria-label="Canales mediáticos que alimentan la celebridad de las superestrellas de la década de 1980">
+      <defs><marker id="sp-arr-es" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5568"/></marker></defs>
+      <rect width="720" height="220" fill="#F5F7F9" rx="10"/>
+      <rect x="20" y="20" width="150" height="55" rx="10" fill="#2B4A6F"/>
+      <text x="95" y="53" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Revistas</text>
+      <rect x="190" y="20" width="150" height="55" rx="10" fill="#233C5C"/>
+      <text x="265" y="53" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Televisión</text>
+      <rect x="360" y="20" width="150" height="55" rx="10" fill="#1C2F47"/>
+      <text x="435" y="53" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Biografías</text>
+      <rect x="530" y="20" width="170" height="55" rx="10" fill="#5E6B7C"/>
+      <text x="615" y="53" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Paparazzi</text>
+      <path d="M95 75 C95 110, 300 120, 340 145" fill="none" stroke="#4A5568" stroke-width="2.5" marker-end="url(#sp-arr-es)"/>
+      <path d="M265 75 C265 110, 320 120, 350 145" fill="none" stroke="#4A5568" stroke-width="2.5" marker-end="url(#sp-arr-es)"/>
+      <path d="M435 75 C435 110, 400 120, 380 145" fill="none" stroke="#4A5568" stroke-width="2.5" marker-end="url(#sp-arr-es)"/>
+      <path d="M615 75 C615 110, 440 120, 400 145" fill="none" stroke="#4A5568" stroke-width="2.5" marker-end="url(#sp-arr-es)"/>
+      <rect x="230" y="150" width="260" height="55" rx="12" fill="#9FACBD"/>
+      <text x="360" y="174" text-anchor="middle" fill="#1C2F47" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold">La superestrella de los 80</text>
+      <text x="360" y="194" text-anchor="middle" fill="#1C2F47" font-family="Arial, Helvetica, sans-serif" font-size="12">imagen masiva que parece personal</text>
+    </svg>
+    <figcaption>Figura 1. Los canales de los medios masivos se combinaron para construir un nuevo modelo de estrellato musical que se sentía más íntimo.</figcaption>
+  </figure>
+
+  <h2>Madonna: la reinvención como estrategia</h2>
+  <p>El álbum de Madonna de 1984, <em>Like a Virgin</em>, fue su gran éxito comercial: con el tiempo vendió más de diez millones de copias y generó varios sencillos exitosos, sobre todo la canción que le da título. El tratamiento franco de la sexualidad en la canción y en su video musical, junto con las provocadoras elecciones de moda de Madonna, generaron justamente el tipo de polémica que la mantenía en las revistas, en la televisión y frente a las cámaras. Lo que distinguió a Madonna en los años siguientes no fue solo ese primer éxito, sino su disposición a cambiar una y otra vez su estilo musical y su imagen pública de un álbum a otro, una estrategia de reinvención constante que la mantuvo a ella, más que a cualquier canción en particular, en el centro de la atención pública.</p>
+  <div class="am-keyterm"><strong>Reinvención de la imagen (image reinvention):</strong> estrategia profesional, estrechamente asociada con Madonna, que consiste en cambiar de manera deliberada y repetida el estilo musical, el estilo visual y la persona pública para mantener la atención de los medios.</div>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Guía de audición: "Like a Virgin"</div><div class="am-listen__meta">Madonna (1984), video musical oficial</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Presta atención a:</strong></p>
+      <ol><li>La producción de dance-pop, construida en torno a una línea de bajo impulsora y texturas de sintetizador.</li><li>La presentación visual deliberadamente provocadora de Madonna en el video.</li><li>Cómo el tema franco de la canción contribuyó a la polémica y a la cobertura mediática.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/s__rX_WL100" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Escuché este ejemplo</label></div>
+    </div>
+  </div>
+
+  <h2>Prince: prolífico y difícil de clasificar</h2>
+  <p>Prince construyó su estrellato sobre una base distinta: un registro musical extraordinario y un ritmo de producción igualmente extraordinario. En la década que comenzó en 1982, colocó varios álbumes entre los diez primeros de la lista de Billboard, moviéndose con fluidez entre el funk, el rock, el pop y el R&amp;B, y a menudo tocando él mismo la mayoría o la totalidad de los instrumentos en sus grabaciones. Su éxito de 1984 "When Doves Cry", del álbum y la película <em>Purple Rain</em>, es un ejemplo llamativo de su enfoque: es famoso que la pista no tiene una línea de bajo convencional, una decisión inusual para un éxito orientado al baile, y combina una producción electrónica mínima y percusiva con una interpretación vocal de intensa carga emocional. A lo largo de su carrera, Prince vendió decenas de millones de álbumes en todo el mundo, lo que lo sitúa entre los artistas de grabación más vendidos e influyentes de su generación.</p>
+  <div class="am-keyterm"><strong>Inclasificable (genre-defying):</strong> se dice de un artista o una grabación que combina elementos de varios estilos, como el funk, el rock y el pop, en lugar de quedarse dentro de una sola categoría establecida.</div>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Guía de audición: "When Doves Cry"</div><div class="am-listen__meta">Prince (1984), del álbum Purple Rain</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Presta atención a:</strong></p>
+      <ol><li>La ausencia de una línea de bajo convencional, una decisión inusual para un éxito de baile.</li><li>La producción electrónica escueta y percusiva que rodea la voz de Prince.</li><li>La intensidad emocional de la interpretación vocal frente al arreglo mínimo.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/UG3VcCAlUgE" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Escuché este ejemplo</label></div>
+    </div>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 200" role="img" aria-label="Comparación de Madonna y Prince como dos modelos contrastantes de superestrellato en la década de 1980">
+      <rect width="720" height="200" fill="#fff" rx="10" stroke="#CDD4DD"/>
+      <rect x="0" y="0" width="720" height="40" rx="10" fill="#2B4A6F"/>
+      <rect x="0" y="20" width="720" height="20" fill="#2B4A6F"/>
+      <text x="180" y="26" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Artista</text>
+      <text x="540" y="26" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold">Camino al superestrellato</text>
+      <line x1="0" y1="120" x2="720" y2="120" stroke="#CDD4DD"/>
+      <line x1="360" y1="40" x2="360" y2="200" stroke="#CDD4DD"/>
+      <text x="16" y="65" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#2B4A6F">Madonna</text>
+      <text x="16" y="85" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Like a Virgin, 1984</text>
+      <text x="375" y="65" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">Reinvención repetida de la</text>
+      <text x="375" y="83" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">imagen y del estilo musical</text>
+      <text x="375" y="103" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">de un álbum a otro</text>
+      <text x="16" y="145" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#2B4A6F">Prince</text>
+      <text x="16" y="165" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">When Doves Cry, 1984</text>
+      <text x="375" y="145" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">Producción prolífica e inclasificable</text>
+      <text x="375" y="163" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">entre funk, rock, pop y R&amp;B,</text>
+      <text x="375" y="183" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B2A41">con nueve álbumes en el Top 10</text>
+    </svg>
+    <figcaption>Figura 2. Dos artistas, dos estrategias para mantener la atención masiva a lo largo de una década: la reinvención constante frente a una producción constante y muy variada.</figcaption>
+  </figure>
+
+  <!-- ============ DROPDOWN ============ -->
+  <div class="h5p-act" data-widget="dropdown">
+    <div class="h5p-act__head"><span>Elige la palabra correcta</span><span class="h5p-act__type">Completa con opciones</span></div>
+    <div class="h5p-act__body">
+      <p>El álbum que consagró a Madonna fue <select class="h5p-dd" data-answer="Like a Virgin"><option value="">…</option><option>Purple Rain</option><option>Like a Virgin</option><option>Private Dancer</option></select>, mientras que el éxito de Prince de 1984, "When Doves Cry", se distingue por carecer de una <select class="h5p-dd" data-answer="línea de bajo"><option value="">…</option><option>línea de bajo</option><option>pista vocal</option><option>patrón de batería</option></select> convencional. Ambos artistas se apoyaron mucho en <select class="h5p-dd" data-answer="los medios masivos"><option value="">…</option><option>solo la radio en vivo</option><option>los medios masivos</option><option>solo el boca a boca</option></select> para construir una conexión aparentemente personal con el público.</p>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Revisar</button>
+        <button class="am-btn am-btn--ghost" data-retry>Reintentar</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ============ TIMELINE ============ -->
+  <div class="h5p-act" data-widget="timeline">
+    <div class="h5p-act__head"><span>Recorre dos carreras</span><span class="h5p-act__type">Línea de tiempo</span></div>
+    <div class="h5p-act__body">
+      <div class="h5p-tl-nav"></div>
+      <div class="h5p-tl-track"><span></span></div>
+      <div class="h5p-tl-panel" data-events='[{"y":"1982","t":"Prince inicia su racha en el Top 10","d":"Prince comienza una década en la que nueve de sus álbumes llegan al Top 10 de Billboard."},{"y":"1984","t":"Like a Virgin","d":"El álbum que consagra a Madonna vende más de diez millones de copias y la convierte en una sensación mediática."},{"y":"1984","t":"Purple Rain y “When Doves Cry”","d":"Prince lanza la película y el álbum Purple Rain; su primer sencillo se convierte en uno de sus mayores éxitos."},{"y":"Fines de los 80","t":"La reinvención continúa","d":"Madonna cambia una y otra vez su sonido y su imagen con cada nuevo álbum, y sostiene su celebridad a lo largo de la década."}]'></div>
+      <div class="h5p-controls" style="justify-content:center"><button class="am-btn am-btn--ghost" data-prev>&#8592; Antes</button><button class="am-btn am-btn--ghost" data-next>Después &#8594;</button></div>
+    </div>
+  </div>
+
+  <h2>En resumen</h2>
+  <p>Madonna y Prince usaron el entorno mediático de la década de 1980 para convertirse en superestrellas, pero de maneras distintas: Madonna, mediante una reinvención calculada y repetida de su imagen y su sonido; Prince, mediante su enorme registro musical y su productividad en varios géneros. Ambos muestran hasta qué punto el estrellato de esta década dependía de la capacidad de los medios masivos para hacer que una figura pública pareciera conocible en lo personal. La página siguiente se aleja por completo del pop comercial para seguir a un género que construía sus propias bases, en gran medida al margen de MTV y de la radio de los cuarenta principales: el hip-hop.</p>
+</main>
+
+<div class="am-pagefoot"><div class="rule"></div></div>
+<footer class="am-footband"><span class="am-l-en">Module 13: The 1980s &nbsp;·&nbsp; <span class="pg">Page 6 of 9</span> &nbsp;·&nbsp; American Music</span><span class="am-l-es">Módulo 13: La década de 1980 &nbsp;·&nbsp; <span class="pg">Página 6 de 9</span> &nbsp;·&nbsp; Música estadounidense</span></footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Language (EN/ES) ---------- */
+  var ROOT=document.documentElement, BI=ROOT.classList.contains('am-bilingual');
+  var ES={"Answer every question first.": "Responde todas las preguntas primero.", "Score: ": "Puntuación: ", "Correct!": "¡Correcto!", "Not quite — the highlighted answer is correct.": "No exactamente: la respuesta resaltada es la correcta.", "Fill every blank first (tap a filled blank to clear it).": "Completa todos los espacios primero (toca un espacio lleno para vaciarlo).", "Perfect!": "¡Perfecto!", "Tap the red blanks to clear them and try again.": "Toca los espacios en rojo para vaciarlos e inténtalo de nuevo.", "Deck complete — you rated ": "Mazo terminado: marcaste ", " of ": " de ", " cards “Got it” on the first pass.": " tarjetas como “Lo sé” en la primera vuelta.", " (review)": " (repaso)", "Move up": "Subir", "Move down": "Bajar", "Exactly right!": "¡Exactamente!", "Red items are out of place — keep adjusting.": "Los elementos en rojo están fuera de lugar; sigue ajustando.", "Place every item in a category first.": "Coloca cada elemento en una categoría primero.", "All sorted correctly!": "¡Todo clasificado correctamente!", "Red items are in the wrong category — tap one to send it back and try again.": "Los elementos en rojo están en la categoría equivocada; toca uno para devolverlo e inténtalo de nuevo.", "Found ": "Encontraste ", " wrong": " incorrectas", "You found them all!": "¡Las encontraste todas!", "Dashed outlines show ones you missed; struck-through words were not targets.": "Los contornos punteados muestran las que te faltaron; las palabras tachadas no eran objetivos.", "Choose an answer for every blank first.": "Elige una respuesta para cada espacio primero.", "All correct!": "¡Todo correcto!", "Red choices are wrong — change them and check again.": "Las opciones en rojo son incorrectas; cámbialas y vuelve a revisar.", "<em>Tap a section to begin.</em>": "<em>Toca una sección para comenzar.</em>", "Tap a key to play.": "Toca una tecla para tocar.", "Now playing: ": "Sonando: ", "Playing: ": "Reproduciendo: ", "<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>": "<h4>Todas las tareas completas ✔</h4><div>Tocaste cada patrón correctamente. Vuelve a escuchar cualquier demostración o sigue explorando.</div>", "Nice work — every task complete.": "¡Buen trabajo! Completaste todas las tareas.", "All piano tasks complete.": "Todas las tareas de piano completas.", "Task ": "Tarea ", "Show me": "Muéstrame", "You played: ": "Tocaste: ", "Tasks: ": "Tareas: ", " correct.": " correcta.", "← Back": "← Atrás", "Start over": "Empezar de nuevo", "Strong outcome": "Buen resultado", "Mixed outcome": "Resultado mixto", "Rethink this path": "Reconsidera este camino", "Your path": "Tu camino", "Outcome": "Resultado", "Try another path": "Prueba otro camino", "Endings found: ": "Finales encontrados: ", "Outcome reached: ": "Resultado alcanzado: ", "Explored: ": "Explorados: ", "You explored every location on the map.": "Exploraste todos los lugares del mapa.", "<em>Select a numbered marker, or a name below the map.</em>": "<em>Selecciona un marcador numerado o un nombre debajo del mapa.</em>", "Image. Tap the spot, or use the arrow keys to move the circle and press Enter.": "Imagen. Toca el lugar, o usa las flechas del teclado para mover el círculo y presiona Enter.", "All found!": "¡Encontraste todo!", "You found every spot.": "Encontraste todos los lugares.", "All spots found.": "Todos los lugares encontrados.", "Found it!": "¡Lo encontraste!", "✖ Not quite — try again.": "✖ No exactamente; inténtalo de nuevo.", " (You can use “Show me.”)": " (Puedes usar “Muéstrame”.)", "Found: ": "Encontrados: ", "Events opened: ": "Eventos abiertos: ", "You opened every event on the timeline.": "Abriste todos los eventos de la línea de tiempo.", "Items to sort": "Elementos para clasificar", "Place selected item in ": "Colocar el elemento seleccionado en ", " selected. Choose a category.": " seleccionado. Elige una categoría.", "Correct: ": "Correctos: ", "All sorted correctly.": "Todo clasificado correctamente.", "Play video: ": "Reproducir video: ", "Play here": "Reproducir aquí", "Play audio: ": "Reproducir audio: ", "✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.": "✔ Los elementos correctos quedan fijos. ✖ Los marcados con una X volvieron a la bandeja; inténtalo de nuevo."};
+  function X(w,s){ var m=w&&w.closest?w.closest('main'):null; return (m&&m.lang==='es'&&ES[s])||s; }
+  function setLang(l){ if(!BI) l='en'; ROOT.setAttribute('data-lang',l); ROOT.lang=l;
+    var tt=ROOT.getAttribute(l==='es'?'data-title-es':'data-title-en'); if(tt) document.title=tt;
+    document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.setAttribute('aria-pressed',b.dataset.setlang===l?'true':'false'); });
+    try{ localStorage.setItem('amMusicLang',l); }catch(e){} }
+  window.amSetLang=setLang;
+  document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.setlang); window.scrollTo(0,0); }); });
+  (function(){ var saved=null; try{ saved=localStorage.getItem('amMusicLang'); }catch(e){} setLang(saved==='es'?'es':'en'); })();
+  function shuffle(a){ for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t;} return a; }
+  function fb(w,cls,msg){ var f=w.querySelector('.h5p-feedback'); if(!f) return; f.className='h5p-feedback'+(cls?' '+cls:''); f.textContent=msg||''; }
+  function score(w,txt){ var s=w.querySelector('.h5p-score'); if(s) s.textContent=txt||''; }
+  function on(w,sel,fn){ var el=w.querySelector(sel); if(el) el.addEventListener('click',fn); }
+
+  /* ---------- 1. MCQ ---------- */
+  document.querySelectorAll('[data-widget="mcq"]').forEach(function(w){
+    var qs=w.querySelectorAll('.h5p-q');
+    qs.forEach(function(q){
+      q.querySelectorAll('.h5p-opt').forEach(function(opt,i){
+        opt.type='button';
+        opt.addEventListener('click',function(){
+          if(q.dataset.locked) return;
+          q.querySelectorAll('.h5p-opt').forEach(function(o){o.classList.remove('sel');});
+          opt.classList.add('sel'); q.dataset.sel=i;
+        });
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, answered=0;
+      qs.forEach(function(q){ if(q.dataset.sel!==undefined) answered++; });
+      if(answered<qs.length){ score(w,X(w,'Answer every question first.')); return; }
+      qs.forEach(function(q){
+        q.dataset.locked="1";
+        var sel=+q.dataset.sel, cor=+q.dataset.correct, opts=q.querySelectorAll('.h5p-opt'), f=q.querySelector('.h5p-feedback'), why=q.querySelector('.h5p-why');
+        opts[cor].classList.add('ok');
+        if(sel===cor){sc++; f.className='h5p-feedback ok'; f.textContent=X(w,'Correct!');}
+        else {opts[sel].classList.add('bad'); f.className='h5p-feedback bad'; f.textContent=X(w,'Not quite — the highlighted answer is correct.');}
+        if(why) why.hidden=false;
+      });
+      score(w,X(w,'Score: ')+sc+' / '+qs.length);
+    });
+    on(w,'[data-retry]',function(){
+      qs.forEach(function(q){
+        delete q.dataset.locked; delete q.dataset.sel;
+        q.querySelectorAll('.h5p-opt').forEach(function(o){o.className='h5p-opt';});
+        var f=q.querySelector('.h5p-feedback'); f.className='h5p-feedback'; f.textContent='';
+        var why=q.querySelector('.h5p-why'); if(why) why.hidden=true;
+      });
+      score(w,'');
+    });
+  });
+
+  /* ---------- 2. Drag the words ---------- */
+  document.querySelectorAll('[data-widget="dragwords"]').forEach(function(w){
+    var bank=w.querySelector('.h5p-bank'), blanks=w.querySelectorAll('.h5p-blank'), selWord=null;
+    var words=[]; blanks.forEach(function(b){words.push(b.dataset.answer);});
+    (w.dataset.extra||'').split('|').forEach(function(x){ if(x) words.push(x); });
+    function makeBank(){
+      bank.innerHTML=''; selWord=null;
+      shuffle(words.slice()).forEach(function(word){
+        var b=document.createElement('button'); b.type='button'; b.className='h5p-word'; b.textContent=word;
+        b.addEventListener('click',function(){
+          bank.querySelectorAll('.h5p-word').forEach(function(x){x.classList.remove('sel');});
+          b.classList.add('sel'); selWord=b;
+        });
+        bank.appendChild(b);
+      });
+    }
+    makeBank();
+    blanks.forEach(function(blank){
+      blank.setAttribute('role','button'); blank.tabIndex=0;
+      blank.addEventListener('click',function(){
+        if(blank.textContent){
+          var t=blank.textContent; blank.textContent='';
+          var returned=false;
+          bank.querySelectorAll('.h5p-word').forEach(function(x){ if(!returned && x.textContent===t && x.classList.contains('used')){ x.classList.remove('used'); returned=true; } });
+          blank.classList.remove('ok','bad'); return;
+        }
+        if(!selWord) return;
+        blank.textContent=selWord.textContent;
+        selWord.classList.add('used'); selWord.classList.remove('sel'); selWord=null;
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      blanks.forEach(function(b){
+        if(!b.textContent){done=false; return;}
+        if(b.textContent.toLowerCase()===b.dataset.answer.toLowerCase()){b.classList.add('ok'); b.classList.remove('bad'); sc++;}
+        else {b.classList.add('bad'); b.classList.remove('ok');}
+      });
+      if(!done){fb(w,'bad',X(w,'Fill every blank first (tap a filled blank to clear it).')); return;}
+      score(w,X(w,'Score: ')+sc+' / '+blanks.length);
+      fb(w, sc===blanks.length?'ok':'bad', sc===blanks.length?X(w,'Perfect!'):X(w,'Tap the red blanks to clear them and try again.'));
+    });
+    on(w,'[data-retry]',function(){
+      blanks.forEach(function(b){b.textContent=''; b.classList.remove('ok','bad');});
+      makeBank(); score(w,''); fb(w,'','');
+    });
+  });
+
+  /* ---------- 3. Flashcards ---------- */
+  document.querySelectorAll('[data-widget="flashcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), cards=JSON.parse(card.dataset.cards), i=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    function render(){ card.classList.remove('flip'); setTimeout(function(){ front.textContent=cards[i].front; back.textContent=cards[i].back; },card.classList.contains('flip')?250:0); counter.textContent=(i+1)+' / '+cards.length; }
+    card.addEventListener('click',function(){card.classList.toggle('flip');});
+    on(w,'[data-prev]',function(){ i=(i-1+cards.length)%cards.length; render(); });
+    on(w,'[data-next]',function(){ i=(i+1)%cards.length; render(); });
+    front.textContent=cards[0].front; back.textContent=cards[0].back; counter.textContent='1 / '+cards.length;
+  });
+
+  /* ---------- 4. Dialog cards (self-assessed) ---------- */
+  document.querySelectorAll('[data-widget="dialogcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), all=JSON.parse(card.dataset.cards), queue=all.slice(), i=0, got=0, seen=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    var ctrl=w.querySelector('.h5p-dlg-ctrl'), bar=w.querySelector('.h5p-progress span'), restart=w.querySelector('[data-restart]');
+    function show(){
+      if(!queue.length){ card.style.display='none'; ctrl.classList.remove('show'); bar.style.width='100%'; fb(w,'ok',X(w,'Deck complete — you rated ')+got+X(w,' of ')+all.length+X(w,' cards “Got it” on the first pass.')); restart.hidden=false; counter.textContent=''; return; }
+      card.style.display=''; card.classList.remove('flip'); ctrl.classList.remove('show');
+      front.textContent=queue[0].front; back.textContent=queue[0].back;
+      counter.textContent=(all.length-queue.length+1)+' / '+all.length+(queue.length+seen>all.length?X(w,' (review)'):'');
+      bar.style.width=Math.round(100*(all.length-queue.length)/all.length)+'%';
+    }
+    card.addEventListener('click',function(){ card.classList.toggle('flip'); if(card.classList.contains('flip')) ctrl.classList.add('show'); });
+    on(w,'[data-gotit]',function(){ var c=queue.shift(); if(!c._again) got++; seen++; show(); });
+    on(w,'[data-again]',function(){ var c=queue.shift(); c._again=true; queue.push(c); seen++; show(); });
+    restart.addEventListener('click',function(){ all.forEach(function(c){delete c._again;}); queue=all.slice(); got=0; seen=0; restart.hidden=true; fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 5. Order the steps ---------- */
+  document.querySelectorAll('[data-widget="order"]').forEach(function(w){
+    var ol=w.querySelector('.h5p-order'), solution=JSON.parse(ol.dataset.solution);
+    function build(){
+      var items=shuffle(solution.slice()); if(items.join()===solution.join()) items.reverse();
+      ol.innerHTML='';
+      items.forEach(function(txt){
+        var li=document.createElement('li');
+        var up=document.createElement('button'); up.className='h5p-move'; up.type='button'; up.innerHTML='&#9650;'; up.setAttribute('aria-label',X(w,'Move up'));
+        var dn=document.createElement('button'); dn.className='h5p-move'; dn.type='button'; dn.innerHTML='&#9660;'; dn.setAttribute('aria-label',X(w,'Move down'));
+        var span=document.createElement('span'); span.textContent=txt;
+        up.addEventListener('click',function(){ var p=li.previousElementSibling; if(p) ol.insertBefore(li,p); clear(); });
+        dn.addEventListener('click',function(){ var n=li.nextElementSibling; if(n) ol.insertBefore(n,li); clear(); });
+        li.appendChild(up); li.appendChild(dn); li.appendChild(span); ol.appendChild(li);
+      });
+    }
+    function clear(){ ol.querySelectorAll('li').forEach(function(li){li.classList.remove('ok','bad');}); fb(w,'',''); score(w,''); }
+    build();
+    on(w,'[data-check]',function(){
+      var lis=ol.querySelectorAll('li'), sc=0;
+      lis.forEach(function(li,idx){ var ok=li.querySelector('span').textContent===solution[idx]; li.classList.toggle('ok',ok); li.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+lis.length);
+      fb(w, sc===lis.length?'ok':'bad', sc===lis.length?X(w,'Exactly right!'):X(w,'Red items are out of place — keep adjusting.'));
+    });
+    on(w,'[data-retry]',function(){ build(); clear(); });
+  });
+
+  /* ---------- 6. Sort into categories ---------- */
+  document.querySelectorAll('[data-widget="sort"]').forEach(function(w){
+    var pool=w.querySelector('.h5p-sort-pool'), binsEl=w.querySelector('.h5p-bins');
+    var items=JSON.parse(pool.dataset.items), bins=JSON.parse(binsEl.dataset.bins), sel=null;
+    function mkItem(it){
+      var b=document.createElement('button'); b.type='button'; b.className='h5p-item'; b.textContent=it.t; b.dataset.c=it.c;
+      b.addEventListener('click',function(){
+        if(b.parentNode!==pool){ pool.appendChild(b); b.className='h5p-item'; sel=null; return; }
+        w.querySelectorAll('.h5p-item').forEach(function(x){x.classList.remove('sel');}); b.classList.add('sel'); sel=b;
+      });
+      return b;
+    }
+    function build(){
+      pool.innerHTML=''; binsEl.innerHTML=''; sel=null;
+      shuffle(items.slice()).forEach(function(it){ pool.appendChild(mkItem(it)); });
+      bins.forEach(function(name,idx){
+        var d=document.createElement('div'); d.className='h5p-bin'; d.dataset.c=idx;
+        var t=document.createElement('div'); t.className='h5p-bin__title'; t.textContent=name; d.appendChild(t);
+        d.addEventListener('click',function(e){ if(e.target.classList.contains('h5p-item')) return; if(!sel) return; d.appendChild(sel); sel.classList.remove('sel'); sel=null; });
+        binsEl.appendChild(d);
+      });
+    }
+    build();
+    on(w,'[data-check]',function(){
+      if(pool.querySelectorAll('.h5p-item').length){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var sc=0, all=w.querySelectorAll('.h5p-bin .h5p-item');
+      all.forEach(function(it){ var ok=it.dataset.c===it.parentNode.dataset.c; it.classList.toggle('ok',ok); it.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+all.length);
+      fb(w, sc===all.length?'ok':'bad', sc===all.length?X(w,'All sorted correctly!'):X(w,'Red items are in the wrong category — tap one to send it back and try again.'));
+    });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 7. Mark the words ---------- */
+  document.querySelectorAll('[data-widget="markwords"]').forEach(function(w){
+    var p=w.querySelector('.h5p-mtw'), targets=p.dataset.targets.split(',').map(function(s){return s.trim().toLowerCase();});
+    var text=p.textContent; p.innerHTML='';
+    text.split(/(\s+)/).forEach(function(tok){
+      if(/^\s+$/.test(tok)||!tok){ p.appendChild(document.createTextNode(tok)); return; }
+      var s=document.createElement('span'); s.className='h5p-tok'; s.textContent=tok; s.tabIndex=0; s.setAttribute('role','button');
+      s.dataset.t = targets.indexOf(tok.replace(/[^\p{L}\p{N}’']/gu,'').toLowerCase())>-1 ? '1':'0';
+      s.addEventListener('click',function(){ if(w.dataset.locked) return; s.classList.toggle('sel'); });
+      p.appendChild(s);
+    });
+    on(w,'[data-check]',function(){
+      w.dataset.locked='1'; var hits=0, wrong=0, total=0;
+      p.querySelectorAll('.h5p-tok').forEach(function(s){
+        var t=s.dataset.t==='1', on=s.classList.contains('sel'); if(t) total++;
+        if(t&&on){s.classList.add('ok'); hits++;} else if(!t&&on){s.classList.add('bad'); wrong++;} else if(t&&!on){s.classList.add('missed');}
+      });
+      score(w,X(w,'Found ')+hits+X(w,' of ')+total+(wrong?' · '+wrong+X(w,' wrong'):''));
+      fb(w, (hits===total&&!wrong)?'ok':'bad', (hits===total&&!wrong)?X(w,'You found them all!'):X(w,'Dashed outlines show ones you missed; struck-through words were not targets.'));
+    });
+    on(w,'[data-retry]',function(){ delete w.dataset.locked; p.querySelectorAll('.h5p-tok').forEach(function(s){s.className='h5p-tok';}); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 8. Dropdown cloze ---------- */
+  document.querySelectorAll('[data-widget="dropdown"]').forEach(function(w){
+    var dds=w.querySelectorAll('.h5p-dd');
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      dds.forEach(function(d){ if(!d.value){done=false; return;} var ok=d.value===d.dataset.answer; d.classList.toggle('ok',ok); d.classList.toggle('bad',!ok); if(ok) sc++; });
+      if(!done){ fb(w,'bad',X(w,'Choose an answer for every blank first.')); return; }
+      score(w,X(w,'Score: ')+sc+' / '+dds.length);
+      fb(w, sc===dds.length?'ok':'bad', sc===dds.length?X(w,'All correct!'):X(w,'Red choices are wrong — change them and check again.'));
+    });
+    on(w,'[data-retry]',function(){ dds.forEach(function(d){ d.value=''; d.classList.remove('ok','bad'); }); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 9. Timeline stepper ---------- */
+  document.querySelectorAll('[data-widget="timeline"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-tl-panel'), ev=JSON.parse(panel.dataset.events), nav=w.querySelector('.h5p-tl-nav'), dot=w.querySelector('.h5p-tl-track span'), i=0, btns=[];
+    ev.forEach(function(e,idx){ var b=document.createElement('button'); b.type='button'; b.className='h5p-tl-btn'; b.textContent=e.y; b.addEventListener('click',function(){ i=idx; render(); }); nav.appendChild(b); btns.push(b); });
+    function render(){ btns.forEach(function(b,idx){ b.classList.toggle('on',idx===i); }); dot.style.left=(ev.length>1? (100*i/(ev.length-1)) : 50)+'%'; panel.innerHTML='<h4>'+ev[i].y+' · '+ev[i].t+'</h4><div>'+ev[i].d+'</div>'; }
+    on(w,'[data-prev]',function(){ i=Math.max(0,i-1); render(); }); on(w,'[data-next]',function(){ i=Math.min(ev.length-1,i+1); render(); });
+    render();
+  });
+
+  /* ---------- 10. Song form explorer ---------- */
+  document.querySelectorAll('[data-widget="songform"]').forEach(function(w){
+    var row=w.querySelector('.h5p-form-row'), secs=JSON.parse(row.dataset.sections), panel=w.querySelector('.h5p-form-panel'), els=[], timer=null;
+    secs.forEach(function(s,idx){ var d=document.createElement('div'); d.className='h5p-form-sec'; d.style.background=s.c; d.innerHTML=s.l+'<small>'+s.s+'</small>'; d.tabIndex=0; d.setAttribute('role','button'); d.addEventListener('click',function(){ stop(); show(idx); }); row.appendChild(d); els.push(d); });
+    function show(idx){ els.forEach(function(e,j){ e.classList.toggle('on',j===idx); }); panel.innerHTML='<strong>'+secs[idx].l+' — '+secs[idx].s+':</strong> '+secs[idx].t; }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    on(w,'[data-play]',function(){ stop(); var k=0; show(0); timer=setInterval(function(){ k++; if(k>=secs.length){ stop(); return; } show(k); },1800); });
+    panel.innerHTML=X(w,'<em>Tap a section to begin.</em>');
+  });
+
+  /* ---------- 11. Hotspots ---------- */
+  document.querySelectorAll('[data-widget="hotspots"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-hs-panel'), spots=w.querySelectorAll('[data-hs]');
+    spots.forEach(function(g){ g.setAttribute('tabindex','0'); g.setAttribute('role','button');
+      g.addEventListener('click',function(){ spots.forEach(function(x){x.classList.remove('on');}); g.classList.add('on'); panel.innerHTML='<h4>'+g.dataset.hs+'</h4><div>'+g.dataset.info+'</div>'; }); });
+  });
+
+  /* ================= ADDED WIDGETS (2026-09) ================= */
+  function el(tag,cls,txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!==undefined) e.textContent=txt; return e; }
+  function live(w,msg){ var r=w.querySelector('.am-sr[aria-live]'); if(!r){ r=el('div','am-sr'); r.setAttribute('aria-live','polite'); w.appendChild(r); } r.textContent=''; setTimeout(function(){ r.textContent=msg; },30); }
+  var SVGNS='http://www.w3.org/2000/svg';
+  function sv(tag,attrs){ var e=document.createElementNS(SVGNS,tag); for(var k in attrs) e.setAttribute(k,attrs[k]); return e; }
+  function svgPoint(svg,evt){ var pt=svg.createSVGPoint(); pt.x=evt.clientX; pt.y=evt.clientY; return pt.matrixTransform(svg.getScreenCTM().inverse()); }
+
+  /* ---------- 12. Piano (WebAudio) ---------- */
+  var ACtx=null;
+  function audio(){ if(!ACtx){ var C=window.AudioContext||window.webkitAudioContext; if(!C) return null; ACtx=new C(); } if(ACtx.state==='suspended') ACtx.resume(); return ACtx; }
+  var NAMES=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'], FLAT={'Db':'C#','Eb':'D#','Gb':'F#','Ab':'G#','Bb':'A#'};
+  function midi(n){ var m=/^([A-G][#b]?)(\d)$/.exec(n); if(!m) return null; var p=FLAT[m[1]]||m[1]; return NAMES.indexOf(p)+12*(+m[2]+1); }
+  function nname(m){ return NAMES[m%12]+(Math.floor(m/12)-1); }
+  function tone(m,when,dur,vol){
+    var ctx=audio(); if(!ctx) return; var t=when||ctx.currentTime, f=440*Math.pow(2,(m-69)/12), v=Math.max(vol||0.5,0.001), d=Math.max(dur||0.9,0.25);
+    var o=ctx.createOscillator(), o2=ctx.createOscillator(), g=ctx.createGain(), g2=ctx.createGain();
+    o.type='triangle'; o.frequency.value=f; o2.type='sine'; o2.frequency.value=f*2;
+    g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(v,t+0.012); g.gain.exponentialRampToValueAtTime(v*0.32,t+0.15); g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+    g2.gain.setValueAtTime(0.0001,t); g2.gain.exponentialRampToValueAtTime(v*0.22,t+0.012); g2.gain.exponentialRampToValueAtTime(0.0001,t+0.28);
+    o.connect(g); o2.connect(g2); g.connect(ctx.destination); g2.connect(ctx.destination);
+    o.start(t); o2.start(t); o.stop(t+d+0.05); o2.stop(t+0.3);
+  }
+  document.querySelectorAll('[data-widget="piano"]').forEach(function(w){
+    var host=w.querySelector('.h5p-piano'), start=midi(host.dataset.start||'C4'), oct=+(host.dataset.octaves||1), last=start+12*oct;
+    var labels=host.dataset.labels!=='0', demos=JSON.parse(host.dataset.demos||'[]'), tasks=JSON.parse(host.dataset.tasks||'[]');
+    var keysMap={}, KB='awsedftgyhujk'.split(''), ti=0, played=[], busy=[], ESL=(w.closest('main')||{}).lang==='es', SOL=['Do','Do♯','Re','Re♯','Mi','Fa','Fa♯','Sol','Sol♯','La','La♯','Si'];
+    function disp(m){ return ESL ? SOL[m%12]+(Math.floor(m/12)-1) : nname(m).replace('#','♯'); }
+    function sayk(m){ return ESL ? SOL[m%12].replace('♯',' sostenido')+' '+(Math.floor(m/12)-1) : nname(m).replace('#',' sharp '); }
+    if(demos.length){ var dm=el('div','h5p-pno-demos'); demos.forEach(function(d){ var b=el('button','am-btn am-btn--slate','▶ '+d.l); b.type='button'; b.addEventListener('click',function(){ playSeq(d); }); dm.appendChild(b); }); host.parentNode.insertBefore(dm,host); }
+    var wrap=el('div','h5p-pno-wrap'); host.parentNode.insertBefore(wrap,host); wrap.appendChild(host);
+    var kb=el('div','h5p-pno'); host.appendChild(kb);
+    var whites=[]; for(var m=start;m<=last;m++){ if(NAMES[m%12].length===1) whites.push(m); }
+    whites.forEach(function(m){ var k=el('button','h5p-pno-w',labels?disp(m).replace(/\d/,''):''); k.type='button'; k.dataset.m=m; k.dataset.n=nname(m); k.setAttribute('aria-label',sayk(m)); kb.appendChild(k); keysMap[m]=k; });
+    var ww=100/whites.length;
+    for(m=start;m<=last;m++){ if(NAMES[m%12].length===2){ var idx=whites.indexOf(m-1); if(idx<0) continue; var b=el('button','h5p-pno-b',labels?disp(m).replace(/\d/,''):''); b.type='button'; b.dataset.m=m; b.dataset.n=nname(m); b.setAttribute('aria-label',sayk(m)); b.style.left='calc('+(ww*(idx+1))+'% - '+(ww*0.3)+'%)'; b.style.width=(ww*0.6)+'%'; kb.appendChild(b); keysMap[m]=b; } }
+    var now=el('div','h5p-pno-now'); now.setAttribute('aria-live','polite'); now.textContent=X(w,'Tap a key to play.'); wrap.parentNode.insertBefore(now,wrap.nextSibling);
+    var tbox=null; if(tasks.length){ tbox=el('div','h5p-pno-task'); now.parentNode.insertBefore(tbox,now.nextSibling); }
+    function flash(m,ms){ var k=keysMap[m]; if(!k) return; k.classList.add('on'); setTimeout(function(){ k.classList.remove('on'); },ms||160); }
+    function press(m){ tone(m); flash(m); now.textContent=X(w,'Now playing: ')+disp(m); if(tasks.length && ti<tasks.length) check(m); }
+    Object.keys(keysMap).forEach(function(m){ keysMap[m].addEventListener('pointerdown',function(e){ e.preventDefault(); press(+m); }); keysMap[m].addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); press(+m); } }); });
+    w.addEventListener('keydown',function(e){ if(e.repeat||e.target.tagName==='INPUT') return; var i=KB.indexOf(e.key.toLowerCase()); if(i>-1 && start+i<=last && keysMap[start+i]){ e.preventDefault(); press(start+i); } });
+    function playSeq(d){ var ctx=audio(); if(!ctx) return; busy.forEach(clearTimeout); busy=[]; var beat=60/(d.bpm||100), t=ctx.currentTime+0.08, ms=0;
+      d.seq.forEach(function(s){ var ns=[].concat(s[0]), len=(s[1]||1)*beat; ns.forEach(function(n){ if(n==='r') return; var mm=midi(n); if(mm===null) return; tone(mm,t,Math.min(len*0.95+0.2,2.2),0.4); (function(mm,ms){ busy.push(setTimeout(function(){ flash(mm,Math.max(120,len*800)); },ms)); })(mm,ms); }); t+=len; ms+=len*1000; });
+      now.textContent=X(w,'Playing: ')+d.l; }
+    function renderTask(){ if(!tbox) return; if(ti>=tasks.length){ tbox.innerHTML=X(w,'<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>'); fb(w,'ok',X(w,'Nice work — every task complete.')); live(w,X(w,'All piano tasks complete.')); return; }
+      var t=tasks[ti]; tbox.innerHTML=''; tbox.appendChild(el('h4','',X(w,'Task ')+(ti+1)+X(w,' of ')+tasks.length)); tbox.appendChild(el('div','',t.p)); var pl=el('div','h5p-pno-played',''); pl.dataset.played=''; tbox.appendChild(pl);
+      var hb=el('button','am-btn am-btn--ghost',X(w,'Show me')); hb.type='button'; hb.style.marginTop='8px'; hb.addEventListener('click',function(){ t.n.forEach(function(n,i){ var mm=midi(n); setTimeout(function(){ tone(mm); var k=keysMap[mm]; if(k){ k.classList.add('hint'); setTimeout(function(){ k.classList.remove('hint'); },1400); } }, t.o?i*420:0); }); }); tbox.appendChild(hb); played=[]; }
+    function check(m){ var t=tasks[ti], want=t.n.map(midi); played.push(m); if(played.length>12) played.shift();
+      var pl=tbox.querySelector('.h5p-pno-played'); pl.textContent=X(w,'You played: ')+played.slice(-8).map(disp).join(' · ');
+      var ok=false; if(t.o){ var tail=played.slice(-want.length); ok=tail.length===want.length && tail.every(function(x,i){ return x===want[i]; }); }
+      else { var need=want.slice().sort().join(), got={}; played.slice(-want.length*2).forEach(function(x){ if(want.indexOf(x)>-1) got[x]=1; }); ok=Object.keys(got).length===want.length && Object.keys(got).map(Number).sort().join()===need; }
+      if(ok){ score(w,X(w,'Tasks: ')+(ti+1)+' / '+tasks.length); fb(w,'ok',t.ok||X(w,'Correct!')); live(w,X(w,'Task ')+(ti+1)+X(w,' correct.')); ti++; setTimeout(renderTask,650); } }
+    var rb=w.querySelector('[data-retry]'); if(rb) rb.addEventListener('click',function(){ ti=0; played=[]; score(w,''); fb(w,'',''); renderTask(); });
+    renderTask();
+  });
+
+  /* ---------- 13. Branching scenario ---------- */
+  document.querySelectorAll('[data-widget="branch"]').forEach(function(w){
+    var host=w.querySelector('.h5p-branch'), S=JSON.parse(host.dataset.scenes), hist=[], trail=[], cur='start', ends={}, nEnds=0;
+    Object.keys(S).forEach(function(k){ if(S[k].end) nEnds++; });
+    var tr=el('ol','h5p-br-trail'), card=el('div','h5p-br-card'), ctl=el('div','h5p-controls');
+    var back=el('button','am-btn am-btn--ghost',X(w,'← Back')), rs=el('button','am-btn am-btn--ghost',X(w,'Start over')), sc=el('span','h5p-score'); back.type=rs.type='button';
+    ctl.appendChild(back); ctl.appendChild(rs); ctl.appendChild(sc); host.appendChild(tr); host.appendChild(card); host.appendChild(ctl); card.setAttribute('aria-live','polite');
+    var TONE={good:X(w,'Strong outcome'),ok:X(w,'Mixed outcome'),review:X(w,'Rethink this path')};
+    function render(){ var s=S[cur]; tr.innerHTML=''; tr.appendChild(el('li','',X(w,'Your path'))); trail.forEach(function(t,i){ tr.appendChild(el('li','',(i+1)+'. '+t)); });
+      card.innerHTML=''; back.disabled=!hist.length;
+      if(s.end){ ends[cur]=1; var box=el('div','h5p-br-end '+s.end); box.appendChild(el('div','tone',TONE[s.end]||X(w,'Outcome'))); box.appendChild(el('h4','',s.t)); var ul=el('ul','h5p-br-pts'); (s.pts||[]).forEach(function(p){ ul.appendChild(el('li',p[0],p[1])); }); box.appendChild(ul); if(s.c) box.appendChild(el('p','',s.c)); card.appendChild(box);
+        var again=el('button','am-btn am-btn--slate',X(w,'Try another path')); again.type='button'; again.style.marginTop='12px'; again.addEventListener('click',restart); card.appendChild(again);
+        sc.textContent=X(w,'Endings found: ')+Object.keys(ends).length+' / '+nEnds; live(w,X(w,'Outcome reached: ')+s.t); return; }
+      card.appendChild(el('h4','',s.t)); [].concat(s.b||[]).forEach(function(p){ card.appendChild(el('p','',p)); });
+      var og=el('div','h5p-br-opts'); s.o.forEach(function(o,i){ var b=el('button','h5p-br-opt'); b.type='button'; b.appendChild(el('b','tag',String.fromCharCode(65+i))); var sp=el('span','',o.l); if(o.d) sp.appendChild(el('small','',o.d)); b.appendChild(sp); b.addEventListener('click',function(){ hist.push({cur:cur,trail:trail.slice()}); trail.push(o.l.length>42?o.l.slice(0,40)+'…':o.l); cur=o.n; render(); }); og.appendChild(b); }); card.appendChild(og); }
+    function restart(){ hist=[]; trail=[]; cur='start'; render(); }
+    back.addEventListener('click',function(){ var h=hist.pop(); if(!h) return; cur=h.cur; trail=h.trail; render(); });
+    rs.addEventListener('click',restart); render();
+  });
+
+  /* ---------- 14. Interactive map ---------- */
+  document.querySelectorAll('[data-widget="map"]').forEach(function(w){
+    var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
+    var COL=['#2B4A6F','#5E6B7C','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
+    var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
+    routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
+    M.forEach(function(m,i){ var g=sv('g',{'class':'h5p-map-m',tabindex:'0',role:'button','aria-label':(i+1)+'. '+m.n}); g.appendChild(sv('circle',{cx:m.x,cy:m.y,r:13,fill:COL[m.c||0]})); var t=sv('text',{x:m.x,y:m.y+4.5,'text-anchor':'middle',fill:'#fff'}); t.style.fill='#fff'; t.textContent=i+1; g.appendChild(t);
+      g.addEventListener('click',function(){ open(i); }); g.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(i); } }); svg.appendChild(g); gs.push(g);
+      var li=el('li'), b=el('button','',(i+1)+'. '+m.n); b.type='button'; b.addEventListener('click',function(){ open(i); }); li.appendChild(b); list.appendChild(li); btns.push(b); });
+    svg.parentNode.insertBefore(list,svg.nextSibling);
+    if(cats.length>1){ var lg=el('div','h5p-map-legend'); cats.forEach(function(c,i){ var s=el('span'); var d=el('i'); d.style.background=COL[i]; s.appendChild(d); s.appendChild(document.createTextNode(c)); lg.appendChild(s); }); list.parentNode.insertBefore(lg,list); }
+    function open(i){ var m=M[i]; seen[i]=1; gs.forEach(function(g,j){ g.classList.toggle('on',j===i); }); btns.forEach(function(b,j){ b.classList.toggle('on',j===i); b.classList.toggle('seen',!!seen[j]); });
+      panel.innerHTML=''; if(cats.length) panel.appendChild(el('div','cat',cats[m.c||0])); panel.appendChild(el('h4','',(i+1)+'. '+m.n)); var d=el('div'); d.innerHTML=m.d; panel.appendChild(d);
+      var k=Object.keys(seen).length; score(w,X(w,'Explored: ')+k+' / '+M.length); if(k===M.length) fb(w,'ok',X(w,'You explored every location on the map.')); }
+    panel.innerHTML=X(w,'<em>Select a numbered marker, or a name below the map.</em>'); score(w,'Explored: 0 / '+M.length);
+  });
+
+  /* ---------- 15. Find the spot ---------- */
+  document.querySelectorAll('[data-widget="findspot"]').forEach(function(w){
+    var frame=w.querySelector('.h5p-fs-frame'), svg=frame.querySelector('svg'), T=JSON.parse(frame.dataset.targets), i=0, miss=0;
+    var prompt=el('div','h5p-fs-prompt'); prompt.setAttribute('aria-live','polite'); frame.parentNode.insertBefore(prompt,frame);
+    var layer=sv('g',{}); svg.appendChild(layer); var vb=svg.viewBox.baseVal, cross=sv('circle',{'class':'h5p-fs-cross',r:10,cx:vb.width/2,cy:vb.height/2,visibility:'hidden'}); svg.appendChild(cross);
+    svg.setAttribute('tabindex','0'); svg.setAttribute('role','application'); svg.setAttribute('aria-label',X(w,'Image. Tap the spot, or use the arrow keys to move the circle and press Enter.'));
+    function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
+    function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
+      var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#9FACBD','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
+    svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
+    svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
+      if(mv){ e.preventDefault(); cross.setAttribute('visibility','visible'); cross.setAttribute('cx',Math.max(0,Math.min(vb.width,cx+mv[0]))); cross.setAttribute('cy',Math.max(0,Math.min(vb.height,cy+mv[1]))); }
+      else if(e.key==='Enter'||e.key===' '){ e.preventDefault(); cross.setAttribute('visibility','visible'); test(cx,cy); } });
+    on(w,'[data-showme]',function(){ if(i<T.length) test(T[i].x,T[i].y); });
+    on(w,'[data-retry]',function(){ layer.innerHTML=''; i=0; score(w,''); fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 16. Era timeline ---------- */
+  document.querySelectorAll('[data-widget="eratimeline"]').forEach(function(w){
+    var host=w.querySelector('.h5p-era'), E=JSON.parse(host.dataset.eras), seen={}, total=0, cur=0;
+    E.forEach(function(e){ total+=e.e.length; });
+    var tabs=el('div','h5p-era-tabs'), spine=el('ul','h5p-era-spine'), note=el('p','h5p-hint'); tabs.setAttribute('role','tablist'); host.appendChild(tabs); host.appendChild(note); host.appendChild(spine);
+    var tb=[]; E.forEach(function(e,i){ var b=el('button','h5p-era-tab',e.n); b.type='button'; b.setAttribute('role','tab'); b.appendChild(el('small','',e.s)); b.addEventListener('click',function(){ cur=i; render(); }); tabs.appendChild(b); tb.push(b); });
+    function render(){ tb.forEach(function(b,i){ b.classList.toggle('on',i===cur); b.setAttribute('aria-selected',i===cur); var all=E[i].e.every(function(_,j){ return seen[i+'.'+j]; }); b.classList.toggle('done',all); });
+      note.textContent=E[cur].d||''; note.hidden=!E[cur].d; spine.innerHTML='';
+      E[cur].e.forEach(function(ev,j){ var key=cur+'.'+j, li=el('li','h5p-era-ev'+(seen[key]?' seen':'')), b=el('button'); b.type='button'; b.setAttribute('aria-expanded','false'); b.appendChild(el('b','',ev.y)); b.appendChild(el('span','',ev.t)); var body=el('div','body'); body.innerHTML=ev.b;
+        b.addEventListener('click',function(){ var o=li.classList.toggle('open'); b.setAttribute('aria-expanded',o); if(o && !seen[key]){ seen[key]=1; li.classList.add('seen'); prog(); tb[cur].classList.toggle('done',E[cur].e.every(function(_,k){ return seen[cur+'.'+k]; })); } });
+        li.appendChild(b); li.appendChild(body); spine.appendChild(li); }); }
+    function prog(){ var k=Object.keys(seen).length; score(w,X(w,'Events opened: ')+k+' / '+total); if(k===total) fb(w,'ok',X(w,'You opened every event on the timeline.')); }
+    on(w,'[data-expand]',function(){ spine.querySelectorAll('.h5p-era-ev').forEach(function(li){ if(!li.classList.contains('open')) li.querySelector('button').click(); }); });
+    render(); prog();
+  });
+
+  /* ---------- 17. Drag sort (pointer drag + tap/keyboard fallback) ---------- */
+  document.querySelectorAll('[data-widget="dragsort"]').forEach(function(w){
+    var host=w.querySelector('.h5p-ds'), items=JSON.parse(host.dataset.items), bins=JSON.parse(host.dataset.bins), sel=null, drag=null;
+    var tray=el('div','h5p-ds-tray'), grid=el('div','h5p-ds-bins'); tray.setAttribute('aria-label',X(w,'Items to sort')); host.appendChild(tray); host.appendChild(grid);
+    var zones=bins.map(function(b,i){ var d=el('div','h5p-ds-bin'); d.appendChild(el('h5','',b)); var z=el('div','zone'); z.dataset.c=i; z.tabIndex=0; z.setAttribute('role','button'); z.setAttribute('aria-label',X(w,'Place selected item in ')+b); d.appendChild(z); grid.appendChild(d);
+      z.addEventListener('click',function(e){ if(e.target!==z && e.target.tagName!=='H5') return; place(z); }); d.addEventListener('click',function(e){ if(e.target===d||e.target.tagName==='H5') place(z); }); z.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); place(z); } }); return z; });
+    tray.addEventListener('click',function(e){ if(e.target===tray && sel){ tray.appendChild(sel); sel.classList.remove('sel'); sel=null; } });
+    function place(z){ if(!sel) return; z.appendChild(sel); sel.classList.remove('sel','shake'); sel=null; fb(w,'',''); }
+    function build(){ tray.innerHTML=''; zones.forEach(function(z){ z.innerHTML=''; }); sel=null; score(w,'');
+      shuffle(items.slice()).forEach(function(it){ var c=el('button','h5p-ds-card',it.t); c.type='button'; c.dataset.a=','+[].concat(it.a).join(',')+','; tray.appendChild(c);
+        c.addEventListener('click',function(){ if(c.disabled) return; if(c.dataset.dragged){ delete c.dataset.dragged; return; } if(sel===c){ c.classList.remove('sel'); sel=null; return; } if(sel) sel.classList.remove('sel'); sel=c; c.classList.add('sel'); live(w,c.textContent+X(w,' selected. Choose a category.')); });
+        c.addEventListener('pointerdown',function(e){ if(c.disabled||e.button>0) return; var r=c.getBoundingClientRect(); drag={c:c,sx:e.clientX,sy:e.clientY,ox:e.clientX-r.left,oy:e.clientY-r.top,moved:false}; c.setPointerCapture(e.pointerId); });
+        c.addEventListener('pointermove',function(e){ if(!drag||drag.c!==c) return; if(!drag.moved && Math.abs(e.clientX-drag.sx)+Math.abs(e.clientY-drag.sy)<6) return; if(!drag.moved){ drag.moved=true; c.classList.add('drag'); c.style.width=c.getBoundingClientRect().width+'px'; }
+          c.style.left=(e.clientX-drag.ox)+'px'; c.style.top=(e.clientY-drag.oy)+'px'; var t=document.elementFromPoint(e.clientX,e.clientY); zones.forEach(function(z){ z.parentNode.classList.toggle('hot',!!t && z.parentNode.contains(t)); }); });
+        c.addEventListener('pointerup',function(e){ if(!drag||drag.c!==c) return; var d=drag; drag=null; if(!d.moved) return; c.classList.remove('drag'); c.style.left=c.style.top=c.style.width=''; c.dataset.dragged='1';
+          var t=document.elementFromPoint(e.clientX,e.clientY), hit=null; zones.forEach(function(z){ z.parentNode.classList.remove('hot'); if(t && z.parentNode.contains(t)) hit=z; }); if(hit){ hit.appendChild(c); c.classList.remove('shake'); } else if(t && tray.contains(t)) tray.appendChild(c); if(sel){ sel.classList.remove('sel'); sel=null; } fb(w,'',''); });
+      }); }
+    build();
+    on(w,'[data-check]',function(){ if(tray.querySelector('.h5p-ds-card')){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var ok=0, all=host.querySelectorAll('.h5p-ds-card'); all.forEach(function(c){ var z=c.parentNode; if(c.dataset.a.indexOf(','+z.dataset.c+',')>-1){ c.classList.add('ok'); c.disabled=true; ok++; } else { c.classList.add('shake'); tray.appendChild(c); } });
+      score(w,X(w,'Correct: ')+ok+' / '+all.length); if(ok===all.length){ fb(w,'ok',X(w,'All sorted correctly!')); live(w,X(w,'All sorted correctly.')); } else fb(w,'bad',X(w,'✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.')); });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); });
+  });
+
+  /* ---------- Listening-guide video thumbnails (click to play) ---------- */
+  function ytId(u){ var m=/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{11})/.exec(u||''); return m?m[1]:null; }
+  document.querySelectorAll('.am-listen').forEach(function(card){
+    var a=card.querySelector('a.am-listen__link[href]'); var href=a?a.getAttribute('href'):'';
+    if(/dropbox\.com\/.*\.mp3/i.test(href)){ var au=document.createElement('audio'); au.controls=true; au.preload='none'; au.className='am-audio';
+      au.src=href.replace(/[?&]dl=\d/,'').replace(/\?$/,'')+(href.indexOf('?')>-1&&!/[?&]dl=\d$/.test(href)?'&':'?')+'raw=1';
+      au.setAttribute('aria-label',X(card,'Play audio: ')+((card.querySelector('.am-listen__title')||{}).textContent||'')); var bd=card.querySelector('.am-listen__body'); bd.insertBefore(au,bd.firstChild); return; }
+    var id=ytId(href); if(!id) return;
+    var body=card.querySelector('.am-listen__body'), ttl=(card.querySelector('.am-listen__title')||{}).textContent||'';
+    var b=document.createElement('button'); b.type='button'; b.className='am-yt'; b.setAttribute('aria-label',X(card,'Play video: ')+ttl);
+    var img=document.createElement('img'); img.alt=''; img.loading='lazy'; img.src='https://i.ytimg.com/vi/'+id+'/hqdefault.jpg';
+    var p=document.createElement('span'); p.className='am-yt__play'; p.textContent=X(card,'Play here');
+    b.appendChild(img); b.appendChild(p); body.insertBefore(b, body.firstChild);
+    b.addEventListener('click',function(){
+      var f=document.createElement('iframe'); f.className='am-yt-frame'; f.title=ttl;
+      f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen'); f.setAttribute('allowfullscreen','');
+      b.parentNode.replaceChild(f,b); f.focus();
+    });
+  });
+})();
+</script>
+</body>
+</html>
