@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en" class="am-bilingual" data-title-en="Race Records and Hillbilly Records — American Music" data-title-es="Discos raciales y discos hillbilly — Música estadounidense">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Race Records and Hillbilly Records — American Music</title>
+<!--
+  AMERICAN MUSIC — SELF-CONTAINED PAGE
+  ===================================================================
+  Palette: Navy #2B4A6F · Slate #9FACBD
+    Navy dark  #1C2F47  (header/footer bands)      Navy deep #233C5C (hover)
+    Navy tint  #EBEFF4 / #DBE1E9 (callouts)         Slate soft #EEF1F5  Slate dark #5E6B7C
+    Ink #1B2A41 · Muted #4A5568 · Border #CDD4DD
+    Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
+  RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
+  or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
+  Every content page: objectives box, 2+ SVG figures, 2–3 widgets, Listening Guide(s),
+  key-term boxes, Page X of Y footer. Neutral textbook voice. No course code.
+-->
+<style>
+  :root{
+    --am-navy:#2B4A6F; --am-navy-dark:#1C2F47; --am-navy-deep:#233C5C;
+    --am-slate:#9FACBD; --am-slate-dark:#5E6B7C; --am-slate-soft:#EEF1F5;
+    --am-tint:#EBEFF4; --am-tint2:#DBE1E9; --am-mist:#F5F7F9;
+    --am-ink:#1B2A41; --am-muted:#4A5568; --am-border:#CDD4DD;
+    --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
+    --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
+    --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:var(--body); color:var(--am-ink); line-height:1.65; background:#fff; font-size:17px}
+  .am-topbar{background:var(--am-navy-dark); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:16px}
+  .am-mark{width:38px; height:38px; flex:none}
+  .am-wordmark{font-family:var(--head); font-weight:700; letter-spacing:1.5px; font-size:1.05em; text-transform:uppercase; white-space:nowrap; line-height:1.1}
+  .am-wordmark span{display:block; font-size:.6em; letter-spacing:4px; font-weight:400; color:var(--am-slate)}
+  .am-coursebar{margin-left:auto; font-size:.78em; letter-spacing:1.5px; text-transform:uppercase; opacity:.9; text-align:right; line-height:1.4}
+  .am-accentbar{height:6px; background:linear-gradient(90deg,var(--am-slate) 0 70%,var(--am-navy) 70% 100%)}
+  main{max-width:880px; margin:0 auto; padding:32px 24px 12px}
+  h1{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:2em; line-height:1.2; margin:0 0 6px; border-bottom:4px solid var(--am-slate); padding-bottom:10px}
+  h1 .am-kicker{display:block; font-size:.5em; letter-spacing:3px; text-transform:uppercase; color:var(--am-slate-dark); font-weight:600; margin-bottom:4px}
+  h2{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:1.35em; margin:34px 0 10px; padding-left:12px; border-left:6px solid var(--am-slate)}
+  h3{font-family:var(--head); font-weight:600; color:var(--am-navy); font-size:1.1em; margin:24px 0 8px}
+  a{color:var(--am-navy-deep)}
+  .am-lead{font-size:1.08em; font-style:italic; color:#3d4a5c; margin:14px 0 20px}
+  /* Callouts */
+  .am-objectives{background:var(--am-tint); border-left:6px solid var(--am-navy); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-label{margin:0 0 6px; font-family:var(--head); font-weight:700; color:var(--am-navy); text-transform:uppercase; letter-spacing:1.5px; font-size:.82em}
+  .am-keyterm{background:var(--am-mist); border:1px solid var(--am-border); border-left:6px solid var(--am-slate); padding:12px 16px; margin:16px 0; border-radius:8px}
+  .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
+  .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
+  .am-note{background:#F6F7F9; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  figure{margin:24px 0; text-align:center}
+  figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
+  figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
+  figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
+  /* Listening guide */
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(28,47,71,.08)}
+  .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
+  .am-listen__head svg{width:26px; height:26px; flex:none}
+  .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
+  .am-listen__meta{font-size:.82em; opacity:.9}
+  .am-listen__body{padding:14px 18px}
+  .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
+  .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
+  .am-listen__link:hover{background:#C7D0DB}
+  .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
+  .am-listen__log label{cursor:pointer}
+  /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#1C2F47; cursor:pointer}
+  .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
+  .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(28,47,71,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
+  .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
+  .am-audio{width:100%; margin:0 0 14px; display:block}
+  .am-yt-frame{width:100%; aspect-ratio:16/9; border:0; border-radius:8px; display:block; margin:0 0 14px; background:#000}
+  /* Buttons */
+  .am-btn{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em; background:var(--am-navy); color:#fff; border:0; padding:10px 18px; cursor:pointer; border-radius:6px}
+  .am-btn:hover{background:var(--am-navy-deep)}
+  .am-btn[disabled]{opacity:.45; cursor:default}
+  .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
+  .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
+  .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-btn--slate:hover{background:#C7D0DB}
+  /* ============ H5P-STYLE ACTIVITY SHELL ============ */
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(28,47,71,.1)}
+  .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
+  .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
+  .h5p-act__body{padding:18px 20px}
+  .h5p-feedback{margin-top:12px; padding:10px 14px; border-radius:6px; font-weight:600; display:none}
+  .h5p-feedback.ok{display:block; background:var(--ok-bg); color:var(--ok)}
+  .h5p-feedback.bad{display:block; background:var(--bad-bg); color:var(--bad)}
+  .h5p-feedback.info{display:block; background:var(--am-tint); color:var(--am-navy)}
+  .h5p-controls{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+  .h5p-score{margin-left:auto; font-family:var(--head); color:var(--am-navy); font-weight:700}
+  .h5p-hint{margin:0 0 10px; font-style:italic; color:var(--am-muted); font-size:.93em}
+  /* MCQ */
+  .h5p-mcq .h5p-q{margin-bottom:18px}
+  .h5p-mcq .h5p-stem{font-weight:600; margin:0 0 8px}
+  .h5p-opt{display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:10px 14px; margin:6px 0; cursor:pointer; font-family:var(--body); font-size:.95em; color:var(--am-ink)}
+  .h5p-opt:hover{border-color:var(--am-navy)}
+  .h5p-opt.sel{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-opt.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-opt.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-why{font-size:.9em; color:var(--am-muted); margin:4px 0 0 4px}
+  /* Drag the words (click-to-place) */
+  .h5p-bank{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px}
+  .h5p-word{background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 12px; cursor:pointer; font-weight:600; color:var(--am-navy-dark); font-family:var(--body); font-size:.95em}
+  .h5p-word.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-word.used{opacity:.3; pointer-events:none}
+  .h5p-blank{display:inline-block; min-width:110px; border-bottom:3px solid var(--am-navy); padding:2px 8px; margin:0 2px; cursor:pointer; text-align:center; font-weight:600; color:var(--am-navy); background:var(--am-tint); line-height:1.5}
+  .h5p-blank.ok{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-blank.bad{background:var(--bad-bg); border-color:var(--bad)}
+  /* Flashcards & dialog cards */
+  .h5p-flash{perspective:900px; max-width:460px; margin:0 auto}
+  .h5p-card{position:relative; width:100%; min-height:180px; transform-style:preserve-3d; transition:transform .5s; cursor:pointer}
+  .h5p-card.flip{transform:rotateY(180deg)}
+  .h5p-face{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px; border-radius:10px}
+  .h5p-face--front{background:var(--am-navy); color:#fff; font-family:var(--head); font-size:1.2em; font-weight:600; border-bottom:5px solid var(--am-slate)}
+  .h5p-face--back{background:var(--am-tint); border:2px solid var(--am-navy); color:var(--am-ink); transform:rotateY(180deg); font-size:.97em}
+  .h5p-dlg-ctrl{display:none; justify-content:center; gap:10px; margin-top:12px}
+  .h5p-dlg-ctrl.show{display:flex}
+  .h5p-progress{height:8px; background:var(--am-tint2); border-radius:4px; overflow:hidden; margin:10px 0}
+  .h5p-progress span{display:block; height:100%; background:var(--am-slate); width:0; transition:width .3s}
+  /* Order steps */
+  .h5p-order{padding-left:0; margin:0}
+  .h5p-order li{background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; margin:7px 0; display:flex; align-items:center; gap:10px; list-style:none}
+  .h5p-order li.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-order li.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-move{border:1px solid var(--am-navy); background:#fff; color:var(--am-navy); border-radius:4px; width:30px; height:28px; cursor:pointer; font-weight:700; flex:none}
+  .h5p-move:hover{background:var(--am-tint)}
+  /* Sort (drag-and-drop categorize, click-to-bin) */
+  .h5p-sort-pool{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px; min-height:40px; padding:10px; border:2px dashed var(--am-border); border-radius:8px}
+  .h5p-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+  .h5p-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:110px; padding:8px; cursor:pointer; background:#fff}
+  .h5p-bin.hot{background:var(--am-tint)}
+  .h5p-bin__title{font-family:var(--head); font-weight:700; color:#fff; background:var(--am-navy); margin:-8px -8px 8px; padding:6px 10px; border-radius:6px 6px 0 0; font-size:.88em; letter-spacing:.5px}
+  .h5p-item{display:inline-block; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 10px; margin:3px; cursor:pointer; font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-item.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-item.ok{border-color:var(--ok); background:var(--ok-bg); color:var(--ok)}
+  .h5p-item.bad{border-color:var(--bad); background:var(--bad-bg); color:var(--bad)}
+  /* Mark the words */
+  .h5p-mtw{line-height:2}
+  .h5p-tok{cursor:pointer; padding:2px 3px; border-radius:4px; border-bottom:2px dotted transparent}
+  .h5p-tok:hover{background:var(--am-tint)}
+  .h5p-tok.sel{background:var(--am-slate-soft); border-bottom-color:var(--am-slate-dark)}
+  .h5p-tok.ok{background:var(--ok-bg); border-bottom-color:var(--ok)}
+  .h5p-tok.bad{background:var(--bad-bg); border-bottom-color:var(--bad); text-decoration:line-through}
+  .h5p-tok.missed{outline:2px dashed var(--am-slate-dark)}
+  /* Dropdown cloze */
+  .h5p-dd{font:inherit; font-weight:600; color:var(--am-navy); border:0; border-bottom:3px solid var(--am-navy); background:var(--am-tint); padding:2px 6px; border-radius:4px 4px 0 0; margin:0 2px}
+  .h5p-dd.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok)}
+  .h5p-dd.bad{background:var(--bad-bg); border-color:var(--bad); color:var(--bad)}
+  /* Timeline stepper */
+  .h5p-tl-nav{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-tl-btn{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:20px; padding:5px 12px; cursor:pointer}
+  .h5p-tl-btn.on{background:var(--am-navy); color:#fff}
+  .h5p-tl-track{height:6px; background:var(--am-tint2); border-radius:3px; position:relative; margin:4px 0 16px}
+  .h5p-tl-track span{position:absolute; top:-5px; width:16px; height:16px; border-radius:50%; background:var(--am-slate); border:3px solid var(--am-navy); transform:translateX(-50%); transition:left .3s}
+  .h5p-tl-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:14px 18px; min-height:90px}
+  .h5p-tl-panel h4{margin:0 0 6px; font-family:var(--head); color:var(--am-navy); font-size:1.05em}
+  /* Song form explorer */
+  .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
+  .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
+  .h5p-form-sec:hover{transform:translateY(-2px)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(159,172,189,.35)}
+  .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
+  .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
+  /* Hotspots (inline SVG) */
+  .h5p-hs [data-hs]{cursor:pointer; transition:opacity .15s}
+  .h5p-hs [data-hs]:hover{opacity:.75}
+  .h5p-hs [data-hs].on{stroke:var(--am-slate); stroke-width:4}
+  .h5p-hs [data-hs].on text{stroke:none}
+  .h5p-hs-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:60px; margin-top:10px}
+  .h5p-hs-panel h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy)}
+  /* ============ ADDED 2026-09: piano, branching, map, find-the-spot, era timeline, drag sort ============ */
+  .am-sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+  .h5p-act :focus-visible{outline:3px solid var(--am-slate); outline-offset:2px; box-shadow:0 0 0 5px var(--am-navy-dark)}
+  /* Piano */
+  .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
+  .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F5F7F9); border:1px solid #9FB3CC; border-bottom:8px solid #CDD4DD; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2C3E57,#0F1B2B); border:1px solid #000; border-bottom:9px solid #1B2A41; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
+  .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(159,172,189,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(159,172,189,.8)}
+  .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
+  .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+  .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
+  .h5p-pno-task h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy); font-size:1em}
+  .h5p-pno-played{font-size:.9em; color:var(--am-muted); margin-top:4px}
+  /* Branching scenario */
+  .h5p-br-trail{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px; padding:0; list-style:none; font-size:.82em}
+  .h5p-br-trail li{background:var(--am-tint); color:var(--am-navy-dark); border-radius:14px; padding:3px 10px; font-weight:600}
+  .h5p-br-trail li:first-child{background:var(--am-navy); color:#fff}
+  .h5p-br-card h4{font-family:var(--head); color:var(--am-navy); font-size:1.12em; margin:0 0 8px}
+  .h5p-br-card p{margin:0 0 10px}
+  .h5p-br-opts{display:grid; gap:10px; margin-top:12px}
+  .h5p-br-opt{display:flex; gap:12px; align-items:flex-start; text-align:left; width:100%; background:#fff; border:2px solid var(--am-border); border-radius:10px; padding:12px 14px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink)}
+  .h5p-br-opt:hover{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-br-opt b.tag{flex:none; width:30px; height:30px; border-radius:50%; background:var(--am-slate); color:var(--am-navy-dark); display:flex; align-items:center; justify-content:center; font-family:var(--head)}
+  .h5p-br-opt small{display:block; color:var(--am-muted); font-size:.88em; margin-top:2px}
+  .h5p-br-end{border-radius:10px; padding:14px 18px; border:2px solid}
+  .h5p-br-end.good{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-br-end.ok{background:var(--am-slate-soft); border-color:var(--am-slate-dark)}
+  .h5p-br-end.review{background:var(--bad-bg); border-color:var(--bad)}
+  .h5p-br-end .tone{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em}
+  .h5p-br-pts{list-style:none; padding:0; margin:10px 0}
+  .h5p-br-pts li{margin:6px 0; padding-left:28px; position:relative}
+  .h5p-br-pts li::before{position:absolute; left:0; top:0; font-weight:700}
+  .h5p-br-pts li.ok::before{content:"✔"; color:var(--ok)}
+  .h5p-br-pts li.alert::before{content:"⚠"; color:var(--am-slate-dark)}
+  .h5p-br-pts li.no::before{content:"✖"; color:var(--bad)}
+  /* Interactive map */
+  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F5F7F9}
+  .h5p-map-m{cursor:pointer}
+  .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
+  .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
+  .h5p-map-m.on circle{stroke:#1C2F47; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#9FACBD; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#5E6B7C; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
+  .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
+  .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-map-list button.on{border-color:var(--am-navy); background:var(--am-navy); color:#fff}
+  .h5p-map-legend{display:flex; flex-wrap:wrap; gap:14px; font-size:.86em; margin:8px 0 0; color:var(--am-muted)}
+  .h5p-map-legend i{display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:5px; vertical-align:-1px}
+  .h5p-map-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px; margin-top:10px}
+  .h5p-map-panel h4{margin:0 0 2px; font-family:var(--head); color:var(--am-navy)}
+  .h5p-map-panel .cat{font-size:.8em; text-transform:uppercase; letter-spacing:1.2px; color:var(--am-slate-dark); font-weight:700}
+  /* Find the spot */
+  .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
+  .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
+  .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
+  .h5p-fs-found circle{fill:none; stroke:#9FACBD; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#1C2F47; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
+  .h5p-fs-cross{fill:none; stroke:#1C2F47; stroke-width:2}
+  @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
+  /* Era timeline */
+  .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-era-tab{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:8px; padding:6px 12px; cursor:pointer; text-align:left; line-height:1.25}
+  .h5p-era-tab small{display:block; font-weight:400; opacity:.85}
+  .h5p-era-tab.on{background:var(--am-navy); color:#fff}
+  .h5p-era-tab.done::after{content:" ✔"; color:var(--ok)}
+  .h5p-era-tab.on.done::after{color:var(--am-slate)}
+  .h5p-era-spine{position:relative; margin:0; padding:0 0 0 34px; list-style:none}
+  .h5p-era-spine::before{content:""; position:absolute; left:12px; top:6px; bottom:6px; width:4px; background:var(--am-tint2); border-radius:2px}
+  .h5p-era-ev{position:relative; margin:0 0 10px}
+  .h5p-era-ev::before{content:""; position:absolute; left:-29px; top:12px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--am-navy)}
+  .h5p-era-ev.seen::before{background:var(--am-slate)}
+  .h5p-era-ev button{width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink); display:flex; gap:10px; align-items:baseline}
+  .h5p-era-ev button:hover{border-color:var(--am-navy)}
+  .h5p-era-ev button b{font-family:var(--head); color:var(--am-navy); flex:none; min-width:58px}
+  .h5p-era-ev button::after{content:"+"; margin-left:auto; font-weight:700; color:var(--am-navy)}
+  .h5p-era-ev.open button::after{content:"–"}
+  .h5p-era-ev .body{display:none; background:var(--am-mist); border-left:4px solid var(--am-slate); border-radius:0 0 8px 8px; padding:10px 14px; margin-top:-2px; font-size:.95em}
+  .h5p-era-ev.open .body{display:block}
+  /* Drag sort (pointer drag + tap fallback) */
+  .h5p-ds-tray{display:flex; flex-wrap:wrap; gap:8px; min-height:52px; padding:10px; border:2px dashed var(--am-border); border-radius:8px; margin:10px 0 14px}
+  .h5p-ds-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px}
+  .h5p-ds-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:120px; padding:8px; background:#fff}
+  .h5p-ds-bin.hot{background:var(--am-tint); box-shadow:0 0 0 3px var(--am-slate)}
+  .h5p-ds-bin h5{margin:-8px -8px 8px; padding:6px 10px; background:var(--am-navy); color:#fff; font-family:var(--head); font-size:.88em; border-radius:6px 6px 0 0}
+  .h5p-ds-bin .zone{display:flex; flex-wrap:wrap; gap:6px; min-height:60px}
+  .h5p-ds-card{touch-action:none; user-select:none; -webkit-user-select:none; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:6px 10px; cursor:grab; font-family:var(--body); font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
+  .h5p-ds-card.ok::before{content:"✔ "}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(28,47,71,.3); cursor:grabbing}
+  .h5p-ds-card.shake{animation:h5pShake .4s}
+  .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
+  @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+  /* ============ BILINGUAL (EN/ES) ============ */
+  html:not([data-lang="es"]) .am-l-es, html[data-lang="es"] .am-l-en{display:none}
+  html[data-lang="es"] main[lang="en"], html:not([data-lang="es"]) main[lang="es"]{display:none}
+  .am-langtoggle{display:none; flex:none; margin-left:12px; border:2px solid var(--am-slate); border-radius:20px; overflow:hidden}
+  html.am-bilingual .am-langtoggle{display:flex}
+  .am-langtoggle button{font-family:var(--head); font-weight:700; font-size:.74em; letter-spacing:1px; text-transform:uppercase; background:transparent; color:#fff; border:0; padding:6px 12px; cursor:pointer}
+  .am-langtoggle button[aria-pressed="true"]{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-langtoggle button:focus-visible{outline:3px solid #fff; outline-offset:-3px}
+  @media (max-width:600px){ .am-langtoggle{margin-left:auto} .am-wordmark{white-space:normal} }
+  /* Footer */
+  .am-pagefoot{max-width:880px; margin:36px auto 0; padding:0 24px}
+  .am-pagefoot .rule{height:4px; background:var(--am-slate)}
+  .am-footband{background:var(--am-navy-dark); color:#fff; padding:16px 24px; text-align:center; font-size:.78em; letter-spacing:1.8px; text-transform:uppercase}
+  .am-footband .pg{color:var(--am-slate)}
+  details.am-answer{margin-top:8px}
+  details.am-answer summary{cursor:pointer; color:var(--am-navy); font-weight:600}
+  @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
+</style>
+</head>
+<body>
+<header class="am-topbar">
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#9FACBD"/><path d="M13 30V11l14 5v14" fill="none" stroke="#1C2F47" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#1C2F47"/><circle cx="24.5" cy="30" r="3.6" fill="#1C2F47"/></svg>
+  <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
+  <div class="am-coursebar"><span class="am-l-en">Module 5: Race Records, Hillbilly Records, and the Blues<br>Page 3 of 9</span><span class="am-l-es">Módulo 5: Discos raciales, discos hillbilly y el blues<br>Página 3 de 9</span></div>
+  <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
+</header>
+<div class="am-accentbar"></div>
+
+<main lang="en">
+  <h1><span class="am-kicker">Module 5 · Page 3 of 9</span>Race Records and Hillbilly Records</h1>
+  <p class="am-lead">How a segregated marketing system built two new record catalogs out of Southern music the industry had ignored.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">On this page you will</p>
+    <ul style="margin:6px 0 0">
+      <li>Define "race records" and "hillbilly records" as industry marketing categories.</li>
+      <li>Explain how field recording trips brought Southern musicians to the record companies.</li>
+      <li>Describe why the term "race" carried a positive meaning in Black communities of the 1920s.</li>
+      <li>Explain the significance of Black Swan Records and Harry Pace.</li>
+    </ul>
+  </div>
+
+  <h2>Two catalogs, one segregated business</h2>
+  <p>Through most of the 1910s, major record companies aimed almost all of their output at a broad, largely white, urban middle-class audience, assuming that rural Southerners, Black or white, had little money to spend on records and little taste for what the labels were already selling. That assumption began to crumble in the early 1920s, when a handful of small, independent labels discovered a paying audience for Southern vernacular music that the majors had overlooked. Once those companies proved the audience existed, larger labels followed, and the industry organized what it sold into two separate marketing categories: race records, aimed at Black listeners, and hillbilly records, aimed at white Southern listeners. Catalogs and advertising brochures kept the two lines almost entirely apart, mirroring the broader segregation of American life at the time.</p>
+  <div class="am-keyterm"><strong>Race record:</strong> the recording industry's marketing term, used from the early 1920s into the late 1940s, for records by African American musicians produced and sold mainly to African American listeners.</div>
+  <div class="am-keyterm"><strong>Hillbilly record:</strong> the industry's parallel marketing term for old-time string-band and rural music performed by, and sold mainly to, white Southerners.</div>
+
+  <figure>
+    <svg viewBox="0 0 720 210" role="img" aria-label="Diagram of how record companies built race and hillbilly catalogs through field recording trips" id="rh-flow">
+      <rect width="720" height="210" fill="#F5F7F9" rx="10"/>
+      <defs><marker id="rh-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5568"/></marker></defs>
+      <rect x="30" y="70" width="150" height="70" rx="8" fill="#2B4A6F"/>
+      <text x="105" y="100" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Mobile recording</text>
+      <text x="105" y="120" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="12">crew and gear by car</text>
+      <path d="M180 105 L230 105" stroke="#4A5568" stroke-width="3" marker-end="url(#rh-arr)"/>
+      <rect x="235" y="70" width="150" height="70" rx="8" fill="#233C5C"/>
+      <text x="310" y="100" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Southern cities</text>
+      <text x="310" y="120" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="12">local musicians recorded</text>
+      <path d="M385 105 L435 105" stroke="#4A5568" stroke-width="3" marker-end="url(#rh-arr)"/>
+      <rect x="440" y="30" width="150" height="60" rx="8" fill="#5E6B7C"/>
+      <text x="515" y="65" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">"Race" catalog</text>
+      <rect x="440" y="120" width="150" height="60" rx="8" fill="#1C2F47"/>
+      <text x="515" y="155" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">"Hillbilly" catalog</text>
+      <path d="M590 55 L635 90" stroke="#4A5568" stroke-width="3" marker-end="url(#rh-arr)"/>
+      <path d="M590 155 L635 100" stroke="#4A5568" stroke-width="3" marker-end="url(#rh-arr)"/>
+      <circle cx="655" cy="95" r="22" fill="#9FACBD"/>
+      <text x="655" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1C2F47">Segregated</text>
+      <text x="360" y="195" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Independent labels piloted the model; the major companies soon copied it.</text>
+    </svg>
+    <figcaption>Figure 1. Small independent labels pioneered the field-recording model in the early 1920s; the major companies quickly copied it, keeping the race and hillbilly catalogs marketed separately.</figcaption>
+  </figure>
+
+  <h2>A term reclaimed</h2>
+  <p>The word "race" reads as jarring today, but in the urban African American communities of the 1920s it carried a proud, self-affirming meaning rather than a demeaning one. Newspapers, businesses, and civic organizations routinely used "race" to describe institutions built by and for Black Americans, in the spirit of what historians now recognize as an early form of Black nationalism: a deliberate claim that Black economic and cultural life could stand on its own. "Race records" fit that same pattern. Naming the catalog that way signaled pride in a distinct, self-sustaining audience, not an insult imposed from outside.</p>
+  <div class="am-keyterm"><strong>Black nationalism:</strong> a set of ideas and movements emphasizing Black cultural pride, self-determination, and independent institutions; in the 1920s the "race" label on records and businesses reflected this spirit rather than a slur.</div>
+
+  <h2>Black Swan Records and Harry Pace</h2>
+  <p>The commercial promise of the race catalog also opened a door that had been shut to Black entrepreneurs: ownership of a record label itself. In 1921, Harry Pace, a former business partner of W. C. Handy, founded Black Swan Records in Harlem, the first record company owned and operated by African Americans. Black Swan recorded blues, jazz, and classical performances by Black artists at a time when white-owned labels rarely gave Black musicians creative control or a fair share of the profits. The company struggled financially within a few years and was eventually absorbed by a larger, white-owned label, but its brief run proved that a Black-owned label could compete in the marketplace the "race" category had created, and it inspired the small handful of Black-owned labels that followed later in the century.</p>
+  <div class="am-keyterm"><strong>Black Swan Records:</strong> founded in 1921 by Harry Pace, the first record company owned and operated by African Americans, recording blues, jazz, and classical artists before its 1924 sale.</div>
+
+  <h2>What the segregated catalogs made possible</h2>
+  <p>The irony of this segregated business model, as later scholars have pointed out, is that it also became one of the main channels through which music crossed racial lines. White record buyers sought out blues and jazz records marketed as "race" material, and rural white musicians absorbed blues phrasing and guitar techniques from records and radio broadcasts aimed at Black audiences, and vice versa. Because these catalogs preserved so much regional music that had never been recorded before, they later supplied the raw material for rhythm and blues, modern country and western, and ultimately rock and roll, styles that grew directly out of records the industry had once filed into two separate, racially defined bins.</p>
+
+  <h3>You Decide: The Field Recording Trip</h3>
+  <p>Put yourself in the shoes of a scout sent south to build one of these catalogs. Every choice below shaped what got preserved on record — and what got left behind.</p>
+
+  <!-- ============ BRANCHING SCENARIO ============ -->
+  <div class="h5p-act" data-widget="branch">
+    <div class="h5p-act__head"><span>You Decide: The Field Recording Trip</span><span class="h5p-act__type">Branching scenario</span></div>
+    <div class="h5p-act__body">
+      <div class="h5p-branch" data-scenes='{"start":{"t":"A Field Trip, 1926","b":["Your label has sent you into the South to find talent no one back in New York has heard yet.","A local contact says two very different audiences are worth recording."],"o":[{"l":"Follow leads into Black churches and juke joints","d":"Build the label’s new “race” catalog","n":"s_race"},{"l":"Follow leads to white string bands in the countryside","d":"Build the label’s new “hillbilly” catalog","n":"s_hill"},{"l":"Stick to acts that already sound like current hits","n":"e_safe"}]},"s_race":{"t":"Building the Race Catalog","b":["You find several strong Black performers willing to record — blues singers, guitarists, a church choir."],"o":[{"l":"Record them exactly as they sound, unpolished","n":"e_race_good"},{"l":"Ask them to imitate a jazz-band style that already sells","n":"e_race_mixed"}]},"s_hill":{"t":"Building the Hillbilly Catalog","b":["You find fiddlers and string bands playing old-time tunes passed down for generations."],"o":[{"l":"Record them as they actually play","n":"e_hill_good"},{"l":"Insist they add polished vocal harmonies to sound more “radio-ready”","n":"e_hill_mixed"}]},"e_safe":{"end":"review","t":"You Play It Too Safe","pts":[["no","You recorded only acts that already sounded familiar."],["alert","A whole catalog of regional Southern music went undiscovered by your label."]],"c":"Try again, and follow one of the local leads this time."},"e_race_good":{"end":"good","t":"A New Race Catalog","pts":[["ok","Your unpolished recordings capture real Southern blues and gospel styles — the same scouting approach that soon brought regional performers like Blind Lemon Jefferson to record labels."],["ok","The records sell to Black listeners who hear, for the first time, music that actually sounds like their own communities."]],"c":"Independent labels, and Black-owned companies like Harry Pace’s Black Swan Records, proved this audience was real years before the major labels followed."},"e_race_mixed":{"end":"ok","t":"A Watered-Down Catalog","pts":[["alert","Pushing performers toward an already-successful sound erases what made them distinctive."],["ok","The records still sell, but you have missed the raw, self-accompanied style that would soon make stars of musicians like Jefferson."]],"c":"Field recording worked best when scouts let regional performers sound like themselves."},"e_hill_good":{"end":"good","t":"A New Hillbilly Catalog","pts":[["ok","Recording the string bands as they actually played preserved old-time tunes that had never been captured before."],["ok","This is the same approach that let the hillbilly catalog later feed into modern country and western music."]],"c":"Just like the race catalog, the hillbilly catalog’s commercial success rested on capturing a real, distinct regional sound."},"e_hill_mixed":{"end":"ok","t":"A Polished, Less Distinct Sound","pts":[["alert","Added harmonies made the band sound more like existing radio acts and less like themselves."],["ok","The records still find an audience, but the rougher, old-time character that made the style worth recording is harder to hear."]],"c":"The hillbilly and race catalogs both succeeded because they were different from what the majors already sold."}}'></div>
+    </div>
+  </div>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Watch: Race Records, the Blues, and Bessie Smith</div><div class="am-listen__meta">Documentary overview</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Watch for:</strong></p>
+      <ol><li>How the "race records" category came to be, and who first benefited from it commercially.</li><li>Any mention of how the term "race" was understood within Black communities at the time.</li><li>What the documentary says about Bessie Smith's place in the classic blues tradition.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/R1G8IcTezxw" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I watched this example</label></div>
+    </div>
+  </div>
+
+  <!-- ============ 1. SORT ============ -->
+  <div class="h5p-act" data-widget="sort">
+    <div class="h5p-act__head"><span>Sort the Catalog</span><span class="h5p-act__type">Drag and drop</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Tap an item, then tap the catalog it was marketed under.</p>
+      <div class="h5p-sort-pool" data-items='[{"t":"Blues recordings for Black audiences","c":0},{"t":"Old-time string bands","c":1},{"t":"Harry Pace, Black Swan Records","c":0},{"t":"Marketed to Southern whites","c":1},{"t":"An early form of Black nationalism in the label’s name","c":0},{"t":"Later fed into modern country and western","c":1}]'></div>
+      <div class="h5p-bins" data-bins='["Race records","Hillbilly records"]'></div>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Check</button>
+        <button class="am-btn am-btn--ghost" data-retry>Retry</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ============ 2. DROPDOWN ============ -->
+  <div class="h5p-act" data-widget="dropdown">
+    <div class="h5p-act__head"><span>Choose the Right Word</span><span class="h5p-act__type">Dropdown cloze</span></div>
+    <div class="h5p-act__body">
+      <p>In 1921, <select class="h5p-dd" data-answer="Harry Pace"><option value="">…</option><option>Harry Pace</option><option>W. C. Handy</option><option>Ralph Peer</option></select> founded <select class="h5p-dd" data-answer="Black Swan"><option value="">…</option><option>Black Swan</option><option>Bluebird</option><option>Okeh</option></select> Records, the first record company owned and operated by African Americans. The industry's method of sending engineers into Southern cities to record local musicians is called <select class="h5p-dd" data-answer="field recording"><option value="">…</option><option>field recording</option><option>studio dubbing</option><option>overdubbing</option></select>.</p>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Check</button>
+        <button class="am-btn am-btn--ghost" data-retry>Retry</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <div class="am-tryit">
+    <p class="am-label">Try it — Think like a historian</p>
+    <ol style="margin:0 0 0 18px"><li>Consider why a marketing category built on racial segregation could still open a business opportunity for a Black-owned company like Black Swan.</li><li>Think of one modern parallel where a marketing label both limits and enables an artist or business.</li></ol>
+  </div>
+
+  <h2>Putting It Together</h2>
+  <p>Race and hillbilly records were segregated by design, yet the catalogs they built preserved music that would otherwise have gone unrecorded and, paradoxically, helped that music travel across the very racial line the labels were meant to enforce. The next page follows one of the most important products of the race catalog, the blues, through the work of the songwriter and publisher who is often credited with introducing it to a national audience: W. C. Handy.</p>
+</main>
+
+<main lang="es">
+  <h1><span class="am-kicker">Módulo 5 · Página 3 de 9</span>Discos raciales y discos hillbilly</h1>
+  <p class="am-lead">Cómo un sistema comercial segregado construyó dos nuevos catálogos de discos a partir de la música del Sur que la industria había ignorado.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">En esta página vas a</p>
+    <ul style="margin:6px 0 0">
+      <li>Definir los "discos raciales" y los "discos hillbilly" como categorías comerciales de la industria.</li>
+      <li>Explicar cómo los viajes de grabación de campo acercaron a los músicos del Sur a las compañías discográficas.</li>
+      <li>Describir por qué el término "race" tenía un significado positivo en las comunidades negras de la década de 1920.</li>
+      <li>Explicar la importancia de Black Swan Records y de Harry Pace.</li>
+    </ul>
+  </div>
+
+  <h2>Dos catálogos, un negocio segregado</h2>
+  <p>Durante la mayor parte de la década de 1910, las grandes compañías discográficas dirigían casi toda su producción a un público amplio, urbano, de clase media y mayoritariamente blanco, bajo el supuesto de que los habitantes rurales del Sur, negros o blancos, tenían poco dinero para gastar en discos y poco interés en lo que las disqueras ya vendían. Ese supuesto empezó a derrumbarse a principios de la década de 1920, cuando un puñado de pequeñas disqueras independientes descubrió que existía un público dispuesto a pagar por la música vernácula del Sur, que las grandes compañías habían pasado por alto. Una vez que esas empresas demostraron que el público existía, las disqueras más grandes las siguieron, y la industria organizó lo que vendía en dos categorías comerciales separadas: los discos raciales, dirigidos a los oyentes negros, y los discos hillbilly, dirigidos a los oyentes blancos del Sur. Los catálogos y los folletos publicitarios mantenían las dos líneas casi totalmente separadas, reflejo de la segregación general de la vida estadounidense de la época.</p>
+  <div class="am-keyterm"><strong>Discos raciales (race records):</strong> el término comercial que usó la industria discográfica, desde principios de la década de 1920 hasta finales de la década de 1940, para los discos de músicos afroamericanos producidos y vendidos principalmente a oyentes afroamericanos.</div>
+  <div class="am-keyterm"><strong>Discos hillbilly (hillbilly records):</strong> el término comercial paralelo de la industria para la música rural y de bandas de cuerda tradicionales (old-time) interpretada por blancos del Sur y vendida principalmente a ese mismo público.</div>
+
+  <figure>
+    <svg viewBox="0 0 720 210" role="img" aria-label="Diagrama de cómo las compañías discográficas formaron los catálogos raciales y hillbilly mediante viajes de grabación de campo" id="rh-flow-es">
+      <rect width="720" height="210" fill="#F5F7F9" rx="10"/>
+      <defs><marker id="rh-arr-es" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5568"/></marker></defs>
+      <rect x="30" y="70" width="150" height="70" rx="8" fill="#2B4A6F"/>
+      <text x="105" y="100" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Grabación móvil</text>
+      <text x="105" y="120" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="12">equipo que viaja en auto</text>
+      <path d="M180 105 L230 105" stroke="#4A5568" stroke-width="3" marker-end="url(#rh-arr-es)"/>
+      <rect x="235" y="70" width="150" height="70" rx="8" fill="#233C5C"/>
+      <text x="310" y="100" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Ciudades del Sur</text>
+      <text x="310" y="120" text-anchor="middle" fill="#DBE1E9" font-family="Arial, Helvetica, sans-serif" font-size="12">graban músicos locales</text>
+      <path d="M385 105 L435 105" stroke="#4A5568" stroke-width="3" marker-end="url(#rh-arr-es)"/>
+      <rect x="440" y="30" width="150" height="60" rx="8" fill="#5E6B7C"/>
+      <text x="515" y="56" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Catálogo</text>
+      <text x="515" y="74" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">"race"</text>
+      <rect x="440" y="120" width="150" height="60" rx="8" fill="#1C2F47"/>
+      <text x="515" y="146" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Catálogo</text>
+      <text x="515" y="164" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">"hillbilly"</text>
+      <path d="M590 55 L635 90" stroke="#4A5568" stroke-width="3" marker-end="url(#rh-arr-es)"/>
+      <path d="M590 155 L635 100" stroke="#4A5568" stroke-width="3" marker-end="url(#rh-arr-es)"/>
+      <circle cx="655" cy="95" r="22" fill="#9FACBD"/>
+      <text x="655" y="93" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1C2F47">Segre-</text>
+      <text x="655" y="106" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1C2F47">gados</text>
+      <text x="360" y="195" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Las disqueras independientes probaron el modelo; las grandes compañías pronto lo copiaron.</text>
+    </svg>
+    <figcaption>Figura 1. Las pequeñas disqueras independientes fueron pioneras del modelo de grabación de campo a principios de la década de 1920; las grandes compañías lo copiaron rápidamente y mantuvieron por separado la comercialización de los catálogos raciales y hillbilly.</figcaption>
+  </figure>
+
+  <h2>Un término reivindicado</h2>
+  <p>La palabra "race" (raza) suena chocante hoy, pero en las comunidades afroamericanas urbanas de la década de 1920 tenía un significado de orgullo y autoafirmación, no un sentido despectivo. Periódicos, negocios y organizaciones cívicas usaban habitualmente "race" para describir instituciones creadas por y para los estadounidenses negros, en el espíritu de lo que los historiadores reconocen hoy como una forma temprana de nacionalismo negro: la afirmación deliberada de que la vida económica y cultural negra podía sostenerse por sí misma. Los "race records" encajaban en ese mismo patrón. Nombrar así el catálogo expresaba orgullo por un público propio y autosuficiente, no un insulto impuesto desde fuera.</p>
+  <div class="am-keyterm"><strong>Nacionalismo negro (Black nationalism):</strong> un conjunto de ideas y movimientos que destacan el orgullo cultural negro, la autodeterminación y las instituciones independientes; en la década de 1920, la etiqueta "race" en discos y negocios reflejaba este espíritu y no un insulto.</div>
+
+  <h2>Black Swan Records y Harry Pace</h2>
+  <p>El potencial comercial del catálogo racial también abrió una puerta que había estado cerrada para los empresarios negros: ser dueños de una disquera. En 1921, Harry Pace, antiguo socio comercial de W. C. Handy, fundó Black Swan Records en Harlem, la primera compañía discográfica cuyos dueños y administradores eran afroamericanos. Black Swan grabó blues, jazz y música clásica de artistas negros en una época en que las disqueras de dueños blancos rara vez daban a los músicos negros control creativo o una parte justa de las ganancias. La empresa tuvo dificultades financieras en pocos años y terminó absorbida por una disquera más grande de dueños blancos, pero su breve trayectoria demostró que una disquera de propietarios negros podía competir en el mercado que había creado la categoría "race", e inspiró al pequeño grupo de disqueras de propietarios negros que surgieron más adelante en el siglo.</p>
+  <div class="am-keyterm"><strong>Black Swan Records:</strong> fundada en 1921 por Harry Pace, fue la primera compañía discográfica cuyos dueños y administradores eran afroamericanos; grabó a artistas de blues, jazz y música clásica antes de su venta en 1924.</div>
+
+  <h2>Lo que hicieron posible los catálogos segregados</h2>
+  <p>La ironía de este modelo de negocio segregado, como han señalado especialistas posteriores, es que también se convirtió en uno de los principales canales por los que la música cruzó las fronteras raciales. Compradores blancos buscaban discos de blues y de jazz comercializados como material "race", y músicos blancos rurales absorbieron el fraseo del blues y las técnicas de guitarra de discos y transmisiones de radio dirigidos al público negro, y viceversa. Como estos catálogos conservaron tanta música regional que nunca se había grabado, más tarde aportaron la materia prima para el rhythm and blues (R&amp;B), el country and western moderno y, en última instancia, el rock and roll, estilos que surgieron directamente de discos que la industria había archivado alguna vez en dos compartimentos separados y definidos por la raza.</p>
+
+  <h3>Tú decides: el viaje de grabación de campo</h3>
+  <p>Ponte en el lugar de un cazatalentos enviado al Sur para formar uno de estos catálogos. Cada decisión de abajo determinó qué quedó conservado en disco y qué se quedó fuera.</p>
+
+  <!-- ============ BRANCHING SCENARIO ============ -->
+  <div class="h5p-act" data-widget="branch">
+    <div class="h5p-act__head"><span>Tú decides: el viaje de grabación de campo</span><span class="h5p-act__type">Escenario con decisiones</span></div>
+    <div class="h5p-act__body">
+      <div class="h5p-branch" data-scenes='{"start":{"t":"Un viaje de campo, 1926","b":["Tu disquera te ha enviado al Sur para encontrar talento que nadie en Nueva York ha escuchado todavía.","Un contacto local te dice que vale la pena grabar para dos públicos muy distintos."],"o":[{"l":"Seguir pistas en iglesias negras y juke joints","d":"Formar el nuevo catálogo “race” de la disquera","n":"s_race"},{"l":"Seguir pistas hacia bandas de cuerda blancas en el campo","d":"Formar el nuevo catálogo “hillbilly” de la disquera","n":"s_hill"},{"l":"Quedarte con artistas que ya suenan como los éxitos del momento","n":"e_safe"}]},"s_race":{"t":"Formar el catálogo racial","b":["Encuentras a varios intérpretes negros de gran nivel dispuestos a grabar: cantantes de blues, guitarristas y un coro de iglesia."],"o":[{"l":"Grabarlos tal como suenan, sin pulir","n":"e_race_good"},{"l":"Pedirles que imiten un estilo de banda de jazz que ya se vende","n":"e_race_mixed"}]},"s_hill":{"t":"Formar el catálogo hillbilly","b":["Encuentras violinistas y bandas de cuerda que tocan melodías tradicionales transmitidas durante generaciones."],"o":[{"l":"Grabarlos tal como tocan realmente","n":"e_hill_good"},{"l":"Exigirles que agreguen armonías vocales pulidas para sonar más “listos para la radio”","n":"e_hill_mixed"}]},"e_safe":{"end":"review","t":"Juegas demasiado a lo seguro","pts":[["no","Solo grabaste artistas que ya sonaban conocidos."],["alert","Todo un catálogo de música regional del Sur quedó sin descubrir para tu disquera."]],"c":"Inténtalo de nuevo y, esta vez, sigue una de las pistas locales."},"e_race_good":{"end":"good","t":"Un nuevo catálogo racial","pts":[["ok","Tus grabaciones sin pulir captan estilos auténticos de blues y gospel del Sur: el mismo método de búsqueda que pronto llevó a intérpretes regionales como Blind Lemon Jefferson a las disqueras."],["ok","Los discos se venden a oyentes negros que escuchan, por primera vez, música que realmente suena como sus propias comunidades."]],"c":"Las disqueras independientes, y compañías de propietarios negros como Black Swan Records de Harry Pace, demostraron que este público era real años antes de que las grandes disqueras las siguieran."},"e_race_mixed":{"end":"ok","t":"Un catálogo diluido","pts":[["alert","Empujar a los intérpretes hacia un sonido que ya tiene éxito borra lo que los hacía distintos."],["ok","Los discos se siguen vendiendo, pero te perdiste el estilo crudo, con acompañamiento propio, que pronto convertiría en estrellas a músicos como Jefferson."]],"c":"La grabación de campo funcionó mejor cuando los cazatalentos dejaban que los intérpretes regionales sonaran como ellos mismos."},"e_hill_good":{"end":"good","t":"Un nuevo catálogo hillbilly","pts":[["ok","Grabar a las bandas de cuerda tal como tocaban realmente conservó melodías tradicionales que nunca se habían grabado."],["ok","Es el mismo método que permitió que el catálogo hillbilly alimentara más tarde la música country and western moderna."]],"c":"Igual que el catálogo racial, el éxito comercial del catálogo hillbilly se basó en captar un sonido regional auténtico y distinto."},"e_hill_mixed":{"end":"ok","t":"Un sonido pulido y menos distintivo","pts":[["alert","Las armonías agregadas hicieron que la banda sonara más como los artistas de radio existentes y menos como ella misma."],["ok","Los discos todavía encuentran público, pero el carácter más áspero y tradicional que hacía valioso grabar ese estilo es más difícil de escuchar."]],"c":"Los catálogos hillbilly y racial tuvieron éxito porque eran diferentes de lo que ya vendían las grandes compañías."}}'></div>
+    </div>
+  </div>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Para ver: los discos raciales, el blues y Bessie Smith</div><div class="am-listen__meta">Panorama documental</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Observa:</strong></p>
+      <ol><li>Cómo surgió la categoría de los "discos raciales" y quiénes se beneficiaron primero de ella en lo comercial.</li><li>Cualquier mención de cómo se entendía el término "race" dentro de las comunidades negras de la época.</li><li>Qué dice el documental sobre el lugar de Bessie Smith en la tradición del blues clásico.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/R1G8IcTezxw" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Vi este video</label></div>
+    </div>
+  </div>
+
+  <!-- ============ 1. SORT ============ -->
+  <div class="h5p-act" data-widget="sort">
+    <div class="h5p-act__head"><span>Clasifica el catálogo</span><span class="h5p-act__type">Arrastrar y soltar</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Toca un elemento y luego el catálogo con el que se comercializaba.</p>
+      <div class="h5p-sort-pool" data-items='[{"t":"Grabaciones de blues para público negro","c":0},{"t":"Bandas de cuerda tradicionales","c":1},{"t":"Harry Pace, Black Swan Records","c":0},{"t":"Dirigidos a los blancos del Sur","c":1},{"t":"Una forma temprana de nacionalismo negro en el nombre de la categoría","c":0},{"t":"Más tarde alimentaron el country and western moderno","c":1}]'></div>
+      <div class="h5p-bins" data-bins='["Discos raciales","Discos hillbilly"]'></div>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Revisar</button>
+        <button class="am-btn am-btn--ghost" data-retry>Reintentar</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ============ 2. DROPDOWN ============ -->
+  <div class="h5p-act" data-widget="dropdown">
+    <div class="h5p-act__head"><span>Elige la palabra correcta</span><span class="h5p-act__type">Completa con opciones</span></div>
+    <div class="h5p-act__body">
+      <p>En 1921, <select class="h5p-dd" data-answer="Harry Pace"><option value="">…</option><option>Harry Pace</option><option>W. C. Handy</option><option>Ralph Peer</option></select> fundó <select class="h5p-dd" data-answer="Black Swan"><option value="">…</option><option>Black Swan</option><option>Bluebird</option><option>Okeh</option></select> Records, la primera compañía discográfica cuyos dueños y administradores eran afroamericanos. El método de la industria de enviar ingenieros a ciudades del Sur para grabar a músicos locales se llama <select class="h5p-dd" data-answer="grabación de campo"><option value="">…</option><option>grabación de campo</option><option>doblaje de estudio</option><option>sobregrabación</option></select>.</p>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Revisar</button>
+        <button class="am-btn am-btn--ghost" data-retry>Reintentar</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <div class="am-tryit">
+    <p class="am-label">Pruébalo: piensa como historiador</p>
+    <ol style="margin:0 0 0 18px"><li>Reflexiona sobre por qué una categoría comercial basada en la segregación racial podía, aun así, abrir una oportunidad de negocio para una compañía de propietarios negros como Black Swan.</li><li>Piensa en un ejemplo actual en el que una etiqueta comercial limite y, a la vez, favorezca a un artista o a un negocio.</li></ol>
+  </div>
+
+  <h2>En resumen</h2>
+  <p>Los discos raciales y los discos hillbilly estaban segregados a propósito; sin embargo, los catálogos que formaron conservaron música que de otro modo nunca se habría grabado y, paradójicamente, ayudaron a que esa música cruzara la misma frontera racial que las etiquetas pretendían imponer. La siguiente página sigue uno de los productos más importantes del catálogo racial, el blues, a través de la obra del compositor y editor al que a menudo se atribuye haberlo presentado a un público nacional: W. C. Handy.</p>
+</main>
+
+<div class="am-pagefoot"><div class="rule"></div></div>
+<footer class="am-footband"><span class="am-l-en">Module 5: Race Records, Hillbilly Records, and the Blues &nbsp;·&nbsp; <span class="pg">Page 3 of 9</span> &nbsp;·&nbsp; American Music</span><span class="am-l-es">Módulo 5: Discos raciales, discos hillbilly y el blues &nbsp;·&nbsp; <span class="pg">Página 3 de 9</span> &nbsp;·&nbsp; Música estadounidense</span></footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Language (EN/ES) ---------- */
+  var ROOT=document.documentElement, BI=ROOT.classList.contains('am-bilingual');
+  var ES={"Answer every question first.": "Responde todas las preguntas primero.", "Score: ": "Puntuación: ", "Correct!": "¡Correcto!", "Not quite — the highlighted answer is correct.": "No exactamente: la respuesta resaltada es la correcta.", "Fill every blank first (tap a filled blank to clear it).": "Completa todos los espacios primero (toca un espacio lleno para vaciarlo).", "Perfect!": "¡Perfecto!", "Tap the red blanks to clear them and try again.": "Toca los espacios en rojo para vaciarlos e inténtalo de nuevo.", "Deck complete — you rated ": "Mazo terminado: marcaste ", " of ": " de ", " cards “Got it” on the first pass.": " tarjetas como “Lo sé” en la primera vuelta.", " (review)": " (repaso)", "Move up": "Subir", "Move down": "Bajar", "Exactly right!": "¡Exactamente!", "Red items are out of place — keep adjusting.": "Los elementos en rojo están fuera de lugar; sigue ajustando.", "Place every item in a category first.": "Coloca cada elemento en una categoría primero.", "All sorted correctly!": "¡Todo clasificado correctamente!", "Red items are in the wrong category — tap one to send it back and try again.": "Los elementos en rojo están en la categoría equivocada; toca uno para devolverlo e inténtalo de nuevo.", "Found ": "Encontraste ", " wrong": " incorrectas", "You found them all!": "¡Las encontraste todas!", "Dashed outlines show ones you missed; struck-through words were not targets.": "Los contornos punteados muestran las que te faltaron; las palabras tachadas no eran objetivos.", "Choose an answer for every blank first.": "Elige una respuesta para cada espacio primero.", "All correct!": "¡Todo correcto!", "Red choices are wrong — change them and check again.": "Las opciones en rojo son incorrectas; cámbialas y vuelve a revisar.", "<em>Tap a section to begin.</em>": "<em>Toca una sección para comenzar.</em>", "Tap a key to play.": "Toca una tecla para tocar.", "Now playing: ": "Sonando: ", "Playing: ": "Reproduciendo: ", "<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>": "<h4>Todas las tareas completas ✔</h4><div>Tocaste cada patrón correctamente. Vuelve a escuchar cualquier demostración o sigue explorando.</div>", "Nice work — every task complete.": "¡Buen trabajo! Completaste todas las tareas.", "All piano tasks complete.": "Todas las tareas de piano completas.", "Task ": "Tarea ", "Show me": "Muéstrame", "You played: ": "Tocaste: ", "Tasks: ": "Tareas: ", " correct.": " correcta.", "← Back": "← Atrás", "Start over": "Empezar de nuevo", "Strong outcome": "Buen resultado", "Mixed outcome": "Resultado mixto", "Rethink this path": "Reconsidera este camino", "Your path": "Tu camino", "Outcome": "Resultado", "Try another path": "Prueba otro camino", "Endings found: ": "Finales encontrados: ", "Outcome reached: ": "Resultado alcanzado: ", "Explored: ": "Explorados: ", "You explored every location on the map.": "Exploraste todos los lugares del mapa.", "<em>Select a numbered marker, or a name below the map.</em>": "<em>Selecciona un marcador numerado o un nombre debajo del mapa.</em>", "Image. Tap the spot, or use the arrow keys to move the circle and press Enter.": "Imagen. Toca el lugar, o usa las flechas del teclado para mover el círculo y presiona Enter.", "All found!": "¡Encontraste todo!", "You found every spot.": "Encontraste todos los lugares.", "All spots found.": "Todos los lugares encontrados.", "Found it!": "¡Lo encontraste!", "✖ Not quite — try again.": "✖ No exactamente; inténtalo de nuevo.", " (You can use “Show me.”)": " (Puedes usar “Muéstrame”.)", "Found: ": "Encontrados: ", "Events opened: ": "Eventos abiertos: ", "You opened every event on the timeline.": "Abriste todos los eventos de la línea de tiempo.", "Items to sort": "Elementos para clasificar", "Place selected item in ": "Colocar el elemento seleccionado en ", " selected. Choose a category.": " seleccionado. Elige una categoría.", "Correct: ": "Correctos: ", "All sorted correctly.": "Todo clasificado correctamente.", "Play video: ": "Reproducir video: ", "Play here": "Reproducir aquí", "Play audio: ": "Reproducir audio: ", "✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.": "✔ Los elementos correctos quedan fijos. ✖ Los marcados con una X volvieron a la bandeja; inténtalo de nuevo."};
+  function X(w,s){ var m=w&&w.closest?w.closest('main'):null; return (m&&m.lang==='es'&&ES[s])||s; }
+  function setLang(l){ if(!BI) l='en'; ROOT.setAttribute('data-lang',l); ROOT.lang=l;
+    var tt=ROOT.getAttribute(l==='es'?'data-title-es':'data-title-en'); if(tt) document.title=tt;
+    document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.setAttribute('aria-pressed',b.dataset.setlang===l?'true':'false'); });
+    try{ localStorage.setItem('amMusicLang',l); }catch(e){} }
+  window.amSetLang=setLang;
+  document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.setlang); window.scrollTo(0,0); }); });
+  (function(){ var saved=null; try{ saved=localStorage.getItem('amMusicLang'); }catch(e){} setLang(saved==='es'?'es':'en'); })();
+  function shuffle(a){ for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t;} return a; }
+  function fb(w,cls,msg){ var f=w.querySelector('.h5p-feedback'); if(!f) return; f.className='h5p-feedback'+(cls?' '+cls:''); f.textContent=msg||''; }
+  function score(w,txt){ var s=w.querySelector('.h5p-score'); if(s) s.textContent=txt||''; }
+  function on(w,sel,fn){ var el=w.querySelector(sel); if(el) el.addEventListener('click',fn); }
+
+  /* ---------- 1. MCQ ---------- */
+  document.querySelectorAll('[data-widget="mcq"]').forEach(function(w){
+    var qs=w.querySelectorAll('.h5p-q');
+    qs.forEach(function(q){
+      q.querySelectorAll('.h5p-opt').forEach(function(opt,i){
+        opt.type='button';
+        opt.addEventListener('click',function(){
+          if(q.dataset.locked) return;
+          q.querySelectorAll('.h5p-opt').forEach(function(o){o.classList.remove('sel');});
+          opt.classList.add('sel'); q.dataset.sel=i;
+        });
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, answered=0;
+      qs.forEach(function(q){ if(q.dataset.sel!==undefined) answered++; });
+      if(answered<qs.length){ score(w,X(w,'Answer every question first.')); return; }
+      qs.forEach(function(q){
+        q.dataset.locked="1";
+        var sel=+q.dataset.sel, cor=+q.dataset.correct, opts=q.querySelectorAll('.h5p-opt'), f=q.querySelector('.h5p-feedback'), why=q.querySelector('.h5p-why');
+        opts[cor].classList.add('ok');
+        if(sel===cor){sc++; f.className='h5p-feedback ok'; f.textContent=X(w,'Correct!');}
+        else {opts[sel].classList.add('bad'); f.className='h5p-feedback bad'; f.textContent=X(w,'Not quite — the highlighted answer is correct.');}
+        if(why) why.hidden=false;
+      });
+      score(w,X(w,'Score: ')+sc+' / '+qs.length);
+    });
+    on(w,'[data-retry]',function(){
+      qs.forEach(function(q){
+        delete q.dataset.locked; delete q.dataset.sel;
+        q.querySelectorAll('.h5p-opt').forEach(function(o){o.className='h5p-opt';});
+        var f=q.querySelector('.h5p-feedback'); f.className='h5p-feedback'; f.textContent='';
+        var why=q.querySelector('.h5p-why'); if(why) why.hidden=true;
+      });
+      score(w,'');
+    });
+  });
+
+  /* ---------- 2. Drag the words ---------- */
+  document.querySelectorAll('[data-widget="dragwords"]').forEach(function(w){
+    var bank=w.querySelector('.h5p-bank'), blanks=w.querySelectorAll('.h5p-blank'), selWord=null;
+    var words=[]; blanks.forEach(function(b){words.push(b.dataset.answer);});
+    (w.dataset.extra||'').split('|').forEach(function(x){ if(x) words.push(x); });
+    function makeBank(){
+      bank.innerHTML=''; selWord=null;
+      shuffle(words.slice()).forEach(function(word){
+        var b=document.createElement('button'); b.type='button'; b.className='h5p-word'; b.textContent=word;
+        b.addEventListener('click',function(){
+          bank.querySelectorAll('.h5p-word').forEach(function(x){x.classList.remove('sel');});
+          b.classList.add('sel'); selWord=b;
+        });
+        bank.appendChild(b);
+      });
+    }
+    makeBank();
+    blanks.forEach(function(blank){
+      blank.setAttribute('role','button'); blank.tabIndex=0;
+      blank.addEventListener('click',function(){
+        if(blank.textContent){
+          var t=blank.textContent; blank.textContent='';
+          var returned=false;
+          bank.querySelectorAll('.h5p-word').forEach(function(x){ if(!returned && x.textContent===t && x.classList.contains('used')){ x.classList.remove('used'); returned=true; } });
+          blank.classList.remove('ok','bad'); return;
+        }
+        if(!selWord) return;
+        blank.textContent=selWord.textContent;
+        selWord.classList.add('used'); selWord.classList.remove('sel'); selWord=null;
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      blanks.forEach(function(b){
+        if(!b.textContent){done=false; return;}
+        if(b.textContent.toLowerCase()===b.dataset.answer.toLowerCase()){b.classList.add('ok'); b.classList.remove('bad'); sc++;}
+        else {b.classList.add('bad'); b.classList.remove('ok');}
+      });
+      if(!done){fb(w,'bad',X(w,'Fill every blank first (tap a filled blank to clear it).')); return;}
+      score(w,X(w,'Score: ')+sc+' / '+blanks.length);
+      fb(w, sc===blanks.length?'ok':'bad', sc===blanks.length?X(w,'Perfect!'):X(w,'Tap the red blanks to clear them and try again.'));
+    });
+    on(w,'[data-retry]',function(){
+      blanks.forEach(function(b){b.textContent=''; b.classList.remove('ok','bad');});
+      makeBank(); score(w,''); fb(w,'','');
+    });
+  });
+
+  /* ---------- 3. Flashcards ---------- */
+  document.querySelectorAll('[data-widget="flashcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), cards=JSON.parse(card.dataset.cards), i=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    function render(){ card.classList.remove('flip'); setTimeout(function(){ front.textContent=cards[i].front; back.textContent=cards[i].back; },card.classList.contains('flip')?250:0); counter.textContent=(i+1)+' / '+cards.length; }
+    card.addEventListener('click',function(){card.classList.toggle('flip');});
+    on(w,'[data-prev]',function(){ i=(i-1+cards.length)%cards.length; render(); });
+    on(w,'[data-next]',function(){ i=(i+1)%cards.length; render(); });
+    front.textContent=cards[0].front; back.textContent=cards[0].back; counter.textContent='1 / '+cards.length;
+  });
+
+  /* ---------- 4. Dialog cards (self-assessed) ---------- */
+  document.querySelectorAll('[data-widget="dialogcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), all=JSON.parse(card.dataset.cards), queue=all.slice(), i=0, got=0, seen=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    var ctrl=w.querySelector('.h5p-dlg-ctrl'), bar=w.querySelector('.h5p-progress span'), restart=w.querySelector('[data-restart]');
+    function show(){
+      if(!queue.length){ card.style.display='none'; ctrl.classList.remove('show'); bar.style.width='100%'; fb(w,'ok',X(w,'Deck complete — you rated ')+got+X(w,' of ')+all.length+X(w,' cards “Got it” on the first pass.')); restart.hidden=false; counter.textContent=''; return; }
+      card.style.display=''; card.classList.remove('flip'); ctrl.classList.remove('show');
+      front.textContent=queue[0].front; back.textContent=queue[0].back;
+      counter.textContent=(all.length-queue.length+1)+' / '+all.length+(queue.length+seen>all.length?X(w,' (review)'):'');
+      bar.style.width=Math.round(100*(all.length-queue.length)/all.length)+'%';
+    }
+    card.addEventListener('click',function(){ card.classList.toggle('flip'); if(card.classList.contains('flip')) ctrl.classList.add('show'); });
+    on(w,'[data-gotit]',function(){ var c=queue.shift(); if(!c._again) got++; seen++; show(); });
+    on(w,'[data-again]',function(){ var c=queue.shift(); c._again=true; queue.push(c); seen++; show(); });
+    restart.addEventListener('click',function(){ all.forEach(function(c){delete c._again;}); queue=all.slice(); got=0; seen=0; restart.hidden=true; fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 5. Order the steps ---------- */
+  document.querySelectorAll('[data-widget="order"]').forEach(function(w){
+    var ol=w.querySelector('.h5p-order'), solution=JSON.parse(ol.dataset.solution);
+    function build(){
+      var items=shuffle(solution.slice()); if(items.join()===solution.join()) items.reverse();
+      ol.innerHTML='';
+      items.forEach(function(txt){
+        var li=document.createElement('li');
+        var up=document.createElement('button'); up.className='h5p-move'; up.type='button'; up.innerHTML='&#9650;'; up.setAttribute('aria-label',X(w,'Move up'));
+        var dn=document.createElement('button'); dn.className='h5p-move'; dn.type='button'; dn.innerHTML='&#9660;'; dn.setAttribute('aria-label',X(w,'Move down'));
+        var span=document.createElement('span'); span.textContent=txt;
+        up.addEventListener('click',function(){ var p=li.previousElementSibling; if(p) ol.insertBefore(li,p); clear(); });
+        dn.addEventListener('click',function(){ var n=li.nextElementSibling; if(n) ol.insertBefore(n,li); clear(); });
+        li.appendChild(up); li.appendChild(dn); li.appendChild(span); ol.appendChild(li);
+      });
+    }
+    function clear(){ ol.querySelectorAll('li').forEach(function(li){li.classList.remove('ok','bad');}); fb(w,'',''); score(w,''); }
+    build();
+    on(w,'[data-check]',function(){
+      var lis=ol.querySelectorAll('li'), sc=0;
+      lis.forEach(function(li,idx){ var ok=li.querySelector('span').textContent===solution[idx]; li.classList.toggle('ok',ok); li.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+lis.length);
+      fb(w, sc===lis.length?'ok':'bad', sc===lis.length?X(w,'Exactly right!'):X(w,'Red items are out of place — keep adjusting.'));
+    });
+    on(w,'[data-retry]',function(){ build(); clear(); });
+  });
+
+  /* ---------- 6. Sort into categories ---------- */
+  document.querySelectorAll('[data-widget="sort"]').forEach(function(w){
+    var pool=w.querySelector('.h5p-sort-pool'), binsEl=w.querySelector('.h5p-bins');
+    var items=JSON.parse(pool.dataset.items), bins=JSON.parse(binsEl.dataset.bins), sel=null;
+    function mkItem(it){
+      var b=document.createElement('button'); b.type='button'; b.className='h5p-item'; b.textContent=it.t; b.dataset.c=it.c;
+      b.addEventListener('click',function(){
+        if(b.parentNode!==pool){ pool.appendChild(b); b.className='h5p-item'; sel=null; return; }
+        w.querySelectorAll('.h5p-item').forEach(function(x){x.classList.remove('sel');}); b.classList.add('sel'); sel=b;
+      });
+      return b;
+    }
+    function build(){
+      pool.innerHTML=''; binsEl.innerHTML=''; sel=null;
+      shuffle(items.slice()).forEach(function(it){ pool.appendChild(mkItem(it)); });
+      bins.forEach(function(name,idx){
+        var d=document.createElement('div'); d.className='h5p-bin'; d.dataset.c=idx;
+        var t=document.createElement('div'); t.className='h5p-bin__title'; t.textContent=name; d.appendChild(t);
+        d.addEventListener('click',function(e){ if(e.target.classList.contains('h5p-item')) return; if(!sel) return; d.appendChild(sel); sel.classList.remove('sel'); sel=null; });
+        binsEl.appendChild(d);
+      });
+    }
+    build();
+    on(w,'[data-check]',function(){
+      if(pool.querySelectorAll('.h5p-item').length){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var sc=0, all=w.querySelectorAll('.h5p-bin .h5p-item');
+      all.forEach(function(it){ var ok=it.dataset.c===it.parentNode.dataset.c; it.classList.toggle('ok',ok); it.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+all.length);
+      fb(w, sc===all.length?'ok':'bad', sc===all.length?X(w,'All sorted correctly!'):X(w,'Red items are in the wrong category — tap one to send it back and try again.'));
+    });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 7. Mark the words ---------- */
+  document.querySelectorAll('[data-widget="markwords"]').forEach(function(w){
+    var p=w.querySelector('.h5p-mtw'), targets=p.dataset.targets.split(',').map(function(s){return s.trim().toLowerCase();});
+    var text=p.textContent; p.innerHTML='';
+    text.split(/(\s+)/).forEach(function(tok){
+      if(/^\s+$/.test(tok)||!tok){ p.appendChild(document.createTextNode(tok)); return; }
+      var s=document.createElement('span'); s.className='h5p-tok'; s.textContent=tok; s.tabIndex=0; s.setAttribute('role','button');
+      s.dataset.t = targets.indexOf(tok.replace(/[^\p{L}\p{N}’']/gu,'').toLowerCase())>-1 ? '1':'0';
+      s.addEventListener('click',function(){ if(w.dataset.locked) return; s.classList.toggle('sel'); });
+      p.appendChild(s);
+    });
+    on(w,'[data-check]',function(){
+      w.dataset.locked='1'; var hits=0, wrong=0, total=0;
+      p.querySelectorAll('.h5p-tok').forEach(function(s){
+        var t=s.dataset.t==='1', on=s.classList.contains('sel'); if(t) total++;
+        if(t&&on){s.classList.add('ok'); hits++;} else if(!t&&on){s.classList.add('bad'); wrong++;} else if(t&&!on){s.classList.add('missed');}
+      });
+      score(w,X(w,'Found ')+hits+X(w,' of ')+total+(wrong?' · '+wrong+X(w,' wrong'):''));
+      fb(w, (hits===total&&!wrong)?'ok':'bad', (hits===total&&!wrong)?X(w,'You found them all!'):X(w,'Dashed outlines show ones you missed; struck-through words were not targets.'));
+    });
+    on(w,'[data-retry]',function(){ delete w.dataset.locked; p.querySelectorAll('.h5p-tok').forEach(function(s){s.className='h5p-tok';}); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 8. Dropdown cloze ---------- */
+  document.querySelectorAll('[data-widget="dropdown"]').forEach(function(w){
+    var dds=w.querySelectorAll('.h5p-dd');
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      dds.forEach(function(d){ if(!d.value){done=false; return;} var ok=d.value===d.dataset.answer; d.classList.toggle('ok',ok); d.classList.toggle('bad',!ok); if(ok) sc++; });
+      if(!done){ fb(w,'bad',X(w,'Choose an answer for every blank first.')); return; }
+      score(w,X(w,'Score: ')+sc+' / '+dds.length);
+      fb(w, sc===dds.length?'ok':'bad', sc===dds.length?X(w,'All correct!'):X(w,'Red choices are wrong — change them and check again.'));
+    });
+    on(w,'[data-retry]',function(){ dds.forEach(function(d){ d.value=''; d.classList.remove('ok','bad'); }); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 9. Timeline stepper ---------- */
+  document.querySelectorAll('[data-widget="timeline"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-tl-panel'), ev=JSON.parse(panel.dataset.events), nav=w.querySelector('.h5p-tl-nav'), dot=w.querySelector('.h5p-tl-track span'), i=0, btns=[];
+    ev.forEach(function(e,idx){ var b=document.createElement('button'); b.type='button'; b.className='h5p-tl-btn'; b.textContent=e.y; b.addEventListener('click',function(){ i=idx; render(); }); nav.appendChild(b); btns.push(b); });
+    function render(){ btns.forEach(function(b,idx){ b.classList.toggle('on',idx===i); }); dot.style.left=(ev.length>1? (100*i/(ev.length-1)) : 50)+'%'; panel.innerHTML='<h4>'+ev[i].y+' · '+ev[i].t+'</h4><div>'+ev[i].d+'</div>'; }
+    on(w,'[data-prev]',function(){ i=Math.max(0,i-1); render(); }); on(w,'[data-next]',function(){ i=Math.min(ev.length-1,i+1); render(); });
+    render();
+  });
+
+  /* ---------- 10. Song form explorer ---------- */
+  document.querySelectorAll('[data-widget="songform"]').forEach(function(w){
+    var row=w.querySelector('.h5p-form-row'), secs=JSON.parse(row.dataset.sections), panel=w.querySelector('.h5p-form-panel'), els=[], timer=null;
+    secs.forEach(function(s,idx){ var d=document.createElement('div'); d.className='h5p-form-sec'; d.style.background=s.c; d.innerHTML=s.l+'<small>'+s.s+'</small>'; d.tabIndex=0; d.setAttribute('role','button'); d.addEventListener('click',function(){ stop(); show(idx); }); row.appendChild(d); els.push(d); });
+    function show(idx){ els.forEach(function(e,j){ e.classList.toggle('on',j===idx); }); panel.innerHTML='<strong>'+secs[idx].l+' — '+secs[idx].s+':</strong> '+secs[idx].t; }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    on(w,'[data-play]',function(){ stop(); var k=0; show(0); timer=setInterval(function(){ k++; if(k>=secs.length){ stop(); return; } show(k); },1800); });
+    panel.innerHTML=X(w,'<em>Tap a section to begin.</em>');
+  });
+
+  /* ---------- 11. Hotspots ---------- */
+  document.querySelectorAll('[data-widget="hotspots"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-hs-panel'), spots=w.querySelectorAll('[data-hs]');
+    spots.forEach(function(g){ g.setAttribute('tabindex','0'); g.setAttribute('role','button');
+      g.addEventListener('click',function(){ spots.forEach(function(x){x.classList.remove('on');}); g.classList.add('on'); panel.innerHTML='<h4>'+g.dataset.hs+'</h4><div>'+g.dataset.info+'</div>'; }); });
+  });
+
+  /* ================= ADDED WIDGETS (2026-09) ================= */
+  function el(tag,cls,txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!==undefined) e.textContent=txt; return e; }
+  function live(w,msg){ var r=w.querySelector('.am-sr[aria-live]'); if(!r){ r=el('div','am-sr'); r.setAttribute('aria-live','polite'); w.appendChild(r); } r.textContent=''; setTimeout(function(){ r.textContent=msg; },30); }
+  var SVGNS='http://www.w3.org/2000/svg';
+  function sv(tag,attrs){ var e=document.createElementNS(SVGNS,tag); for(var k in attrs) e.setAttribute(k,attrs[k]); return e; }
+  function svgPoint(svg,evt){ var pt=svg.createSVGPoint(); pt.x=evt.clientX; pt.y=evt.clientY; return pt.matrixTransform(svg.getScreenCTM().inverse()); }
+
+  /* ---------- 12. Piano (WebAudio) ---------- */
+  var ACtx=null;
+  function audio(){ if(!ACtx){ var C=window.AudioContext||window.webkitAudioContext; if(!C) return null; ACtx=new C(); } if(ACtx.state==='suspended') ACtx.resume(); return ACtx; }
+  var NAMES=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'], FLAT={'Db':'C#','Eb':'D#','Gb':'F#','Ab':'G#','Bb':'A#'};
+  function midi(n){ var m=/^([A-G][#b]?)(\d)$/.exec(n); if(!m) return null; var p=FLAT[m[1]]||m[1]; return NAMES.indexOf(p)+12*(+m[2]+1); }
+  function nname(m){ return NAMES[m%12]+(Math.floor(m/12)-1); }
+  function tone(m,when,dur,vol){
+    var ctx=audio(); if(!ctx) return; var t=when||ctx.currentTime, f=440*Math.pow(2,(m-69)/12), v=Math.max(vol||0.5,0.001), d=Math.max(dur||0.9,0.25);
+    var o=ctx.createOscillator(), o2=ctx.createOscillator(), g=ctx.createGain(), g2=ctx.createGain();
+    o.type='triangle'; o.frequency.value=f; o2.type='sine'; o2.frequency.value=f*2;
+    g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(v,t+0.012); g.gain.exponentialRampToValueAtTime(v*0.32,t+0.15); g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+    g2.gain.setValueAtTime(0.0001,t); g2.gain.exponentialRampToValueAtTime(v*0.22,t+0.012); g2.gain.exponentialRampToValueAtTime(0.0001,t+0.28);
+    o.connect(g); o2.connect(g2); g.connect(ctx.destination); g2.connect(ctx.destination);
+    o.start(t); o2.start(t); o.stop(t+d+0.05); o2.stop(t+0.3);
+  }
+  document.querySelectorAll('[data-widget="piano"]').forEach(function(w){
+    var host=w.querySelector('.h5p-piano'), start=midi(host.dataset.start||'C4'), oct=+(host.dataset.octaves||1), last=start+12*oct;
+    var labels=host.dataset.labels!=='0', demos=JSON.parse(host.dataset.demos||'[]'), tasks=JSON.parse(host.dataset.tasks||'[]');
+    var keysMap={}, KB='awsedftgyhujk'.split(''), ti=0, played=[], busy=[], ESL=(w.closest('main')||{}).lang==='es', SOL=['Do','Do♯','Re','Re♯','Mi','Fa','Fa♯','Sol','Sol♯','La','La♯','Si'];
+    function disp(m){ return ESL ? SOL[m%12]+(Math.floor(m/12)-1) : nname(m).replace('#','♯'); }
+    function sayk(m){ return ESL ? SOL[m%12].replace('♯',' sostenido')+' '+(Math.floor(m/12)-1) : nname(m).replace('#',' sharp '); }
+    if(demos.length){ var dm=el('div','h5p-pno-demos'); demos.forEach(function(d){ var b=el('button','am-btn am-btn--slate','▶ '+d.l); b.type='button'; b.addEventListener('click',function(){ playSeq(d); }); dm.appendChild(b); }); host.parentNode.insertBefore(dm,host); }
+    var wrap=el('div','h5p-pno-wrap'); host.parentNode.insertBefore(wrap,host); wrap.appendChild(host);
+    var kb=el('div','h5p-pno'); host.appendChild(kb);
+    var whites=[]; for(var m=start;m<=last;m++){ if(NAMES[m%12].length===1) whites.push(m); }
+    whites.forEach(function(m){ var k=el('button','h5p-pno-w',labels?disp(m).replace(/\d/,''):''); k.type='button'; k.dataset.m=m; k.dataset.n=nname(m); k.setAttribute('aria-label',sayk(m)); kb.appendChild(k); keysMap[m]=k; });
+    var ww=100/whites.length;
+    for(m=start;m<=last;m++){ if(NAMES[m%12].length===2){ var idx=whites.indexOf(m-1); if(idx<0) continue; var b=el('button','h5p-pno-b',labels?disp(m).replace(/\d/,''):''); b.type='button'; b.dataset.m=m; b.dataset.n=nname(m); b.setAttribute('aria-label',sayk(m)); b.style.left='calc('+(ww*(idx+1))+'% - '+(ww*0.3)+'%)'; b.style.width=(ww*0.6)+'%'; kb.appendChild(b); keysMap[m]=b; } }
+    var now=el('div','h5p-pno-now'); now.setAttribute('aria-live','polite'); now.textContent=X(w,'Tap a key to play.'); wrap.parentNode.insertBefore(now,wrap.nextSibling);
+    var tbox=null; if(tasks.length){ tbox=el('div','h5p-pno-task'); now.parentNode.insertBefore(tbox,now.nextSibling); }
+    function flash(m,ms){ var k=keysMap[m]; if(!k) return; k.classList.add('on'); setTimeout(function(){ k.classList.remove('on'); },ms||160); }
+    function press(m){ tone(m); flash(m); now.textContent=X(w,'Now playing: ')+disp(m); if(tasks.length && ti<tasks.length) check(m); }
+    Object.keys(keysMap).forEach(function(m){ keysMap[m].addEventListener('pointerdown',function(e){ e.preventDefault(); press(+m); }); keysMap[m].addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); press(+m); } }); });
+    w.addEventListener('keydown',function(e){ if(e.repeat||e.target.tagName==='INPUT') return; var i=KB.indexOf(e.key.toLowerCase()); if(i>-1 && start+i<=last && keysMap[start+i]){ e.preventDefault(); press(start+i); } });
+    function playSeq(d){ var ctx=audio(); if(!ctx) return; busy.forEach(clearTimeout); busy=[]; var beat=60/(d.bpm||100), t=ctx.currentTime+0.08, ms=0;
+      d.seq.forEach(function(s){ var ns=[].concat(s[0]), len=(s[1]||1)*beat; ns.forEach(function(n){ if(n==='r') return; var mm=midi(n); if(mm===null) return; tone(mm,t,Math.min(len*0.95+0.2,2.2),0.4); (function(mm,ms){ busy.push(setTimeout(function(){ flash(mm,Math.max(120,len*800)); },ms)); })(mm,ms); }); t+=len; ms+=len*1000; });
+      now.textContent=X(w,'Playing: ')+d.l; }
+    function renderTask(){ if(!tbox) return; if(ti>=tasks.length){ tbox.innerHTML=X(w,'<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>'); fb(w,'ok',X(w,'Nice work — every task complete.')); live(w,X(w,'All piano tasks complete.')); return; }
+      var t=tasks[ti]; tbox.innerHTML=''; tbox.appendChild(el('h4','',X(w,'Task ')+(ti+1)+X(w,' of ')+tasks.length)); tbox.appendChild(el('div','',t.p)); var pl=el('div','h5p-pno-played',''); pl.dataset.played=''; tbox.appendChild(pl);
+      var hb=el('button','am-btn am-btn--ghost',X(w,'Show me')); hb.type='button'; hb.style.marginTop='8px'; hb.addEventListener('click',function(){ t.n.forEach(function(n,i){ var mm=midi(n); setTimeout(function(){ tone(mm); var k=keysMap[mm]; if(k){ k.classList.add('hint'); setTimeout(function(){ k.classList.remove('hint'); },1400); } }, t.o?i*420:0); }); }); tbox.appendChild(hb); played=[]; }
+    function check(m){ var t=tasks[ti], want=t.n.map(midi); played.push(m); if(played.length>12) played.shift();
+      var pl=tbox.querySelector('.h5p-pno-played'); pl.textContent=X(w,'You played: ')+played.slice(-8).map(disp).join(' · ');
+      var ok=false; if(t.o){ var tail=played.slice(-want.length); ok=tail.length===want.length && tail.every(function(x,i){ return x===want[i]; }); }
+      else { var need=want.slice().sort().join(), got={}; played.slice(-want.length*2).forEach(function(x){ if(want.indexOf(x)>-1) got[x]=1; }); ok=Object.keys(got).length===want.length && Object.keys(got).map(Number).sort().join()===need; }
+      if(ok){ score(w,X(w,'Tasks: ')+(ti+1)+' / '+tasks.length); fb(w,'ok',t.ok||X(w,'Correct!')); live(w,X(w,'Task ')+(ti+1)+X(w,' correct.')); ti++; setTimeout(renderTask,650); } }
+    var rb=w.querySelector('[data-retry]'); if(rb) rb.addEventListener('click',function(){ ti=0; played=[]; score(w,''); fb(w,'',''); renderTask(); });
+    renderTask();
+  });
+
+  /* ---------- 13. Branching scenario ---------- */
+  document.querySelectorAll('[data-widget="branch"]').forEach(function(w){
+    var host=w.querySelector('.h5p-branch'), S=JSON.parse(host.dataset.scenes), hist=[], trail=[], cur='start', ends={}, nEnds=0;
+    Object.keys(S).forEach(function(k){ if(S[k].end) nEnds++; });
+    var tr=el('ol','h5p-br-trail'), card=el('div','h5p-br-card'), ctl=el('div','h5p-controls');
+    var back=el('button','am-btn am-btn--ghost',X(w,'← Back')), rs=el('button','am-btn am-btn--ghost',X(w,'Start over')), sc=el('span','h5p-score'); back.type=rs.type='button';
+    ctl.appendChild(back); ctl.appendChild(rs); ctl.appendChild(sc); host.appendChild(tr); host.appendChild(card); host.appendChild(ctl); card.setAttribute('aria-live','polite');
+    var TONE={good:X(w,'Strong outcome'),ok:X(w,'Mixed outcome'),review:X(w,'Rethink this path')};
+    function render(){ var s=S[cur]; tr.innerHTML=''; tr.appendChild(el('li','',X(w,'Your path'))); trail.forEach(function(t,i){ tr.appendChild(el('li','',(i+1)+'. '+t)); });
+      card.innerHTML=''; back.disabled=!hist.length;
+      if(s.end){ ends[cur]=1; var box=el('div','h5p-br-end '+s.end); box.appendChild(el('div','tone',TONE[s.end]||X(w,'Outcome'))); box.appendChild(el('h4','',s.t)); var ul=el('ul','h5p-br-pts'); (s.pts||[]).forEach(function(p){ ul.appendChild(el('li',p[0],p[1])); }); box.appendChild(ul); if(s.c) box.appendChild(el('p','',s.c)); card.appendChild(box);
+        var again=el('button','am-btn am-btn--slate',X(w,'Try another path')); again.type='button'; again.style.marginTop='12px'; again.addEventListener('click',restart); card.appendChild(again);
+        sc.textContent=X(w,'Endings found: ')+Object.keys(ends).length+' / '+nEnds; live(w,X(w,'Outcome reached: ')+s.t); return; }
+      card.appendChild(el('h4','',s.t)); [].concat(s.b||[]).forEach(function(p){ card.appendChild(el('p','',p)); });
+      var og=el('div','h5p-br-opts'); s.o.forEach(function(o,i){ var b=el('button','h5p-br-opt'); b.type='button'; b.appendChild(el('b','tag',String.fromCharCode(65+i))); var sp=el('span','',o.l); if(o.d) sp.appendChild(el('small','',o.d)); b.appendChild(sp); b.addEventListener('click',function(){ hist.push({cur:cur,trail:trail.slice()}); trail.push(o.l.length>42?o.l.slice(0,40)+'…':o.l); cur=o.n; render(); }); og.appendChild(b); }); card.appendChild(og); }
+    function restart(){ hist=[]; trail=[]; cur='start'; render(); }
+    back.addEventListener('click',function(){ var h=hist.pop(); if(!h) return; cur=h.cur; trail=h.trail; render(); });
+    rs.addEventListener('click',restart); render();
+  });
+
+  /* ---------- 14. Interactive map ---------- */
+  document.querySelectorAll('[data-widget="map"]').forEach(function(w){
+    var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
+    var COL=['#2B4A6F','#5E6B7C','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
+    var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
+    routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
+    M.forEach(function(m,i){ var g=sv('g',{'class':'h5p-map-m',tabindex:'0',role:'button','aria-label':(i+1)+'. '+m.n}); g.appendChild(sv('circle',{cx:m.x,cy:m.y,r:13,fill:COL[m.c||0]})); var t=sv('text',{x:m.x,y:m.y+4.5,'text-anchor':'middle',fill:'#fff'}); t.style.fill='#fff'; t.textContent=i+1; g.appendChild(t);
+      g.addEventListener('click',function(){ open(i); }); g.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(i); } }); svg.appendChild(g); gs.push(g);
+      var li=el('li'), b=el('button','',(i+1)+'. '+m.n); b.type='button'; b.addEventListener('click',function(){ open(i); }); li.appendChild(b); list.appendChild(li); btns.push(b); });
+    svg.parentNode.insertBefore(list,svg.nextSibling);
+    if(cats.length>1){ var lg=el('div','h5p-map-legend'); cats.forEach(function(c,i){ var s=el('span'); var d=el('i'); d.style.background=COL[i]; s.appendChild(d); s.appendChild(document.createTextNode(c)); lg.appendChild(s); }); list.parentNode.insertBefore(lg,list); }
+    function open(i){ var m=M[i]; seen[i]=1; gs.forEach(function(g,j){ g.classList.toggle('on',j===i); }); btns.forEach(function(b,j){ b.classList.toggle('on',j===i); b.classList.toggle('seen',!!seen[j]); });
+      panel.innerHTML=''; if(cats.length) panel.appendChild(el('div','cat',cats[m.c||0])); panel.appendChild(el('h4','',(i+1)+'. '+m.n)); var d=el('div'); d.innerHTML=m.d; panel.appendChild(d);
+      var k=Object.keys(seen).length; score(w,X(w,'Explored: ')+k+' / '+M.length); if(k===M.length) fb(w,'ok',X(w,'You explored every location on the map.')); }
+    panel.innerHTML=X(w,'<em>Select a numbered marker, or a name below the map.</em>'); score(w,'Explored: 0 / '+M.length);
+  });
+
+  /* ---------- 15. Find the spot ---------- */
+  document.querySelectorAll('[data-widget="findspot"]').forEach(function(w){
+    var frame=w.querySelector('.h5p-fs-frame'), svg=frame.querySelector('svg'), T=JSON.parse(frame.dataset.targets), i=0, miss=0;
+    var prompt=el('div','h5p-fs-prompt'); prompt.setAttribute('aria-live','polite'); frame.parentNode.insertBefore(prompt,frame);
+    var layer=sv('g',{}); svg.appendChild(layer); var vb=svg.viewBox.baseVal, cross=sv('circle',{'class':'h5p-fs-cross',r:10,cx:vb.width/2,cy:vb.height/2,visibility:'hidden'}); svg.appendChild(cross);
+    svg.setAttribute('tabindex','0'); svg.setAttribute('role','application'); svg.setAttribute('aria-label',X(w,'Image. Tap the spot, or use the arrow keys to move the circle and press Enter.'));
+    function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
+    function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
+      var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#9FACBD','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
+    svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
+    svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
+      if(mv){ e.preventDefault(); cross.setAttribute('visibility','visible'); cross.setAttribute('cx',Math.max(0,Math.min(vb.width,cx+mv[0]))); cross.setAttribute('cy',Math.max(0,Math.min(vb.height,cy+mv[1]))); }
+      else if(e.key==='Enter'||e.key===' '){ e.preventDefault(); cross.setAttribute('visibility','visible'); test(cx,cy); } });
+    on(w,'[data-showme]',function(){ if(i<T.length) test(T[i].x,T[i].y); });
+    on(w,'[data-retry]',function(){ layer.innerHTML=''; i=0; score(w,''); fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 16. Era timeline ---------- */
+  document.querySelectorAll('[data-widget="eratimeline"]').forEach(function(w){
+    var host=w.querySelector('.h5p-era'), E=JSON.parse(host.dataset.eras), seen={}, total=0, cur=0;
+    E.forEach(function(e){ total+=e.e.length; });
+    var tabs=el('div','h5p-era-tabs'), spine=el('ul','h5p-era-spine'), note=el('p','h5p-hint'); tabs.setAttribute('role','tablist'); host.appendChild(tabs); host.appendChild(note); host.appendChild(spine);
+    var tb=[]; E.forEach(function(e,i){ var b=el('button','h5p-era-tab',e.n); b.type='button'; b.setAttribute('role','tab'); b.appendChild(el('small','',e.s)); b.addEventListener('click',function(){ cur=i; render(); }); tabs.appendChild(b); tb.push(b); });
+    function render(){ tb.forEach(function(b,i){ b.classList.toggle('on',i===cur); b.setAttribute('aria-selected',i===cur); var all=E[i].e.every(function(_,j){ return seen[i+'.'+j]; }); b.classList.toggle('done',all); });
+      note.textContent=E[cur].d||''; note.hidden=!E[cur].d; spine.innerHTML='';
+      E[cur].e.forEach(function(ev,j){ var key=cur+'.'+j, li=el('li','h5p-era-ev'+(seen[key]?' seen':'')), b=el('button'); b.type='button'; b.setAttribute('aria-expanded','false'); b.appendChild(el('b','',ev.y)); b.appendChild(el('span','',ev.t)); var body=el('div','body'); body.innerHTML=ev.b;
+        b.addEventListener('click',function(){ var o=li.classList.toggle('open'); b.setAttribute('aria-expanded',o); if(o && !seen[key]){ seen[key]=1; li.classList.add('seen'); prog(); tb[cur].classList.toggle('done',E[cur].e.every(function(_,k){ return seen[cur+'.'+k]; })); } });
+        li.appendChild(b); li.appendChild(body); spine.appendChild(li); }); }
+    function prog(){ var k=Object.keys(seen).length; score(w,X(w,'Events opened: ')+k+' / '+total); if(k===total) fb(w,'ok',X(w,'You opened every event on the timeline.')); }
+    on(w,'[data-expand]',function(){ spine.querySelectorAll('.h5p-era-ev').forEach(function(li){ if(!li.classList.contains('open')) li.querySelector('button').click(); }); });
+    render(); prog();
+  });
+
+  /* ---------- 17. Drag sort (pointer drag + tap/keyboard fallback) ---------- */
+  document.querySelectorAll('[data-widget="dragsort"]').forEach(function(w){
+    var host=w.querySelector('.h5p-ds'), items=JSON.parse(host.dataset.items), bins=JSON.parse(host.dataset.bins), sel=null, drag=null;
+    var tray=el('div','h5p-ds-tray'), grid=el('div','h5p-ds-bins'); tray.setAttribute('aria-label',X(w,'Items to sort')); host.appendChild(tray); host.appendChild(grid);
+    var zones=bins.map(function(b,i){ var d=el('div','h5p-ds-bin'); d.appendChild(el('h5','',b)); var z=el('div','zone'); z.dataset.c=i; z.tabIndex=0; z.setAttribute('role','button'); z.setAttribute('aria-label',X(w,'Place selected item in ')+b); d.appendChild(z); grid.appendChild(d);
+      z.addEventListener('click',function(e){ if(e.target!==z && e.target.tagName!=='H5') return; place(z); }); d.addEventListener('click',function(e){ if(e.target===d||e.target.tagName==='H5') place(z); }); z.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); place(z); } }); return z; });
+    tray.addEventListener('click',function(e){ if(e.target===tray && sel){ tray.appendChild(sel); sel.classList.remove('sel'); sel=null; } });
+    function place(z){ if(!sel) return; z.appendChild(sel); sel.classList.remove('sel','shake'); sel=null; fb(w,'',''); }
+    function build(){ tray.innerHTML=''; zones.forEach(function(z){ z.innerHTML=''; }); sel=null; score(w,'');
+      shuffle(items.slice()).forEach(function(it){ var c=el('button','h5p-ds-card',it.t); c.type='button'; c.dataset.a=','+[].concat(it.a).join(',')+','; tray.appendChild(c);
+        c.addEventListener('click',function(){ if(c.disabled) return; if(c.dataset.dragged){ delete c.dataset.dragged; return; } if(sel===c){ c.classList.remove('sel'); sel=null; return; } if(sel) sel.classList.remove('sel'); sel=c; c.classList.add('sel'); live(w,c.textContent+X(w,' selected. Choose a category.')); });
+        c.addEventListener('pointerdown',function(e){ if(c.disabled||e.button>0) return; var r=c.getBoundingClientRect(); drag={c:c,sx:e.clientX,sy:e.clientY,ox:e.clientX-r.left,oy:e.clientY-r.top,moved:false}; c.setPointerCapture(e.pointerId); });
+        c.addEventListener('pointermove',function(e){ if(!drag||drag.c!==c) return; if(!drag.moved && Math.abs(e.clientX-drag.sx)+Math.abs(e.clientY-drag.sy)<6) return; if(!drag.moved){ drag.moved=true; c.classList.add('drag'); c.style.width=c.getBoundingClientRect().width+'px'; }
+          c.style.left=(e.clientX-drag.ox)+'px'; c.style.top=(e.clientY-drag.oy)+'px'; var t=document.elementFromPoint(e.clientX,e.clientY); zones.forEach(function(z){ z.parentNode.classList.toggle('hot',!!t && z.parentNode.contains(t)); }); });
+        c.addEventListener('pointerup',function(e){ if(!drag||drag.c!==c) return; var d=drag; drag=null; if(!d.moved) return; c.classList.remove('drag'); c.style.left=c.style.top=c.style.width=''; c.dataset.dragged='1';
+          var t=document.elementFromPoint(e.clientX,e.clientY), hit=null; zones.forEach(function(z){ z.parentNode.classList.remove('hot'); if(t && z.parentNode.contains(t)) hit=z; }); if(hit){ hit.appendChild(c); c.classList.remove('shake'); } else if(t && tray.contains(t)) tray.appendChild(c); if(sel){ sel.classList.remove('sel'); sel=null; } fb(w,'',''); });
+      }); }
+    build();
+    on(w,'[data-check]',function(){ if(tray.querySelector('.h5p-ds-card')){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var ok=0, all=host.querySelectorAll('.h5p-ds-card'); all.forEach(function(c){ var z=c.parentNode; if(c.dataset.a.indexOf(','+z.dataset.c+',')>-1){ c.classList.add('ok'); c.disabled=true; ok++; } else { c.classList.add('shake'); tray.appendChild(c); } });
+      score(w,X(w,'Correct: ')+ok+' / '+all.length); if(ok===all.length){ fb(w,'ok',X(w,'All sorted correctly!')); live(w,X(w,'All sorted correctly.')); } else fb(w,'bad',X(w,'✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.')); });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); });
+  });
+
+  /* ---------- Listening-guide video thumbnails (click to play) ---------- */
+  function ytId(u){ var m=/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{11})/.exec(u||''); return m?m[1]:null; }
+  document.querySelectorAll('.am-listen').forEach(function(card){
+    var a=card.querySelector('a.am-listen__link[href]'); var href=a?a.getAttribute('href'):'';
+    if(/dropbox\.com\/.*\.mp3/i.test(href)){ var au=document.createElement('audio'); au.controls=true; au.preload='none'; au.className='am-audio';
+      au.src=href.replace(/[?&]dl=\d/,'').replace(/\?$/,'')+(href.indexOf('?')>-1&&!/[?&]dl=\d$/.test(href)?'&':'?')+'raw=1';
+      au.setAttribute('aria-label',X(card,'Play audio: ')+((card.querySelector('.am-listen__title')||{}).textContent||'')); var bd=card.querySelector('.am-listen__body'); bd.insertBefore(au,bd.firstChild); return; }
+    var id=ytId(href); if(!id) return;
+    var body=card.querySelector('.am-listen__body'), ttl=(card.querySelector('.am-listen__title')||{}).textContent||'';
+    var b=document.createElement('button'); b.type='button'; b.className='am-yt'; b.setAttribute('aria-label',X(card,'Play video: ')+ttl);
+    var img=document.createElement('img'); img.alt=''; img.loading='lazy'; img.src='https://i.ytimg.com/vi/'+id+'/hqdefault.jpg';
+    var p=document.createElement('span'); p.className='am-yt__play'; p.textContent=X(card,'Play here');
+    b.appendChild(img); b.appendChild(p); body.insertBefore(b, body.firstChild);
+    b.addEventListener('click',function(){
+      var f=document.createElement('iframe'); f.className='am-yt-frame'; f.title=ttl;
+      f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen'); f.setAttribute('allowfullscreen','');
+      b.parentNode.replaceChild(f,b); f.focus();
+    });
+  });
+})();
+</script>
+</body>
+</html>

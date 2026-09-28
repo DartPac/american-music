@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en" class="am-bilingual" data-title-en="Delta Pioneers — Patton, Jefferson, and Johnson — American Music" data-title-es="Pioneros del delta: Patton, Jefferson y Johnson — Música estadounidense">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delta Pioneers — Patton, Jefferson, and Johnson — American Music</title>
+<!--
+  AMERICAN MUSIC — SELF-CONTAINED PAGE
+  ===================================================================
+  Palette: Navy #2B4A6F · Slate #9FACBD
+    Navy dark  #1C2F47  (header/footer bands)      Navy deep #233C5C (hover)
+    Navy tint  #EBEFF4 / #DBE1E9 (callouts)         Slate soft #EEF1F5  Slate dark #5E6B7C
+    Ink #1B2A41 · Muted #4A5568 · Border #CDD4DD
+    Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
+  RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
+  or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
+  Every content page: objectives box, 2+ SVG figures, 2–3 widgets, Listening Guide(s),
+  key-term boxes, Page X of Y footer. Neutral textbook voice. No course code.
+-->
+<style>
+  :root{
+    --am-navy:#2B4A6F; --am-navy-dark:#1C2F47; --am-navy-deep:#233C5C;
+    --am-slate:#9FACBD; --am-slate-dark:#5E6B7C; --am-slate-soft:#EEF1F5;
+    --am-tint:#EBEFF4; --am-tint2:#DBE1E9; --am-mist:#F5F7F9;
+    --am-ink:#1B2A41; --am-muted:#4A5568; --am-border:#CDD4DD;
+    --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
+    --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
+    --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:var(--body); color:var(--am-ink); line-height:1.65; background:#fff; font-size:17px}
+  .am-topbar{background:var(--am-navy-dark); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:16px}
+  .am-mark{width:38px; height:38px; flex:none}
+  .am-wordmark{font-family:var(--head); font-weight:700; letter-spacing:1.5px; font-size:1.05em; text-transform:uppercase; white-space:nowrap; line-height:1.1}
+  .am-wordmark span{display:block; font-size:.6em; letter-spacing:4px; font-weight:400; color:var(--am-slate)}
+  .am-coursebar{margin-left:auto; font-size:.78em; letter-spacing:1.5px; text-transform:uppercase; opacity:.9; text-align:right; line-height:1.4}
+  .am-accentbar{height:6px; background:linear-gradient(90deg,var(--am-slate) 0 70%,var(--am-navy) 70% 100%)}
+  main{max-width:880px; margin:0 auto; padding:32px 24px 12px}
+  h1{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:2em; line-height:1.2; margin:0 0 6px; border-bottom:4px solid var(--am-slate); padding-bottom:10px}
+  h1 .am-kicker{display:block; font-size:.5em; letter-spacing:3px; text-transform:uppercase; color:var(--am-slate-dark); font-weight:600; margin-bottom:4px}
+  h2{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:1.35em; margin:34px 0 10px; padding-left:12px; border-left:6px solid var(--am-slate)}
+  h3{font-family:var(--head); font-weight:600; color:var(--am-navy); font-size:1.1em; margin:24px 0 8px}
+  a{color:var(--am-navy-deep)}
+  .am-lead{font-size:1.08em; font-style:italic; color:#3d4a5c; margin:14px 0 20px}
+  /* Callouts */
+  .am-objectives{background:var(--am-tint); border-left:6px solid var(--am-navy); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-label{margin:0 0 6px; font-family:var(--head); font-weight:700; color:var(--am-navy); text-transform:uppercase; letter-spacing:1.5px; font-size:.82em}
+  .am-keyterm{background:var(--am-mist); border:1px solid var(--am-border); border-left:6px solid var(--am-slate); padding:12px 16px; margin:16px 0; border-radius:8px}
+  .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
+  .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
+  .am-note{background:#F6F7F9; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  figure{margin:24px 0; text-align:center}
+  figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
+  figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
+  figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
+  /* Listening guide */
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(28,47,71,.08)}
+  .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
+  .am-listen__head svg{width:26px; height:26px; flex:none}
+  .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
+  .am-listen__meta{font-size:.82em; opacity:.9}
+  .am-listen__body{padding:14px 18px}
+  .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
+  .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
+  .am-listen__link:hover{background:#C7D0DB}
+  .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
+  .am-listen__log label{cursor:pointer}
+  /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#1C2F47; cursor:pointer}
+  .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
+  .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(28,47,71,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
+  .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
+  .am-audio{width:100%; margin:0 0 14px; display:block}
+  .am-yt-frame{width:100%; aspect-ratio:16/9; border:0; border-radius:8px; display:block; margin:0 0 14px; background:#000}
+  /* Buttons */
+  .am-btn{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em; background:var(--am-navy); color:#fff; border:0; padding:10px 18px; cursor:pointer; border-radius:6px}
+  .am-btn:hover{background:var(--am-navy-deep)}
+  .am-btn[disabled]{opacity:.45; cursor:default}
+  .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
+  .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
+  .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-btn--slate:hover{background:#C7D0DB}
+  /* ============ H5P-STYLE ACTIVITY SHELL ============ */
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(28,47,71,.1)}
+  .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
+  .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
+  .h5p-act__body{padding:18px 20px}
+  .h5p-feedback{margin-top:12px; padding:10px 14px; border-radius:6px; font-weight:600; display:none}
+  .h5p-feedback.ok{display:block; background:var(--ok-bg); color:var(--ok)}
+  .h5p-feedback.bad{display:block; background:var(--bad-bg); color:var(--bad)}
+  .h5p-feedback.info{display:block; background:var(--am-tint); color:var(--am-navy)}
+  .h5p-controls{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+  .h5p-score{margin-left:auto; font-family:var(--head); color:var(--am-navy); font-weight:700}
+  .h5p-hint{margin:0 0 10px; font-style:italic; color:var(--am-muted); font-size:.93em}
+  /* MCQ */
+  .h5p-mcq .h5p-q{margin-bottom:18px}
+  .h5p-mcq .h5p-stem{font-weight:600; margin:0 0 8px}
+  .h5p-opt{display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:10px 14px; margin:6px 0; cursor:pointer; font-family:var(--body); font-size:.95em; color:var(--am-ink)}
+  .h5p-opt:hover{border-color:var(--am-navy)}
+  .h5p-opt.sel{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-opt.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-opt.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-why{font-size:.9em; color:var(--am-muted); margin:4px 0 0 4px}
+  /* Drag the words (click-to-place) */
+  .h5p-bank{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px}
+  .h5p-word{background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 12px; cursor:pointer; font-weight:600; color:var(--am-navy-dark); font-family:var(--body); font-size:.95em}
+  .h5p-word.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-word.used{opacity:.3; pointer-events:none}
+  .h5p-blank{display:inline-block; min-width:110px; border-bottom:3px solid var(--am-navy); padding:2px 8px; margin:0 2px; cursor:pointer; text-align:center; font-weight:600; color:var(--am-navy); background:var(--am-tint); line-height:1.5}
+  .h5p-blank.ok{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-blank.bad{background:var(--bad-bg); border-color:var(--bad)}
+  /* Flashcards & dialog cards */
+  .h5p-flash{perspective:900px; max-width:460px; margin:0 auto}
+  .h5p-card{position:relative; width:100%; min-height:180px; transform-style:preserve-3d; transition:transform .5s; cursor:pointer}
+  .h5p-card.flip{transform:rotateY(180deg)}
+  .h5p-face{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px; border-radius:10px}
+  .h5p-face--front{background:var(--am-navy); color:#fff; font-family:var(--head); font-size:1.2em; font-weight:600; border-bottom:5px solid var(--am-slate)}
+  .h5p-face--back{background:var(--am-tint); border:2px solid var(--am-navy); color:var(--am-ink); transform:rotateY(180deg); font-size:.97em}
+  .h5p-dlg-ctrl{display:none; justify-content:center; gap:10px; margin-top:12px}
+  .h5p-dlg-ctrl.show{display:flex}
+  .h5p-progress{height:8px; background:var(--am-tint2); border-radius:4px; overflow:hidden; margin:10px 0}
+  .h5p-progress span{display:block; height:100%; background:var(--am-slate); width:0; transition:width .3s}
+  /* Order steps */
+  .h5p-order{padding-left:0; margin:0}
+  .h5p-order li{background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; margin:7px 0; display:flex; align-items:center; gap:10px; list-style:none}
+  .h5p-order li.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-order li.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-move{border:1px solid var(--am-navy); background:#fff; color:var(--am-navy); border-radius:4px; width:30px; height:28px; cursor:pointer; font-weight:700; flex:none}
+  .h5p-move:hover{background:var(--am-tint)}
+  /* Sort (drag-and-drop categorize, click-to-bin) */
+  .h5p-sort-pool{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px; min-height:40px; padding:10px; border:2px dashed var(--am-border); border-radius:8px}
+  .h5p-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+  .h5p-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:110px; padding:8px; cursor:pointer; background:#fff}
+  .h5p-bin.hot{background:var(--am-tint)}
+  .h5p-bin__title{font-family:var(--head); font-weight:700; color:#fff; background:var(--am-navy); margin:-8px -8px 8px; padding:6px 10px; border-radius:6px 6px 0 0; font-size:.88em; letter-spacing:.5px}
+  .h5p-item{display:inline-block; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 10px; margin:3px; cursor:pointer; font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-item.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-item.ok{border-color:var(--ok); background:var(--ok-bg); color:var(--ok)}
+  .h5p-item.bad{border-color:var(--bad); background:var(--bad-bg); color:var(--bad)}
+  /* Mark the words */
+  .h5p-mtw{line-height:2}
+  .h5p-tok{cursor:pointer; padding:2px 3px; border-radius:4px; border-bottom:2px dotted transparent}
+  .h5p-tok:hover{background:var(--am-tint)}
+  .h5p-tok.sel{background:var(--am-slate-soft); border-bottom-color:var(--am-slate-dark)}
+  .h5p-tok.ok{background:var(--ok-bg); border-bottom-color:var(--ok)}
+  .h5p-tok.bad{background:var(--bad-bg); border-bottom-color:var(--bad); text-decoration:line-through}
+  .h5p-tok.missed{outline:2px dashed var(--am-slate-dark)}
+  /* Dropdown cloze */
+  .h5p-dd{font:inherit; font-weight:600; color:var(--am-navy); border:0; border-bottom:3px solid var(--am-navy); background:var(--am-tint); padding:2px 6px; border-radius:4px 4px 0 0; margin:0 2px}
+  .h5p-dd.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok)}
+  .h5p-dd.bad{background:var(--bad-bg); border-color:var(--bad); color:var(--bad)}
+  /* Timeline stepper */
+  .h5p-tl-nav{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-tl-btn{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:20px; padding:5px 12px; cursor:pointer}
+  .h5p-tl-btn.on{background:var(--am-navy); color:#fff}
+  .h5p-tl-track{height:6px; background:var(--am-tint2); border-radius:3px; position:relative; margin:4px 0 16px}
+  .h5p-tl-track span{position:absolute; top:-5px; width:16px; height:16px; border-radius:50%; background:var(--am-slate); border:3px solid var(--am-navy); transform:translateX(-50%); transition:left .3s}
+  .h5p-tl-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:14px 18px; min-height:90px}
+  .h5p-tl-panel h4{margin:0 0 6px; font-family:var(--head); color:var(--am-navy); font-size:1.05em}
+  /* Song form explorer */
+  .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
+  .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
+  .h5p-form-sec:hover{transform:translateY(-2px)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(159,172,189,.35)}
+  .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
+  .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
+  /* Hotspots (inline SVG) */
+  .h5p-hs [data-hs]{cursor:pointer; transition:opacity .15s}
+  .h5p-hs [data-hs]:hover{opacity:.75}
+  .h5p-hs [data-hs].on{stroke:var(--am-slate); stroke-width:4}
+  .h5p-hs [data-hs].on text{stroke:none}
+  .h5p-hs-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:60px; margin-top:10px}
+  .h5p-hs-panel h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy)}
+  /* ============ ADDED 2026-09: piano, branching, map, find-the-spot, era timeline, drag sort ============ */
+  .am-sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+  .h5p-act :focus-visible{outline:3px solid var(--am-slate); outline-offset:2px; box-shadow:0 0 0 5px var(--am-navy-dark)}
+  /* Piano */
+  .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
+  .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F5F7F9); border:1px solid #9FB3CC; border-bottom:8px solid #CDD4DD; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2C3E57,#0F1B2B); border:1px solid #000; border-bottom:9px solid #1B2A41; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
+  .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(159,172,189,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(159,172,189,.8)}
+  .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
+  .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+  .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
+  .h5p-pno-task h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy); font-size:1em}
+  .h5p-pno-played{font-size:.9em; color:var(--am-muted); margin-top:4px}
+  /* Branching scenario */
+  .h5p-br-trail{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px; padding:0; list-style:none; font-size:.82em}
+  .h5p-br-trail li{background:var(--am-tint); color:var(--am-navy-dark); border-radius:14px; padding:3px 10px; font-weight:600}
+  .h5p-br-trail li:first-child{background:var(--am-navy); color:#fff}
+  .h5p-br-card h4{font-family:var(--head); color:var(--am-navy); font-size:1.12em; margin:0 0 8px}
+  .h5p-br-card p{margin:0 0 10px}
+  .h5p-br-opts{display:grid; gap:10px; margin-top:12px}
+  .h5p-br-opt{display:flex; gap:12px; align-items:flex-start; text-align:left; width:100%; background:#fff; border:2px solid var(--am-border); border-radius:10px; padding:12px 14px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink)}
+  .h5p-br-opt:hover{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-br-opt b.tag{flex:none; width:30px; height:30px; border-radius:50%; background:var(--am-slate); color:var(--am-navy-dark); display:flex; align-items:center; justify-content:center; font-family:var(--head)}
+  .h5p-br-opt small{display:block; color:var(--am-muted); font-size:.88em; margin-top:2px}
+  .h5p-br-end{border-radius:10px; padding:14px 18px; border:2px solid}
+  .h5p-br-end.good{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-br-end.ok{background:var(--am-slate-soft); border-color:var(--am-slate-dark)}
+  .h5p-br-end.review{background:var(--bad-bg); border-color:var(--bad)}
+  .h5p-br-end .tone{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em}
+  .h5p-br-pts{list-style:none; padding:0; margin:10px 0}
+  .h5p-br-pts li{margin:6px 0; padding-left:28px; position:relative}
+  .h5p-br-pts li::before{position:absolute; left:0; top:0; font-weight:700}
+  .h5p-br-pts li.ok::before{content:"✔"; color:var(--ok)}
+  .h5p-br-pts li.alert::before{content:"⚠"; color:var(--am-slate-dark)}
+  .h5p-br-pts li.no::before{content:"✖"; color:var(--bad)}
+  /* Interactive map */
+  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F5F7F9}
+  .h5p-map-m{cursor:pointer}
+  .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
+  .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
+  .h5p-map-m.on circle{stroke:#1C2F47; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#9FACBD; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#5E6B7C; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
+  .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
+  .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-map-list button.on{border-color:var(--am-navy); background:var(--am-navy); color:#fff}
+  .h5p-map-legend{display:flex; flex-wrap:wrap; gap:14px; font-size:.86em; margin:8px 0 0; color:var(--am-muted)}
+  .h5p-map-legend i{display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:5px; vertical-align:-1px}
+  .h5p-map-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px; margin-top:10px}
+  .h5p-map-panel h4{margin:0 0 2px; font-family:var(--head); color:var(--am-navy)}
+  .h5p-map-panel .cat{font-size:.8em; text-transform:uppercase; letter-spacing:1.2px; color:var(--am-slate-dark); font-weight:700}
+  /* Find the spot */
+  .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
+  .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
+  .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
+  .h5p-fs-found circle{fill:none; stroke:#9FACBD; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#1C2F47; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
+  .h5p-fs-cross{fill:none; stroke:#1C2F47; stroke-width:2}
+  @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
+  /* Era timeline */
+  .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-era-tab{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:8px; padding:6px 12px; cursor:pointer; text-align:left; line-height:1.25}
+  .h5p-era-tab small{display:block; font-weight:400; opacity:.85}
+  .h5p-era-tab.on{background:var(--am-navy); color:#fff}
+  .h5p-era-tab.done::after{content:" ✔"; color:var(--ok)}
+  .h5p-era-tab.on.done::after{color:var(--am-slate)}
+  .h5p-era-spine{position:relative; margin:0; padding:0 0 0 34px; list-style:none}
+  .h5p-era-spine::before{content:""; position:absolute; left:12px; top:6px; bottom:6px; width:4px; background:var(--am-tint2); border-radius:2px}
+  .h5p-era-ev{position:relative; margin:0 0 10px}
+  .h5p-era-ev::before{content:""; position:absolute; left:-29px; top:12px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--am-navy)}
+  .h5p-era-ev.seen::before{background:var(--am-slate)}
+  .h5p-era-ev button{width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink); display:flex; gap:10px; align-items:baseline}
+  .h5p-era-ev button:hover{border-color:var(--am-navy)}
+  .h5p-era-ev button b{font-family:var(--head); color:var(--am-navy); flex:none; min-width:58px}
+  .h5p-era-ev button::after{content:"+"; margin-left:auto; font-weight:700; color:var(--am-navy)}
+  .h5p-era-ev.open button::after{content:"–"}
+  .h5p-era-ev .body{display:none; background:var(--am-mist); border-left:4px solid var(--am-slate); border-radius:0 0 8px 8px; padding:10px 14px; margin-top:-2px; font-size:.95em}
+  .h5p-era-ev.open .body{display:block}
+  /* Drag sort (pointer drag + tap fallback) */
+  .h5p-ds-tray{display:flex; flex-wrap:wrap; gap:8px; min-height:52px; padding:10px; border:2px dashed var(--am-border); border-radius:8px; margin:10px 0 14px}
+  .h5p-ds-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px}
+  .h5p-ds-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:120px; padding:8px; background:#fff}
+  .h5p-ds-bin.hot{background:var(--am-tint); box-shadow:0 0 0 3px var(--am-slate)}
+  .h5p-ds-bin h5{margin:-8px -8px 8px; padding:6px 10px; background:var(--am-navy); color:#fff; font-family:var(--head); font-size:.88em; border-radius:6px 6px 0 0}
+  .h5p-ds-bin .zone{display:flex; flex-wrap:wrap; gap:6px; min-height:60px}
+  .h5p-ds-card{touch-action:none; user-select:none; -webkit-user-select:none; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:6px 10px; cursor:grab; font-family:var(--body); font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
+  .h5p-ds-card.ok::before{content:"✔ "}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(28,47,71,.3); cursor:grabbing}
+  .h5p-ds-card.shake{animation:h5pShake .4s}
+  .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
+  @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+  /* ============ BILINGUAL (EN/ES) ============ */
+  html:not([data-lang="es"]) .am-l-es, html[data-lang="es"] .am-l-en{display:none}
+  html[data-lang="es"] main[lang="en"], html:not([data-lang="es"]) main[lang="es"]{display:none}
+  .am-langtoggle{display:none; flex:none; margin-left:12px; border:2px solid var(--am-slate); border-radius:20px; overflow:hidden}
+  html.am-bilingual .am-langtoggle{display:flex}
+  .am-langtoggle button{font-family:var(--head); font-weight:700; font-size:.74em; letter-spacing:1px; text-transform:uppercase; background:transparent; color:#fff; border:0; padding:6px 12px; cursor:pointer}
+  .am-langtoggle button[aria-pressed="true"]{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-langtoggle button:focus-visible{outline:3px solid #fff; outline-offset:-3px}
+  @media (max-width:600px){ .am-langtoggle{margin-left:auto} .am-wordmark{white-space:normal} }
+  /* Footer */
+  .am-pagefoot{max-width:880px; margin:36px auto 0; padding:0 24px}
+  .am-pagefoot .rule{height:4px; background:var(--am-slate)}
+  .am-footband{background:var(--am-navy-dark); color:#fff; padding:16px 24px; text-align:center; font-size:.78em; letter-spacing:1.8px; text-transform:uppercase}
+  .am-footband .pg{color:var(--am-slate)}
+  details.am-answer{margin-top:8px}
+  details.am-answer summary{cursor:pointer; color:var(--am-navy); font-weight:600}
+  @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
+</style>
+</head>
+<body>
+<header class="am-topbar">
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#9FACBD"/><path d="M13 30V11l14 5v14" fill="none" stroke="#1C2F47" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#1C2F47"/><circle cx="24.5" cy="30" r="3.6" fill="#1C2F47"/></svg>
+  <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
+  <div class="am-coursebar"><span class="am-l-en">Module 5: Race Records, Hillbilly Records, and the Blues<br>Page 7 of 9</span><span class="am-l-es">Módulo 5: Discos raciales, discos hillbilly y el blues<br>Página 7 de 9</span></div>
+  <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
+</header>
+<div class="am-accentbar"></div>
+
+<main lang="en">
+  <h1><span class="am-kicker">Module 5 · Page 7 of 9</span>Delta Pioneers: Patton, Jefferson, and Johnson</h1>
+  <p class="am-lead">Three self-accompanied blues musicians, recorded across the Depression decade, who shaped every generation of blues and rock guitarists after them.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">On this page you will</p>
+    <ul style="margin:6px 0 0">
+      <li>Identify Charley Patton, Blind Lemon Jefferson, and Robert Johnson and roughly when each was first recorded.</li>
+      <li>Describe the showmanship and regional importance of Charley Patton.</li>
+      <li>Explain Blind Lemon Jefferson's significance as the first country blues star.</li>
+      <li>Explain why Robert Johnson's recordings had an outsized influence on later blues and rock musicians.</li>
+    </ul>
+  </div>
+
+  <h2>Charley Patton: showman of the Delta</h2>
+  <p>Charley Patton is widely regarded as one of the earliest and most influential figures of the Mississippi Delta country blues style. Based for years around the Dockery Plantation in the Delta, Patton built a reputation not only for his rough, powerful singing voice but also for his showmanship: he would beat rhythmically on the wooden body of his guitar and toss the instrument into the air mid-performance, techniques that thrilled live audiences decades before rock guitarists made similar stage antics famous. A talent scout "discovered" Patton in 1929, the same year the stock market crashed, and he went on to record more than fifty songs before his death in 1934, leaving one of the largest surviving bodies of work by any early Delta blues musician.</p>
+  <div class="am-keyterm"><strong>Charley Patton (c. 1891&#8211;1934):</strong> a foundational Mississippi Delta blues musician, first recorded in 1929, known for his powerful voice, showmanship, and influence on later Delta guitarists.</div>
+
+  <h2>Blind Lemon Jefferson: the first country blues star</h2>
+  <p>Blind Lemon Jefferson, based mainly in Texas, is generally credited as the first true country blues star: the first self-accompanied rural blues singer-guitarist to achieve wide commercial success on record. Beginning in 1926, his recordings for Paramount Records sold in numbers that surprised the label and proved a national audience existed for unpolished, solo country blues, not just the jazz-band-backed classic blues of singers such as Bessie Smith. Jefferson's intricate, syncopated guitar playing and high, expressive voice, heard on recordings such as "Match Box Blues," influenced a generation of blues guitarists who followed him, and his commercial success helped convince record companies that rural, self-accompanied blues performers were worth recording and marketing in their own right.</p>
+  <div class="am-keyterm"><strong>Blind Lemon Jefferson (c. 1893&#8211;1929):</strong> a Texas-based blues singer and guitarist, recording from 1926, generally considered the first commercially successful country blues star.</div>
+
+  <h2>Robert Johnson: pointing toward the future</h2>
+  <p>If Patton and Jefferson connect listeners to the roots of the blues, Robert Johnson's recordings seem to reach forward toward music that would not exist for decades. Johnson made his only studio recordings across two sessions in 1936 and 1937, capturing just a couple of dozen songs before his death in 1938 at around age twenty-seven. No other country blues musician had a greater influence on later generations of blues and rock guitarists: British musicians including Keith Richards of the Rolling Stones studied his recordings closely, and Eric Clapton's band Cream recorded a celebrated cover of Johnson's "Cross Road Blues" in 1968, helping introduce Johnson's music to a mass rock audience more than three decades after it was first recorded.</p>
+  <div class="am-keyterm"><strong>Robert Johnson (1911&#8211;1938):</strong> a Mississippi Delta blues singer and guitarist who recorded in 1936 and 1937; his small surviving catalog, including "Cross Road Blues," became enormously influential on later blues and rock musicians.</div>
+
+  <figure>
+    <svg viewBox="0 0 720 210" role="img" aria-label="Timeline comparing the recording careers of Charley Patton, Blind Lemon Jefferson, and Robert Johnson" id="dp-timeline">
+      <rect width="720" height="210" fill="#F5F7F9" rx="10"/>
+      <text x="360" y="26" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#2B4A6F">Recording Careers of Three Delta Pioneers</text>
+      <line x1="80" y1="105" x2="640" y2="105" stroke="#2B4A6F" stroke-width="4"/>
+      <g font-family="Arial, Helvetica, sans-serif">
+        <circle cx="140" cy="105" r="9" fill="#2B4A6F" stroke="#fff" stroke-width="2"/>
+        <text x="140" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#2B4A6F">1926</text>
+        <text x="140" y="131" text-anchor="middle" font-size="12" fill="#1B2A41">Blind Lemon Jefferson</text>
+        <text x="140" y="147" text-anchor="middle" font-size="12" fill="#1B2A41">begins recording</text>
+
+        <circle cx="360" cy="105" r="9" fill="#5E6B7C" stroke="#fff" stroke-width="2"/>
+        <text x="360" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#2B4A6F">1929</text>
+        <text x="360" y="131" text-anchor="middle" font-size="12" fill="#1B2A41">Charley Patton</text>
+        <text x="360" y="147" text-anchor="middle" font-size="12" fill="#1B2A41">first recorded</text>
+
+        <circle cx="580" cy="105" r="9" fill="#1C2F47" stroke="#fff" stroke-width="2"/>
+        <text x="580" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#2B4A6F">1936&#8211;37</text>
+        <text x="580" y="131" text-anchor="middle" font-size="12" fill="#1B2A41">Robert Johnson</text>
+        <text x="580" y="147" text-anchor="middle" font-size="12" fill="#1B2A41">records</text>
+      </g>
+      <text x="360" y="188" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">All three careers unfold within about a decade, spanning the Great Depression.</text>
+    </svg>
+    <figcaption>Figure 1. All three musicians recorded within about a decade of one another, spanning the years just before and during the Great Depression.</figcaption>
+  </figure>
+
+  <!-- ============ HOTSPOTS ============ -->
+  <div class="h5p-act" data-widget="hotspots">
+    <div class="h5p-act__head"><span>Explore the Delta Blues Landscape</span><span class="h5p-act__type">Image hotspots</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Tap a highlighted region to learn about its place in this page.</p>
+      <figure style="margin:0">
+        <svg class="h5p-hs" viewBox="0 0 720 220" role="img" aria-label="Map-style diagram of places associated with the three Delta blues pioneers">
+          <rect width="720" height="220" fill="#F5F7F9" rx="8"/>
+          <g data-hs="Dockery Plantation, Mississippi" data-info="A Mississippi Delta cotton plantation where Charley Patton lived and performed for years, becoming a hub for a generation of Delta blues musicians."><circle cx="150" cy="90" r="50" fill="#2B4A6F"/><text x="150" y="86" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Dockery</text><text x="150" y="102" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Plantation</text></g>
+          <g data-hs="Texas" data-info="Home base for Blind Lemon Jefferson, whose 1926 recordings made him the first commercially successful country blues star."><circle cx="330" cy="90" r="50" fill="#5E6B7C"/><text x="330" y="96" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold">Texas</text></g>
+          <g data-hs="Mississippi Delta crossroads" data-info="The rural highway crossings of the Delta region, later mythologized in blues legend and echoed in Robert Johnson&#39;s song title ‘Cross Road Blues.’"><circle cx="510" cy="90" r="50" fill="#1C2F47"/><text x="510" y="86" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Delta</text><text x="510" y="102" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">crossroads</text></g>
+          <g data-hs="Later influence: British rock" data-info="Decades later, Keith Richards and Eric Clapton studied Robert Johnson&#39;s recordings closely; Cream&#39;s 1968 cover of &#39;Cross Road Blues&#39; carried his music to a new, global rock audience."><rect x="595" y="55" width="105" height="70" rx="10" fill="#4A5568"/><text x="647" y="86" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold">British</text><text x="647" y="102" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold">rock, 1968</text></g>
+          <text x="360" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Three places, three careers, one lasting influence on later blues and rock</text>
+        </svg>
+      </figure>
+      <div class="h5p-hs-panel"><em>Select a region above.</em></div>
+    </div>
+  </div>
+
+  <h3>Where their careers unfolded</h3>
+  <p>These three careers played out across a handful of real places in Mississippi and Texas, decades apart from the British rock scene that later rediscovered Johnson. Explore the map below to see how the geography lines up.</p>
+
+  <!-- ============ INTERACTIVE MAP ============ -->
+  <div class="h5p-act" data-widget="map">
+    <div class="h5p-act__head"><span>Explore the Map: Delta Blues Geography</span><span class="h5p-act__type">Interactive map</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Select each numbered marker (or a name below the map) to learn what happened there.</p>
+      <svg class="h5p-mapsvg" data-region="bbox" data-bbox="-99,27,-82,37.5" data-statelabels="full" data-labels='[{"t":"Mississippi Delta","lat":33.9,"lon":-90.7,"i":1}]' role="img" aria-label="Map of the South showing places associated with Charley Patton, Blind Lemon Jefferson, and Robert Johnson" viewBox="0 0 720 511"><g class="h5p-map-base" aria-hidden="true"><rect width="720" height="511" fill="#F5F7F9"/><path d="M717.6,511L718.3,504.4L718.0,503.2L716.2,501.9L716.2,501.3L718.9,499.1L720,498.7L720,511ZM720,497.5L719.3,498.0L716.2,499.1L715.2,498.8L715.1,499.7L713.7,500.6L712.4,499.4L712.5,498.6L710.7,499.0L709.3,497.1L708.3,496.8L709.0,498.0L710.9,499.8L711.1,499.5L712.7,501.7L713.8,503.7L714.3,506.5L713.7,507.3L713.1,505.5L712.3,506.6L711.7,506.1L710.6,506.4L709.9,505.8L708.6,505.6L707.3,504.9L705.7,500.9L704.4,499.7L705.5,502.3L704.6,501.7L704.2,500.7L699.8,493.3L698.2,489.8L698.2,488.2L697.4,487.5L697.1,488.1L695.2,485.4L695.2,484.3L696.1,485.0L694.4,479.8L691.2,477.7L689.5,477.6L688.4,476.7L687.3,474.6L687.4,473.8L688.4,475.7L690.5,476.9L691.0,475.2L689.6,475.0L690.1,474.1L692.3,474.8L693.2,474.7L691.2,473.8L693.0,473.1L693.8,472.0L692.6,472.4L692.7,471.2L693.5,470.5L694.7,467.6L695.7,466.6L695.9,465.6L696.9,465.0L697.4,463.6L698.7,462.3L700.6,459.5L699.3,456.5L698.9,454.5L697.6,454.0L696.7,454.5L696.2,455.9L696.6,459.3L694.8,459.2L694.2,458.4L694.0,454.9L693.8,453.7L693.0,453.2L690.6,453.0L691.3,452L688.9,450.6L688.9,451.2L687.2,449.7L687.9,451.2L687.4,452.9L689.3,452.8L688.8,453.4L687.0,454.1L686.3,455.0L691.3,456.9L693.1,456.5L691.4,457.7L691.8,459.2L690.7,463.1L691.1,463.9L690.6,465.4L688.8,465.8L688.3,464.0L687.0,463.6L685.3,461.7L682.7,459.8L682.5,460.5L686.3,464.5L687.4,467.1L686.8,467.6L685.7,465.8L685.0,463.4L682.2,461.1L681.5,460.1L680.7,457.1L681.6,454.7L681.3,456.6L681.6,457.3L682.7,453.4L683.3,449.0L683.3,446.0L682.7,444.1L682.6,442.6L683.7,441.5L684.1,439.5L685.2,437.4L684.4,437.2L686.0,431.8L686.8,430.2L686.7,427.0L687.0,425.6L686.9,421.5L687.3,420.6L686.9,419.5L687.3,418.7L686.9,415.9L686.2,415.5L684.8,413.7L685.3,412.6L687.1,414.1L686.7,412.2L686.8,409.9L686.1,408.7L684.4,408.2L682.5,406.1L682.3,404.4L681.1,403.8L681.4,401.2L679.6,400.1L679.1,399.3L680.0,398.7L678.9,397.9L678.6,396.2L677.6,396.9L676.7,395.9L676.0,396.6L674.9,396.6L673.2,395.9L669.5,396.8L668.8,396.6L668.2,395.2L667.3,394.4L667.7,394.0L666.7,392.4L663.9,391.4L663.3,390.8L663.0,389.2L662.2,387.9L660.1,385.4L659.2,384.8L658.1,385.0L656.9,384.2L654.6,381.9L652.6,381.0L652.7,379.8L652.2,378.7L652.8,377.3L652.6,375.1L652.1,374.6L650.4,374.4L646.3,372.1L644.8,370.4L644.2,368.0L642.9,366.8L642.6,365.8L640.5,363.7L638.2,362.0L637.0,361.7L635.4,360.3L634.5,360.6L632.6,359.9L628.6,357.7L625.5,355.4L623.3,356.2L620.4,356.6L619.2,357.4L617.8,355.8L617.1,356.5L615.8,356.3L614.8,358.0L613.1,358.1L611.6,358.9L611.4,360.1L610.7,360.1L611.1,361.8L611.5,361.3L612.6,362.7L609.6,361.9L608.1,361.2L608.9,363.2L611.6,363.4L612.8,363.7L613.2,364.7L612.6,365.9L611.6,366.6L612.0,365.7L610.5,365.2L608.7,365.1L606.5,365.7L606.1,365.3L603.9,366.8L602.4,368.2L600.3,368.9L597.2,371.9L594.9,372.7L594.1,373.5L591.0,375.2L590.8,374.4L592.1,372.0L591.4,371.7L589.3,373.0L588.6,374.2L587.6,374.4L586.2,376.1L582.9,376.0L581.3,376.1L576.6,377.9L573.8,377.8L572.2,378.6L570.7,377.6L569.4,372.9L569.1,370.5L569.9,370L569.9,373.2L570.9,376.3L572.3,378.1L573.4,377.9L574.0,377.0L573.7,376.2L573.9,372.9L571.9,370.2L571.4,368.7L569.2,366.5L564.4,364.6L563.2,363.5L562.8,362.3L564.2,363.9L566.0,364.4L560.7,360.4L560.1,360.1L557.9,358.2L557.9,357.5L560.4,357.9L560.5,358.8L563.1,359.4L564.5,361.1L567.6,362.6L569.6,361.3L569.1,360.7L567.5,360.4L566.7,361.9L565.7,360.8L565.5,358.5L564.7,359.0L564.5,357.9L565.1,357.0L563.1,357.7L562.3,357.4L562.1,358.4L559.6,357.0L558.9,357.3L558.3,356.5L556.8,355.8L555.7,354.8L556.6,354.3L558.2,352.1L559.9,352.2L561.4,350.2L562.3,350.3L561.0,348.4L559.6,350.5L558.7,350.4L556.7,351.4L556.2,352.4L554.1,349.0L553.3,350.3L552.0,350.4L550.5,351.1L550.1,351.8L551.2,353.1L553.8,352.7L555.2,354.2L554.7,355.1L556.4,356.7L555.8,357.7L554.9,357.5L549.8,354.1L541.5,350.2L529.1,347.1L524.1,346.7L523.0,346.0L527.0,345.9L529.7,346.4L530.3,346.2L530.9,344.5L532.2,345.9L534.1,346.3L534.5,345.3L533.1,344.6L534.9,344.7L536.0,345.5L538.1,346.0L539.1,346.8L539.5,346.4L539.2,345.2L537.8,343.9L538.0,341.9L536.3,342.7L535.2,341.0L534.6,341.6L532.0,341.5L528.8,342.3L527.1,343.4L526.3,343.4L526.0,342.0L526.8,340.7L525.5,340.8L524.9,341.7L523.7,340.6L524.1,342.2L523.1,343.2L521.6,343.6L521.2,344.4L519.7,344.4L519.3,345.7L516.1,345.7L512.7,346.1L511.8,345.8L511.0,346.3L507.6,346.6L501.3,347.7L497.2,348.9L495.2,349.3L495.3,348.8L497.5,347.6L499.8,346.9L502.9,346.7L505.5,344.4L507.4,345.2L506.9,344.1L503.9,343.3L503.5,342.3L502.3,341.9L502.4,340.8L504.4,339.6L504.1,338.9L503.4,339.4L502.4,337.9L501.9,338.2L499.9,344.9L499.1,345L499.2,342.9L498.4,340.8L497.5,340.8L497.7,339.8L496.0,338.5L495.3,339.1L495.6,341.2L496.7,343.3L495.6,345.7L495.0,345.4L494.8,346.5L492.3,347.4L492.3,349.1L491.9,349.7L490.5,350.1L490.6,350.9L489.8,351.4L483.9,352.8L481.6,353.6L482.9,352.2L484.9,351.8L483.4,351.3L485.9,350.6L485.7,348.9L486.8,347.4L488.9,346.3L488.7,345.0L487.2,344.7L485.6,343.8L486.9,345.3L484.9,347.5L483.7,349.7L482.1,350.3L481.4,351.4L479.7,351.5L478.4,349.8L478.7,351.6L478.4,352.4L480.0,351.9L479.1,353.8L476.4,355.0L471.2,355.8L466.0,356.0L462.5,356.6L461.1,356.6L462.4,355.7L464.1,355.4L464.9,354.6L465.8,355.4L467.5,355.7L470.8,354.6L472.0,353.7L471.4,352.2L469.4,350.4L469.1,349.8L469.5,347.9L468.7,347.7L468.3,348.8L466.4,348.3L465.5,347.1L465.3,345.5L464.5,343.5L465.6,341.2L465.6,339.5L464.2,335.9L462.8,334.9L461.7,334.7L461.5,332.9L460.9,332.9L460.4,335.3L459.5,337.1L459.4,338.7L458.6,340.0L458.6,341.3L458.0,342.6L457.5,345.9L457.7,347.8L457.3,351.4L456.6,352.3L456.3,351.6L454.2,351.4L454.5,350.0L450.8,349.0L449.8,348.5L449.2,349.5L448.4,348.4L445.7,349.2L445.5,350.6L444.7,350.9L443.1,352.3L441.6,351.5L439.4,351.2L438.7,350.0L437.7,349.0L437.0,350.2L435.1,351.0L431.8,351.1L427.5,347.9L424.3,347.0L421.9,348.0L427.1,348.6L426.4,349.2L422.5,349.3L420.8,350.1L411.5,352.9L410.2,352.9L411.1,351.7L409.0,350.3L408.1,350.1L406.8,351.2L408.1,351.8L407.9,353.9L404.2,356.0L404.5,356.6L403.6,358.0L403.4,359.3L402.8,359.6L402.2,358.6L400.7,359.3L400.0,359.0L399.5,359.7L397.0,360.9L396.3,360.3L397.5,360.0L397.0,359.4L395.1,360.0L392.4,360.0L391.0,359.4L390.6,357.1L387.6,357.4L386.1,356.1L385.2,355.8L384.0,356.1L381.6,355.8L380.3,353.1L377.9,351.4L374.5,350.2L372.6,349.9L371.3,350.0L369.4,351.7L366.9,355.3L363.8,358.0L362.9,359.5L362.6,361.7L363.5,363.4L364.8,364.6L366.6,365.3L369.6,365.6L371.1,366.5L374.5,367.3L376.2,366.7L378.9,366.5L380.7,365.9L383.5,363.8L384.6,362.5L385.4,361.0L386.7,361.5L387.0,362.7L389.1,363.6L390.2,361.9L391.0,360.0L391.6,360.7L390.4,362.9L391.0,363.6L391.9,362.3L393.5,361.7L393.5,361.0L392.4,361.2L393.5,360.3L395.3,361.7L393.6,363.5L393.5,364.7L392.3,365.1L391.6,367.1L389.8,366.0L387.8,366.4L387.0,368.6L388.2,370.8L390.2,371.1L392.1,370.2L392.5,370.4L391.6,372.0L393.4,373.9L394.3,374.2L396.1,374.0L396.8,373.5L398.0,371.6L398.1,368.9L398.9,367.7L400.9,366.8L401.8,364.5L404.0,365.4L404.0,366.4L405.6,365.4L406.5,365.9L405.9,366.7L404.2,366.7L403.4,367.5L403.7,368.7L402.9,369.4L403.5,369.7L405.7,369.7L406.4,370.5L405.1,371.4L404.8,370.6L403.8,371.6L404.8,372.9L406.4,372.1L406.3,373.0L407.9,373.9L406.9,374.5L407.5,375.2L406.0,376.1L406.9,377.7L405.8,377.8L404.7,379.4L404.4,378.1L402.9,376.3L401.7,376.2L402.0,377.0L400.4,378.8L399.8,379.8L397.6,380.1L396.9,381.8L397.7,383.0L400.2,383.1L399.9,383.7L401.8,385.3L401.2,385.6L399.6,384.3L396.0,383.8L394.1,382.5L392.7,382.1L394.8,383.7L395.1,384.9L396.2,386.0L395.5,386.3L392.0,385.4L390.5,385.7L391.6,386.0L391.7,386.7L393.2,388.6L393.9,390.7L396.4,392.0L397.4,391.8L397.7,392.5L400.3,393.4L399.7,395.0L400.6,395.1L400.1,396.1L399.4,396.3L400.6,397.1L404.0,396.5L406.0,397.3L407.0,397.0L408.0,397.4L406.6,397.8L406.3,398.4L408.2,399.2L410.3,398.6L411.0,399.2L411.4,400.4L411.9,400.6L414.2,399.1L414.2,400.4L414.8,400.1L415.7,401.7L416.3,401.3L417.2,403.4L416.0,404.3L417.7,404.8L418.4,405.7L419.6,405.9L419.5,405.2L420.8,405.2L421.7,406.2L419.9,407.5L419.9,406.6L418.6,407.2L418.0,408.5L421.1,408.5L419.5,411.4L419.2,410.1L418.0,409.8L418.7,411.8L417.9,411.2L416.0,413.3L415.8,414.1L416.6,415.7L416.2,416.0L414.3,414.1L412.8,411.2L411.9,410.5L412.1,412.1L411.2,412.8L409.4,413.2L408.7,415.2L406.8,418.1L405.1,419.1L405.3,417.1L407.5,414.7L407.6,412.9L409.2,412.2L410.3,410.0L410.7,408.0L410.1,408.0L409.8,409.4L409.2,409.3L409.2,407.5L408.3,407.8L408.6,409.9L408.2,410.7L406.3,411.5L405.3,409.8L405.6,408.9L404.4,408.3L402.0,404.1L403.2,403.8L401.5,403.3L401.6,404.8L399.0,403.9L396.9,403.5L396.3,402.2L394.7,401.5L394.4,401.8L391.7,401.3L388.1,400.8L390.6,399.5L391.2,397.5L389.6,397.2L389.9,395.8L388.2,396.3L387.5,395.1L388.2,393.3L386.7,393.0L386.4,394.7L384.4,393.2L383.0,393.8L381.8,393.4L377.2,390.4L375.7,389.9L375.3,391.0L373.0,388.4L372.0,390.3L373.0,390.6L372.5,391.3L374.7,393.3L376.6,393.7L378.7,394.6L379.6,395.5L378.7,396.1L378.6,397.3L379.2,398.5L379.0,399.7L378.3,399.7L379.9,401.7L379.0,402.1L378.6,401.3L377.5,401.6L378.0,402.4L376.7,402.4L376.5,403.8L377.1,405.2L378.6,404.9L377.1,407.9L375.9,409.0L372.5,411.2L371.2,411.8L370.4,409.2L369.5,408.4L370.3,405.2L370.1,403.5L369.5,403.1L368.8,404.7L366.7,401.9L366.7,401.1L365.5,401.9L365.3,403.1L364.3,404.3L364.3,401.7L363.1,399.5L362.2,398.9L361.6,401.0L360.7,402.1L360.1,401.4L358.8,402.1L357.0,401.4L357.6,400.7L355.7,401.3L355.7,402.3L356.7,402.4L355.9,404.3L355.9,405.5L354.9,404.3L354.2,406.3L354.5,406.6L354.2,409.2L353.7,408.2L352.7,408.3L352.7,409.4L351.5,410.2L349.8,409.7L349.5,410.3L347.3,409.9L348.8,408.8L348.5,407.9L347.7,408.3L345.7,407.2L345.6,408.4L344.0,409.5L341.0,407.0L340.0,406.8L338.8,407.2L339.7,405.9L337.9,405.2L337.6,406.1L336.6,406.6L334.2,405.2L329.7,404.5L327.5,403.4L325.7,401.7L325.6,400.4L327.2,400.5L327.8,400.0L329.0,397.8L330.1,397.8L330.3,399.5L331.4,400.1L332.6,399.7L332.6,401.3L332.0,402.7L332.8,403.9L334.6,403.0L334.0,402.0L334.7,400.8L334.2,399.8L332.0,397.8L330.7,397.0L329.9,394.9L329.0,394.6L328.4,393.5L328.5,391.0L328.9,390.0L330.3,388.8L330.0,386.9L328.6,386.7L328.9,388.5L327.4,389.9L327.9,390.9L327.0,392.8L326.1,392.2L323.3,391.1L321.8,391.0L322.2,389.3L321.6,388.9L319.0,390.1L316.3,390.1L317.0,388.7L316.2,385.2L312.9,385.5L313.4,381.0L313.1,380.5L311.2,379.9L307.3,380.1L305.1,381.3L304.1,381.4L303.2,379.5L304.3,377.3L305.3,378.4L305.3,376.8L304.6,376.1L302.1,375.8L301.0,376.6L298.9,376.0L298.2,377.6L294.0,379.1L292.7,380.4L292.7,379.5L291.6,378.7L290.7,379.7L289.9,379.0L290.3,381.0L291.0,382.3L291.9,381.8L294.0,381.7L292.3,382.7L293.5,385.1L293.6,386.0L295.6,385.2L297.0,385.7L295.2,386.2L296.0,387.0L295.4,387.5L292.4,387.6L290.9,388.0L286.6,390.0L285.1,389.9L278.9,388.5L275.5,388.0L269.8,386.3L265.3,384.3L260.4,381.9L255.9,379.9L253.1,378.9L248.8,377.8L246.6,377.6L242.7,378.2L238.3,377.7L234.0,377.9L226.5,378.9L223.1,380.1L222.8,380.5L220.8,378.1L220.3,376.2L220.6,375.4L223.3,374.7L224.9,373.2L226.0,368.3L224.8,367.1L222.2,366.9L222.0,367.8L219.2,372.5L218.5,375.4L218.6,376.8L220.9,379.4L221.6,380.9L220.8,381.6L219.2,381.3L213.3,381.1L210.3,382.1L206.8,383.9L201.8,385.7L188.4,391.1L186.9,392.1L184.5,394.6L182.7,394.8L182.9,393.7L186.5,390.5L189.8,389.4L191.9,387.7L194.0,387.9L195.2,387.5L195.6,386.0L194.5,386.8L192.5,385.5L190.5,386.4L186.9,386.9L184.4,387.6L183.3,387.2L183.2,386.4L184.1,386.6L186.2,383.5L187.2,379.5L186.9,376.8L186.3,375.6L185.3,375.3L183.2,375.7L182.8,375.2L181.9,375.8L181.8,376.7L179.6,380.6L177.8,381.0L177.1,379.4L174.1,377.8L173.2,376.4L172.5,376.3L172.0,378.1L174.2,379.0L175.2,380.0L174.1,380.6L174.0,382.2L175.0,383.3L173.6,385.0L173.3,386.2L174.8,387.7L177.9,388.6L177.3,389.5L175.6,389.8L176.4,392.1L177.5,392.2L177.5,391.1L178.6,393.2L181.4,394.6L178.6,394.3L177.9,396.3L176.8,397.5L175.9,396.9L170.9,402.2L168.8,403.5L168.4,402.5L166.9,402.2L167.3,403.5L167.0,404.5L167.1,408.9L166.7,409.5L163.7,411.8L162.4,412.4L160.1,414.8L157.7,416.7L155.5,417.3L152.7,419.2L147.8,422.1L145.9,422.9L144.1,423.2L138.7,423.1L132.9,424.9L133.2,425.5L132.8,427.3L133.7,427.7L139.5,424.7L141.2,424.2L142.7,424.1L137.6,427.1L134.8,428.3L130.6,429.2L127.9,431.0L125.5,431.7L122.7,433.2L121.3,433.7L123.8,431.6L130.0,428.9L131.4,428.4L131.3,426.9L130.6,426.4L126.8,427.7L124.1,428.7L121.3,429.2L122.2,428.1L124.2,427.9L125.1,427.1L121.8,427.2L121.9,426.3L123.0,424.7L122.9,424.1L121.4,424.1L119.8,424.9L119.3,424.6L118.1,425.9L116.5,426.6L114.9,424.4L115.2,422.0L114.6,421.3L113.7,421.9L112.7,420.3L112.8,421.8L113.3,422.9L114.4,422.4L113.6,423.8L113.5,426.0L115.4,426.9L112.9,428.3L110.2,428.9L110.8,428.3L112.3,428.2L112.3,426.3L110.5,427.4L110.2,425.7L107.8,425.5L107.3,422.8L105.9,421.8L104.8,422.1L104.0,421.4L104.4,424.2L105.8,426.7L105.4,428.6L106.4,428.7L109.0,430.2L110.0,432.1L107.4,433.1L107.6,433.9L110.8,433.0L112.3,433.6L113.4,434.8L113.5,436.0L110.4,437.4L107.5,438.5L102.9,440.8L101.0,439.9L100.8,437.4L100.4,436.6L99.4,436.3L99.3,435.1L98.4,434.5L97.4,432.9L96.5,433.9L97.9,434.9L98.0,436.7L95.8,435.2L95.2,435.8L97.0,438.7L97.5,439.9L96.6,442.4L97.2,444.2L96.7,444.8L94.4,446.4L92.9,448.3L90.1,449.2L91.0,446.8L91.7,446.1L91.1,445.2L92.0,443.6L91.4,442.8L89.8,445.0L90.1,447.0L89.0,448.8L87.0,448.4L87.6,445.9L87.2,445.2L85.0,447.0L82.1,447.8L82.1,446.9L81.1,446.7L80.5,448.1L81.3,448.4L78.5,451.0L78.8,451.5L80.6,452.0L81.4,453.3L81.2,454.5L82.3,453.5L83.2,451.5L85.2,450.8L86.8,449.8L86.4,453.3L84.8,455.5L84.5,455.2L82.8,457.9L79.2,462.4L78.2,463.1L77.2,461.0L75.8,460.2L73.1,460.9L72.0,460.8L72.7,460.0L71.6,460.1L68.1,459.9L67.6,460.5L66.5,459.6L65.3,459.7L65.8,461.0L67.4,461.9L68.8,461.6L69.7,462.0L70.6,461.4L70.3,463.5L71.1,465.7L71.7,466.4L75.3,468.3L75.6,468.9L74.4,471.0L73.7,473.3L72.3,475.6L71.0,479.1L70.3,479.8L68.4,484.5L68.1,485.6L64.9,486.8L63.3,488.0L62.5,487.4L64.6,486.2L64.2,485.5L65.7,485.4L64.9,484.6L65.2,482.3L62.8,483.8L63.0,484.4L61.5,485.3L60.9,484.8L59.8,486.7L58.8,486.7L58.6,485.4L55.5,480.3L53.2,478.2L53.3,479.4L54.7,480.9L54.5,481.9L55.9,483.6L56.3,484.6L55.4,484.9L55.6,485.6L57.2,485.5L56.8,486.6L55.9,487.1L52.7,486.3L53.2,487.2L55.2,487.9L57.5,487.8L58.6,489.3L63.3,490.2L66.7,488.5L67.3,488.9L66.9,490.1L66.3,490.2L66.3,492.5L65.7,493.1L66.0,494.5L65.7,495.6L63.8,496.2L64.5,497.8L63.8,498.3L64.3,499.5L63.7,500.7L61.2,500.7L60.7,501.4L60.8,504.3L61.7,505.6L63.8,507.1L63.2,508.0L61.5,506.1L60.7,506.3L60.3,508.2L60.5,509.4L62.3,509.9L62.8,511L0,511L0,0L720,0ZM709.1,506.9L709.7,508.0L710.0,510.0L709.4,510.1ZM68.0,511L67.2,509.6L67.8,507.9L67.9,501.8L67.5,500.0L68.1,496.4L67.8,495.5L68.6,492.4L68.9,492.6L68.4,504.8L69.0,511L68.0,511ZM690.7,480.0L689.7,478.2L690.8,478.9L692.0,480.7L693.7,482.4L693.1,482.6ZM83.7,463.7L84.2,462.5L84.6,463.3L79.0,471.1L75.0,478.4L72.0,484.8L70.7,488.6L70.4,490.5L69.8,491.0L68.4,490.7L68.8,489.9L69.9,485.0L71.4,482.2L73.4,477.7L75.4,473.7L76.2,471.9L75.8,470.6L77.7,472.0L80.3,467.0L83.5,464.2ZM92.9,449.2L93.9,449.3L94.3,450.2L93.9,452.1L89.9,456.0L88.1,458.6L85.8,461.1L85.2,461.2L85.9,459.7L87.5,457.6L89.1,456.0L89.3,455.2L88.6,454.7L91.3,450.7L91.9,450.5ZM112.4,437.8L113.4,438.2L113.3,439.9L112.7,441.0L109.6,442.2L108.2,442.6L104.4,445.2L100.4,447.0L99.3,448.2L95.6,450.7L94.5,452.1L95.1,450.5L96.0,449.3L95.7,447.6L96.0,446.7L100.2,445.7L102.2,444.6L102.5,443.8L105.2,442.2L107.2,441.5L108.0,440.6L109.5,440.2L111.2,440.5L112.3,439.0ZM114.8,437.3L114.8,437.0L117.3,435.0L119.0,434.2L120.9,433.7L118.5,435.6L117.5,435.9L115.7,437.3ZM341.6,413.0L341.6,413.0L341.6,413.0ZM366.2,413.2L367.7,411.9L368.9,412.2ZM382.2,403.0L382.5,403.6L379.4,405.6L379.6,404.5L381.6,403.6ZM181.5,395.5L185.2,396.7L178.1,401.5L175.8,402.9L170.3,406.5L168.9,407.6L169.1,406.5L170.1,405.4L176.0,401.5L177.2,400.0L179.0,398.7L179.5,397.7L181.0,397.2ZM415.0,391.7L415.0,391.7L415.0,391.7ZM306.2,392.3L304.7,392.6L301.4,390.3L297.3,388.4L296.6,387.1L297.6,386.4L300.1,385.8L301.5,384.7L303.9,385.3L305.5,386.8L308.0,387.8L309.6,388.0L309.5,389.1L307.4,390.4L307.2,391.9ZM580.7,380.0L579.5,378.7L577.8,377.8L580.2,377.9L580.8,377.4L583.0,377.7L582.1,380.3ZM597.2,374.6L598.9,373.1L598.4,374.2L597.5,374.6L595.1,376.6L591.2,378.6L590.4,379.4L587.9,381.0L587.0,381.3L584.5,381.3L587.2,380.6L595.7,375.9ZM402.9,378.1L403.5,378.4L404.2,380.4L403.1,379.3L402.5,379.3L401.5,380.8L401.3,378.8L402.0,377.5ZM409.2,377.4L410.3,377.1L409.8,379.0L407.8,377.3ZM601.9,371.0L603.2,370.2L603.3,371.2L602.3,371.8L600.1,372.4ZM411.9,370.6L411.8,371.5L409.4,371.8L410.1,371.1ZM410.4,369.0L409.1,371.4L410.1,369.0ZM426.8,365.1L427.6,365.7L429.0,368.7L429.4,371.9L429.0,375.8L427.7,378.9L427.5,377.8L428.7,375.4L429.1,371.0L428.5,369.7L427.8,366.3ZM403.7,361.4L403.7,361.4L403.7,361.4ZM413.7,364.4L413.6,365.8L412.1,366.5L411.1,364.8L410.2,365.4L409.2,365.1L407.8,365.9L407.4,365.1L410.2,363.9L409.9,363.0L411.1,362.6L413.4,360.3L411.2,363.3L412.6,364.1L412.7,365.3ZM423.8,357.7L423.8,357.7L423.8,357.7ZM441.8,357.4L441.8,357.0L444.9,357.4L444.6,357.7ZM418.9,355.8L418.0,358.8L417.9,357.8L417.0,357.3L415.1,356.9L417.2,357.0ZM436.1,356.3L437.0,356.8L439.5,356.8L439.6,357.5L431.3,356.3L432.4,355.7L435.2,355.8ZM459.5,355.5L458.6,355.7L449.6,356.3L450.2,355.9L453.9,355.2L456.8,355.1L457.8,354.2L459.5,355.1ZM515.5,346.3L517.0,345.9L522.6,346.4L521.0,346.4L507.1,348.8L493.3,351.0L491.1,350.7L491.8,350.5L495.0,350.3L499.9,349.3L502.2,348.4L505.0,348.3L507.5,347.3L510.0,347.2ZM685.8,416.6L685.6,417.5L684.6,417.1ZM684.5,415.3L684.7,414.2L685.4,415.1ZM353.7,412.7L352.8,413.2L349.7,413.9L348.9,413.6L351.0,412.7L351.8,413.1ZM363.4,413.2L363.3,413.6L359.4,412.4L361.9,412.6ZM669.0,398.2L668.2,398.7L668.4,397.8ZM362.1,404.7L362.1,404.7L362.1,404.7ZM383.7,402.1L383.7,402.1L383.7,402.1ZM380.8,394.2L379.9,394.8L378.1,393.2L376.8,393.4L375.6,391.9L377.2,391.6L380.0,393.2L379.4,393.5ZM419.5,388.8L419.5,388.8L419.5,388.8ZM422.6,385.4L422.6,385.4L422.6,385.4ZM424.8,383.0L424.8,383.0L424.8,383.0Z" fill="#DBE1E9" stroke="#8FA9C8" stroke-width="0.8"/><path d="M446.0,350.1L444.7,326.5L441.4,277.9L445.0,237.4L445.5,228.8L449.2,183.1L453.4,135.5L451.1,134.1L449.3,130.7L449.2,130.1L478.9,129.6L501.3,129.4L541.6,128.0L550.1,127.9L556.8,158.7L571.3,227.2L574.1,231.6L575.2,237.7L579.3,243.2L581.3,247.9L580.1,252.7L584.5,255.3L583.2,257.5L578.2,261.7L578.7,267.5L575.6,275.9L576.6,282.7L579.5,286.1L580.2,290.9L578.0,302.5L578.5,306.7L581.6,310.3L583.2,315.3L547.0,317.4L521.7,318.4L502.0,318.8L477.8,319.6L476.5,325.8L480.8,331.5L486.1,334.7L486.6,337.5L484.6,341.7L485.1,343.9L488.1,345.9L485.5,347.4L484.1,352.4L482.0,353.5M583.2,315.3L585.9,320.5L587.4,326.8L589.6,328.7L609.5,328.6L647.7,328.6L697.8,328.4L698.5,335.2L700.3,338.2L705.7,337.3L706.2,327.4L704.2,323.8L704.7,317.7L707.6,315.4L713.5,316.7L717.3,318.5L720,318.7M550.1,127.9L599.9,125.1L627.2,123.5L627.1,123.3L647.0,121.5L646.7,124.5L642.6,127.5L639.3,132.1L639.1,137.2L643.5,140.3L645.9,140.4L649.4,144.4L652.7,146.2L657.8,145.7L659.7,150.8L663.7,155.9L665.0,160.7L666.8,161.5L670.2,166.0L672.1,170.0L680.5,174.4L684.9,178.1L687.3,183.7L693.5,186.4L696.3,189.9L699.2,191.8L698.6,196.5L702.8,199.5L702.3,200.7L705.9,202.0L707.0,205.4L712.3,207.2L717.6,210.8L717.1,213.6L720,217.4M204.9,0L203.5,33.5L169.6,32.0L62.0,25.7L0,20.4M599.9,125.1L600.5,113.8L607.8,112.3L610.7,109.6L610.4,104.4L615.4,99.0L619.5,96.6L630.6,95.6L632.0,93.5L636.9,91.1L639.5,87.5L641.7,87.2L645.5,84.1L648.8,84.6L652.1,79.7L652.8,75.8L655.0,77.1L657.4,73.0L661.8,69.8L663.3,71.3L662.8,74.2L664.9,74.9L668.6,72.1L670.3,68.1L677.4,64.1L680.0,64.4L680.7,66.4L684.6,65.0L688.5,56.5L692.6,53.5L696.1,54.1L694.5,51.2L696.0,48.0L695.2,44.7L696.3,42.2L707.8,41.9L720,41.3M720,108.3L718.8,108.3L678.0,109.8L668.0,112.5L660.4,117.4L659.3,116.6L647.0,121.5M203.5,33.5L202.6,57.2L207.8,110.0L205.2,150.0L202.7,193.1L201.4,194.1L198.8,191.0L194.0,190.4L191.6,187.1L187.7,187.4L184.0,181.7L180.9,181.5L177.8,177.9L174.0,176.6L171.3,180.6L161.7,179.9L159.5,177.2L156.0,179.2L153.2,178.9L153.2,180.7L150.1,181.5L146.1,178.8L145.9,180.0L137.6,180.7L136.3,184.3L131.7,183.9L130.5,187.1L126.5,182.9L123.5,183.0L122.5,180.6L118.8,179.3L120.6,177.1L117.1,176.2L115.8,179.6L108.8,177.6L108.2,173.7L104.7,173.5L104.9,176.5L100.3,180.4L100.5,183.0L97.4,183.5L95.9,179.6L97.4,178.5L96.1,174.6L94.3,176.9L91.2,176.3L89.5,178.8L86.7,178.4L86.4,174.6L82.4,174.6L81.4,171.9L77.6,170.0L71.4,175.7L66.3,174.2L67.5,169.3L62.0,168.2L60.9,164.4L61.7,161.0L59.2,162.7L51.7,160.1L49.5,163.4L46.6,164.2L43.5,160.1L40.7,158.9L35.9,159.9L30.1,157.3L27.5,155.2L25.2,156.1L19.5,154.8L19.3,149.1L13.0,142.8L12.2,146.5L5.2,144.1L4.2,146.0L0.0,145.1L0,145.0M202.7,193.1L207.6,197.8L209.9,196.3L212.9,197.5L214.5,195.7L216.8,197.7L219.9,197.8L219.9,197.8L219.2,223.0L217.6,271.7L220.3,275.2L222.8,276.5L226.1,282.2L226.9,285.9L225.1,290.6L228.6,296.8L230.6,298.3L231.9,302.3L231.0,304.4L233.5,306.3L234.3,311.0L237.0,310.6L236.0,314.7L237.4,318.2L235.3,320.3L237.0,322.6L235.2,325.0L235.7,327.6L232.9,331.4L230.2,338.1L228.2,339.3L229.3,345.6L226.4,350.6L228.6,352.8L227.9,356.5L229.2,359.8L227.3,362.6L228.6,363.4L224.8,366.9L221.7,373.0L219.1,374.8L222.5,381.0M391.4,0L391.3,0.6L397.0,3.3L398.6,8.4L397.1,10.8L400.7,17.4L400.2,19.9L397.1,22.7L399.4,24.8L399.3,26.8L402.6,32.2L402.5,34.3L405.8,36.6L407.0,33.1L410.4,37.6L411.9,37.0L413.2,37.8L411.7,43.4L410.3,45.3L412.6,46.8L410.0,47.9L411.0,52.0L409.0,56.1L407.3,56.9L404.8,53.7L403.0,54.3L401.3,60.1L398.7,60.2L398.8,56.6L395.9,56.6L396.6,60.2L397.2,67.6L393.9,67.7L396.8,70.7L394.9,72.5L390.4,72.7L394.3,75.7L394.4,78.2L391.4,79.8L389.4,83.8L364.7,84.2L366.9,79.7L370.0,77.3L372.1,74.2L375.9,71.0L376.6,65.6L373.6,63.8L373.3,60.3L325.4,60.2L202.6,57.2M720,6.3L714.8,7.7L710.8,10.1L705.2,5.7L703.3,8.9L700.3,9.9L698.4,12.5L693.9,13.1L689.3,9.5L686.9,9.6L683.8,6.5L683.2,2.8L680.9,0.7L682.0,0M451.9,0L451.9,0.1L448.2,3.9L449.2,8.2L452.0,10.9L451.2,12.9L443.1,14.3L440.7,16.5L438.8,15.5L436.4,17.3L435.0,22.3L438.6,28.6L437.3,32.2L433.5,32.2L430.9,30.1L426.1,28.5L419.9,25.3L417.4,25.2L413.9,27.8L410.5,32.6L410.0,34.9L411.9,37.0M389.4,83.8L392.4,87.4L392.4,89.2L389.1,88.3L387.9,90.3L390.7,91.8L386.4,95.3L382.8,95.4L380.7,97.0L381.6,99.8L384.9,101.1L381.3,102.8L382.3,107.0L379.3,104.7L377.3,107.5L378.6,109.2L377.1,112.3L375.9,108.7L372.8,111.4L376.4,113.2L373.5,119.3L376.4,120.7L374.7,122.5L376.8,124.9L372.5,126.1L371.3,130.2L367.8,129.7L367.4,131.7L369.8,135.7L362.9,139.3L360.8,136.8L361.8,143.8L359.9,144.5L359.4,140.8L357.3,143.9L361.0,145.6L359.3,148.9L356.5,147.1L358.3,153.3L356.5,155.3L357.3,158.7L353.8,161.0L350.2,161.4L350.6,164.3L346.9,166.1L346.3,169.0L344.1,167.3L344.8,170.2L347.6,170.2L346.0,172.3L343.8,171.0L342.1,172.3L345.3,175.2L344.2,177.7L340.8,177.9L336.8,180.8L339.9,182.2L337.4,185.3L340.6,188.6L339.2,190.0L334.7,189.3L334.5,191.7L337.8,192.3L337.2,195.0L333.9,192.7L331.2,194.5L335.1,197.9L331.1,199.5L332.9,202.1L330.9,205.4L335.3,203.8L333.3,208.1L335.7,207.6L334.5,212.1L336.5,215.7L336.3,219.7L332.8,219.5L332.1,221.0L335.3,223.6L333.5,226.0L302.2,225.5L257.9,224.2L219.2,223.0M679.8,0L668.0,12.2L663.1,14.1L654.6,20.3L654.8,23.8L649.6,27.2L649.5,31.5L646.2,33.2L642.3,33.6L640.2,39.1L638.0,39.4L628.4,43.6L625.5,43.7L620.1,47.2L619.6,48.0L587.1,49.4L558.6,49.4L551.1,50.3L537.9,50.6L518.8,50.1L509.0,50.3L489.0,51.4L460.9,52.6L461.0,51.2L452.6,50.7L454.1,56.7L453.4,59.3L405.8,59.6L401.3,60.1M398.7,60.2L396.6,60.2M367.4,131.7L399.3,131.6L449.3,130.7M399.9,359.7L396.2,357.7L395.5,352.2L393.3,346.9L388.1,341.4L386.3,337.0L390.3,323.2L390.3,320.9L313.8,320.8L316.7,317.7L314.4,315.6L315.7,312.6L313.8,308.1L318.8,307.7L319.2,305.9L316.3,301.9L317.6,300.3L319.3,303.5L320.6,302.1L318.8,299.0L318.7,296.0L323.3,293.9L320.1,293.1L319.6,290.3L323.6,291.5L323.8,287.2L329.3,284.9L325.1,284.4L326.2,280.6L329.1,280.6L332.6,277.4L332.3,275.4L336.0,273.8L335.9,271.3L339.7,266.2L337.5,265.2L337.8,267.7L333.2,267.2L333.5,264.0L338.4,262.1L340.4,263.4L340.9,259.5L343.5,257.5L340.2,256.8L340.2,252.2L338.7,253.0L335.5,251.0L335.9,248.7L339.0,250.6L339.8,249.3L336.8,247.2L339.9,244.5L335.2,245.9L333.9,243.2L337.8,239.2L333.4,238.0L334.3,233.6L337.3,231.5L336.3,226.9L334.9,229.8L331.6,230.0L333.5,226.0M620.1,47.2L636.0,46.4L686.4,42.7L686.7,41.6L697.3,41.0L696.3,42.2" fill="none" stroke="#FFFFFF" stroke-width="0.9"/><text x="506.2" y="234.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">ALABAMA</text><text x="641.7" y="234.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">GEORGIA</text><text x="90.3" y="94.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">OKLAHOMA</text><text x="284.3" y="135.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">ARKANSAS</text><text x="393.1" y="238.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">MISSISSIPPI</text><text x="519.7" y="87.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">TENNESSEE</text><text x="300.7" y="318.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">LOUISIANA</text><text x="352.1" y="183.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-style="italic" letter-spacing="1" fill="#6B7F99">Mississippi Delta</text></g></svg>
+      <div class="h5p-map-data" data-cats='["Charley Patton","Blind Lemon Jefferson","Robert Johnson"]' data-markers='[{"n": "Dockery Plantation, Mississippi", "lat": 33.63, "lon": -90.62, "c": 0, "d": "The Delta cotton plantation where Charley Patton lived and performed for years, building the reputation that led to his 1929 discovery; he died in 1934, having recorded more than fifty songs.", "x": 355.3, "y": 196.5}, {"n": "Clarksdale, Mississippi", "lat": 34.2, "lon": -90.57, "c": 2, "d": "A Delta town near the highway crossing later mythologized in blues legend and echoed in Robert Johnson’s song title “Cross Road Blues.”", "x": 357.3, "y": 169.4}, {"n": "Dallas, Texas", "lat": 32.78, "lon": -96.8, "c": 1, "d": "Blind Lemon Jefferson’s home base as a street and club performer; his recordings, beginning in 1926, made him the first commercially successful country blues star.", "x": 109.1, "y": 229.4}, {"n": "Wortham, Texas", "lat": 31.78, "lon": -96.46, "c": 1, "d": "The small Texas town near where Blind Lemon Jefferson was born, before he made his way to Dallas.", "x": 120, "y": 277.5}, {"n": "San Antonio, Texas", "lat": 29.42, "lon": -98.49, "c": 2, "d": "Robert Johnson recorded his only studio sessions in Texas: here in November 1936, and in Dallas the following June, before his death in Mississippi in 1938.", "x": 30.1, "y": 383.7}]'></div>
+      <div class="h5p-map-panel"></div>
+      <div class="h5p-controls"><span class="h5p-score"></span></div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ============ LISTENING GUIDES ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Watch: Getting to Know Charley Patton</div><div class="am-listen__meta">Documentary overview</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Watch for:</strong></p>
+      <ol><li>Details about Patton's life at Dockery Plantation.</li><li>How the video describes his stage showmanship.</li><li>How many songs Patton is credited with recording.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/Ou-Fb19hL7c" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I watched this example</label></div>
+    </div>
+  </div>
+
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Listening Guide: "Tom Rushen Blues" (audio only)</div><div class="am-listen__meta">Charley Patton, 1929 recording</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Listen for:</strong></p>
+      <ol><li>Patton's rough, forceful vocal delivery.</li><li>Percussive guitar playing that mimics the beat on the body of the instrument.</li><li>How loosely the twelve-bar form is treated compared to a polished classic blues recording.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=9WkltAg2vmI" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I listened to this example</label></div>
+    </div>
+  </div>
+
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Listening Guide: "Match Box Blues" (audio only)</div><div class="am-listen__meta">Blind Lemon Jefferson, recordings began 1926</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Listen for:</strong></p>
+      <ol><li>Jefferson's high, expressive vocal tone.</li><li>Quick, syncopated guitar runs between vocal lines.</li><li>How freely he stretches or shortens a phrase compared to the strict twelve-bar grid.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=3Zy1nBF1Mhs" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I listened to this example</label></div>
+    </div>
+  </div>
+
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Listening Guide: "Cross Road Blues" (audio only)</div><div class="am-listen__meta">Robert Johnson, recorded 1936&#8211;37</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Listen for:</strong></p>
+      <ol><li>Johnson's precise, driving guitar rhythm against his vocal.</li><li>The tension and urgency in his voice.</li><li>Why later rock guitarists might have found this recording so compelling to study closely.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/GsB_cGdgPTo" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I listened to this example</label></div>
+    </div>
+  </div>
+
+  <!-- ============ SORT ============ -->
+  <div class="h5p-act" data-widget="sort">
+    <div class="h5p-act__head"><span>Sort the Pioneers</span><span class="h5p-act__type">Drag and drop</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Tap an item, then tap the musician it describes.</p>
+      <div class="h5p-sort-pool" data-items='[{"t":"Discovered in 1929, based at Dockery Plantation","c":0},{"t":"Recording from 1926, first country blues star","c":1},{"t":"Recorded only in 1936–37, revered by Clapton and Richards","c":2},{"t":"Tossed his guitar in the air while performing","c":0},{"t":"Texas-based singer-guitarist","c":1},{"t":"Wrote \"Cross Road Blues\"","c":2}]'></div>
+      <div class="h5p-bins" data-bins='["Charley Patton","Blind Lemon Jefferson","Robert Johnson"]'></div>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Check</button>
+        <button class="am-btn am-btn--ghost" data-retry>Retry</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <h2>Putting It Together</h2>
+  <p>Patton, Jefferson, and Johnson recorded only a few years apart, yet together they trace the country blues from its rough, Delta-born roots to a small, tightly focused catalog that would go on to shape the sound of blues and rock guitar for decades. Their recordings capture the African-American side of the South's segregated race and hillbilly catalogs at its most influential. The next page turns to the other side of that same industry: the founding of commercial hillbilly, or early country, music at the Grand Ole Opry.</p>
+</main>
+
+<main lang="es">
+  <h1><span class="am-kicker">Módulo 5 · Página 7 de 9</span>Pioneros del delta: Patton, Jefferson y Johnson</h1>
+  <p class="am-lead">Tres músicos de blues que se acompañaban a sí mismos, grabados a lo largo de la década de la Depresión, que moldearon a todas las generaciones posteriores de guitarristas de blues y de rock.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">En esta página vas a</p>
+    <ul style="margin:6px 0 0">
+      <li>Identificar a Charley Patton, Blind Lemon Jefferson y Robert Johnson, y saber aproximadamente cuándo grabó cada uno por primera vez.</li>
+      <li>Describir el talento escénico y la importancia regional de Charley Patton.</li>
+      <li>Explicar la importancia de Blind Lemon Jefferson como la primera estrella del country blues.</li>
+      <li>Explicar por qué las grabaciones de Robert Johnson tuvieron una influencia desproporcionada en los músicos de blues y de rock posteriores.</li>
+    </ul>
+  </div>
+
+  <h2>Charley Patton: el gran showman del delta</h2>
+  <p>Charley Patton es considerado ampliamente una de las primeras y más influyentes figuras del country blues del delta del Misisipi. Durante años tuvo como base la plantación Dockery, en el delta, y se ganó una reputación no solo por su voz áspera y poderosa, sino también por su talento escénico: golpeaba rítmicamente el cuerpo de madera de su guitarra y lanzaba el instrumento al aire en plena actuación, técnicas que entusiasmaban al público en vivo décadas antes de que los guitarristas de rock hicieran famosas acrobacias parecidas en el escenario. Un cazatalentos "descubrió" a Patton en 1929, el mismo año de la quiebra de la bolsa, y llegó a grabar más de cincuenta canciones antes de morir en 1934, lo que dejó una de las obras conservadas más extensas de cualquier músico temprano del blues del delta.</p>
+  <div class="am-keyterm"><strong>Charley Patton (c. 1891&#8211;1934):</strong> músico fundamental del blues del delta del Misisipi, grabado por primera vez en 1929, conocido por su voz poderosa, su talento escénico y su influencia en los guitarristas posteriores del delta.</div>
+
+  <h2>Blind Lemon Jefferson: la primera estrella del country blues</h2>
+  <p>A Blind Lemon Jefferson, que vivió principalmente en Texas, se le reconoce en general como la primera verdadera estrella del country blues: el primer cantante y guitarrista rural de blues, acompañado solo por sí mismo, que logró un amplio éxito comercial en disco. A partir de 1926, sus grabaciones para Paramount Records se vendieron en cantidades que sorprendieron a la disquera y demostraron que existía un público nacional para el country blues solista y sin pulir, y no solo para el blues clásico acompañado por bandas de jazz de cantantes como Bessie Smith. La forma de tocar la guitarra de Jefferson, intrincada y sincopada, y su voz aguda y expresiva, que se escuchan en grabaciones como "Match Box Blues", influyeron en toda una generación de guitarristas de blues que lo siguieron, y su éxito comercial ayudó a convencer a las compañías discográficas de que valía la pena grabar y comercializar por derecho propio a los intérpretes rurales de blues que se acompañaban a sí mismos.</p>
+  <div class="am-keyterm"><strong>Blind Lemon Jefferson (c. 1893&#8211;1929):</strong> cantante y guitarrista de blues radicado en Texas, que grabó a partir de 1926 y a quien se considera en general la primera estrella comercialmente exitosa del country blues.</div>
+
+  <h2>Robert Johnson: una mirada hacia el futuro</h2>
+  <p>Si Patton y Jefferson conectan a los oyentes con las raíces del blues, las grabaciones de Robert Johnson parecen adelantarse hacia una música que no existiría sino décadas después. Johnson hizo sus únicas grabaciones de estudio en dos sesiones, en 1936 y 1937, y dejó apenas un par de docenas de canciones antes de morir en 1938, a los veintisiete años aproximadamente. Ningún otro músico de country blues tuvo mayor influencia en las generaciones posteriores de guitarristas de blues y de rock: músicos británicos como Keith Richards, de los Rolling Stones, estudiaron sus grabaciones con atención, y la banda de Eric Clapton, Cream, grabó en 1968 una célebre versión de "Cross Road Blues" de Johnson, lo que ayudó a presentar su música a un público masivo de rock más de tres décadas después de su grabación original.</p>
+  <div class="am-keyterm"><strong>Robert Johnson (1911&#8211;1938):</strong> cantante y guitarrista de blues del delta del Misisipi que grabó en 1936 y 1937; su pequeño catálogo conservado, que incluye "Cross Road Blues", tuvo una influencia enorme en los músicos de blues y de rock posteriores.</div>
+
+  <figure>
+    <svg viewBox="0 0 720 210" role="img" aria-label="Línea de tiempo que compara las carreras discográficas de Charley Patton, Blind Lemon Jefferson y Robert Johnson" id="dp-timeline-es">
+      <rect width="720" height="210" fill="#F5F7F9" rx="10"/>
+      <text x="360" y="26" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#2B4A6F">Carreras discográficas de tres pioneros del delta</text>
+      <line x1="80" y1="105" x2="640" y2="105" stroke="#2B4A6F" stroke-width="4"/>
+      <g font-family="Arial, Helvetica, sans-serif">
+        <circle cx="140" cy="105" r="9" fill="#2B4A6F" stroke="#fff" stroke-width="2"/>
+        <text x="140" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#2B4A6F">1926</text>
+        <text x="140" y="131" text-anchor="middle" font-size="12" fill="#1B2A41">Blind Lemon Jefferson</text>
+        <text x="140" y="147" text-anchor="middle" font-size="12" fill="#1B2A41">empieza a grabar</text>
+
+        <circle cx="360" cy="105" r="9" fill="#5E6B7C" stroke="#fff" stroke-width="2"/>
+        <text x="360" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#2B4A6F">1929</text>
+        <text x="360" y="131" text-anchor="middle" font-size="12" fill="#1B2A41">Charley Patton</text>
+        <text x="360" y="147" text-anchor="middle" font-size="12" fill="#1B2A41">graba por primera vez</text>
+
+        <circle cx="580" cy="105" r="9" fill="#1C2F47" stroke="#fff" stroke-width="2"/>
+        <text x="580" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#2B4A6F">1936&#8211;37</text>
+        <text x="580" y="131" text-anchor="middle" font-size="12" fill="#1B2A41">Robert Johnson</text>
+        <text x="580" y="147" text-anchor="middle" font-size="12" fill="#1B2A41">graba</text>
+      </g>
+      <text x="360" y="188" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Las tres carreras caben en cerca de una década, a lo largo de la Gran Depresión.</text>
+    </svg>
+    <figcaption>Figura 1. Los tres músicos grabaron en un lapso de alrededor de una década, en los años inmediatamente anteriores a la Gran Depresión y durante ella.</figcaption>
+  </figure>
+
+  <!-- ============ HOTSPOTS ============ -->
+  <div class="h5p-act" data-widget="hotspots">
+    <div class="h5p-act__head"><span>Explora el paisaje del blues del delta</span><span class="h5p-act__type">Imagen interactiva</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Toca una región resaltada para conocer su lugar en esta página.</p>
+      <figure style="margin:0">
+        <svg class="h5p-hs" viewBox="0 0 720 220" role="img" aria-label="Diagrama tipo mapa de los lugares asociados con los tres pioneros del blues del delta">
+          <rect width="720" height="220" fill="#F5F7F9" rx="8"/>
+          <g data-hs="Plantación Dockery, Misisipi" data-info="Una plantación algodonera del delta del Misisipi donde Charley Patton vivió y tocó durante años, y que se convirtió en un centro para toda una generación de músicos de blues del delta."><circle cx="150" cy="90" r="50" fill="#2B4A6F"/><text x="150" y="86" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Plantación</text><text x="150" y="102" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Dockery</text></g>
+          <g data-hs="Texas" data-info="La base de Blind Lemon Jefferson, cuyas grabaciones de 1926 lo convirtieron en la primera estrella comercialmente exitosa del country blues."><circle cx="330" cy="90" r="50" fill="#5E6B7C"/><text x="330" y="96" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold">Texas</text></g>
+          <g data-hs="Encrucijadas del delta del Misisipi" data-info="Los cruces de caminos rurales de la región del delta, que más tarde se volvieron parte de la leyenda del blues y resuenan en el título de la canción de Robert Johnson “Cross Road Blues”."><circle cx="510" cy="90" r="50" fill="#1C2F47"/><text x="510" y="86" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">Cruces del</text><text x="510" y="102" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold">delta</text></g>
+          <g data-hs="Influencia posterior: el rock británico" data-info="Décadas más tarde, Keith Richards y Eric Clapton estudiaron con atención las grabaciones de Robert Johnson; la versión de “Cross Road Blues” que grabó Cream en 1968 llevó su música a un nuevo público mundial de rock."><rect x="595" y="55" width="105" height="70" rx="10" fill="#4A5568"/><text x="647" y="86" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold">Rock británico,</text><text x="647" y="102" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold">1968</text></g>
+          <text x="360" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Tres lugares, tres carreras y una influencia duradera en el blues y el rock posteriores</text>
+        </svg>
+      </figure>
+      <div class="h5p-hs-panel"><em>Selecciona una región arriba.</em></div>
+    </div>
+  </div>
+
+  <h3>Dónde se desarrollaron sus carreras</h3>
+  <p>Estas tres carreras transcurrieron en unos pocos lugares reales de Misisipi y Texas, a décadas de distancia de la escena del rock británico que más tarde redescubrió a Johnson. Explora el mapa de abajo para ver cómo se relaciona la geografía.</p>
+
+  <!-- ============ INTERACTIVE MAP ============ -->
+  <div class="h5p-act" data-widget="map">
+    <div class="h5p-act__head"><span>Explora el mapa: la geografía del blues del delta</span><span class="h5p-act__type">Mapa interactivo</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Selecciona cada marcador numerado (o un nombre debajo del mapa) para saber qué ocurrió allí.</p>
+      <svg class="h5p-mapsvg" data-region="bbox" data-bbox="-99,27,-82,37.5" data-statelabels="full" data-labels='[{"t":"Delta del Misisipi","lat":33.9,"lon":-90.7,"i":1}]' role="img" aria-label="Mapa del Sur que muestra lugares asociados con Charley Patton, Blind Lemon Jefferson y Robert Johnson" viewBox="0 0 720 511"><g class="h5p-map-base" aria-hidden="true"><rect width="720" height="511" fill="#F5F7F9"/><path d="M717.6,511L718.3,504.4L718.0,503.2L716.2,501.9L716.2,501.3L718.9,499.1L720,498.7L720,511ZM720,497.5L719.3,498.0L716.2,499.1L715.2,498.8L715.1,499.7L713.7,500.6L712.4,499.4L712.5,498.6L710.7,499.0L709.3,497.1L708.3,496.8L709.0,498.0L710.9,499.8L711.1,499.5L712.7,501.7L713.8,503.7L714.3,506.5L713.7,507.3L713.1,505.5L712.3,506.6L711.7,506.1L710.6,506.4L709.9,505.8L708.6,505.6L707.3,504.9L705.7,500.9L704.4,499.7L705.5,502.3L704.6,501.7L704.2,500.7L699.8,493.3L698.2,489.8L698.2,488.2L697.4,487.5L697.1,488.1L695.2,485.4L695.2,484.3L696.1,485.0L694.4,479.8L691.2,477.7L689.5,477.6L688.4,476.7L687.3,474.6L687.4,473.8L688.4,475.7L690.5,476.9L691.0,475.2L689.6,475.0L690.1,474.1L692.3,474.8L693.2,474.7L691.2,473.8L693.0,473.1L693.8,472.0L692.6,472.4L692.7,471.2L693.5,470.5L694.7,467.6L695.7,466.6L695.9,465.6L696.9,465.0L697.4,463.6L698.7,462.3L700.6,459.5L699.3,456.5L698.9,454.5L697.6,454.0L696.7,454.5L696.2,455.9L696.6,459.3L694.8,459.2L694.2,458.4L694.0,454.9L693.8,453.7L693.0,453.2L690.6,453.0L691.3,452L688.9,450.6L688.9,451.2L687.2,449.7L687.9,451.2L687.4,452.9L689.3,452.8L688.8,453.4L687.0,454.1L686.3,455.0L691.3,456.9L693.1,456.5L691.4,457.7L691.8,459.2L690.7,463.1L691.1,463.9L690.6,465.4L688.8,465.8L688.3,464.0L687.0,463.6L685.3,461.7L682.7,459.8L682.5,460.5L686.3,464.5L687.4,467.1L686.8,467.6L685.7,465.8L685.0,463.4L682.2,461.1L681.5,460.1L680.7,457.1L681.6,454.7L681.3,456.6L681.6,457.3L682.7,453.4L683.3,449.0L683.3,446.0L682.7,444.1L682.6,442.6L683.7,441.5L684.1,439.5L685.2,437.4L684.4,437.2L686.0,431.8L686.8,430.2L686.7,427.0L687.0,425.6L686.9,421.5L687.3,420.6L686.9,419.5L687.3,418.7L686.9,415.9L686.2,415.5L684.8,413.7L685.3,412.6L687.1,414.1L686.7,412.2L686.8,409.9L686.1,408.7L684.4,408.2L682.5,406.1L682.3,404.4L681.1,403.8L681.4,401.2L679.6,400.1L679.1,399.3L680.0,398.7L678.9,397.9L678.6,396.2L677.6,396.9L676.7,395.9L676.0,396.6L674.9,396.6L673.2,395.9L669.5,396.8L668.8,396.6L668.2,395.2L667.3,394.4L667.7,394.0L666.7,392.4L663.9,391.4L663.3,390.8L663.0,389.2L662.2,387.9L660.1,385.4L659.2,384.8L658.1,385.0L656.9,384.2L654.6,381.9L652.6,381.0L652.7,379.8L652.2,378.7L652.8,377.3L652.6,375.1L652.1,374.6L650.4,374.4L646.3,372.1L644.8,370.4L644.2,368.0L642.9,366.8L642.6,365.8L640.5,363.7L638.2,362.0L637.0,361.7L635.4,360.3L634.5,360.6L632.6,359.9L628.6,357.7L625.5,355.4L623.3,356.2L620.4,356.6L619.2,357.4L617.8,355.8L617.1,356.5L615.8,356.3L614.8,358.0L613.1,358.1L611.6,358.9L611.4,360.1L610.7,360.1L611.1,361.8L611.5,361.3L612.6,362.7L609.6,361.9L608.1,361.2L608.9,363.2L611.6,363.4L612.8,363.7L613.2,364.7L612.6,365.9L611.6,366.6L612.0,365.7L610.5,365.2L608.7,365.1L606.5,365.7L606.1,365.3L603.9,366.8L602.4,368.2L600.3,368.9L597.2,371.9L594.9,372.7L594.1,373.5L591.0,375.2L590.8,374.4L592.1,372.0L591.4,371.7L589.3,373.0L588.6,374.2L587.6,374.4L586.2,376.1L582.9,376.0L581.3,376.1L576.6,377.9L573.8,377.8L572.2,378.6L570.7,377.6L569.4,372.9L569.1,370.5L569.9,370L569.9,373.2L570.9,376.3L572.3,378.1L573.4,377.9L574.0,377.0L573.7,376.2L573.9,372.9L571.9,370.2L571.4,368.7L569.2,366.5L564.4,364.6L563.2,363.5L562.8,362.3L564.2,363.9L566.0,364.4L560.7,360.4L560.1,360.1L557.9,358.2L557.9,357.5L560.4,357.9L560.5,358.8L563.1,359.4L564.5,361.1L567.6,362.6L569.6,361.3L569.1,360.7L567.5,360.4L566.7,361.9L565.7,360.8L565.5,358.5L564.7,359.0L564.5,357.9L565.1,357.0L563.1,357.7L562.3,357.4L562.1,358.4L559.6,357.0L558.9,357.3L558.3,356.5L556.8,355.8L555.7,354.8L556.6,354.3L558.2,352.1L559.9,352.2L561.4,350.2L562.3,350.3L561.0,348.4L559.6,350.5L558.7,350.4L556.7,351.4L556.2,352.4L554.1,349.0L553.3,350.3L552.0,350.4L550.5,351.1L550.1,351.8L551.2,353.1L553.8,352.7L555.2,354.2L554.7,355.1L556.4,356.7L555.8,357.7L554.9,357.5L549.8,354.1L541.5,350.2L529.1,347.1L524.1,346.7L523.0,346.0L527.0,345.9L529.7,346.4L530.3,346.2L530.9,344.5L532.2,345.9L534.1,346.3L534.5,345.3L533.1,344.6L534.9,344.7L536.0,345.5L538.1,346.0L539.1,346.8L539.5,346.4L539.2,345.2L537.8,343.9L538.0,341.9L536.3,342.7L535.2,341.0L534.6,341.6L532.0,341.5L528.8,342.3L527.1,343.4L526.3,343.4L526.0,342.0L526.8,340.7L525.5,340.8L524.9,341.7L523.7,340.6L524.1,342.2L523.1,343.2L521.6,343.6L521.2,344.4L519.7,344.4L519.3,345.7L516.1,345.7L512.7,346.1L511.8,345.8L511.0,346.3L507.6,346.6L501.3,347.7L497.2,348.9L495.2,349.3L495.3,348.8L497.5,347.6L499.8,346.9L502.9,346.7L505.5,344.4L507.4,345.2L506.9,344.1L503.9,343.3L503.5,342.3L502.3,341.9L502.4,340.8L504.4,339.6L504.1,338.9L503.4,339.4L502.4,337.9L501.9,338.2L499.9,344.9L499.1,345L499.2,342.9L498.4,340.8L497.5,340.8L497.7,339.8L496.0,338.5L495.3,339.1L495.6,341.2L496.7,343.3L495.6,345.7L495.0,345.4L494.8,346.5L492.3,347.4L492.3,349.1L491.9,349.7L490.5,350.1L490.6,350.9L489.8,351.4L483.9,352.8L481.6,353.6L482.9,352.2L484.9,351.8L483.4,351.3L485.9,350.6L485.7,348.9L486.8,347.4L488.9,346.3L488.7,345.0L487.2,344.7L485.6,343.8L486.9,345.3L484.9,347.5L483.7,349.7L482.1,350.3L481.4,351.4L479.7,351.5L478.4,349.8L478.7,351.6L478.4,352.4L480.0,351.9L479.1,353.8L476.4,355.0L471.2,355.8L466.0,356.0L462.5,356.6L461.1,356.6L462.4,355.7L464.1,355.4L464.9,354.6L465.8,355.4L467.5,355.7L470.8,354.6L472.0,353.7L471.4,352.2L469.4,350.4L469.1,349.8L469.5,347.9L468.7,347.7L468.3,348.8L466.4,348.3L465.5,347.1L465.3,345.5L464.5,343.5L465.6,341.2L465.6,339.5L464.2,335.9L462.8,334.9L461.7,334.7L461.5,332.9L460.9,332.9L460.4,335.3L459.5,337.1L459.4,338.7L458.6,340.0L458.6,341.3L458.0,342.6L457.5,345.9L457.7,347.8L457.3,351.4L456.6,352.3L456.3,351.6L454.2,351.4L454.5,350.0L450.8,349.0L449.8,348.5L449.2,349.5L448.4,348.4L445.7,349.2L445.5,350.6L444.7,350.9L443.1,352.3L441.6,351.5L439.4,351.2L438.7,350.0L437.7,349.0L437.0,350.2L435.1,351.0L431.8,351.1L427.5,347.9L424.3,347.0L421.9,348.0L427.1,348.6L426.4,349.2L422.5,349.3L420.8,350.1L411.5,352.9L410.2,352.9L411.1,351.7L409.0,350.3L408.1,350.1L406.8,351.2L408.1,351.8L407.9,353.9L404.2,356.0L404.5,356.6L403.6,358.0L403.4,359.3L402.8,359.6L402.2,358.6L400.7,359.3L400.0,359.0L399.5,359.7L397.0,360.9L396.3,360.3L397.5,360.0L397.0,359.4L395.1,360.0L392.4,360.0L391.0,359.4L390.6,357.1L387.6,357.4L386.1,356.1L385.2,355.8L384.0,356.1L381.6,355.8L380.3,353.1L377.9,351.4L374.5,350.2L372.6,349.9L371.3,350.0L369.4,351.7L366.9,355.3L363.8,358.0L362.9,359.5L362.6,361.7L363.5,363.4L364.8,364.6L366.6,365.3L369.6,365.6L371.1,366.5L374.5,367.3L376.2,366.7L378.9,366.5L380.7,365.9L383.5,363.8L384.6,362.5L385.4,361.0L386.7,361.5L387.0,362.7L389.1,363.6L390.2,361.9L391.0,360.0L391.6,360.7L390.4,362.9L391.0,363.6L391.9,362.3L393.5,361.7L393.5,361.0L392.4,361.2L393.5,360.3L395.3,361.7L393.6,363.5L393.5,364.7L392.3,365.1L391.6,367.1L389.8,366.0L387.8,366.4L387.0,368.6L388.2,370.8L390.2,371.1L392.1,370.2L392.5,370.4L391.6,372.0L393.4,373.9L394.3,374.2L396.1,374.0L396.8,373.5L398.0,371.6L398.1,368.9L398.9,367.7L400.9,366.8L401.8,364.5L404.0,365.4L404.0,366.4L405.6,365.4L406.5,365.9L405.9,366.7L404.2,366.7L403.4,367.5L403.7,368.7L402.9,369.4L403.5,369.7L405.7,369.7L406.4,370.5L405.1,371.4L404.8,370.6L403.8,371.6L404.8,372.9L406.4,372.1L406.3,373.0L407.9,373.9L406.9,374.5L407.5,375.2L406.0,376.1L406.9,377.7L405.8,377.8L404.7,379.4L404.4,378.1L402.9,376.3L401.7,376.2L402.0,377.0L400.4,378.8L399.8,379.8L397.6,380.1L396.9,381.8L397.7,383.0L400.2,383.1L399.9,383.7L401.8,385.3L401.2,385.6L399.6,384.3L396.0,383.8L394.1,382.5L392.7,382.1L394.8,383.7L395.1,384.9L396.2,386.0L395.5,386.3L392.0,385.4L390.5,385.7L391.6,386.0L391.7,386.7L393.2,388.6L393.9,390.7L396.4,392.0L397.4,391.8L397.7,392.5L400.3,393.4L399.7,395.0L400.6,395.1L400.1,396.1L399.4,396.3L400.6,397.1L404.0,396.5L406.0,397.3L407.0,397.0L408.0,397.4L406.6,397.8L406.3,398.4L408.2,399.2L410.3,398.6L411.0,399.2L411.4,400.4L411.9,400.6L414.2,399.1L414.2,400.4L414.8,400.1L415.7,401.7L416.3,401.3L417.2,403.4L416.0,404.3L417.7,404.8L418.4,405.7L419.6,405.9L419.5,405.2L420.8,405.2L421.7,406.2L419.9,407.5L419.9,406.6L418.6,407.2L418.0,408.5L421.1,408.5L419.5,411.4L419.2,410.1L418.0,409.8L418.7,411.8L417.9,411.2L416.0,413.3L415.8,414.1L416.6,415.7L416.2,416.0L414.3,414.1L412.8,411.2L411.9,410.5L412.1,412.1L411.2,412.8L409.4,413.2L408.7,415.2L406.8,418.1L405.1,419.1L405.3,417.1L407.5,414.7L407.6,412.9L409.2,412.2L410.3,410.0L410.7,408.0L410.1,408.0L409.8,409.4L409.2,409.3L409.2,407.5L408.3,407.8L408.6,409.9L408.2,410.7L406.3,411.5L405.3,409.8L405.6,408.9L404.4,408.3L402.0,404.1L403.2,403.8L401.5,403.3L401.6,404.8L399.0,403.9L396.9,403.5L396.3,402.2L394.7,401.5L394.4,401.8L391.7,401.3L388.1,400.8L390.6,399.5L391.2,397.5L389.6,397.2L389.9,395.8L388.2,396.3L387.5,395.1L388.2,393.3L386.7,393.0L386.4,394.7L384.4,393.2L383.0,393.8L381.8,393.4L377.2,390.4L375.7,389.9L375.3,391.0L373.0,388.4L372.0,390.3L373.0,390.6L372.5,391.3L374.7,393.3L376.6,393.7L378.7,394.6L379.6,395.5L378.7,396.1L378.6,397.3L379.2,398.5L379.0,399.7L378.3,399.7L379.9,401.7L379.0,402.1L378.6,401.3L377.5,401.6L378.0,402.4L376.7,402.4L376.5,403.8L377.1,405.2L378.6,404.9L377.1,407.9L375.9,409.0L372.5,411.2L371.2,411.8L370.4,409.2L369.5,408.4L370.3,405.2L370.1,403.5L369.5,403.1L368.8,404.7L366.7,401.9L366.7,401.1L365.5,401.9L365.3,403.1L364.3,404.3L364.3,401.7L363.1,399.5L362.2,398.9L361.6,401.0L360.7,402.1L360.1,401.4L358.8,402.1L357.0,401.4L357.6,400.7L355.7,401.3L355.7,402.3L356.7,402.4L355.9,404.3L355.9,405.5L354.9,404.3L354.2,406.3L354.5,406.6L354.2,409.2L353.7,408.2L352.7,408.3L352.7,409.4L351.5,410.2L349.8,409.7L349.5,410.3L347.3,409.9L348.8,408.8L348.5,407.9L347.7,408.3L345.7,407.2L345.6,408.4L344.0,409.5L341.0,407.0L340.0,406.8L338.8,407.2L339.7,405.9L337.9,405.2L337.6,406.1L336.6,406.6L334.2,405.2L329.7,404.5L327.5,403.4L325.7,401.7L325.6,400.4L327.2,400.5L327.8,400.0L329.0,397.8L330.1,397.8L330.3,399.5L331.4,400.1L332.6,399.7L332.6,401.3L332.0,402.7L332.8,403.9L334.6,403.0L334.0,402.0L334.7,400.8L334.2,399.8L332.0,397.8L330.7,397.0L329.9,394.9L329.0,394.6L328.4,393.5L328.5,391.0L328.9,390.0L330.3,388.8L330.0,386.9L328.6,386.7L328.9,388.5L327.4,389.9L327.9,390.9L327.0,392.8L326.1,392.2L323.3,391.1L321.8,391.0L322.2,389.3L321.6,388.9L319.0,390.1L316.3,390.1L317.0,388.7L316.2,385.2L312.9,385.5L313.4,381.0L313.1,380.5L311.2,379.9L307.3,380.1L305.1,381.3L304.1,381.4L303.2,379.5L304.3,377.3L305.3,378.4L305.3,376.8L304.6,376.1L302.1,375.8L301.0,376.6L298.9,376.0L298.2,377.6L294.0,379.1L292.7,380.4L292.7,379.5L291.6,378.7L290.7,379.7L289.9,379.0L290.3,381.0L291.0,382.3L291.9,381.8L294.0,381.7L292.3,382.7L293.5,385.1L293.6,386.0L295.6,385.2L297.0,385.7L295.2,386.2L296.0,387.0L295.4,387.5L292.4,387.6L290.9,388.0L286.6,390.0L285.1,389.9L278.9,388.5L275.5,388.0L269.8,386.3L265.3,384.3L260.4,381.9L255.9,379.9L253.1,378.9L248.8,377.8L246.6,377.6L242.7,378.2L238.3,377.7L234.0,377.9L226.5,378.9L223.1,380.1L222.8,380.5L220.8,378.1L220.3,376.2L220.6,375.4L223.3,374.7L224.9,373.2L226.0,368.3L224.8,367.1L222.2,366.9L222.0,367.8L219.2,372.5L218.5,375.4L218.6,376.8L220.9,379.4L221.6,380.9L220.8,381.6L219.2,381.3L213.3,381.1L210.3,382.1L206.8,383.9L201.8,385.7L188.4,391.1L186.9,392.1L184.5,394.6L182.7,394.8L182.9,393.7L186.5,390.5L189.8,389.4L191.9,387.7L194.0,387.9L195.2,387.5L195.6,386.0L194.5,386.8L192.5,385.5L190.5,386.4L186.9,386.9L184.4,387.6L183.3,387.2L183.2,386.4L184.1,386.6L186.2,383.5L187.2,379.5L186.9,376.8L186.3,375.6L185.3,375.3L183.2,375.7L182.8,375.2L181.9,375.8L181.8,376.7L179.6,380.6L177.8,381.0L177.1,379.4L174.1,377.8L173.2,376.4L172.5,376.3L172.0,378.1L174.2,379.0L175.2,380.0L174.1,380.6L174.0,382.2L175.0,383.3L173.6,385.0L173.3,386.2L174.8,387.7L177.9,388.6L177.3,389.5L175.6,389.8L176.4,392.1L177.5,392.2L177.5,391.1L178.6,393.2L181.4,394.6L178.6,394.3L177.9,396.3L176.8,397.5L175.9,396.9L170.9,402.2L168.8,403.5L168.4,402.5L166.9,402.2L167.3,403.5L167.0,404.5L167.1,408.9L166.7,409.5L163.7,411.8L162.4,412.4L160.1,414.8L157.7,416.7L155.5,417.3L152.7,419.2L147.8,422.1L145.9,422.9L144.1,423.2L138.7,423.1L132.9,424.9L133.2,425.5L132.8,427.3L133.7,427.7L139.5,424.7L141.2,424.2L142.7,424.1L137.6,427.1L134.8,428.3L130.6,429.2L127.9,431.0L125.5,431.7L122.7,433.2L121.3,433.7L123.8,431.6L130.0,428.9L131.4,428.4L131.3,426.9L130.6,426.4L126.8,427.7L124.1,428.7L121.3,429.2L122.2,428.1L124.2,427.9L125.1,427.1L121.8,427.2L121.9,426.3L123.0,424.7L122.9,424.1L121.4,424.1L119.8,424.9L119.3,424.6L118.1,425.9L116.5,426.6L114.9,424.4L115.2,422.0L114.6,421.3L113.7,421.9L112.7,420.3L112.8,421.8L113.3,422.9L114.4,422.4L113.6,423.8L113.5,426.0L115.4,426.9L112.9,428.3L110.2,428.9L110.8,428.3L112.3,428.2L112.3,426.3L110.5,427.4L110.2,425.7L107.8,425.5L107.3,422.8L105.9,421.8L104.8,422.1L104.0,421.4L104.4,424.2L105.8,426.7L105.4,428.6L106.4,428.7L109.0,430.2L110.0,432.1L107.4,433.1L107.6,433.9L110.8,433.0L112.3,433.6L113.4,434.8L113.5,436.0L110.4,437.4L107.5,438.5L102.9,440.8L101.0,439.9L100.8,437.4L100.4,436.6L99.4,436.3L99.3,435.1L98.4,434.5L97.4,432.9L96.5,433.9L97.9,434.9L98.0,436.7L95.8,435.2L95.2,435.8L97.0,438.7L97.5,439.9L96.6,442.4L97.2,444.2L96.7,444.8L94.4,446.4L92.9,448.3L90.1,449.2L91.0,446.8L91.7,446.1L91.1,445.2L92.0,443.6L91.4,442.8L89.8,445.0L90.1,447.0L89.0,448.8L87.0,448.4L87.6,445.9L87.2,445.2L85.0,447.0L82.1,447.8L82.1,446.9L81.1,446.7L80.5,448.1L81.3,448.4L78.5,451.0L78.8,451.5L80.6,452.0L81.4,453.3L81.2,454.5L82.3,453.5L83.2,451.5L85.2,450.8L86.8,449.8L86.4,453.3L84.8,455.5L84.5,455.2L82.8,457.9L79.2,462.4L78.2,463.1L77.2,461.0L75.8,460.2L73.1,460.9L72.0,460.8L72.7,460.0L71.6,460.1L68.1,459.9L67.6,460.5L66.5,459.6L65.3,459.7L65.8,461.0L67.4,461.9L68.8,461.6L69.7,462.0L70.6,461.4L70.3,463.5L71.1,465.7L71.7,466.4L75.3,468.3L75.6,468.9L74.4,471.0L73.7,473.3L72.3,475.6L71.0,479.1L70.3,479.8L68.4,484.5L68.1,485.6L64.9,486.8L63.3,488.0L62.5,487.4L64.6,486.2L64.2,485.5L65.7,485.4L64.9,484.6L65.2,482.3L62.8,483.8L63.0,484.4L61.5,485.3L60.9,484.8L59.8,486.7L58.8,486.7L58.6,485.4L55.5,480.3L53.2,478.2L53.3,479.4L54.7,480.9L54.5,481.9L55.9,483.6L56.3,484.6L55.4,484.9L55.6,485.6L57.2,485.5L56.8,486.6L55.9,487.1L52.7,486.3L53.2,487.2L55.2,487.9L57.5,487.8L58.6,489.3L63.3,490.2L66.7,488.5L67.3,488.9L66.9,490.1L66.3,490.2L66.3,492.5L65.7,493.1L66.0,494.5L65.7,495.6L63.8,496.2L64.5,497.8L63.8,498.3L64.3,499.5L63.7,500.7L61.2,500.7L60.7,501.4L60.8,504.3L61.7,505.6L63.8,507.1L63.2,508.0L61.5,506.1L60.7,506.3L60.3,508.2L60.5,509.4L62.3,509.9L62.8,511L0,511L0,0L720,0ZM709.1,506.9L709.7,508.0L710.0,510.0L709.4,510.1ZM68.0,511L67.2,509.6L67.8,507.9L67.9,501.8L67.5,500.0L68.1,496.4L67.8,495.5L68.6,492.4L68.9,492.6L68.4,504.8L69.0,511L68.0,511ZM690.7,480.0L689.7,478.2L690.8,478.9L692.0,480.7L693.7,482.4L693.1,482.6ZM83.7,463.7L84.2,462.5L84.6,463.3L79.0,471.1L75.0,478.4L72.0,484.8L70.7,488.6L70.4,490.5L69.8,491.0L68.4,490.7L68.8,489.9L69.9,485.0L71.4,482.2L73.4,477.7L75.4,473.7L76.2,471.9L75.8,470.6L77.7,472.0L80.3,467.0L83.5,464.2ZM92.9,449.2L93.9,449.3L94.3,450.2L93.9,452.1L89.9,456.0L88.1,458.6L85.8,461.1L85.2,461.2L85.9,459.7L87.5,457.6L89.1,456.0L89.3,455.2L88.6,454.7L91.3,450.7L91.9,450.5ZM112.4,437.8L113.4,438.2L113.3,439.9L112.7,441.0L109.6,442.2L108.2,442.6L104.4,445.2L100.4,447.0L99.3,448.2L95.6,450.7L94.5,452.1L95.1,450.5L96.0,449.3L95.7,447.6L96.0,446.7L100.2,445.7L102.2,444.6L102.5,443.8L105.2,442.2L107.2,441.5L108.0,440.6L109.5,440.2L111.2,440.5L112.3,439.0ZM114.8,437.3L114.8,437.0L117.3,435.0L119.0,434.2L120.9,433.7L118.5,435.6L117.5,435.9L115.7,437.3ZM341.6,413.0L341.6,413.0L341.6,413.0ZM366.2,413.2L367.7,411.9L368.9,412.2ZM382.2,403.0L382.5,403.6L379.4,405.6L379.6,404.5L381.6,403.6ZM181.5,395.5L185.2,396.7L178.1,401.5L175.8,402.9L170.3,406.5L168.9,407.6L169.1,406.5L170.1,405.4L176.0,401.5L177.2,400.0L179.0,398.7L179.5,397.7L181.0,397.2ZM415.0,391.7L415.0,391.7L415.0,391.7ZM306.2,392.3L304.7,392.6L301.4,390.3L297.3,388.4L296.6,387.1L297.6,386.4L300.1,385.8L301.5,384.7L303.9,385.3L305.5,386.8L308.0,387.8L309.6,388.0L309.5,389.1L307.4,390.4L307.2,391.9ZM580.7,380.0L579.5,378.7L577.8,377.8L580.2,377.9L580.8,377.4L583.0,377.7L582.1,380.3ZM597.2,374.6L598.9,373.1L598.4,374.2L597.5,374.6L595.1,376.6L591.2,378.6L590.4,379.4L587.9,381.0L587.0,381.3L584.5,381.3L587.2,380.6L595.7,375.9ZM402.9,378.1L403.5,378.4L404.2,380.4L403.1,379.3L402.5,379.3L401.5,380.8L401.3,378.8L402.0,377.5ZM409.2,377.4L410.3,377.1L409.8,379.0L407.8,377.3ZM601.9,371.0L603.2,370.2L603.3,371.2L602.3,371.8L600.1,372.4ZM411.9,370.6L411.8,371.5L409.4,371.8L410.1,371.1ZM410.4,369.0L409.1,371.4L410.1,369.0ZM426.8,365.1L427.6,365.7L429.0,368.7L429.4,371.9L429.0,375.8L427.7,378.9L427.5,377.8L428.7,375.4L429.1,371.0L428.5,369.7L427.8,366.3ZM403.7,361.4L403.7,361.4L403.7,361.4ZM413.7,364.4L413.6,365.8L412.1,366.5L411.1,364.8L410.2,365.4L409.2,365.1L407.8,365.9L407.4,365.1L410.2,363.9L409.9,363.0L411.1,362.6L413.4,360.3L411.2,363.3L412.6,364.1L412.7,365.3ZM423.8,357.7L423.8,357.7L423.8,357.7ZM441.8,357.4L441.8,357.0L444.9,357.4L444.6,357.7ZM418.9,355.8L418.0,358.8L417.9,357.8L417.0,357.3L415.1,356.9L417.2,357.0ZM436.1,356.3L437.0,356.8L439.5,356.8L439.6,357.5L431.3,356.3L432.4,355.7L435.2,355.8ZM459.5,355.5L458.6,355.7L449.6,356.3L450.2,355.9L453.9,355.2L456.8,355.1L457.8,354.2L459.5,355.1ZM515.5,346.3L517.0,345.9L522.6,346.4L521.0,346.4L507.1,348.8L493.3,351.0L491.1,350.7L491.8,350.5L495.0,350.3L499.9,349.3L502.2,348.4L505.0,348.3L507.5,347.3L510.0,347.2ZM685.8,416.6L685.6,417.5L684.6,417.1ZM684.5,415.3L684.7,414.2L685.4,415.1ZM353.7,412.7L352.8,413.2L349.7,413.9L348.9,413.6L351.0,412.7L351.8,413.1ZM363.4,413.2L363.3,413.6L359.4,412.4L361.9,412.6ZM669.0,398.2L668.2,398.7L668.4,397.8ZM362.1,404.7L362.1,404.7L362.1,404.7ZM383.7,402.1L383.7,402.1L383.7,402.1ZM380.8,394.2L379.9,394.8L378.1,393.2L376.8,393.4L375.6,391.9L377.2,391.6L380.0,393.2L379.4,393.5ZM419.5,388.8L419.5,388.8L419.5,388.8ZM422.6,385.4L422.6,385.4L422.6,385.4ZM424.8,383.0L424.8,383.0L424.8,383.0Z" fill="#DBE1E9" stroke="#8FA9C8" stroke-width="0.8"/><path d="M446.0,350.1L444.7,326.5L441.4,277.9L445.0,237.4L445.5,228.8L449.2,183.1L453.4,135.5L451.1,134.1L449.3,130.7L449.2,130.1L478.9,129.6L501.3,129.4L541.6,128.0L550.1,127.9L556.8,158.7L571.3,227.2L574.1,231.6L575.2,237.7L579.3,243.2L581.3,247.9L580.1,252.7L584.5,255.3L583.2,257.5L578.2,261.7L578.7,267.5L575.6,275.9L576.6,282.7L579.5,286.1L580.2,290.9L578.0,302.5L578.5,306.7L581.6,310.3L583.2,315.3L547.0,317.4L521.7,318.4L502.0,318.8L477.8,319.6L476.5,325.8L480.8,331.5L486.1,334.7L486.6,337.5L484.6,341.7L485.1,343.9L488.1,345.9L485.5,347.4L484.1,352.4L482.0,353.5M583.2,315.3L585.9,320.5L587.4,326.8L589.6,328.7L609.5,328.6L647.7,328.6L697.8,328.4L698.5,335.2L700.3,338.2L705.7,337.3L706.2,327.4L704.2,323.8L704.7,317.7L707.6,315.4L713.5,316.7L717.3,318.5L720,318.7M550.1,127.9L599.9,125.1L627.2,123.5L627.1,123.3L647.0,121.5L646.7,124.5L642.6,127.5L639.3,132.1L639.1,137.2L643.5,140.3L645.9,140.4L649.4,144.4L652.7,146.2L657.8,145.7L659.7,150.8L663.7,155.9L665.0,160.7L666.8,161.5L670.2,166.0L672.1,170.0L680.5,174.4L684.9,178.1L687.3,183.7L693.5,186.4L696.3,189.9L699.2,191.8L698.6,196.5L702.8,199.5L702.3,200.7L705.9,202.0L707.0,205.4L712.3,207.2L717.6,210.8L717.1,213.6L720,217.4M204.9,0L203.5,33.5L169.6,32.0L62.0,25.7L0,20.4M599.9,125.1L600.5,113.8L607.8,112.3L610.7,109.6L610.4,104.4L615.4,99.0L619.5,96.6L630.6,95.6L632.0,93.5L636.9,91.1L639.5,87.5L641.7,87.2L645.5,84.1L648.8,84.6L652.1,79.7L652.8,75.8L655.0,77.1L657.4,73.0L661.8,69.8L663.3,71.3L662.8,74.2L664.9,74.9L668.6,72.1L670.3,68.1L677.4,64.1L680.0,64.4L680.7,66.4L684.6,65.0L688.5,56.5L692.6,53.5L696.1,54.1L694.5,51.2L696.0,48.0L695.2,44.7L696.3,42.2L707.8,41.9L720,41.3M720,108.3L718.8,108.3L678.0,109.8L668.0,112.5L660.4,117.4L659.3,116.6L647.0,121.5M203.5,33.5L202.6,57.2L207.8,110.0L205.2,150.0L202.7,193.1L201.4,194.1L198.8,191.0L194.0,190.4L191.6,187.1L187.7,187.4L184.0,181.7L180.9,181.5L177.8,177.9L174.0,176.6L171.3,180.6L161.7,179.9L159.5,177.2L156.0,179.2L153.2,178.9L153.2,180.7L150.1,181.5L146.1,178.8L145.9,180.0L137.6,180.7L136.3,184.3L131.7,183.9L130.5,187.1L126.5,182.9L123.5,183.0L122.5,180.6L118.8,179.3L120.6,177.1L117.1,176.2L115.8,179.6L108.8,177.6L108.2,173.7L104.7,173.5L104.9,176.5L100.3,180.4L100.5,183.0L97.4,183.5L95.9,179.6L97.4,178.5L96.1,174.6L94.3,176.9L91.2,176.3L89.5,178.8L86.7,178.4L86.4,174.6L82.4,174.6L81.4,171.9L77.6,170.0L71.4,175.7L66.3,174.2L67.5,169.3L62.0,168.2L60.9,164.4L61.7,161.0L59.2,162.7L51.7,160.1L49.5,163.4L46.6,164.2L43.5,160.1L40.7,158.9L35.9,159.9L30.1,157.3L27.5,155.2L25.2,156.1L19.5,154.8L19.3,149.1L13.0,142.8L12.2,146.5L5.2,144.1L4.2,146.0L0.0,145.1L0,145.0M202.7,193.1L207.6,197.8L209.9,196.3L212.9,197.5L214.5,195.7L216.8,197.7L219.9,197.8L219.9,197.8L219.2,223.0L217.6,271.7L220.3,275.2L222.8,276.5L226.1,282.2L226.9,285.9L225.1,290.6L228.6,296.8L230.6,298.3L231.9,302.3L231.0,304.4L233.5,306.3L234.3,311.0L237.0,310.6L236.0,314.7L237.4,318.2L235.3,320.3L237.0,322.6L235.2,325.0L235.7,327.6L232.9,331.4L230.2,338.1L228.2,339.3L229.3,345.6L226.4,350.6L228.6,352.8L227.9,356.5L229.2,359.8L227.3,362.6L228.6,363.4L224.8,366.9L221.7,373.0L219.1,374.8L222.5,381.0M391.4,0L391.3,0.6L397.0,3.3L398.6,8.4L397.1,10.8L400.7,17.4L400.2,19.9L397.1,22.7L399.4,24.8L399.3,26.8L402.6,32.2L402.5,34.3L405.8,36.6L407.0,33.1L410.4,37.6L411.9,37.0L413.2,37.8L411.7,43.4L410.3,45.3L412.6,46.8L410.0,47.9L411.0,52.0L409.0,56.1L407.3,56.9L404.8,53.7L403.0,54.3L401.3,60.1L398.7,60.2L398.8,56.6L395.9,56.6L396.6,60.2L397.2,67.6L393.9,67.7L396.8,70.7L394.9,72.5L390.4,72.7L394.3,75.7L394.4,78.2L391.4,79.8L389.4,83.8L364.7,84.2L366.9,79.7L370.0,77.3L372.1,74.2L375.9,71.0L376.6,65.6L373.6,63.8L373.3,60.3L325.4,60.2L202.6,57.2M720,6.3L714.8,7.7L710.8,10.1L705.2,5.7L703.3,8.9L700.3,9.9L698.4,12.5L693.9,13.1L689.3,9.5L686.9,9.6L683.8,6.5L683.2,2.8L680.9,0.7L682.0,0M451.9,0L451.9,0.1L448.2,3.9L449.2,8.2L452.0,10.9L451.2,12.9L443.1,14.3L440.7,16.5L438.8,15.5L436.4,17.3L435.0,22.3L438.6,28.6L437.3,32.2L433.5,32.2L430.9,30.1L426.1,28.5L419.9,25.3L417.4,25.2L413.9,27.8L410.5,32.6L410.0,34.9L411.9,37.0M389.4,83.8L392.4,87.4L392.4,89.2L389.1,88.3L387.9,90.3L390.7,91.8L386.4,95.3L382.8,95.4L380.7,97.0L381.6,99.8L384.9,101.1L381.3,102.8L382.3,107.0L379.3,104.7L377.3,107.5L378.6,109.2L377.1,112.3L375.9,108.7L372.8,111.4L376.4,113.2L373.5,119.3L376.4,120.7L374.7,122.5L376.8,124.9L372.5,126.1L371.3,130.2L367.8,129.7L367.4,131.7L369.8,135.7L362.9,139.3L360.8,136.8L361.8,143.8L359.9,144.5L359.4,140.8L357.3,143.9L361.0,145.6L359.3,148.9L356.5,147.1L358.3,153.3L356.5,155.3L357.3,158.7L353.8,161.0L350.2,161.4L350.6,164.3L346.9,166.1L346.3,169.0L344.1,167.3L344.8,170.2L347.6,170.2L346.0,172.3L343.8,171.0L342.1,172.3L345.3,175.2L344.2,177.7L340.8,177.9L336.8,180.8L339.9,182.2L337.4,185.3L340.6,188.6L339.2,190.0L334.7,189.3L334.5,191.7L337.8,192.3L337.2,195.0L333.9,192.7L331.2,194.5L335.1,197.9L331.1,199.5L332.9,202.1L330.9,205.4L335.3,203.8L333.3,208.1L335.7,207.6L334.5,212.1L336.5,215.7L336.3,219.7L332.8,219.5L332.1,221.0L335.3,223.6L333.5,226.0L302.2,225.5L257.9,224.2L219.2,223.0M679.8,0L668.0,12.2L663.1,14.1L654.6,20.3L654.8,23.8L649.6,27.2L649.5,31.5L646.2,33.2L642.3,33.6L640.2,39.1L638.0,39.4L628.4,43.6L625.5,43.7L620.1,47.2L619.6,48.0L587.1,49.4L558.6,49.4L551.1,50.3L537.9,50.6L518.8,50.1L509.0,50.3L489.0,51.4L460.9,52.6L461.0,51.2L452.6,50.7L454.1,56.7L453.4,59.3L405.8,59.6L401.3,60.1M398.7,60.2L396.6,60.2M367.4,131.7L399.3,131.6L449.3,130.7M399.9,359.7L396.2,357.7L395.5,352.2L393.3,346.9L388.1,341.4L386.3,337.0L390.3,323.2L390.3,320.9L313.8,320.8L316.7,317.7L314.4,315.6L315.7,312.6L313.8,308.1L318.8,307.7L319.2,305.9L316.3,301.9L317.6,300.3L319.3,303.5L320.6,302.1L318.8,299.0L318.7,296.0L323.3,293.9L320.1,293.1L319.6,290.3L323.6,291.5L323.8,287.2L329.3,284.9L325.1,284.4L326.2,280.6L329.1,280.6L332.6,277.4L332.3,275.4L336.0,273.8L335.9,271.3L339.7,266.2L337.5,265.2L337.8,267.7L333.2,267.2L333.5,264.0L338.4,262.1L340.4,263.4L340.9,259.5L343.5,257.5L340.2,256.8L340.2,252.2L338.7,253.0L335.5,251.0L335.9,248.7L339.0,250.6L339.8,249.3L336.8,247.2L339.9,244.5L335.2,245.9L333.9,243.2L337.8,239.2L333.4,238.0L334.3,233.6L337.3,231.5L336.3,226.9L334.9,229.8L331.6,230.0L333.5,226.0M620.1,47.2L636.0,46.4L686.4,42.7L686.7,41.6L697.3,41.0L696.3,42.2" fill="none" stroke="#FFFFFF" stroke-width="0.9"/><text x="506.2" y="234.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">ALABAMA</text><text x="641.7" y="234.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">GEORGIA</text><text x="90.3" y="94.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">OKLAHOMA</text><text x="284.3" y="135.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">ARKANSAS</text><text x="393.1" y="238.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">MISSISSIPPI</text><text x="519.7" y="87.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">TENNESSEE</text><text x="300.7" y="318.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#7A8CA5">LOUISIANA</text><text x="352.1" y="183.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-style="italic" letter-spacing="1" fill="#6B7F99">Delta del Misisipi</text></g></svg>
+      <div class="h5p-map-data" data-cats='["Charley Patton","Blind Lemon Jefferson","Robert Johnson"]' data-markers='[{"n": "Plantación Dockery, Misisipi", "lat": 33.63, "lon": -90.62, "c": 0, "d": "La plantación algodonera del delta donde Charley Patton vivió y tocó durante años, y donde se ganó la reputación que llevó a su descubrimiento en 1929; murió en 1934, después de grabar más de cincuenta canciones.", "x": 355.3, "y": 196.5}, {"n": "Clarksdale, Misisipi", "lat": 34.2, "lon": -90.57, "c": 2, "d": "Un pueblo del delta cercano al cruce de carreteras que más tarde se volvió parte de la leyenda del blues y que resuena en el título de la canción de Robert Johnson “Cross Road Blues”.", "x": 357.3, "y": 169.4}, {"n": "Dallas, Texas", "lat": 32.78, "lon": -96.8, "c": 1, "d": "La base de Blind Lemon Jefferson como intérprete callejero y de clubes; sus grabaciones, a partir de 1926, lo convirtieron en la primera estrella comercialmente exitosa del country blues.", "x": 109.1, "y": 229.4}, {"n": "Wortham, Texas", "lat": 31.78, "lon": -96.46, "c": 1, "d": "El pequeño pueblo de Texas cerca del cual nació Blind Lemon Jefferson, antes de abrirse camino hacia Dallas.", "x": 120, "y": 277.5}, {"n": "San Antonio, Texas", "lat": 29.42, "lon": -98.49, "c": 2, "d": "Robert Johnson hizo sus únicas sesiones de estudio en Texas: aquí en noviembre de 1936 y en Dallas en junio del año siguiente, antes de morir en Misisipi en 1938.", "x": 30.1, "y": 383.7}]'></div>
+      <div class="h5p-map-panel"></div>
+      <div class="h5p-controls"><span class="h5p-score"></span></div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ============ LISTENING GUIDES ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Para ver: conoce a Charley Patton</div><div class="am-listen__meta">Panorama documental</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Observa:</strong></p>
+      <ol><li>Detalles sobre la vida de Patton en la plantación Dockery.</li><li>Cómo describe el video su talento escénico.</li><li>Cuántas canciones se le atribuye haber grabado a Patton.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/Ou-Fb19hL7c" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Vi este video</label></div>
+    </div>
+  </div>
+
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Guía de audición: "Tom Rushen Blues" (solo audio)</div><div class="am-listen__meta">Charley Patton, grabación de 1929</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Presta atención a:</strong></p>
+      <ol><li>La forma de cantar de Patton, áspera y enérgica.</li><li>La guitarra percusiva que imita el golpe sobre el cuerpo del instrumento.</li><li>Con cuánta libertad trata la forma de doce compases, en comparación con una grabación pulida de blues clásico.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=9WkltAg2vmI" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Escuché este ejemplo</label></div>
+    </div>
+  </div>
+
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Guía de audición: "Match Box Blues" (solo audio)</div><div class="am-listen__meta">Blind Lemon Jefferson, grabaciones a partir de 1926</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Presta atención a:</strong></p>
+      <ol><li>El tono vocal agudo y expresivo de Jefferson.</li><li>Los pasajes de guitarra rápidos y sincopados entre los versos cantados.</li><li>Con cuánta libertad alarga o acorta una frase, en comparación con la cuadrícula estricta de doce compases.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=3Zy1nBF1Mhs" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Escuché este ejemplo</label></div>
+    </div>
+  </div>
+
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Guía de audición: "Cross Road Blues" (solo audio)</div><div class="am-listen__meta">Robert Johnson, grabada en 1936&#8211;37</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Presta atención a:</strong></p>
+      <ol><li>El ritmo de guitarra preciso e impulsor de Johnson frente a su voz.</li><li>La tensión y la urgencia de su voz.</li><li>Por qué los guitarristas de rock posteriores pudieron encontrar tan atractivo estudiar esta grabación con detalle.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/GsB_cGdgPTo" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Escuché este ejemplo</label></div>
+    </div>
+  </div>
+
+  <!-- ============ SORT ============ -->
+  <div class="h5p-act" data-widget="sort">
+    <div class="h5p-act__head"><span>Clasifica a los pioneros</span><span class="h5p-act__type">Arrastrar y soltar</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Toca un elemento y luego el músico al que describe.</p>
+      <div class="h5p-sort-pool" data-items='[{"t":"Descubierto en 1929, con base en la plantación Dockery","c":0},{"t":"Grabó desde 1926; primera estrella del country blues","c":1},{"t":"Grabó solo en 1936–37; admirado por Clapton y Richards","c":2},{"t":"Lanzaba la guitarra al aire mientras tocaba","c":0},{"t":"Cantante y guitarrista radicado en Texas","c":1},{"t":"Escribió \"Cross Road Blues\"","c":2}]'></div>
+      <div class="h5p-bins" data-bins='["Charley Patton","Blind Lemon Jefferson","Robert Johnson"]'></div>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Revisar</button>
+        <button class="am-btn am-btn--ghost" data-retry>Reintentar</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <h2>En resumen</h2>
+  <p>Patton, Jefferson y Johnson grabaron con pocos años de diferencia, pero juntos trazan el recorrido del country blues desde sus raíces ásperas, nacidas en el delta, hasta un catálogo pequeño y muy concentrado que moldearía durante décadas el sonido de la guitarra de blues y de rock. Sus grabaciones muestran, en su momento de mayor influencia, el lado afroamericano de los catálogos segregados del Sur, divididos entre discos raciales y discos hillbilly. La siguiente página pasa al otro lado de esa misma industria: el nacimiento de la música hillbilly comercial, o primer country, en el Grand Ole Opry.</p>
+</main>
+
+<div class="am-pagefoot"><div class="rule"></div></div>
+<footer class="am-footband"><span class="am-l-en">Module 5: Race Records, Hillbilly Records, and the Blues &nbsp;·&nbsp; <span class="pg">Page 7 of 9</span> &nbsp;·&nbsp; American Music</span><span class="am-l-es">Módulo 5: Discos raciales, discos hillbilly y el blues &nbsp;·&nbsp; <span class="pg">Página 7 de 9</span> &nbsp;·&nbsp; Música estadounidense</span></footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Language (EN/ES) ---------- */
+  var ROOT=document.documentElement, BI=ROOT.classList.contains('am-bilingual');
+  var ES={"Answer every question first.": "Responde todas las preguntas primero.", "Score: ": "Puntuación: ", "Correct!": "¡Correcto!", "Not quite — the highlighted answer is correct.": "No exactamente: la respuesta resaltada es la correcta.", "Fill every blank first (tap a filled blank to clear it).": "Completa todos los espacios primero (toca un espacio lleno para vaciarlo).", "Perfect!": "¡Perfecto!", "Tap the red blanks to clear them and try again.": "Toca los espacios en rojo para vaciarlos e inténtalo de nuevo.", "Deck complete — you rated ": "Mazo terminado: marcaste ", " of ": " de ", " cards “Got it” on the first pass.": " tarjetas como “Lo sé” en la primera vuelta.", " (review)": " (repaso)", "Move up": "Subir", "Move down": "Bajar", "Exactly right!": "¡Exactamente!", "Red items are out of place — keep adjusting.": "Los elementos en rojo están fuera de lugar; sigue ajustando.", "Place every item in a category first.": "Coloca cada elemento en una categoría primero.", "All sorted correctly!": "¡Todo clasificado correctamente!", "Red items are in the wrong category — tap one to send it back and try again.": "Los elementos en rojo están en la categoría equivocada; toca uno para devolverlo e inténtalo de nuevo.", "Found ": "Encontraste ", " wrong": " incorrectas", "You found them all!": "¡Las encontraste todas!", "Dashed outlines show ones you missed; struck-through words were not targets.": "Los contornos punteados muestran las que te faltaron; las palabras tachadas no eran objetivos.", "Choose an answer for every blank first.": "Elige una respuesta para cada espacio primero.", "All correct!": "¡Todo correcto!", "Red choices are wrong — change them and check again.": "Las opciones en rojo son incorrectas; cámbialas y vuelve a revisar.", "<em>Tap a section to begin.</em>": "<em>Toca una sección para comenzar.</em>", "Tap a key to play.": "Toca una tecla para tocar.", "Now playing: ": "Sonando: ", "Playing: ": "Reproduciendo: ", "<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>": "<h4>Todas las tareas completas ✔</h4><div>Tocaste cada patrón correctamente. Vuelve a escuchar cualquier demostración o sigue explorando.</div>", "Nice work — every task complete.": "¡Buen trabajo! Completaste todas las tareas.", "All piano tasks complete.": "Todas las tareas de piano completas.", "Task ": "Tarea ", "Show me": "Muéstrame", "You played: ": "Tocaste: ", "Tasks: ": "Tareas: ", " correct.": " correcta.", "← Back": "← Atrás", "Start over": "Empezar de nuevo", "Strong outcome": "Buen resultado", "Mixed outcome": "Resultado mixto", "Rethink this path": "Reconsidera este camino", "Your path": "Tu camino", "Outcome": "Resultado", "Try another path": "Prueba otro camino", "Endings found: ": "Finales encontrados: ", "Outcome reached: ": "Resultado alcanzado: ", "Explored: ": "Explorados: ", "You explored every location on the map.": "Exploraste todos los lugares del mapa.", "<em>Select a numbered marker, or a name below the map.</em>": "<em>Selecciona un marcador numerado o un nombre debajo del mapa.</em>", "Image. Tap the spot, or use the arrow keys to move the circle and press Enter.": "Imagen. Toca el lugar, o usa las flechas del teclado para mover el círculo y presiona Enter.", "All found!": "¡Encontraste todo!", "You found every spot.": "Encontraste todos los lugares.", "All spots found.": "Todos los lugares encontrados.", "Found it!": "¡Lo encontraste!", "✖ Not quite — try again.": "✖ No exactamente; inténtalo de nuevo.", " (You can use “Show me.”)": " (Puedes usar “Muéstrame”.)", "Found: ": "Encontrados: ", "Events opened: ": "Eventos abiertos: ", "You opened every event on the timeline.": "Abriste todos los eventos de la línea de tiempo.", "Items to sort": "Elementos para clasificar", "Place selected item in ": "Colocar el elemento seleccionado en ", " selected. Choose a category.": " seleccionado. Elige una categoría.", "Correct: ": "Correctos: ", "All sorted correctly.": "Todo clasificado correctamente.", "Play video: ": "Reproducir video: ", "Play here": "Reproducir aquí", "Play audio: ": "Reproducir audio: ", "✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.": "✔ Los elementos correctos quedan fijos. ✖ Los marcados con una X volvieron a la bandeja; inténtalo de nuevo."};
+  function X(w,s){ var m=w&&w.closest?w.closest('main'):null; return (m&&m.lang==='es'&&ES[s])||s; }
+  function setLang(l){ if(!BI) l='en'; ROOT.setAttribute('data-lang',l); ROOT.lang=l;
+    var tt=ROOT.getAttribute(l==='es'?'data-title-es':'data-title-en'); if(tt) document.title=tt;
+    document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.setAttribute('aria-pressed',b.dataset.setlang===l?'true':'false'); });
+    try{ localStorage.setItem('amMusicLang',l); }catch(e){} }
+  window.amSetLang=setLang;
+  document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.setlang); window.scrollTo(0,0); }); });
+  (function(){ var saved=null; try{ saved=localStorage.getItem('amMusicLang'); }catch(e){} setLang(saved==='es'?'es':'en'); })();
+  function shuffle(a){ for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t;} return a; }
+  function fb(w,cls,msg){ var f=w.querySelector('.h5p-feedback'); if(!f) return; f.className='h5p-feedback'+(cls?' '+cls:''); f.textContent=msg||''; }
+  function score(w,txt){ var s=w.querySelector('.h5p-score'); if(s) s.textContent=txt||''; }
+  function on(w,sel,fn){ var el=w.querySelector(sel); if(el) el.addEventListener('click',fn); }
+
+  /* ---------- 1. MCQ ---------- */
+  document.querySelectorAll('[data-widget="mcq"]').forEach(function(w){
+    var qs=w.querySelectorAll('.h5p-q');
+    qs.forEach(function(q){
+      q.querySelectorAll('.h5p-opt').forEach(function(opt,i){
+        opt.type='button';
+        opt.addEventListener('click',function(){
+          if(q.dataset.locked) return;
+          q.querySelectorAll('.h5p-opt').forEach(function(o){o.classList.remove('sel');});
+          opt.classList.add('sel'); q.dataset.sel=i;
+        });
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, answered=0;
+      qs.forEach(function(q){ if(q.dataset.sel!==undefined) answered++; });
+      if(answered<qs.length){ score(w,X(w,'Answer every question first.')); return; }
+      qs.forEach(function(q){
+        q.dataset.locked="1";
+        var sel=+q.dataset.sel, cor=+q.dataset.correct, opts=q.querySelectorAll('.h5p-opt'), f=q.querySelector('.h5p-feedback'), why=q.querySelector('.h5p-why');
+        opts[cor].classList.add('ok');
+        if(sel===cor){sc++; f.className='h5p-feedback ok'; f.textContent=X(w,'Correct!');}
+        else {opts[sel].classList.add('bad'); f.className='h5p-feedback bad'; f.textContent=X(w,'Not quite — the highlighted answer is correct.');}
+        if(why) why.hidden=false;
+      });
+      score(w,X(w,'Score: ')+sc+' / '+qs.length);
+    });
+    on(w,'[data-retry]',function(){
+      qs.forEach(function(q){
+        delete q.dataset.locked; delete q.dataset.sel;
+        q.querySelectorAll('.h5p-opt').forEach(function(o){o.className='h5p-opt';});
+        var f=q.querySelector('.h5p-feedback'); f.className='h5p-feedback'; f.textContent='';
+        var why=q.querySelector('.h5p-why'); if(why) why.hidden=true;
+      });
+      score(w,'');
+    });
+  });
+
+  /* ---------- 2. Drag the words ---------- */
+  document.querySelectorAll('[data-widget="dragwords"]').forEach(function(w){
+    var bank=w.querySelector('.h5p-bank'), blanks=w.querySelectorAll('.h5p-blank'), selWord=null;
+    var words=[]; blanks.forEach(function(b){words.push(b.dataset.answer);});
+    (w.dataset.extra||'').split('|').forEach(function(x){ if(x) words.push(x); });
+    function makeBank(){
+      bank.innerHTML=''; selWord=null;
+      shuffle(words.slice()).forEach(function(word){
+        var b=document.createElement('button'); b.type='button'; b.className='h5p-word'; b.textContent=word;
+        b.addEventListener('click',function(){
+          bank.querySelectorAll('.h5p-word').forEach(function(x){x.classList.remove('sel');});
+          b.classList.add('sel'); selWord=b;
+        });
+        bank.appendChild(b);
+      });
+    }
+    makeBank();
+    blanks.forEach(function(blank){
+      blank.setAttribute('role','button'); blank.tabIndex=0;
+      blank.addEventListener('click',function(){
+        if(blank.textContent){
+          var t=blank.textContent; blank.textContent='';
+          var returned=false;
+          bank.querySelectorAll('.h5p-word').forEach(function(x){ if(!returned && x.textContent===t && x.classList.contains('used')){ x.classList.remove('used'); returned=true; } });
+          blank.classList.remove('ok','bad'); return;
+        }
+        if(!selWord) return;
+        blank.textContent=selWord.textContent;
+        selWord.classList.add('used'); selWord.classList.remove('sel'); selWord=null;
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      blanks.forEach(function(b){
+        if(!b.textContent){done=false; return;}
+        if(b.textContent.toLowerCase()===b.dataset.answer.toLowerCase()){b.classList.add('ok'); b.classList.remove('bad'); sc++;}
+        else {b.classList.add('bad'); b.classList.remove('ok');}
+      });
+      if(!done){fb(w,'bad',X(w,'Fill every blank first (tap a filled blank to clear it).')); return;}
+      score(w,X(w,'Score: ')+sc+' / '+blanks.length);
+      fb(w, sc===blanks.length?'ok':'bad', sc===blanks.length?X(w,'Perfect!'):X(w,'Tap the red blanks to clear them and try again.'));
+    });
+    on(w,'[data-retry]',function(){
+      blanks.forEach(function(b){b.textContent=''; b.classList.remove('ok','bad');});
+      makeBank(); score(w,''); fb(w,'','');
+    });
+  });
+
+  /* ---------- 3. Flashcards ---------- */
+  document.querySelectorAll('[data-widget="flashcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), cards=JSON.parse(card.dataset.cards), i=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    function render(){ card.classList.remove('flip'); setTimeout(function(){ front.textContent=cards[i].front; back.textContent=cards[i].back; },card.classList.contains('flip')?250:0); counter.textContent=(i+1)+' / '+cards.length; }
+    card.addEventListener('click',function(){card.classList.toggle('flip');});
+    on(w,'[data-prev]',function(){ i=(i-1+cards.length)%cards.length; render(); });
+    on(w,'[data-next]',function(){ i=(i+1)%cards.length; render(); });
+    front.textContent=cards[0].front; back.textContent=cards[0].back; counter.textContent='1 / '+cards.length;
+  });
+
+  /* ---------- 4. Dialog cards (self-assessed) ---------- */
+  document.querySelectorAll('[data-widget="dialogcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), all=JSON.parse(card.dataset.cards), queue=all.slice(), i=0, got=0, seen=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    var ctrl=w.querySelector('.h5p-dlg-ctrl'), bar=w.querySelector('.h5p-progress span'), restart=w.querySelector('[data-restart]');
+    function show(){
+      if(!queue.length){ card.style.display='none'; ctrl.classList.remove('show'); bar.style.width='100%'; fb(w,'ok',X(w,'Deck complete — you rated ')+got+X(w,' of ')+all.length+X(w,' cards “Got it” on the first pass.')); restart.hidden=false; counter.textContent=''; return; }
+      card.style.display=''; card.classList.remove('flip'); ctrl.classList.remove('show');
+      front.textContent=queue[0].front; back.textContent=queue[0].back;
+      counter.textContent=(all.length-queue.length+1)+' / '+all.length+(queue.length+seen>all.length?X(w,' (review)'):'');
+      bar.style.width=Math.round(100*(all.length-queue.length)/all.length)+'%';
+    }
+    card.addEventListener('click',function(){ card.classList.toggle('flip'); if(card.classList.contains('flip')) ctrl.classList.add('show'); });
+    on(w,'[data-gotit]',function(){ var c=queue.shift(); if(!c._again) got++; seen++; show(); });
+    on(w,'[data-again]',function(){ var c=queue.shift(); c._again=true; queue.push(c); seen++; show(); });
+    restart.addEventListener('click',function(){ all.forEach(function(c){delete c._again;}); queue=all.slice(); got=0; seen=0; restart.hidden=true; fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 5. Order the steps ---------- */
+  document.querySelectorAll('[data-widget="order"]').forEach(function(w){
+    var ol=w.querySelector('.h5p-order'), solution=JSON.parse(ol.dataset.solution);
+    function build(){
+      var items=shuffle(solution.slice()); if(items.join()===solution.join()) items.reverse();
+      ol.innerHTML='';
+      items.forEach(function(txt){
+        var li=document.createElement('li');
+        var up=document.createElement('button'); up.className='h5p-move'; up.type='button'; up.innerHTML='&#9650;'; up.setAttribute('aria-label',X(w,'Move up'));
+        var dn=document.createElement('button'); dn.className='h5p-move'; dn.type='button'; dn.innerHTML='&#9660;'; dn.setAttribute('aria-label',X(w,'Move down'));
+        var span=document.createElement('span'); span.textContent=txt;
+        up.addEventListener('click',function(){ var p=li.previousElementSibling; if(p) ol.insertBefore(li,p); clear(); });
+        dn.addEventListener('click',function(){ var n=li.nextElementSibling; if(n) ol.insertBefore(n,li); clear(); });
+        li.appendChild(up); li.appendChild(dn); li.appendChild(span); ol.appendChild(li);
+      });
+    }
+    function clear(){ ol.querySelectorAll('li').forEach(function(li){li.classList.remove('ok','bad');}); fb(w,'',''); score(w,''); }
+    build();
+    on(w,'[data-check]',function(){
+      var lis=ol.querySelectorAll('li'), sc=0;
+      lis.forEach(function(li,idx){ var ok=li.querySelector('span').textContent===solution[idx]; li.classList.toggle('ok',ok); li.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+lis.length);
+      fb(w, sc===lis.length?'ok':'bad', sc===lis.length?X(w,'Exactly right!'):X(w,'Red items are out of place — keep adjusting.'));
+    });
+    on(w,'[data-retry]',function(){ build(); clear(); });
+  });
+
+  /* ---------- 6. Sort into categories ---------- */
+  document.querySelectorAll('[data-widget="sort"]').forEach(function(w){
+    var pool=w.querySelector('.h5p-sort-pool'), binsEl=w.querySelector('.h5p-bins');
+    var items=JSON.parse(pool.dataset.items), bins=JSON.parse(binsEl.dataset.bins), sel=null;
+    function mkItem(it){
+      var b=document.createElement('button'); b.type='button'; b.className='h5p-item'; b.textContent=it.t; b.dataset.c=it.c;
+      b.addEventListener('click',function(){
+        if(b.parentNode!==pool){ pool.appendChild(b); b.className='h5p-item'; sel=null; return; }
+        w.querySelectorAll('.h5p-item').forEach(function(x){x.classList.remove('sel');}); b.classList.add('sel'); sel=b;
+      });
+      return b;
+    }
+    function build(){
+      pool.innerHTML=''; binsEl.innerHTML=''; sel=null;
+      shuffle(items.slice()).forEach(function(it){ pool.appendChild(mkItem(it)); });
+      bins.forEach(function(name,idx){
+        var d=document.createElement('div'); d.className='h5p-bin'; d.dataset.c=idx;
+        var t=document.createElement('div'); t.className='h5p-bin__title'; t.textContent=name; d.appendChild(t);
+        d.addEventListener('click',function(e){ if(e.target.classList.contains('h5p-item')) return; if(!sel) return; d.appendChild(sel); sel.classList.remove('sel'); sel=null; });
+        binsEl.appendChild(d);
+      });
+    }
+    build();
+    on(w,'[data-check]',function(){
+      if(pool.querySelectorAll('.h5p-item').length){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var sc=0, all=w.querySelectorAll('.h5p-bin .h5p-item');
+      all.forEach(function(it){ var ok=it.dataset.c===it.parentNode.dataset.c; it.classList.toggle('ok',ok); it.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+all.length);
+      fb(w, sc===all.length?'ok':'bad', sc===all.length?X(w,'All sorted correctly!'):X(w,'Red items are in the wrong category — tap one to send it back and try again.'));
+    });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 7. Mark the words ---------- */
+  document.querySelectorAll('[data-widget="markwords"]').forEach(function(w){
+    var p=w.querySelector('.h5p-mtw'), targets=p.dataset.targets.split(',').map(function(s){return s.trim().toLowerCase();});
+    var text=p.textContent; p.innerHTML='';
+    text.split(/(\s+)/).forEach(function(tok){
+      if(/^\s+$/.test(tok)||!tok){ p.appendChild(document.createTextNode(tok)); return; }
+      var s=document.createElement('span'); s.className='h5p-tok'; s.textContent=tok; s.tabIndex=0; s.setAttribute('role','button');
+      s.dataset.t = targets.indexOf(tok.replace(/[^\p{L}\p{N}’']/gu,'').toLowerCase())>-1 ? '1':'0';
+      s.addEventListener('click',function(){ if(w.dataset.locked) return; s.classList.toggle('sel'); });
+      p.appendChild(s);
+    });
+    on(w,'[data-check]',function(){
+      w.dataset.locked='1'; var hits=0, wrong=0, total=0;
+      p.querySelectorAll('.h5p-tok').forEach(function(s){
+        var t=s.dataset.t==='1', on=s.classList.contains('sel'); if(t) total++;
+        if(t&&on){s.classList.add('ok'); hits++;} else if(!t&&on){s.classList.add('bad'); wrong++;} else if(t&&!on){s.classList.add('missed');}
+      });
+      score(w,X(w,'Found ')+hits+X(w,' of ')+total+(wrong?' · '+wrong+X(w,' wrong'):''));
+      fb(w, (hits===total&&!wrong)?'ok':'bad', (hits===total&&!wrong)?X(w,'You found them all!'):X(w,'Dashed outlines show ones you missed; struck-through words were not targets.'));
+    });
+    on(w,'[data-retry]',function(){ delete w.dataset.locked; p.querySelectorAll('.h5p-tok').forEach(function(s){s.className='h5p-tok';}); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 8. Dropdown cloze ---------- */
+  document.querySelectorAll('[data-widget="dropdown"]').forEach(function(w){
+    var dds=w.querySelectorAll('.h5p-dd');
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      dds.forEach(function(d){ if(!d.value){done=false; return;} var ok=d.value===d.dataset.answer; d.classList.toggle('ok',ok); d.classList.toggle('bad',!ok); if(ok) sc++; });
+      if(!done){ fb(w,'bad',X(w,'Choose an answer for every blank first.')); return; }
+      score(w,X(w,'Score: ')+sc+' / '+dds.length);
+      fb(w, sc===dds.length?'ok':'bad', sc===dds.length?X(w,'All correct!'):X(w,'Red choices are wrong — change them and check again.'));
+    });
+    on(w,'[data-retry]',function(){ dds.forEach(function(d){ d.value=''; d.classList.remove('ok','bad'); }); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 9. Timeline stepper ---------- */
+  document.querySelectorAll('[data-widget="timeline"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-tl-panel'), ev=JSON.parse(panel.dataset.events), nav=w.querySelector('.h5p-tl-nav'), dot=w.querySelector('.h5p-tl-track span'), i=0, btns=[];
+    ev.forEach(function(e,idx){ var b=document.createElement('button'); b.type='button'; b.className='h5p-tl-btn'; b.textContent=e.y; b.addEventListener('click',function(){ i=idx; render(); }); nav.appendChild(b); btns.push(b); });
+    function render(){ btns.forEach(function(b,idx){ b.classList.toggle('on',idx===i); }); dot.style.left=(ev.length>1? (100*i/(ev.length-1)) : 50)+'%'; panel.innerHTML='<h4>'+ev[i].y+' · '+ev[i].t+'</h4><div>'+ev[i].d+'</div>'; }
+    on(w,'[data-prev]',function(){ i=Math.max(0,i-1); render(); }); on(w,'[data-next]',function(){ i=Math.min(ev.length-1,i+1); render(); });
+    render();
+  });
+
+  /* ---------- 10. Song form explorer ---------- */
+  document.querySelectorAll('[data-widget="songform"]').forEach(function(w){
+    var row=w.querySelector('.h5p-form-row'), secs=JSON.parse(row.dataset.sections), panel=w.querySelector('.h5p-form-panel'), els=[], timer=null;
+    secs.forEach(function(s,idx){ var d=document.createElement('div'); d.className='h5p-form-sec'; d.style.background=s.c; d.innerHTML=s.l+'<small>'+s.s+'</small>'; d.tabIndex=0; d.setAttribute('role','button'); d.addEventListener('click',function(){ stop(); show(idx); }); row.appendChild(d); els.push(d); });
+    function show(idx){ els.forEach(function(e,j){ e.classList.toggle('on',j===idx); }); panel.innerHTML='<strong>'+secs[idx].l+' — '+secs[idx].s+':</strong> '+secs[idx].t; }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    on(w,'[data-play]',function(){ stop(); var k=0; show(0); timer=setInterval(function(){ k++; if(k>=secs.length){ stop(); return; } show(k); },1800); });
+    panel.innerHTML=X(w,'<em>Tap a section to begin.</em>');
+  });
+
+  /* ---------- 11. Hotspots ---------- */
+  document.querySelectorAll('[data-widget="hotspots"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-hs-panel'), spots=w.querySelectorAll('[data-hs]');
+    spots.forEach(function(g){ g.setAttribute('tabindex','0'); g.setAttribute('role','button');
+      g.addEventListener('click',function(){ spots.forEach(function(x){x.classList.remove('on');}); g.classList.add('on'); panel.innerHTML='<h4>'+g.dataset.hs+'</h4><div>'+g.dataset.info+'</div>'; }); });
+  });
+
+  /* ================= ADDED WIDGETS (2026-09) ================= */
+  function el(tag,cls,txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!==undefined) e.textContent=txt; return e; }
+  function live(w,msg){ var r=w.querySelector('.am-sr[aria-live]'); if(!r){ r=el('div','am-sr'); r.setAttribute('aria-live','polite'); w.appendChild(r); } r.textContent=''; setTimeout(function(){ r.textContent=msg; },30); }
+  var SVGNS='http://www.w3.org/2000/svg';
+  function sv(tag,attrs){ var e=document.createElementNS(SVGNS,tag); for(var k in attrs) e.setAttribute(k,attrs[k]); return e; }
+  function svgPoint(svg,evt){ var pt=svg.createSVGPoint(); pt.x=evt.clientX; pt.y=evt.clientY; return pt.matrixTransform(svg.getScreenCTM().inverse()); }
+
+  /* ---------- 12. Piano (WebAudio) ---------- */
+  var ACtx=null;
+  function audio(){ if(!ACtx){ var C=window.AudioContext||window.webkitAudioContext; if(!C) return null; ACtx=new C(); } if(ACtx.state==='suspended') ACtx.resume(); return ACtx; }
+  var NAMES=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'], FLAT={'Db':'C#','Eb':'D#','Gb':'F#','Ab':'G#','Bb':'A#'};
+  function midi(n){ var m=/^([A-G][#b]?)(\d)$/.exec(n); if(!m) return null; var p=FLAT[m[1]]||m[1]; return NAMES.indexOf(p)+12*(+m[2]+1); }
+  function nname(m){ return NAMES[m%12]+(Math.floor(m/12)-1); }
+  function tone(m,when,dur,vol){
+    var ctx=audio(); if(!ctx) return; var t=when||ctx.currentTime, f=440*Math.pow(2,(m-69)/12), v=Math.max(vol||0.5,0.001), d=Math.max(dur||0.9,0.25);
+    var o=ctx.createOscillator(), o2=ctx.createOscillator(), g=ctx.createGain(), g2=ctx.createGain();
+    o.type='triangle'; o.frequency.value=f; o2.type='sine'; o2.frequency.value=f*2;
+    g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(v,t+0.012); g.gain.exponentialRampToValueAtTime(v*0.32,t+0.15); g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+    g2.gain.setValueAtTime(0.0001,t); g2.gain.exponentialRampToValueAtTime(v*0.22,t+0.012); g2.gain.exponentialRampToValueAtTime(0.0001,t+0.28);
+    o.connect(g); o2.connect(g2); g.connect(ctx.destination); g2.connect(ctx.destination);
+    o.start(t); o2.start(t); o.stop(t+d+0.05); o2.stop(t+0.3);
+  }
+  document.querySelectorAll('[data-widget="piano"]').forEach(function(w){
+    var host=w.querySelector('.h5p-piano'), start=midi(host.dataset.start||'C4'), oct=+(host.dataset.octaves||1), last=start+12*oct;
+    var labels=host.dataset.labels!=='0', demos=JSON.parse(host.dataset.demos||'[]'), tasks=JSON.parse(host.dataset.tasks||'[]');
+    var keysMap={}, KB='awsedftgyhujk'.split(''), ti=0, played=[], busy=[], ESL=(w.closest('main')||{}).lang==='es', SOL=['Do','Do♯','Re','Re♯','Mi','Fa','Fa♯','Sol','Sol♯','La','La♯','Si'];
+    function disp(m){ return ESL ? SOL[m%12]+(Math.floor(m/12)-1) : nname(m).replace('#','♯'); }
+    function sayk(m){ return ESL ? SOL[m%12].replace('♯',' sostenido')+' '+(Math.floor(m/12)-1) : nname(m).replace('#',' sharp '); }
+    if(demos.length){ var dm=el('div','h5p-pno-demos'); demos.forEach(function(d){ var b=el('button','am-btn am-btn--slate','▶ '+d.l); b.type='button'; b.addEventListener('click',function(){ playSeq(d); }); dm.appendChild(b); }); host.parentNode.insertBefore(dm,host); }
+    var wrap=el('div','h5p-pno-wrap'); host.parentNode.insertBefore(wrap,host); wrap.appendChild(host);
+    var kb=el('div','h5p-pno'); host.appendChild(kb);
+    var whites=[]; for(var m=start;m<=last;m++){ if(NAMES[m%12].length===1) whites.push(m); }
+    whites.forEach(function(m){ var k=el('button','h5p-pno-w',labels?disp(m).replace(/\d/,''):''); k.type='button'; k.dataset.m=m; k.dataset.n=nname(m); k.setAttribute('aria-label',sayk(m)); kb.appendChild(k); keysMap[m]=k; });
+    var ww=100/whites.length;
+    for(m=start;m<=last;m++){ if(NAMES[m%12].length===2){ var idx=whites.indexOf(m-1); if(idx<0) continue; var b=el('button','h5p-pno-b',labels?disp(m).replace(/\d/,''):''); b.type='button'; b.dataset.m=m; b.dataset.n=nname(m); b.setAttribute('aria-label',sayk(m)); b.style.left='calc('+(ww*(idx+1))+'% - '+(ww*0.3)+'%)'; b.style.width=(ww*0.6)+'%'; kb.appendChild(b); keysMap[m]=b; } }
+    var now=el('div','h5p-pno-now'); now.setAttribute('aria-live','polite'); now.textContent=X(w,'Tap a key to play.'); wrap.parentNode.insertBefore(now,wrap.nextSibling);
+    var tbox=null; if(tasks.length){ tbox=el('div','h5p-pno-task'); now.parentNode.insertBefore(tbox,now.nextSibling); }
+    function flash(m,ms){ var k=keysMap[m]; if(!k) return; k.classList.add('on'); setTimeout(function(){ k.classList.remove('on'); },ms||160); }
+    function press(m){ tone(m); flash(m); now.textContent=X(w,'Now playing: ')+disp(m); if(tasks.length && ti<tasks.length) check(m); }
+    Object.keys(keysMap).forEach(function(m){ keysMap[m].addEventListener('pointerdown',function(e){ e.preventDefault(); press(+m); }); keysMap[m].addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); press(+m); } }); });
+    w.addEventListener('keydown',function(e){ if(e.repeat||e.target.tagName==='INPUT') return; var i=KB.indexOf(e.key.toLowerCase()); if(i>-1 && start+i<=last && keysMap[start+i]){ e.preventDefault(); press(start+i); } });
+    function playSeq(d){ var ctx=audio(); if(!ctx) return; busy.forEach(clearTimeout); busy=[]; var beat=60/(d.bpm||100), t=ctx.currentTime+0.08, ms=0;
+      d.seq.forEach(function(s){ var ns=[].concat(s[0]), len=(s[1]||1)*beat; ns.forEach(function(n){ if(n==='r') return; var mm=midi(n); if(mm===null) return; tone(mm,t,Math.min(len*0.95+0.2,2.2),0.4); (function(mm,ms){ busy.push(setTimeout(function(){ flash(mm,Math.max(120,len*800)); },ms)); })(mm,ms); }); t+=len; ms+=len*1000; });
+      now.textContent=X(w,'Playing: ')+d.l; }
+    function renderTask(){ if(!tbox) return; if(ti>=tasks.length){ tbox.innerHTML=X(w,'<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>'); fb(w,'ok',X(w,'Nice work — every task complete.')); live(w,X(w,'All piano tasks complete.')); return; }
+      var t=tasks[ti]; tbox.innerHTML=''; tbox.appendChild(el('h4','',X(w,'Task ')+(ti+1)+X(w,' of ')+tasks.length)); tbox.appendChild(el('div','',t.p)); var pl=el('div','h5p-pno-played',''); pl.dataset.played=''; tbox.appendChild(pl);
+      var hb=el('button','am-btn am-btn--ghost',X(w,'Show me')); hb.type='button'; hb.style.marginTop='8px'; hb.addEventListener('click',function(){ t.n.forEach(function(n,i){ var mm=midi(n); setTimeout(function(){ tone(mm); var k=keysMap[mm]; if(k){ k.classList.add('hint'); setTimeout(function(){ k.classList.remove('hint'); },1400); } }, t.o?i*420:0); }); }); tbox.appendChild(hb); played=[]; }
+    function check(m){ var t=tasks[ti], want=t.n.map(midi); played.push(m); if(played.length>12) played.shift();
+      var pl=tbox.querySelector('.h5p-pno-played'); pl.textContent=X(w,'You played: ')+played.slice(-8).map(disp).join(' · ');
+      var ok=false; if(t.o){ var tail=played.slice(-want.length); ok=tail.length===want.length && tail.every(function(x,i){ return x===want[i]; }); }
+      else { var need=want.slice().sort().join(), got={}; played.slice(-want.length*2).forEach(function(x){ if(want.indexOf(x)>-1) got[x]=1; }); ok=Object.keys(got).length===want.length && Object.keys(got).map(Number).sort().join()===need; }
+      if(ok){ score(w,X(w,'Tasks: ')+(ti+1)+' / '+tasks.length); fb(w,'ok',t.ok||X(w,'Correct!')); live(w,X(w,'Task ')+(ti+1)+X(w,' correct.')); ti++; setTimeout(renderTask,650); } }
+    var rb=w.querySelector('[data-retry]'); if(rb) rb.addEventListener('click',function(){ ti=0; played=[]; score(w,''); fb(w,'',''); renderTask(); });
+    renderTask();
+  });
+
+  /* ---------- 13. Branching scenario ---------- */
+  document.querySelectorAll('[data-widget="branch"]').forEach(function(w){
+    var host=w.querySelector('.h5p-branch'), S=JSON.parse(host.dataset.scenes), hist=[], trail=[], cur='start', ends={}, nEnds=0;
+    Object.keys(S).forEach(function(k){ if(S[k].end) nEnds++; });
+    var tr=el('ol','h5p-br-trail'), card=el('div','h5p-br-card'), ctl=el('div','h5p-controls');
+    var back=el('button','am-btn am-btn--ghost',X(w,'← Back')), rs=el('button','am-btn am-btn--ghost',X(w,'Start over')), sc=el('span','h5p-score'); back.type=rs.type='button';
+    ctl.appendChild(back); ctl.appendChild(rs); ctl.appendChild(sc); host.appendChild(tr); host.appendChild(card); host.appendChild(ctl); card.setAttribute('aria-live','polite');
+    var TONE={good:X(w,'Strong outcome'),ok:X(w,'Mixed outcome'),review:X(w,'Rethink this path')};
+    function render(){ var s=S[cur]; tr.innerHTML=''; tr.appendChild(el('li','',X(w,'Your path'))); trail.forEach(function(t,i){ tr.appendChild(el('li','',(i+1)+'. '+t)); });
+      card.innerHTML=''; back.disabled=!hist.length;
+      if(s.end){ ends[cur]=1; var box=el('div','h5p-br-end '+s.end); box.appendChild(el('div','tone',TONE[s.end]||X(w,'Outcome'))); box.appendChild(el('h4','',s.t)); var ul=el('ul','h5p-br-pts'); (s.pts||[]).forEach(function(p){ ul.appendChild(el('li',p[0],p[1])); }); box.appendChild(ul); if(s.c) box.appendChild(el('p','',s.c)); card.appendChild(box);
+        var again=el('button','am-btn am-btn--slate',X(w,'Try another path')); again.type='button'; again.style.marginTop='12px'; again.addEventListener('click',restart); card.appendChild(again);
+        sc.textContent=X(w,'Endings found: ')+Object.keys(ends).length+' / '+nEnds; live(w,X(w,'Outcome reached: ')+s.t); return; }
+      card.appendChild(el('h4','',s.t)); [].concat(s.b||[]).forEach(function(p){ card.appendChild(el('p','',p)); });
+      var og=el('div','h5p-br-opts'); s.o.forEach(function(o,i){ var b=el('button','h5p-br-opt'); b.type='button'; b.appendChild(el('b','tag',String.fromCharCode(65+i))); var sp=el('span','',o.l); if(o.d) sp.appendChild(el('small','',o.d)); b.appendChild(sp); b.addEventListener('click',function(){ hist.push({cur:cur,trail:trail.slice()}); trail.push(o.l.length>42?o.l.slice(0,40)+'…':o.l); cur=o.n; render(); }); og.appendChild(b); }); card.appendChild(og); }
+    function restart(){ hist=[]; trail=[]; cur='start'; render(); }
+    back.addEventListener('click',function(){ var h=hist.pop(); if(!h) return; cur=h.cur; trail=h.trail; render(); });
+    rs.addEventListener('click',restart); render();
+  });
+
+  /* ---------- 14. Interactive map ---------- */
+  document.querySelectorAll('[data-widget="map"]').forEach(function(w){
+    var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
+    var COL=['#2B4A6F','#5E6B7C','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
+    var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
+    routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
+    M.forEach(function(m,i){ var g=sv('g',{'class':'h5p-map-m',tabindex:'0',role:'button','aria-label':(i+1)+'. '+m.n}); g.appendChild(sv('circle',{cx:m.x,cy:m.y,r:13,fill:COL[m.c||0]})); var t=sv('text',{x:m.x,y:m.y+4.5,'text-anchor':'middle',fill:'#fff'}); t.style.fill='#fff'; t.textContent=i+1; g.appendChild(t);
+      g.addEventListener('click',function(){ open(i); }); g.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(i); } }); svg.appendChild(g); gs.push(g);
+      var li=el('li'), b=el('button','',(i+1)+'. '+m.n); b.type='button'; b.addEventListener('click',function(){ open(i); }); li.appendChild(b); list.appendChild(li); btns.push(b); });
+    svg.parentNode.insertBefore(list,svg.nextSibling);
+    if(cats.length>1){ var lg=el('div','h5p-map-legend'); cats.forEach(function(c,i){ var s=el('span'); var d=el('i'); d.style.background=COL[i]; s.appendChild(d); s.appendChild(document.createTextNode(c)); lg.appendChild(s); }); list.parentNode.insertBefore(lg,list); }
+    function open(i){ var m=M[i]; seen[i]=1; gs.forEach(function(g,j){ g.classList.toggle('on',j===i); }); btns.forEach(function(b,j){ b.classList.toggle('on',j===i); b.classList.toggle('seen',!!seen[j]); });
+      panel.innerHTML=''; if(cats.length) panel.appendChild(el('div','cat',cats[m.c||0])); panel.appendChild(el('h4','',(i+1)+'. '+m.n)); var d=el('div'); d.innerHTML=m.d; panel.appendChild(d);
+      var k=Object.keys(seen).length; score(w,X(w,'Explored: ')+k+' / '+M.length); if(k===M.length) fb(w,'ok',X(w,'You explored every location on the map.')); }
+    panel.innerHTML=X(w,'<em>Select a numbered marker, or a name below the map.</em>'); score(w,'Explored: 0 / '+M.length);
+  });
+
+  /* ---------- 15. Find the spot ---------- */
+  document.querySelectorAll('[data-widget="findspot"]').forEach(function(w){
+    var frame=w.querySelector('.h5p-fs-frame'), svg=frame.querySelector('svg'), T=JSON.parse(frame.dataset.targets), i=0, miss=0;
+    var prompt=el('div','h5p-fs-prompt'); prompt.setAttribute('aria-live','polite'); frame.parentNode.insertBefore(prompt,frame);
+    var layer=sv('g',{}); svg.appendChild(layer); var vb=svg.viewBox.baseVal, cross=sv('circle',{'class':'h5p-fs-cross',r:10,cx:vb.width/2,cy:vb.height/2,visibility:'hidden'}); svg.appendChild(cross);
+    svg.setAttribute('tabindex','0'); svg.setAttribute('role','application'); svg.setAttribute('aria-label',X(w,'Image. Tap the spot, or use the arrow keys to move the circle and press Enter.'));
+    function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
+    function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
+      var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#9FACBD','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
+    svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
+    svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
+      if(mv){ e.preventDefault(); cross.setAttribute('visibility','visible'); cross.setAttribute('cx',Math.max(0,Math.min(vb.width,cx+mv[0]))); cross.setAttribute('cy',Math.max(0,Math.min(vb.height,cy+mv[1]))); }
+      else if(e.key==='Enter'||e.key===' '){ e.preventDefault(); cross.setAttribute('visibility','visible'); test(cx,cy); } });
+    on(w,'[data-showme]',function(){ if(i<T.length) test(T[i].x,T[i].y); });
+    on(w,'[data-retry]',function(){ layer.innerHTML=''; i=0; score(w,''); fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 16. Era timeline ---------- */
+  document.querySelectorAll('[data-widget="eratimeline"]').forEach(function(w){
+    var host=w.querySelector('.h5p-era'), E=JSON.parse(host.dataset.eras), seen={}, total=0, cur=0;
+    E.forEach(function(e){ total+=e.e.length; });
+    var tabs=el('div','h5p-era-tabs'), spine=el('ul','h5p-era-spine'), note=el('p','h5p-hint'); tabs.setAttribute('role','tablist'); host.appendChild(tabs); host.appendChild(note); host.appendChild(spine);
+    var tb=[]; E.forEach(function(e,i){ var b=el('button','h5p-era-tab',e.n); b.type='button'; b.setAttribute('role','tab'); b.appendChild(el('small','',e.s)); b.addEventListener('click',function(){ cur=i; render(); }); tabs.appendChild(b); tb.push(b); });
+    function render(){ tb.forEach(function(b,i){ b.classList.toggle('on',i===cur); b.setAttribute('aria-selected',i===cur); var all=E[i].e.every(function(_,j){ return seen[i+'.'+j]; }); b.classList.toggle('done',all); });
+      note.textContent=E[cur].d||''; note.hidden=!E[cur].d; spine.innerHTML='';
+      E[cur].e.forEach(function(ev,j){ var key=cur+'.'+j, li=el('li','h5p-era-ev'+(seen[key]?' seen':'')), b=el('button'); b.type='button'; b.setAttribute('aria-expanded','false'); b.appendChild(el('b','',ev.y)); b.appendChild(el('span','',ev.t)); var body=el('div','body'); body.innerHTML=ev.b;
+        b.addEventListener('click',function(){ var o=li.classList.toggle('open'); b.setAttribute('aria-expanded',o); if(o && !seen[key]){ seen[key]=1; li.classList.add('seen'); prog(); tb[cur].classList.toggle('done',E[cur].e.every(function(_,k){ return seen[cur+'.'+k]; })); } });
+        li.appendChild(b); li.appendChild(body); spine.appendChild(li); }); }
+    function prog(){ var k=Object.keys(seen).length; score(w,X(w,'Events opened: ')+k+' / '+total); if(k===total) fb(w,'ok',X(w,'You opened every event on the timeline.')); }
+    on(w,'[data-expand]',function(){ spine.querySelectorAll('.h5p-era-ev').forEach(function(li){ if(!li.classList.contains('open')) li.querySelector('button').click(); }); });
+    render(); prog();
+  });
+
+  /* ---------- 17. Drag sort (pointer drag + tap/keyboard fallback) ---------- */
+  document.querySelectorAll('[data-widget="dragsort"]').forEach(function(w){
+    var host=w.querySelector('.h5p-ds'), items=JSON.parse(host.dataset.items), bins=JSON.parse(host.dataset.bins), sel=null, drag=null;
+    var tray=el('div','h5p-ds-tray'), grid=el('div','h5p-ds-bins'); tray.setAttribute('aria-label',X(w,'Items to sort')); host.appendChild(tray); host.appendChild(grid);
+    var zones=bins.map(function(b,i){ var d=el('div','h5p-ds-bin'); d.appendChild(el('h5','',b)); var z=el('div','zone'); z.dataset.c=i; z.tabIndex=0; z.setAttribute('role','button'); z.setAttribute('aria-label',X(w,'Place selected item in ')+b); d.appendChild(z); grid.appendChild(d);
+      z.addEventListener('click',function(e){ if(e.target!==z && e.target.tagName!=='H5') return; place(z); }); d.addEventListener('click',function(e){ if(e.target===d||e.target.tagName==='H5') place(z); }); z.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); place(z); } }); return z; });
+    tray.addEventListener('click',function(e){ if(e.target===tray && sel){ tray.appendChild(sel); sel.classList.remove('sel'); sel=null; } });
+    function place(z){ if(!sel) return; z.appendChild(sel); sel.classList.remove('sel','shake'); sel=null; fb(w,'',''); }
+    function build(){ tray.innerHTML=''; zones.forEach(function(z){ z.innerHTML=''; }); sel=null; score(w,'');
+      shuffle(items.slice()).forEach(function(it){ var c=el('button','h5p-ds-card',it.t); c.type='button'; c.dataset.a=','+[].concat(it.a).join(',')+','; tray.appendChild(c);
+        c.addEventListener('click',function(){ if(c.disabled) return; if(c.dataset.dragged){ delete c.dataset.dragged; return; } if(sel===c){ c.classList.remove('sel'); sel=null; return; } if(sel) sel.classList.remove('sel'); sel=c; c.classList.add('sel'); live(w,c.textContent+X(w,' selected. Choose a category.')); });
+        c.addEventListener('pointerdown',function(e){ if(c.disabled||e.button>0) return; var r=c.getBoundingClientRect(); drag={c:c,sx:e.clientX,sy:e.clientY,ox:e.clientX-r.left,oy:e.clientY-r.top,moved:false}; c.setPointerCapture(e.pointerId); });
+        c.addEventListener('pointermove',function(e){ if(!drag||drag.c!==c) return; if(!drag.moved && Math.abs(e.clientX-drag.sx)+Math.abs(e.clientY-drag.sy)<6) return; if(!drag.moved){ drag.moved=true; c.classList.add('drag'); c.style.width=c.getBoundingClientRect().width+'px'; }
+          c.style.left=(e.clientX-drag.ox)+'px'; c.style.top=(e.clientY-drag.oy)+'px'; var t=document.elementFromPoint(e.clientX,e.clientY); zones.forEach(function(z){ z.parentNode.classList.toggle('hot',!!t && z.parentNode.contains(t)); }); });
+        c.addEventListener('pointerup',function(e){ if(!drag||drag.c!==c) return; var d=drag; drag=null; if(!d.moved) return; c.classList.remove('drag'); c.style.left=c.style.top=c.style.width=''; c.dataset.dragged='1';
+          var t=document.elementFromPoint(e.clientX,e.clientY), hit=null; zones.forEach(function(z){ z.parentNode.classList.remove('hot'); if(t && z.parentNode.contains(t)) hit=z; }); if(hit){ hit.appendChild(c); c.classList.remove('shake'); } else if(t && tray.contains(t)) tray.appendChild(c); if(sel){ sel.classList.remove('sel'); sel=null; } fb(w,'',''); });
+      }); }
+    build();
+    on(w,'[data-check]',function(){ if(tray.querySelector('.h5p-ds-card')){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var ok=0, all=host.querySelectorAll('.h5p-ds-card'); all.forEach(function(c){ var z=c.parentNode; if(c.dataset.a.indexOf(','+z.dataset.c+',')>-1){ c.classList.add('ok'); c.disabled=true; ok++; } else { c.classList.add('shake'); tray.appendChild(c); } });
+      score(w,X(w,'Correct: ')+ok+' / '+all.length); if(ok===all.length){ fb(w,'ok',X(w,'All sorted correctly!')); live(w,X(w,'All sorted correctly.')); } else fb(w,'bad',X(w,'✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.')); });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); });
+  });
+
+  /* ---------- Listening-guide video thumbnails (click to play) ---------- */
+  function ytId(u){ var m=/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{11})/.exec(u||''); return m?m[1]:null; }
+  document.querySelectorAll('.am-listen').forEach(function(card){
+    var a=card.querySelector('a.am-listen__link[href]'); var href=a?a.getAttribute('href'):'';
+    if(/dropbox\.com\/.*\.mp3/i.test(href)){ var au=document.createElement('audio'); au.controls=true; au.preload='none'; au.className='am-audio';
+      au.src=href.replace(/[?&]dl=\d/,'').replace(/\?$/,'')+(href.indexOf('?')>-1&&!/[?&]dl=\d$/.test(href)?'&':'?')+'raw=1';
+      au.setAttribute('aria-label',X(card,'Play audio: ')+((card.querySelector('.am-listen__title')||{}).textContent||'')); var bd=card.querySelector('.am-listen__body'); bd.insertBefore(au,bd.firstChild); return; }
+    var id=ytId(href); if(!id) return;
+    var body=card.querySelector('.am-listen__body'), ttl=(card.querySelector('.am-listen__title')||{}).textContent||'';
+    var b=document.createElement('button'); b.type='button'; b.className='am-yt'; b.setAttribute('aria-label',X(card,'Play video: ')+ttl);
+    var img=document.createElement('img'); img.alt=''; img.loading='lazy'; img.src='https://i.ytimg.com/vi/'+id+'/hqdefault.jpg';
+    var p=document.createElement('span'); p.className='am-yt__play'; p.textContent=X(card,'Play here');
+    b.appendChild(img); b.appendChild(p); body.insertBefore(b, body.firstChild);
+    b.addEventListener('click',function(){
+      var f=document.createElement('iframe'); f.className='am-yt-frame'; f.title=ttl;
+      f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen'); f.setAttribute('allowfullscreen','');
+      b.parentNode.replaceChild(f,b); f.focus();
+    });
+  });
+})();
+</script>
+</body>
+</html>

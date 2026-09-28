@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en" class="am-bilingual" data-title-en="New Orleans and Dixieland — American Music" data-title-es="Nueva Orleans y el dixieland — Música estadounidense">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Orleans and Dixieland — American Music</title>
+<!--
+  AMERICAN MUSIC — SELF-CONTAINED PAGE
+  ===================================================================
+  Palette: Navy #2B4A6F · Slate #9FACBD
+    Navy dark  #1C2F47  (header/footer bands)      Navy deep #233C5C (hover)
+    Navy tint  #EBEFF4 / #DBE1E9 (callouts)         Slate soft #EEF1F5  Slate dark #5E6B7C
+    Ink #1B2A41 · Muted #4A5568 · Border #CDD4DD
+    Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
+  RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
+  or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
+  Every content page: objectives box, 2+ SVG figures, 2–3 widgets, Listening Guide(s),
+  key-term boxes, Page X of Y footer. Neutral textbook voice. No course code.
+-->
+<style>
+  :root{
+    --am-navy:#2B4A6F; --am-navy-dark:#1C2F47; --am-navy-deep:#233C5C;
+    --am-slate:#9FACBD; --am-slate-dark:#5E6B7C; --am-slate-soft:#EEF1F5;
+    --am-tint:#EBEFF4; --am-tint2:#DBE1E9; --am-mist:#F5F7F9;
+    --am-ink:#1B2A41; --am-muted:#4A5568; --am-border:#CDD4DD;
+    --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
+    --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
+    --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:var(--body); color:var(--am-ink); line-height:1.65; background:#fff; font-size:17px}
+  .am-topbar{background:var(--am-navy-dark); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:16px}
+  .am-mark{width:38px; height:38px; flex:none}
+  .am-wordmark{font-family:var(--head); font-weight:700; letter-spacing:1.5px; font-size:1.05em; text-transform:uppercase; white-space:nowrap; line-height:1.1}
+  .am-wordmark span{display:block; font-size:.6em; letter-spacing:4px; font-weight:400; color:var(--am-slate)}
+  .am-coursebar{margin-left:auto; font-size:.78em; letter-spacing:1.5px; text-transform:uppercase; opacity:.9; text-align:right; line-height:1.4}
+  .am-accentbar{height:6px; background:linear-gradient(90deg,var(--am-slate) 0 70%,var(--am-navy) 70% 100%)}
+  main{max-width:880px; margin:0 auto; padding:32px 24px 12px}
+  h1{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:2em; line-height:1.2; margin:0 0 6px; border-bottom:4px solid var(--am-slate); padding-bottom:10px}
+  h1 .am-kicker{display:block; font-size:.5em; letter-spacing:3px; text-transform:uppercase; color:var(--am-slate-dark); font-weight:600; margin-bottom:4px}
+  h2{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:1.35em; margin:34px 0 10px; padding-left:12px; border-left:6px solid var(--am-slate)}
+  h3{font-family:var(--head); font-weight:600; color:var(--am-navy); font-size:1.1em; margin:24px 0 8px}
+  a{color:var(--am-navy-deep)}
+  .am-lead{font-size:1.08em; font-style:italic; color:#3d4a5c; margin:14px 0 20px}
+  /* Callouts */
+  .am-objectives{background:var(--am-tint); border-left:6px solid var(--am-navy); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-label{margin:0 0 6px; font-family:var(--head); font-weight:700; color:var(--am-navy); text-transform:uppercase; letter-spacing:1.5px; font-size:.82em}
+  .am-keyterm{background:var(--am-mist); border:1px solid var(--am-border); border-left:6px solid var(--am-slate); padding:12px 16px; margin:16px 0; border-radius:8px}
+  .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
+  .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
+  .am-note{background:#F6F7F9; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  figure{margin:24px 0; text-align:center}
+  figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
+  figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
+  figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
+  /* Listening guide */
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(28,47,71,.08)}
+  .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
+  .am-listen__head svg{width:26px; height:26px; flex:none}
+  .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
+  .am-listen__meta{font-size:.82em; opacity:.9}
+  .am-listen__body{padding:14px 18px}
+  .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
+  .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
+  .am-listen__link:hover{background:#C7D0DB}
+  .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
+  .am-listen__log label{cursor:pointer}
+  /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#1C2F47; cursor:pointer}
+  .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
+  .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(28,47,71,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
+  .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
+  .am-audio{width:100%; margin:0 0 14px; display:block}
+  .am-yt-frame{width:100%; aspect-ratio:16/9; border:0; border-radius:8px; display:block; margin:0 0 14px; background:#000}
+  /* Buttons */
+  .am-btn{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em; background:var(--am-navy); color:#fff; border:0; padding:10px 18px; cursor:pointer; border-radius:6px}
+  .am-btn:hover{background:var(--am-navy-deep)}
+  .am-btn[disabled]{opacity:.45; cursor:default}
+  .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
+  .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
+  .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-btn--slate:hover{background:#C7D0DB}
+  /* ============ H5P-STYLE ACTIVITY SHELL ============ */
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(28,47,71,.1)}
+  .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
+  .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
+  .h5p-act__body{padding:18px 20px}
+  .h5p-feedback{margin-top:12px; padding:10px 14px; border-radius:6px; font-weight:600; display:none}
+  .h5p-feedback.ok{display:block; background:var(--ok-bg); color:var(--ok)}
+  .h5p-feedback.bad{display:block; background:var(--bad-bg); color:var(--bad)}
+  .h5p-feedback.info{display:block; background:var(--am-tint); color:var(--am-navy)}
+  .h5p-controls{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+  .h5p-score{margin-left:auto; font-family:var(--head); color:var(--am-navy); font-weight:700}
+  .h5p-hint{margin:0 0 10px; font-style:italic; color:var(--am-muted); font-size:.93em}
+  /* MCQ */
+  .h5p-mcq .h5p-q{margin-bottom:18px}
+  .h5p-mcq .h5p-stem{font-weight:600; margin:0 0 8px}
+  .h5p-opt{display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:10px 14px; margin:6px 0; cursor:pointer; font-family:var(--body); font-size:.95em; color:var(--am-ink)}
+  .h5p-opt:hover{border-color:var(--am-navy)}
+  .h5p-opt.sel{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-opt.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-opt.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-why{font-size:.9em; color:var(--am-muted); margin:4px 0 0 4px}
+  /* Drag the words (click-to-place) */
+  .h5p-bank{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px}
+  .h5p-word{background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 12px; cursor:pointer; font-weight:600; color:var(--am-navy-dark); font-family:var(--body); font-size:.95em}
+  .h5p-word.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-word.used{opacity:.3; pointer-events:none}
+  .h5p-blank{display:inline-block; min-width:110px; border-bottom:3px solid var(--am-navy); padding:2px 8px; margin:0 2px; cursor:pointer; text-align:center; font-weight:600; color:var(--am-navy); background:var(--am-tint); line-height:1.5}
+  .h5p-blank.ok{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-blank.bad{background:var(--bad-bg); border-color:var(--bad)}
+  /* Flashcards & dialog cards */
+  .h5p-flash{perspective:900px; max-width:460px; margin:0 auto}
+  .h5p-card{position:relative; width:100%; min-height:180px; transform-style:preserve-3d; transition:transform .5s; cursor:pointer}
+  .h5p-card.flip{transform:rotateY(180deg)}
+  .h5p-face{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px; border-radius:10px}
+  .h5p-face--front{background:var(--am-navy); color:#fff; font-family:var(--head); font-size:1.2em; font-weight:600; border-bottom:5px solid var(--am-slate)}
+  .h5p-face--back{background:var(--am-tint); border:2px solid var(--am-navy); color:var(--am-ink); transform:rotateY(180deg); font-size:.97em}
+  .h5p-dlg-ctrl{display:none; justify-content:center; gap:10px; margin-top:12px}
+  .h5p-dlg-ctrl.show{display:flex}
+  .h5p-progress{height:8px; background:var(--am-tint2); border-radius:4px; overflow:hidden; margin:10px 0}
+  .h5p-progress span{display:block; height:100%; background:var(--am-slate); width:0; transition:width .3s}
+  /* Order steps */
+  .h5p-order{padding-left:0; margin:0}
+  .h5p-order li{background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; margin:7px 0; display:flex; align-items:center; gap:10px; list-style:none}
+  .h5p-order li.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-order li.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-move{border:1px solid var(--am-navy); background:#fff; color:var(--am-navy); border-radius:4px; width:30px; height:28px; cursor:pointer; font-weight:700; flex:none}
+  .h5p-move:hover{background:var(--am-tint)}
+  /* Sort (drag-and-drop categorize, click-to-bin) */
+  .h5p-sort-pool{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px; min-height:40px; padding:10px; border:2px dashed var(--am-border); border-radius:8px}
+  .h5p-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+  .h5p-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:110px; padding:8px; cursor:pointer; background:#fff}
+  .h5p-bin.hot{background:var(--am-tint)}
+  .h5p-bin__title{font-family:var(--head); font-weight:700; color:#fff; background:var(--am-navy); margin:-8px -8px 8px; padding:6px 10px; border-radius:6px 6px 0 0; font-size:.88em; letter-spacing:.5px}
+  .h5p-item{display:inline-block; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 10px; margin:3px; cursor:pointer; font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-item.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-item.ok{border-color:var(--ok); background:var(--ok-bg); color:var(--ok)}
+  .h5p-item.bad{border-color:var(--bad); background:var(--bad-bg); color:var(--bad)}
+  /* Mark the words */
+  .h5p-mtw{line-height:2}
+  .h5p-tok{cursor:pointer; padding:2px 3px; border-radius:4px; border-bottom:2px dotted transparent}
+  .h5p-tok:hover{background:var(--am-tint)}
+  .h5p-tok.sel{background:var(--am-slate-soft); border-bottom-color:var(--am-slate-dark)}
+  .h5p-tok.ok{background:var(--ok-bg); border-bottom-color:var(--ok)}
+  .h5p-tok.bad{background:var(--bad-bg); border-bottom-color:var(--bad); text-decoration:line-through}
+  .h5p-tok.missed{outline:2px dashed var(--am-slate-dark)}
+  /* Dropdown cloze */
+  .h5p-dd{font:inherit; font-weight:600; color:var(--am-navy); border:0; border-bottom:3px solid var(--am-navy); background:var(--am-tint); padding:2px 6px; border-radius:4px 4px 0 0; margin:0 2px}
+  .h5p-dd.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok)}
+  .h5p-dd.bad{background:var(--bad-bg); border-color:var(--bad); color:var(--bad)}
+  /* Timeline stepper */
+  .h5p-tl-nav{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-tl-btn{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:20px; padding:5px 12px; cursor:pointer}
+  .h5p-tl-btn.on{background:var(--am-navy); color:#fff}
+  .h5p-tl-track{height:6px; background:var(--am-tint2); border-radius:3px; position:relative; margin:4px 0 16px}
+  .h5p-tl-track span{position:absolute; top:-5px; width:16px; height:16px; border-radius:50%; background:var(--am-slate); border:3px solid var(--am-navy); transform:translateX(-50%); transition:left .3s}
+  .h5p-tl-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:14px 18px; min-height:90px}
+  .h5p-tl-panel h4{margin:0 0 6px; font-family:var(--head); color:var(--am-navy); font-size:1.05em}
+  /* Song form explorer */
+  .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
+  .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
+  .h5p-form-sec:hover{transform:translateY(-2px)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(159,172,189,.35)}
+  .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
+  .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
+  /* Hotspots (inline SVG) */
+  .h5p-hs [data-hs]{cursor:pointer; transition:opacity .15s}
+  .h5p-hs [data-hs]:hover{opacity:.75}
+  .h5p-hs [data-hs].on{stroke:var(--am-slate); stroke-width:4}
+  .h5p-hs [data-hs].on text{stroke:none}
+  .h5p-hs-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:60px; margin-top:10px}
+  .h5p-hs-panel h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy)}
+  /* ============ ADDED 2026-09: piano, branching, map, find-the-spot, era timeline, drag sort ============ */
+  .am-sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+  .h5p-act :focus-visible{outline:3px solid var(--am-slate); outline-offset:2px; box-shadow:0 0 0 5px var(--am-navy-dark)}
+  /* Piano */
+  .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
+  .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F5F7F9); border:1px solid #9FB3CC; border-bottom:8px solid #CDD4DD; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2C3E57,#0F1B2B); border:1px solid #000; border-bottom:9px solid #1B2A41; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
+  .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(159,172,189,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(159,172,189,.8)}
+  .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
+  .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+  .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
+  .h5p-pno-task h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy); font-size:1em}
+  .h5p-pno-played{font-size:.9em; color:var(--am-muted); margin-top:4px}
+  /* Branching scenario */
+  .h5p-br-trail{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px; padding:0; list-style:none; font-size:.82em}
+  .h5p-br-trail li{background:var(--am-tint); color:var(--am-navy-dark); border-radius:14px; padding:3px 10px; font-weight:600}
+  .h5p-br-trail li:first-child{background:var(--am-navy); color:#fff}
+  .h5p-br-card h4{font-family:var(--head); color:var(--am-navy); font-size:1.12em; margin:0 0 8px}
+  .h5p-br-card p{margin:0 0 10px}
+  .h5p-br-opts{display:grid; gap:10px; margin-top:12px}
+  .h5p-br-opt{display:flex; gap:12px; align-items:flex-start; text-align:left; width:100%; background:#fff; border:2px solid var(--am-border); border-radius:10px; padding:12px 14px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink)}
+  .h5p-br-opt:hover{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-br-opt b.tag{flex:none; width:30px; height:30px; border-radius:50%; background:var(--am-slate); color:var(--am-navy-dark); display:flex; align-items:center; justify-content:center; font-family:var(--head)}
+  .h5p-br-opt small{display:block; color:var(--am-muted); font-size:.88em; margin-top:2px}
+  .h5p-br-end{border-radius:10px; padding:14px 18px; border:2px solid}
+  .h5p-br-end.good{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-br-end.ok{background:var(--am-slate-soft); border-color:var(--am-slate-dark)}
+  .h5p-br-end.review{background:var(--bad-bg); border-color:var(--bad)}
+  .h5p-br-end .tone{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em}
+  .h5p-br-pts{list-style:none; padding:0; margin:10px 0}
+  .h5p-br-pts li{margin:6px 0; padding-left:28px; position:relative}
+  .h5p-br-pts li::before{position:absolute; left:0; top:0; font-weight:700}
+  .h5p-br-pts li.ok::before{content:"✔"; color:var(--ok)}
+  .h5p-br-pts li.alert::before{content:"⚠"; color:var(--am-slate-dark)}
+  .h5p-br-pts li.no::before{content:"✖"; color:var(--bad)}
+  /* Interactive map */
+  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F5F7F9}
+  .h5p-map-m{cursor:pointer}
+  .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
+  .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
+  .h5p-map-m.on circle{stroke:#1C2F47; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#9FACBD; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#5E6B7C; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
+  .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
+  .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-map-list button.on{border-color:var(--am-navy); background:var(--am-navy); color:#fff}
+  .h5p-map-legend{display:flex; flex-wrap:wrap; gap:14px; font-size:.86em; margin:8px 0 0; color:var(--am-muted)}
+  .h5p-map-legend i{display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:5px; vertical-align:-1px}
+  .h5p-map-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px; margin-top:10px}
+  .h5p-map-panel h4{margin:0 0 2px; font-family:var(--head); color:var(--am-navy)}
+  .h5p-map-panel .cat{font-size:.8em; text-transform:uppercase; letter-spacing:1.2px; color:var(--am-slate-dark); font-weight:700}
+  /* Find the spot */
+  .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
+  .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
+  .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
+  .h5p-fs-found circle{fill:none; stroke:#9FACBD; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#1C2F47; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
+  .h5p-fs-cross{fill:none; stroke:#1C2F47; stroke-width:2}
+  @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
+  /* Era timeline */
+  .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-era-tab{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:8px; padding:6px 12px; cursor:pointer; text-align:left; line-height:1.25}
+  .h5p-era-tab small{display:block; font-weight:400; opacity:.85}
+  .h5p-era-tab.on{background:var(--am-navy); color:#fff}
+  .h5p-era-tab.done::after{content:" ✔"; color:var(--ok)}
+  .h5p-era-tab.on.done::after{color:var(--am-slate)}
+  .h5p-era-spine{position:relative; margin:0; padding:0 0 0 34px; list-style:none}
+  .h5p-era-spine::before{content:""; position:absolute; left:12px; top:6px; bottom:6px; width:4px; background:var(--am-tint2); border-radius:2px}
+  .h5p-era-ev{position:relative; margin:0 0 10px}
+  .h5p-era-ev::before{content:""; position:absolute; left:-29px; top:12px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--am-navy)}
+  .h5p-era-ev.seen::before{background:var(--am-slate)}
+  .h5p-era-ev button{width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink); display:flex; gap:10px; align-items:baseline}
+  .h5p-era-ev button:hover{border-color:var(--am-navy)}
+  .h5p-era-ev button b{font-family:var(--head); color:var(--am-navy); flex:none; min-width:58px}
+  .h5p-era-ev button::after{content:"+"; margin-left:auto; font-weight:700; color:var(--am-navy)}
+  .h5p-era-ev.open button::after{content:"–"}
+  .h5p-era-ev .body{display:none; background:var(--am-mist); border-left:4px solid var(--am-slate); border-radius:0 0 8px 8px; padding:10px 14px; margin-top:-2px; font-size:.95em}
+  .h5p-era-ev.open .body{display:block}
+  /* Drag sort (pointer drag + tap fallback) */
+  .h5p-ds-tray{display:flex; flex-wrap:wrap; gap:8px; min-height:52px; padding:10px; border:2px dashed var(--am-border); border-radius:8px; margin:10px 0 14px}
+  .h5p-ds-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px}
+  .h5p-ds-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:120px; padding:8px; background:#fff}
+  .h5p-ds-bin.hot{background:var(--am-tint); box-shadow:0 0 0 3px var(--am-slate)}
+  .h5p-ds-bin h5{margin:-8px -8px 8px; padding:6px 10px; background:var(--am-navy); color:#fff; font-family:var(--head); font-size:.88em; border-radius:6px 6px 0 0}
+  .h5p-ds-bin .zone{display:flex; flex-wrap:wrap; gap:6px; min-height:60px}
+  .h5p-ds-card{touch-action:none; user-select:none; -webkit-user-select:none; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:6px 10px; cursor:grab; font-family:var(--body); font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
+  .h5p-ds-card.ok::before{content:"✔ "}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(28,47,71,.3); cursor:grabbing}
+  .h5p-ds-card.shake{animation:h5pShake .4s}
+  .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
+  @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+  /* ============ BILINGUAL (EN/ES) ============ */
+  html:not([data-lang="es"]) .am-l-es, html[data-lang="es"] .am-l-en{display:none}
+  html[data-lang="es"] main[lang="en"], html:not([data-lang="es"]) main[lang="es"]{display:none}
+  .am-langtoggle{display:none; flex:none; margin-left:12px; border:2px solid var(--am-slate); border-radius:20px; overflow:hidden}
+  html.am-bilingual .am-langtoggle{display:flex}
+  .am-langtoggle button{font-family:var(--head); font-weight:700; font-size:.74em; letter-spacing:1px; text-transform:uppercase; background:transparent; color:#fff; border:0; padding:6px 12px; cursor:pointer}
+  .am-langtoggle button[aria-pressed="true"]{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-langtoggle button:focus-visible{outline:3px solid #fff; outline-offset:-3px}
+  @media (max-width:600px){ .am-langtoggle{margin-left:auto} .am-wordmark{white-space:normal} }
+  /* Footer */
+  .am-pagefoot{max-width:880px; margin:36px auto 0; padding:0 24px}
+  .am-pagefoot .rule{height:4px; background:var(--am-slate)}
+  .am-footband{background:var(--am-navy-dark); color:#fff; padding:16px 24px; text-align:center; font-size:.78em; letter-spacing:1.8px; text-transform:uppercase}
+  .am-footband .pg{color:var(--am-slate)}
+  details.am-answer{margin-top:8px}
+  details.am-answer summary{cursor:pointer; color:var(--am-navy); font-weight:600}
+  @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
+</style>
+</head>
+<body>
+<header class="am-topbar">
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#9FACBD"/><path d="M13 30V11l14 5v14" fill="none" stroke="#1C2F47" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#1C2F47"/><circle cx="24.5" cy="30" r="3.6" fill="#1C2F47"/></svg>
+  <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
+  <div class="am-coursebar"><span class="am-l-en">Module 3: The Jazz Age: 1917–1935<br>Page 7 of 13</span><span class="am-l-es">Módulo 3: La era del jazz: 1917–1935<br>Página 7 de 13</span></div>
+  <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
+</header>
+<div class="am-accentbar"></div>
+
+<main lang="en">
+  <h1><span class="am-kicker">Module 3 · Page 7 of 13</span>New Orleans and Dixieland</h1>
+  <p class="am-lead">Jazz began in a single, unusually mixed American city, then traveled north when the neighborhood built around its earliest performances shut down.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">On this page you will</p>
+    <ul style="margin:6px 0 0">
+      <li>Explain why New Orleans's population and musical life made it fertile ground for jazz.</li>
+      <li>Describe the front-line-and-rhythm-section instrumentation of a Dixieland band.</li>
+      <li>Identify the Original Dixieland Jazz Band and its historic first jazz recording.</li>
+      <li>Trace how jazz migrated from New Orleans to Chicago in the years around 1917.</li>
+    </ul>
+  </div>
+
+  <h2>A city built for musical mixing</h2>
+  <p>New Orleans entered the twentieth century as one of the most musically diverse cities in the United States. Its population included descendants of French and Spanish colonists, Creole musicians trained in formal European technique, African Americans carrying the traditions of spirituals and the blues, and communities with ties to the Caribbean. Brass bands were everywhere in the city's public life, marching in parades, playing at picnics, and — most distinctively — accompanying funeral processions, where a somber march to the cemetery gave way to upbeat, celebratory music on the way back. Out of that dense mixture of formal training, vernacular rhythm, and constant public performance, a new style of collective, improvised ensemble playing took shape by the early twentieth century: jazz.</p>
+
+  <div class="am-context">
+    <p class="am-label">Historical context</p>
+    Storyville, a legally sanctioned red-light district established in New Orleans in 1897, employed many of the city's musicians in its bars and dance halls. When the U.S. Navy pressured the city to close the district in 1917, citing concerns about sailors stationed nearby, many musicians lost steady local work and looked elsewhere for it — one factor, among several, that pushed jazz musicians toward Chicago and other Northern cities in the years that followed.
+  </div>
+
+  <h2>The Dixieland sound</h2>
+  <p>The style that traveled out of New Orleans became known as <strong>Dixieland</strong>, built around a small ensemble with two functional groups. A "front line" of melody instruments — typically a cornet or trumpet carrying the main tune, a clarinet weaving a fast countermelody above it, and a trombone sliding underneath with rhythmic fills — improvised simultaneously rather than taking turns, a texture called <strong>collective improvisation</strong>. Behind the front line, a rhythm section of piano or banjo, tuba or string bass, and drums kept the beat and outlined the chords. The result was dense, energetic, and only loosely arranged: musicians agreed on a tune and a harmonic structure, then built their individual parts around each other in real time.</p>
+  <div class="am-keyterm"><strong>Dixieland:</strong> the New Orleans jazz style built around a front line of cornet or trumpet, clarinet, and trombone playing simultaneous, improvised parts over a rhythm section.</div>
+  <div class="am-keyterm"><strong>Collective improvisation:</strong> a group texture, central to early jazz, in which several musicians improvise their individual parts at the same time rather than one soloist performing while the others accompany.</div>
+
+  <figure>
+    <svg viewBox="0 0 720 210" role="img" aria-label="Diagram of a Dixieland band's front line and rhythm section">
+      <rect width="720" height="210" fill="#F5F7F9" rx="10"/>
+      <g font-family="Arial, Helvetica, sans-serif">
+        <text x="20" y="28" font-size="14" font-weight="bold" fill="#2B4A6F">Front line (improvised melody)</text>
+        <circle cx="90" cy="90" r="42" fill="#2B4A6F"/><text x="90" y="95" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">Cornet</text>
+        <circle cx="200" cy="90" r="42" fill="#233C5C"/><text x="200" y="95" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">Clarinet</text>
+        <circle cx="310" cy="90" r="42" fill="#1C2F47"/><text x="310" y="95" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">Trombone</text>
+
+        <text x="420" y="28" font-size="14" font-weight="bold" fill="#2B4A6F">Rhythm section (beat and chords)</text>
+        <rect x="420" y="55" width="80" height="70" rx="8" fill="#5E6B7C"/><text x="460" y="95" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Banjo</text>
+        <rect x="510" y="55" width="80" height="70" rx="8" fill="#5E6B7C"/><text x="550" y="95" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Tuba</text>
+        <rect x="600" y="55" width="80" height="70" rx="8" fill="#5E6B7C"/><text x="640" y="95" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Drums</text>
+      </g>
+      <text x="360" y="185" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Three melody instruments improvise together over a steady rhythm section beneath them.</text>
+    </svg>
+    <figcaption>Figure 1. A typical Dixieland lineup: a front line of cornet, clarinet, and trombone improvising simultaneously, supported by a rhythm section keeping time.</figcaption>
+  </figure>
+
+  <figure>
+    <svg viewBox="0 0 720 230" role="img" aria-label="Map showing jazz migration from New Orleans to Chicago around 1917">
+      <rect width="720" height="230" fill="#DBE1E9" rx="10"/>
+      <g font-family="Arial, Helvetica, sans-serif">
+        <path d="M60 60 L260 50 L300 90 L270 150 L200 190 L120 170 L70 120 Z" fill="#EBEFF4" stroke="#2B4A6F" stroke-width="2"/>
+        <text x="175" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#2B4A6F">United States</text>
+        <circle cx="150" cy="175" r="7" fill="#5E6B7C"/>
+        <text x="150" y="200" text-anchor="middle" font-size="12" fill="#1B2A41">New Orleans</text>
+        <circle cx="170" cy="75" r="7" fill="#5E6B7C"/>
+        <text x="170" y="55" text-anchor="middle" font-size="12" fill="#1B2A41">Chicago</text>
+        <path d="M150 168 C155 130, 165 100, 170 82" fill="none" stroke="#5E6B7C" stroke-width="4" marker-end="url(#no-arr)"/>
+        <defs><marker id="no-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5E6B7C"/></marker></defs>
+
+        <rect x="420" y="40" width="270" height="160" rx="10" fill="#fff" stroke="#CDD4DD"/>
+        <text x="440" y="65" font-size="13" font-weight="bold" fill="#2B4A6F">Why musicians moved north</text>
+        <text x="440" y="90" font-size="12" fill="#1B2A41">• Storyville closes in 1917,</text>
+        <text x="452" y="106" font-size="12" fill="#1B2A41">cutting local work</text>
+        <text x="440" y="128" font-size="12" fill="#1B2A41">• The Great Migration draws</text>
+        <text x="452" y="144" font-size="12" fill="#1B2A41">workers to Northern cities</text>
+        <text x="440" y="166" font-size="12" fill="#1B2A41">• Chicago offers new clubs</text>
+        <text x="452" y="182" font-size="12" fill="#1B2A41">and recording studios</text>
+      </g>
+    </svg>
+    <figcaption>Figure 2. Jazz musicians carried the New Orleans sound north to Chicago in the years around 1917, following the same migration routes described earlier in this module.</figcaption>
+  </figure>
+
+  <h3>Where the migration led</h3>
+  <p>Chicago was only the first stop. Over the following decade, musicians who left New Orleans — and the Great Migration that carried them — reshaped the map of American jazz, seeding new scenes in river and rail cities on the way north and turning New York into the music business's headquarters.</p>
+
+  <!-- ============ MAP ============ -->
+  <div class="h5p-act" data-widget="map">
+    <div class="h5p-act__head"><span>Explore the Map: Jazz Leaves New Orleans</span><span class="h5p-act__type">Interactive map</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Select each numbered marker (or a name below the map) to learn what happened there.</p>
+      <svg class="h5p-mapsvg" data-region="us" data-statelabels="1" role="img" aria-label="Map of the United States showing New Orleans and the cities jazz musicians moved to" viewBox="0 0 720 446"><g class="h5p-map-base" aria-hidden="true"><rect width="720" height="446" fill="#F5F7F9"/><path d="M497.5,349.8L497.5,349.8L497.5,349.8ZM589.2,331.5L593.8,345.1L599.8,355.3L606.2,362.7L607.5,370.3L616.9,385.8L618.8,392.2L619.4,406.2L618.2,406.1L616.7,414.8L607.8,417.3L603.4,409.0L597.3,407.4L593.6,399.6L587.4,394.5L579.4,384.0L583.0,378.1L576.6,378.6L575.7,373.1L577.8,369.3L576.6,362.1L565.6,353.9L561.6,348.6L555.9,345.8L552.6,346.3L543.0,355.6L538.8,354.9L538.2,351.2L530.0,346.7L520.2,345.2L508.4,348.2L505.1,348.8L501.3,342.4L500.0,348.3L496.4,347.8L489.7,347.9L481.4,351.9L477.6,354.3L479.9,357.0L482.1,353.4L483.2,360.0L480.0,360.5L482.5,364.4L486.7,364.7L487.9,370.2L478.0,365.7L473.0,369.7L469.9,365.8L464.9,370.9L457.5,367.2L453.3,360.5L449.6,359.1L443.8,364.1L432.0,360.8L423.0,362.3L419.0,363.0L410.1,367.5L411.3,361.4L407.0,363.0L408.7,368.5L410.9,368.1L402.0,375.5L390.4,381.4L379.5,390.5L380.6,387.6L387.4,383.8L382.5,383.1L373.6,399.7L373.4,412.8L377.1,421.1L373.8,422.8L367.8,419.3L362.1,419.2L358.4,416.5L349.2,413.0L344.8,403.6L344.6,396.3L339.3,391.2L338.6,388.3L333.8,383.4L329.1,370.3L318.8,359.0L310.9,358.5L307.6,356.8L302.8,358.7L298.8,366.7L295.5,370.0L281.8,362.7L277.3,358.2L275.3,348.6L272.0,341.1L267.0,338.0L260.4,329.2L253.5,321.8L231.3,319.1L230.4,326.2L219.2,324.7L192.3,320.7L146.7,293.8L148.6,290.6L117.0,286.8L116.4,277.2L114.9,273.4L108.0,264.8L104.9,264.4L104.4,259.4L100.9,259.2L96.3,255.7L93.1,250.5L81.8,247.0L80.2,244.4L82.5,236.1L77.1,225.9L72.2,211.0L75.5,206.5L69.8,198.5L71.0,189.1L74.7,195.6L72.8,186.6L71.0,188.5L66.1,184.0L67.7,180.4L61.9,167.0L64.6,153.3L60.8,145.0L61.1,142.1L65.6,136.8L69.6,128.1L70.5,119.1L69.5,117.3L71.2,109.9L70.7,105.2L78.4,93.9L87.6,72.3L93.0,57.1L97.2,56.9L91.6,55.1L96.3,49.1L93.7,47.9L94.5,30.6L93.7,24.7L95.5,21.5L101.3,27.0L110.5,31.1L113.6,31.0L114.8,37.8L111.2,45.4L114.6,44.2L115.9,37.1L118.5,34.2L119.0,22.7L117.3,18.1L175.3,33.1L185.4,35.3L309.4,53.7L380.6,57.2L402.3,57.3L402.3,51.3L405.7,52.6L407.7,61.2L416.3,62.9L416.7,64.6L425.2,62.7L438.8,68.7L440.5,71.1L447.5,67.6L449.0,69.8L455.6,69.2L461.6,70.6L451.7,75.9L445.7,80.9L442.1,85.4L435.7,91.0L436.6,92.2L442.0,91.2L447.7,88.0L450.5,91.8L454.1,93.5L460.6,89.2L464.4,88.6L477.1,77.9L482.2,78.4L476.9,82.0L475.0,89.1L477.1,86.2L483.4,87.1L486.9,91.7L495.7,91.9L500.2,88.1L507.2,87.2L512.8,85.2L512.5,89.8L517.3,90.3L521.0,87.9L523.5,94.5L525.9,95.9L528.9,94.0L529.5,96.7L520.6,97.5L517.3,96.0L515.7,99.0L513.5,97.1L507.9,96.4L506.5,98.6L500.7,99.3L497.2,101.4L491.9,102.1L486.7,114.3L482.9,120.6L483.2,123.6L489.0,117.1L492.3,110.7L492.7,113.9L488.8,122.7L488.8,128.6L486.8,133.6L487.4,136.7L485.6,143.9L487.9,155.5L487.8,158.6L492.2,167.6L495.8,168.6L500.3,166.0L502.4,163.7L505.7,154.6L505.1,145.6L500.6,135.8L500.2,129.6L502.5,124.7L502.1,119.2L506.6,114.7L508.3,110.7L509.3,117.3L511.2,114.5L510.9,109.1L515.7,106.6L513.1,104.0L516.5,100.3L522.9,101.9L524.9,104.0L531.3,105.2L534.5,110.1L532.8,111.7L535.1,115.0L535.3,120.9L533.1,125.7L530.4,127.1L529.5,131.0L532.9,133.2L536.8,126.5L540.5,124.5L544.0,127.5L548.4,140.3L548.1,146.8L544.7,147.0L541.8,157.3L539.3,162.0L551.4,166.0L556.5,163.1L559.7,163.0L567.2,156.0L572.5,153.1L580.4,147.1L586.6,141.5L589.3,137.3L585.5,130.3L591.7,127.3L600.6,126.5L602.8,127.4L609.2,125.6L616.4,119.9L616.1,113.4L613.3,109.7L617.2,106.2L622.2,97.5L626.8,93.6L642.9,89.9L662.7,84.8L663.1,81.0L666.0,79.2L668.8,79.7L669.0,75.0L672.4,67.9L671.1,61.1L671.7,55.0L676.4,41.2L681.0,44.5L687.1,39.8L693.0,42.7L699.2,63.6L703.3,63.6L704.4,68.6L708.4,69.3L712,73.9L709.0,76.6L707.2,81.4L704.8,80.5L702.8,84.7L698.1,87.3L698.3,91.3L694.5,87.5L693.9,84.5L692.0,94.7L684.9,99.0L681.3,104.0L679.4,112.3L678.9,115.5L682.3,118.1L678.9,123.2L684.2,127.0L686.4,130.9L693.8,130.8L686.3,135.4L685.9,132.7L681.2,137.5L679.6,135.0L679.2,134.5L677.0,133.9L677.6,140.5L673.6,142.4L662.1,146.6L654.3,152.7L666.1,149.9L668.6,146.6L672.1,148.2L660.8,156.9L652.7,160.3L651.0,158.3L650.8,158.8L649.2,161.8L653.0,163.0L653.8,172.8L652.1,178.6L646.4,187.9L646.7,184.3L638.0,181.3L637.2,179.1L637.1,178.7L637.5,177.7L637.3,181.4L640.9,187.1L645.4,190.3L647.2,195.7L646.4,202.8L643.5,208.1L642.1,217.6L639.5,216.8L639.6,211.2L641.5,205.1L638.9,206.2L638.5,201.5L634.5,201.8L631.7,198.4L635.1,196.4L630.1,192.9L630.8,185.1L628.1,187.7L629.4,198.1L631.5,203.8L627.0,203.5L621.8,198.1L621.1,203.1L629.5,204.4L634.9,207.5L634.3,215.5L637.1,220.1L635.1,223.6L641.0,221.9L643.8,227.4L641.8,228.4L644.1,232.3L635.9,239.0L646.5,236.4L648.2,242.2L644.4,247.1L632.8,246.4L640.6,249.0L638.0,255.0L641.6,252.0L643.9,253.5L641.9,259.6L635.4,259.7L629.6,264.9L626.9,269.5L626.1,274.6L618.8,276.1L612.9,283.1L610.6,291.2L603.4,298.8L597.5,302.2L598.2,304.2L593.3,309.7L590.9,315.1ZM125.0,386.3L125.0,386.3L125.0,386.3ZM124.0,396.3L124.0,396.3L124.0,396.3ZM122.0,397.4L122.0,397.4L122.0,397.4ZM121.4,397.5L121.4,397.5L121.4,397.5ZM121.0,397.4L121.0,397.4L121.0,397.4ZM121.1,402.6L121.1,402.6L121.1,402.6ZM120.5,398.7L120.5,398.7L120.5,398.7ZM120.2,390.9L120.2,390.9L120.2,390.9ZM119.7,398.8L119.7,398.8L119.7,398.8ZM118.7,391.9L118.7,391.9L118.7,391.9ZM116.7,403.6L117.4,403.4L118.8,400.8L119.8,400.4L119.3,401.5L120.8,401.9L120.6,403.0L119.1,402.9L118.0,404.0ZM116.2,396.2L116.2,396.2L116.2,396.2ZM114.5,411.1L114.5,411.1L114.5,411.1ZM113.9,412.0L113.9,412.0L113.9,412.0ZM112.7,407.4L114.3,405.8L115.1,405.8L116.6,404.1L119.5,404.1L119.5,406.1L120.4,405.9L119.9,407.0L118.7,406.6L118.8,407.9L118.0,407.5L115.1,410.8L115.6,408.6L114.1,410.3ZM112.6,412.5L112.6,412.5L112.6,412.5ZM109.6,415.8L109.6,415.8L109.6,415.8ZM106.6,414.6L106.6,414.6L106.6,414.6ZM106.4,413.7L106.4,413.7L106.4,413.7ZM104.9,411.7L104.9,411.7L104.9,411.7ZM103.1,412.7L103.1,412.7L103.1,412.7ZM99.9,415.4L99.9,415.4L99.9,415.4ZM99.1,415.0L99.1,415.0L99.1,415.0ZM98.2,420.4L98.2,420.4L98.2,420.4ZM98.3,415.7L98.3,415.7L98.3,415.7ZM97.8,420.0L97.8,420.0L97.8,420.0ZM97.2,420.7L97.2,420.7L97.2,420.7ZM97.2,418.7L97.2,418.7L97.2,418.7ZM96.6,420.6L96.6,420.6L96.6,420.6ZM96.6,419.4L96.6,419.4L96.6,419.4ZM95.9,417.8L95.9,417.8L95.9,417.8ZM95.3,419.9L96.0,418.5L96.5,419.1ZM97.0,399.2L97.0,399.2L97.0,399.2ZM95.2,417.2L95.2,417.2L95.2,417.2ZM96.7,399.2L96.7,399.2L96.7,399.2ZM93.6,417.6L94.5,417.6L94.5,418.7ZM94.8,399.6L96.0,398.5L95.3,399.7ZM91.7,418.0L91.7,418.0L91.7,418.0ZM90.9,417.9L90.9,417.9L90.9,417.9ZM90.2,418.3L90.2,418.3L90.2,418.3ZM88.4,419.2L88.4,419.2L88.4,419.2ZM93.8,371.7L93.8,371.7L93.8,371.7ZM86.8,421.6L86.8,421.6L86.8,421.6ZM86.4,416.1L86.4,416.1L86.4,416.1ZM80.1,422.0L80.1,422.0L80.1,422.0ZM78.9,422.4L78.9,422.4L78.9,422.4ZM78.0,422.4L78.0,422.4L78.0,422.4ZM77.7,422.5L77.7,422.5L77.7,422.5ZM77.6,421.3L77.6,421.3L77.6,421.3ZM76.1,421.6L76.1,421.6L76.1,421.6ZM75.7,422.4L75.7,422.4L75.7,422.4ZM78.6,388.0L80.0,388.3L80.7,387.7L82.3,387.4L83.4,388.5L83.3,390.6L81.5,391.2L78.7,388.8ZM69.6,425.0L71.4,424.7L73.2,423.5L72.5,422.7L74.3,422.0L75.8,423.2L73.3,425.0L72.1,424.9L70.3,425.5ZM83.1,358.2L87.2,356.3L90.4,355.1L92.3,354.7L93.6,355.1L93.0,357.0L93.2,357.8L95.5,357.9L97.5,358.6L98.2,357.5L99.5,357.6L98.4,356.6L97.5,356.8L97.7,355.9L96.3,353.8L97.0,353.4L97.6,354.4L97.4,355.1L98.3,356.4L98.9,356.2L97.8,354.8L98.4,353.5L98.2,353.0L96.7,353.2L94.1,352.0L93.9,349.7L91.6,346.7L90.6,346.0L90.0,345.0L89.1,344.4L90.3,343.3L90.6,341.7L92.4,342.1L94.5,342.1L96.1,341.2L96.8,340.4L97.7,337.7L99.2,335.9L100.2,335.2L101.2,335.5L102.2,335.2L104.6,333.1L105.5,332.8L105.9,333.2L107.6,333.2L108.6,332.6L109.9,330.8L112.2,331.6L111.4,332.6L112.0,333.4L113.1,331.7L113.9,332.3L114.0,333.4L114.7,333.7L115.2,333.1L116.4,332.9L118.3,333.4L118.0,334.6L119.3,334.8L119.0,335.5L120.4,335.7L121.5,335.1L121.9,335.5L123.5,334.8L127.0,336.2L130.5,336.0L132.3,336.9L134.8,335.5L135.4,335.4L139.3,337.2L140.1,337.3L150.1,387.7L151.5,387.4L153.0,387.8L153.6,386.8L155.2,386.4L155.2,387.9L156.7,388.5L157.3,389.3L160.6,391.4L161.5,393.1L162.8,391.3L163.5,391.1L163.5,388.6L165.5,386.9L167.1,387.8L167.7,389.2L168.4,389.2L170.3,390.9L171.6,391.2L173.4,392.4L174.4,393.7L179.4,398.4L179.5,399.4L180.4,399.5L180.9,400.5L181.6,400.2L183.4,400.8L186.7,401.3L187.3,403.1L188.7,405.4L188.4,407.7L187.7,409.1L186.7,408.9L185.6,407.1L182.9,406.5L182.6,404.1L182.5,406.4L181.4,405.6L181.2,404.2L180.7,405.0L179.2,404.0L179.9,402.4L178.5,400.4L176.8,399.4L175.1,399.1L174.9,398.1L173.5,396.1L171.6,394.3L170.2,394.4L167.8,391.7L166.5,389.5L165.9,389.8L166.9,390.6L168.2,392.9L169.1,395.1L167.7,394.3L166.5,394.8L165.3,392.6L165.0,393.0L166.1,394.9L164.8,396.2L161.2,394.8L158.9,392.9L154.1,391.2L154.7,390.7L154.3,389.3L152.7,390.7L151.0,390.7L148.9,389.9L145.2,389.8L141.8,390.9L141.4,390.0L139.7,389.9L139.7,388.7L138.7,389.6L137.3,388.8L134.9,390.2L135.4,389.1L137.1,388.2L135.2,387.9L133.4,385.7L132.7,387.1L132.2,386.1L131.8,387.5L130.6,387.6L131.5,385.6L130.5,386.3L130.1,388.0L130.8,388.1L131.4,389.7L131.0,390.8L131.9,391.7L130.8,392.5L127.9,392.6L127.5,391.7L127.1,393.9L126.3,394.3L125.2,395.8L125.2,394.9L123.4,397.0L122.3,396.7L121.8,397.4L120.7,396.9L120.9,396.0L122.6,394.9L123.3,393.9L121.9,394.8L120.9,394.0L122.0,391.5L122.4,389.7L122.0,388.7L124.6,386.8L125.7,387.8L126.3,386.9L125.6,385.7L123.8,385.5L122.5,386.9L121.7,387.1L119.6,390.0L119.8,390.6L117.6,394.5L116.5,394.8L115.8,395.8L114.7,396.4L114.3,397.6L116.7,398.6L116.7,399.8L115.3,400.6L114.4,403.2L112.1,403.8L111.8,404.6L110.5,405.0L109.9,406.3L109.0,406.2L107.4,407.7L108.1,408.3L107.4,409.4L106.3,409.4L105.4,410.5L104.9,409.9L101.3,412.6L102.4,413.3L101.1,414.6L97.1,415.0L94.6,416.9L93.6,416.5L92.4,417.3L91.6,417.1L92.2,415.8L91.4,415.8L90.0,418.4L86.5,418.8L84.5,420.4L82.4,420.2L82.0,420.8L80.4,420.8L80.3,419.8L82.1,418.2L85.0,418.0L85.6,419.1L85.8,417.7L87.2,417.6L89.4,415.1L91.0,414.1L94.1,413.7L94.1,414.5L95.8,415.0L94.8,414.0L95.6,412.5L97.4,411.2L100.1,409.7L100.9,410.1L101.1,408.8L102.0,407.7L104.2,406.0L105.1,400.9L106.2,399.8L106.2,398.9L103.2,400.1L102.0,399.0L102.3,398.0L101.2,399.6L101.5,400.8L100.5,401.1L99.8,399.2L98.8,398.1L98.2,398.9L97.1,397.8L97.2,397.1L94.1,398.7L92.8,399.6L92.4,398.9L93.0,397.3L92.5,395.5L93.6,394.4L92.2,390.5L91.7,391.4L88.4,392.0L87.2,391.6L87.2,390.6L86.0,388.9L84.3,387.2L85.7,386.4L85.4,385.2L86.0,384.8L85.3,383.8L84.5,384.2L84.5,383.1L83.4,381.6L84.4,380.9L83.8,380.0L85.0,380.0L85.2,378.4L87.8,375.8L88.7,373.6L90.3,373.0L91.9,374.4L92.5,374.4L94.8,372.3L96.4,372.7L97.5,372.5L98.6,371.2L98.4,368.6L97.6,366.8L98.4,367.1L99.1,366.0L98.2,364.8L94.8,366.5L94.1,367.6L94.1,366.6L92.4,366.0L90.5,365.8L89.0,366.2L86.3,364.9L86.1,363.2L85.3,361.6L85.9,361.8L86.5,360.7L84.5,359.9ZM65.2,426.6L66.5,425.1L68.2,423.8L69.4,423.5L69.7,424.6L68.2,425.1L67.2,426.0ZM64.4,426.9L64.4,426.9L64.4,426.9ZM63.1,425.4L63.1,425.4L63.1,425.4ZM67.7,405.9L67.7,405.9L67.7,405.9ZM63.1,424.8L63.1,424.8L63.1,424.8ZM62.1,425.9L62.1,425.9L62.1,425.9ZM61.8,425.5L61.8,425.5L61.8,425.5ZM61.3,426.4L61.3,426.4L61.3,426.4ZM66.6,402.5L66.6,402.5L66.6,402.5ZM59.1,426.5L59.1,426.5L59.1,426.5ZM58.0,426.4L58.0,426.4L58.0,426.4ZM57.4,426.7L57.4,426.7L57.4,426.7ZM71.8,367.4L72.6,366.9L74.1,367.9L75.2,367.5L76.0,368.8L77.1,369.7L79.0,370.6L78.4,371.3L77.2,371.0L76.3,372.0L75.0,369.7L73.4,368.5L72.4,368.9ZM52.8,426.5L52.8,426.5L52.8,426.5ZM64.2,382.7L66.1,384.4L64.9,383.8ZM64.4,381.7L64.4,381.7L64.4,381.7ZM47.9,426.0L51.4,427.3L49.6,427.2ZM43.6,425.2L47.3,425.3L47.9,424.4L48.4,425.2L45.5,426.0ZM42.9,425.3L42.9,425.3L42.9,425.3ZM43.2,424.2L43.2,424.2L43.2,424.2ZM42.2,425.1L42.2,425.1L42.2,425.1ZM41.5,424.8L41.5,424.8L41.5,424.8ZM40.9,424.0L40.9,424.0L40.9,424.0ZM40.3,425.3L40.3,425.3L40.3,425.3ZM37.5,425.4L38.8,424.0L40.2,425.0L38.1,425.7ZM36.5,423.4L36.5,423.4L36.5,423.4ZM35.4,424.2L37.8,424.0L37.2,424.9ZM34.0,422.7L35.0,422.8L34.6,423.8ZM32.0,423.5L32.0,423.5L32.0,423.5ZM31.4,423.4L31.4,423.4L31.4,423.4ZM31.8,422.3L31.8,422.3L31.8,422.3ZM30.6,424.3L30.6,424.3L30.6,424.3ZM29.9,424.6L29.9,424.6L29.9,424.6ZM27.0,419.2L27.0,419.2L27.0,419.2ZM23.5,419.8L23.5,419.8L23.5,419.8ZM23.7,417.9L23.7,417.9L23.7,417.9ZM22.7,418.3L22.7,418.3L22.7,418.3ZM22.7,417.1L22.7,417.1L22.7,417.1ZM19.7,416.5L19.7,416.5L19.7,416.5ZM16.7,412.2L16.7,412.2L16.7,412.2ZM12.2,407.7L12.2,407.7L12.2,407.7ZM11.9,407.5L11.9,407.5L11.9,407.5ZM11.7,407.2L11.7,407.2L11.7,407.2ZM9.2,408.2L10.3,408.1L10.2,409.0ZM8,404.2L10.0,405.0L10.5,406.3L8.6,405.5ZM185.4,407.8L185.4,407.8L185.4,407.8ZM184.9,408.8L184.9,408.8L184.9,408.8ZM184.5,408.9L184.5,408.9L184.5,408.9ZM184.3,408.5L184.1,407.1L185.1,408.4ZM183.0,407.0L183.0,407.0L183.0,407.0ZM179.2,401.7L179.2,401.7L179.2,401.7ZM179.2,402.4L179.2,402.4L179.2,402.4ZM178.7,402.0L178.7,402.0L178.7,402.0ZM180.7,410.1L180.7,410.1L180.7,410.1ZM178.1,403.6L178.1,403.6L178.1,403.6ZM177.8,403.0L179.0,402.4L178.5,403.4ZM178.6,408.1L178.6,408.1L178.6,408.1ZM178.8,411.3L178.8,411.3L178.8,411.3ZM177.3,407.4L177.3,407.4L177.3,407.4ZM177.0,407.2L177.0,407.2L177.0,407.2ZM177.1,408.4L178.1,407.5L178.4,408.4L177.7,409.1ZM176.2,405.8L176.7,404.5L176.3,403.5L177.5,403.3L178.8,404.6L179.8,404.9L182.0,406.8L180.7,406.6L183.0,408.1L183.7,410.6L181.0,409.8L179.5,408.9L181.8,411.4L179.9,410.4L179.2,409.1L179.3,408.0L176.9,406.6ZM173.8,398.8L173.8,398.8L173.8,398.8ZM175.9,406.2L175.9,406.2L175.9,406.2ZM174.7,406.6L174.7,406.6L174.7,406.6ZM173.1,401.7L173.3,401.1L174.6,401.2L174.2,399.9L176.5,399.6L178.9,401.3L175.9,403.1L175.6,402.6L175.6,405.2L174.7,405.4ZM169.0,393.9L170.5,394.7L171.6,394.5L173.2,396.8L171.9,395.9L173.6,397.9L173.6,398.8L172.5,400.8L171.8,399.9L172.0,398.8ZM168.7,393.3L168.7,393.3L168.7,393.3ZM167.0,390.9L167.0,390.9L167.0,390.9ZM168.6,400.0L169.1,398.7L170.9,399.1L172.6,402.5L173.4,405.5L170.6,403.0L170.0,402.9L169.7,400.4ZM167.0,394.7L167.0,394.7L167.0,394.7ZM168.3,400.8L169.2,400.7L168.7,402.1ZM165.5,393.8L165.5,393.8L165.5,393.8ZM165.9,395.5L165.9,395.5L165.9,395.5ZM165.3,397.7L165.1,396.9L166.9,395.2L169.6,395.8L170.8,398.6L170.2,399.0L168.5,398.2L168.5,400.0L166.7,399.2ZM137.6,389.4L137.6,389.4L137.6,389.4ZM136.6,389.4L136.6,389.4L136.6,389.4ZM132.8,387.1L132.8,387.1L132.8,387.1ZM132.5,388.4L132.5,388.4L132.5,388.4ZM132.7,390.6L132.7,390.6L132.7,390.6ZM131.8,393.3L133.7,389.8L134.2,390.4L132.9,392.4ZM131.5,390.8L132.3,388.8L132.0,391.2ZM131.0,388.1L131.0,388.1L131.0,388.1ZM613.1,420.6L613.1,420.6L613.1,420.6ZM611.8,421.6L611.8,421.6L611.8,421.6ZM608.1,423.7L608.1,423.7L608.1,423.7ZM598.6,427.4L603.3,422.8L606.5,424.5ZM595.8,428.2L595.8,428.2L595.8,428.2ZM593.6,428.2L593.6,428.2L593.6,428.2ZM587.3,395.5L587.3,395.5L587.3,395.5ZM582.4,428.7L582.4,428.7L582.4,428.7ZM547.8,351.7L547.8,351.7L547.8,351.7ZM699.9,87.8L699.9,87.8L699.9,87.8ZM698.7,88.7L698.7,88.7L698.7,88.7ZM697.6,86.0L697.6,86.0L697.6,86.0ZM694.7,88.7L694.7,88.7L694.7,88.7ZM695.6,94.7L695.6,94.7L695.6,94.7ZM694.1,90.9L694.1,90.9L694.1,90.9ZM693.3,88.8L693.3,88.8L693.3,88.8ZM691.5,137.7L691.5,137.7L691.5,137.7ZM685.1,138.8L687.1,136.1L689.4,137.7ZM647.6,236.5L647.6,236.5L647.6,236.5ZM646.9,250.8L646.9,250.8L646.9,250.8ZM101.5,267.9L101.5,267.9L101.5,267.9ZM99.8,274.7L99.8,274.7L99.8,274.7ZM95.8,266.2L95.8,266.2L95.8,266.2ZM93.1,256.8L93.1,256.8L93.1,256.8ZM88.4,267.9L88.4,267.9L88.4,267.9ZM87.2,254.5L87.2,254.5L87.2,254.5ZM82.8,254.6L82.8,254.6L82.8,254.6ZM80.4,253.4L80.4,253.4L80.4,253.4ZM259.8,413.7L263.3,409.2L262.5,405.4L271.3,409.2L278.4,417.1L275.9,419.8L268.0,423.2L265.6,426.6L262.5,424.7L262.4,419.9ZM250.3,395.3L255.8,394.8L260.6,397.2L259.7,399.4L254.2,400.2ZM250.2,401.3L250.2,401.3L250.2,401.3ZM244.9,395.5L244.9,395.5L244.9,395.5ZM241.2,392.4L241.9,390.6L250.1,391.5L247.7,393.2ZM227.0,384.9L231.6,382.8L236.2,389.3L229.4,389.3ZM204.8,377.7L207.8,374.7L212.1,376.6L207.5,379.9ZM198.0,380.4L198.0,380.4L198.0,380.4ZM637.0,206.0L637.6,205.9L637.0,206.0ZM635.8,203.5L635.8,203.5L635.8,203.5ZM630.1,194.2L630.1,194.2L630.1,194.2ZM517.7,99.0L517.7,99.0L517.7,99.0ZM509.7,101.2L509.7,101.2L509.7,101.2ZM508.2,100.6L508.2,100.6L508.2,100.6ZM507.5,104.3L507.5,104.3L507.5,104.3ZM506.5,102.2L506.5,102.2L506.5,102.2ZM505.0,107.0L505.0,107.0L505.0,107.0ZM503.5,112.0L503.5,112.0L503.5,112.0ZM502.7,114.1L502.7,114.1L502.7,114.1ZM495.8,105.2L495.8,105.2L495.8,105.2ZM465.2,72.3L471.2,67.7L471.2,69.7ZM495.1,350.3L495.1,350.3L495.1,350.3ZM491.5,350.1L491.5,350.1L491.5,350.1ZM488.6,350.8L488.6,350.8L488.6,350.8ZM486.3,350.6L486.3,350.6L486.3,350.6ZM671.8,143.9L671.8,143.9L671.8,143.9ZM671.2,146.7L671.2,146.7L671.2,146.7ZM670.1,145.6L670.1,145.6L670.1,145.6ZM613.7,114.9L613.7,114.9L613.7,114.9ZM612.8,114.8L612.8,114.8L612.8,114.8ZM547.9,162.9L547.9,162.9L547.9,162.9ZM546.6,162.4L546.6,162.4L546.6,162.4ZM637.9,207.5L637.9,207.5L637.9,207.5ZM112.6,43.5L112.6,43.5L112.6,43.5ZM116.5,25.2L116.5,25.2L116.5,25.2ZM116.5,22.3L116.5,22.3L116.5,22.3ZM115.7,24.4L115.7,24.4L115.7,24.4ZM113.9,29.7L117.1,33.7L116.0,35.4ZM114.2,20.6L114.2,20.6L114.2,20.6ZM112.9,21.7L112.9,21.7L112.9,21.7ZM114.0,17.2L114.0,17.2L114.0,17.2ZM111.1,22.9L116.0,23.3L114.4,26.6ZM111.2,21.4L111.2,21.4L111.2,21.4ZM493.3,109.7L493.3,109.7L493.3,109.7ZM488.9,112.5L488.9,112.5L488.9,112.5ZM453.1,86.7L453.1,86.7L453.1,86.7ZM452.6,88.8L452.6,88.8L452.6,88.8ZM451.2,88.1L451.2,88.1L451.2,88.1ZM450.1,89.5L450.1,89.5L450.1,89.5ZM450.2,87.5L450.2,87.5L450.2,87.5ZM449.8,86.6L449.8,86.6L449.8,86.6ZM449.8,90.3L449.8,90.3L449.8,90.3ZM447.6,87.3L447.6,87.3L447.6,87.3ZM490.3,353.3L490.3,353.3L490.3,353.3ZM484.0,353.6L484.0,353.6L484.0,353.6ZM480.7,362.1L480.7,362.1L480.7,362.1ZM470.8,369.5L470.8,369.5L470.8,369.5ZM468.3,369.8L468.3,369.8L468.3,369.8ZM465.7,370.6L465.7,370.6L465.7,370.6ZM448.0,363.0L448.0,363.0L448.0,363.0ZM677.8,135.7L677.8,135.7L677.8,135.7ZM678.2,138.9L678.2,138.9L678.2,138.9ZM677.0,144.1L677.0,144.1L677.0,144.1Z" fill="#DBE1E9" stroke="#8FA9C8" stroke-width="1"/><path d="M496.4,347.8L493.5,323.9L494.5,276.1L493.1,274.6L526.1,271.6L535.3,304.3L540.2,313.4L537.7,320.4L541.1,333.4L506.3,337.0L510.3,345.5L508.4,348.2M148.6,290.6L151.2,290.5L152.1,286.3L149.9,284.8L150.6,279.9L154.5,275.9L156.4,270.0L160.8,268.1L158.8,264.6L156.8,255.3L158.6,238.0L163.5,238.1L165.9,240.5L167.7,238.1L170.1,225.5L231.6,235.7L219.2,324.7M541.1,333.4L543.5,337.7L579.2,335.3L582.1,338.0L582.2,330.7L589.2,331.5M526.1,271.6L542.4,269.6L557.8,267.4L555.5,272.8L561.9,275.3L567.1,283.0L576.6,289.7L579.5,294.1L583.1,295.7L590.2,308.9L593.3,309.7M500.3,166.0L523.6,163.5L523.8,164.5L528.4,205.4L529.1,210.3L521.5,212.5L522.3,215.2L517.7,219.9L517.0,224.0L512.7,223.9L510.0,226.2L506.4,225.6L502.6,229.2L496.5,226.8L491.5,230.0L490.6,228.5L496.8,214.5L494.4,207.9L495.5,204.9L492.2,167.6M321.2,196.8L401.7,199.1L406.9,201.8L404.2,206.5L410.3,213.0L410.7,246.7L341.2,245.6L318.3,244.5M679.4,112.3L675.0,108.3L666.0,79.2M679.2,134.5L676.1,130.3L671.5,131.7L652.4,135.8L652.3,124.5L661.3,122.5L674.4,119.6L678.9,115.5M681.2,137.5L679.6,135.0M436.6,92.2L433.6,93.0L434.0,102.3L429.5,105.3L427.8,110.3L430.5,112.3L429.3,114.8L429.1,123.0L432.2,126.1L439.2,129.5L439.8,131.5L446.9,137.0L447.8,142.3L388.3,143.6L388.4,115.2L384.0,110.4L387.3,105.2L386.9,99.0L384.8,93.7L384.3,78.9L381.5,70.6L381.9,62.1L380.6,57.2M637.5,177.7L638.2,175.7L645.1,168.4L640.3,165.2L637.6,161.3L637.4,156.8L641.1,149.7L651.5,153.2L651.0,158.3M650.8,158.8L649.2,161.8M637.2,179.1L637.1,178.7M542.4,269.6L542.4,265.8L545.6,264.2L548.2,259.7L551.8,259.1L566.4,247.6L568.8,247.7L572.1,239.9L589.3,237.8L643.8,227.4M618.8,276.1L601.7,263.8L587.5,265.9L583.6,261.2L567.7,262.8L557.8,267.4M387.3,105.2L305.4,101.4L309.4,53.7M410.7,246.7L410.8,254.6L413.4,272.2L413.2,300.0L403.4,295.0L391.5,297.0L389.3,299.3L381.7,295.2L378.3,298.7L377.8,295.7L374.7,297.1L362.9,291.6L361.3,293.1L352.1,288.4L345.7,287.4L342.0,284.5L343.3,253.7L305.8,251.5L306.4,243.6M580.4,147.1L581.2,151.3L631.3,141.5L634.7,143.3L635.9,146.8L641.1,149.7M638.2,175.7L634.1,177.9L590.7,186.4L578.3,188.5L576.0,174.1L572.5,153.1M388.3,143.6L386.2,156.2L388.3,159.6L385.6,157.0L378.5,153.6L372.3,153.4L370.3,155.1L364.9,151.2L301.4,147.6L304.0,116.2L305.4,101.4M413.2,300.0L418.9,301.3L418.9,301.3L419.2,309.7L419.5,326.0L426.6,338.6L426.4,344.3L423.8,352.1L424.8,356.3L421.8,360.3L423.0,362.3M253.5,321.8L252.7,318.3L299.7,322.6L302.3,291.9L305.3,251.5L305.8,251.5M301.4,147.6L298.7,179.2M240.2,172.7L298.7,179.2L322.2,181.0L321.2,196.8L318.3,244.5L306.4,243.6L231.6,235.7L240.2,172.7L216.9,169.3L219.4,153.6L225.6,114.9L226.8,106.7L304.0,116.2M671.5,131.7L673.6,142.4M654.3,152.7L654.4,147.6L652.4,135.8M401.7,199.1L396.3,189.8L410.1,190.0L444.0,188.3L447.9,191.8L447.3,197.3L449.0,202.0L457.2,209.6L458.2,214.4L464.9,215.2L462.6,225.5L473.4,233.1L473.8,239.5L478.9,244.0L478.9,249.0L475.9,251.9L475.0,252.0L474.4,252.0L472.5,260.1L464.4,260.7L467.8,256.1L466.7,252.5L410.8,254.6M590.7,186.4L592.0,194.5L599.2,186.5L603.2,187.4L606.0,184.0L612.6,188.8L611.9,192.0L604.8,187.9L605.0,192.7L600.6,200.1L598.8,199.0L596.3,206.5L591.7,204.4L591.7,207.0L586.3,219.9L586.8,222.7L576.1,228.9L574.2,227.5L570.7,230.2L566.3,225.5L562.0,224.0L556.8,217.2L556.6,212.7L559.9,211.8L562.1,202.2L564.1,204.3L565.0,199.3L567.9,195.2L571.0,194.9L574.7,189.2L576.0,174.1M447.9,191.8L448.4,188.2L451.2,187.0L452.9,180.1L451.5,175.1L459.5,171.9L461.1,163.5L455.2,157.6L487.9,155.5M491.5,230.0L491.3,235.2L486.5,237.0L487.2,241.9L481.3,240.0L478.9,244.0M472.5,260.1L473.6,261.8L467.6,269.6L469.2,274.0L466.2,276.5L463.8,279.7L463.4,285.7L457.1,293.5L458.5,296.0L457.0,301.2L456.8,308.6L419.2,309.7M70.5,119.1L82.5,122.5L117.6,132.5L117.6,132.5L105.8,178.5L125.7,208.5L140.8,231.3L156.8,255.3M647.2,195.7L639.5,197.2L634.1,177.9M447.8,142.3L449.8,146.2L448.6,148.1L450.3,154.2L455.2,157.6M396.3,189.8L394.2,175.9L390.3,166.6L388.3,159.6M528.4,205.4L532.9,204.7L536.3,209.3L543.3,211.2L547.6,211.1L552.3,207.9L556.6,212.7M566.3,225.5L558.0,233.5L553.7,240.1L547.3,243.2L524.8,245.7L511.0,246.5L495.3,248.3L492.9,250.7L475.9,251.9M475.0,252.0L474.4,252.0M637.6,205.9L637.0,206.0M646.4,202.8L641.5,205.1M621.8,198.1L622.3,195.4M621.0,193.4L622.3,195.4L621.0,193.4L612.6,188.8M539.3,162.0L523.8,164.5M486.7,114.3L483.5,110.7L483.5,110.7L483.8,105.4L480.0,101.8L472.4,101.0L468.9,99.3L457.5,96.9L454.8,93.9L454.8,93.9L454.1,93.5M466.2,276.5L493.1,274.6M481.4,351.9L476.4,344.6L477.4,339.2L452.1,340.6L453.3,332.3L460.7,319.0L458.0,317.0L456.8,308.6M225.6,114.9L222.6,110.0L221.1,113.1L212.2,111.2L210.7,112.9L203.9,111.6L203.4,106.4L200.1,104.3L200.7,101.3L196.8,90.2L192.2,93.2L190.8,87.9L195.9,75.5L190.0,70.4L187.3,63.5L183.7,60.0L184.5,55.9L182.0,50.9L185.4,35.3M661.3,122.5L658.9,109.3L660.7,100.4L659.8,96.9L664.0,92.9L662.7,84.8M642.9,89.9L645.6,98.5L645.5,105.0L649.4,112.0L652.3,124.5M97.2,56.9L101.4,59.3L103.6,63.7L102.7,68.4L107.5,71.6L116.1,71.0L119.3,73.9L126.5,73.6L142.4,74.6L144.2,73.9L166.2,79.2L169.8,86.3L161.9,97.7L157.7,101.7L157.1,104.7L160.2,107.1L157.5,112.6L151.2,140.5L117.6,132.5M547.3,243.2L572.1,239.9M170.1,225.5L185.1,147.7L219.4,153.6M175.3,33.1L166.4,72.6L166.2,79.2M185.1,147.7L151.2,140.5" fill="none" stroke="#FFFFFF" stroke-width="1"/><text x="514.0" y="308.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">AL</text><text x="119.3" y="370.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">AK</text><text x="192.3" y="273.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">AZ</text><text x="278.1" y="209.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">CO</text><text x="580.2" y="366.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">FL</text><text x="558.7" y="305.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">GA</text><text x="509.6" y="194.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">IN</text><text x="364.4" y="222.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">KS</text><text x="685.5" y="73.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">ME</text><text x="412.0" y="99.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MN</text><text x="603.8" y="251.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NC</text><text x="345.7" y="79.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">ND</text><text x="374.5" y="268.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">OK</text><text x="607.0" y="164.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">PA</text><text x="346.1" y="127.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">SD</text><text x="349.3" y="334.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">TX</text><text x="261.6" y="143.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">WY</text><text x="436.9" y="224.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MO</text><text x="579.8" y="205.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">WV</text><text x="474.8" y="195.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">IL</text><text x="263.5" y="280.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NM</text><text x="439.1" y="279.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">AR</text><text x="104.9" y="207.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">CA</text><text x="422.5" y="165.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">IA</text><text x="525.5" y="231.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">KY</text><text x="512.6" y="124.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MI</text><text x="476.8" y="311.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MS</text><text x="247.0" y="76.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MT</text><text x="626.9" y="127.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NY</text><text x="550.1" y="183.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">OH</text><text x="119.3" y="101.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">OR</text><text x="515.4" y="258.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">TN</text><text x="205.3" y="194.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">UT</text><text x="604.6" y="219.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">VA</text><text x="134.3" y="49.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">WA</text><text x="460.5" y="123.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">WI</text><text x="349.1" y="173.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NE</text><text x="588.9" y="280.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">SC</text><text x="186.0" y="109.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">ID</text><text x="146.6" y="182.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NV</text><text x="447.7" y="340.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">LA</text></g></svg>
+      <div class="h5p-map-data" data-cats='["Where jazz began","Where musicians settled"]' data-routes='[[0,1],[0,2],[0,3],[0,4],[0,5]]' data-markers='[{"n": "New Orleans, Louisiana", "lat": 29.95, "lon": -90.07, "c": 0, "d": "A uniquely mixed musical culture, brass-band traditions, and the 1917 closing of Storyville all pushed working musicians to look for steady jobs elsewhere.", "x": 474.3, "y": 356}, {"n": "Memphis, Tennessee", "lat": 35.15, "lon": -90.05, "c": 1, "d": "A major stop along the Mississippi River route north, Memphis built its own blues and jazz scene as Southern musicians and workers moved toward Northern cities.", "x": 469.4, "y": 273.9}, {"n": "St. Louis, Missouri", "lat": 38.63, "lon": -90.2, "c": 1, "d": "A riverboat and rail hub on the Mississippi, St. Louis carried musicians and migrants further north during the Great Migration of the early twentieth century.", "x": 464.1, "y": 218.8}, {"n": "Kansas City, Missouri", "lat": 39.1, "lon": -94.58, "c": 1, "d": "A rail and cattle-trade center that grew, over the following decade, into one of jazz’s most important regional scenes.", "x": 410.7, "y": 213.4}, {"n": "Chicago, Illinois", "lat": 41.88, "lon": -87.63, "c": 1, "d": "Chicago drew many New Orleans musicians after 1917, including cornetist King Oliver, whose band gave a young Louis Armstrong his first major professional break in the early 1920s.", "x": 490.8, "y": 165.1}, {"n": "New York City, New York", "lat": 40.71, "lon": -74.0, "c": 1, "d": "By the later 1920s, New York had become the business and recording center of American jazz, drawing bandleaders and musicians from across the country.", "x": 651.5, "y": 157.9}]'></div>
+      <div class="h5p-map-panel"></div>
+      <div class="h5p-controls"><span class="h5p-score"></span></div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <h2>The first jazz recording</h2>
+  <p>The Original Dixieland Jazz Band, a group of white musicians from New Orleans, made history in 1917 by recording "Livery Stable Blues," widely recognized as the first jazz recording ever released. The record was a commercial sensation and introduced the word "jazz" and the New Orleans ensemble sound to a national audience that had never encountered anything quite like it. The band's success also highlights an uncomfortable pattern in jazz's early commercial history: an African-American musical tradition, largely developed by Black musicians in New Orleans, reached its first mass audience through white performers — the same dynamic seen earlier in this module with the animal dances and, more broadly, throughout the history of American popular music.</p>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Watch: The Origins of Dixieland Jazz</div><div class="am-listen__meta">ABC News short documentary: New Orleans as the birthplace of jazz</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Watch for:</strong></p>
+      <ol><li>How the front-line instruments — cornet, clarinet, and trombone — weave around each other.</li><li>The steady rhythm section keeping time underneath the improvised front line.</li><li>Why "Livery Stable Blues" (1917) counts as a milestone recording.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=kJhiQp18jRs" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I watched this example</label></div>
+    </div>
+  </div>
+
+  <!-- ============ SORT ============ -->
+  <div class="h5p-act" data-widget="sort">
+    <div class="h5p-act__head"><span>Sort the Instruments</span><span class="h5p-act__type">Drag and drop</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Tap an instrument, then tap the group it belongs to in a Dixieland band.</p>
+      <div class="h5p-sort-pool" data-items='[{"t":"Cornet","c":0},{"t":"Clarinet","c":0},{"t":"Trombone","c":0},{"t":"Banjo","c":1},{"t":"Tuba","c":1},{"t":"Drums","c":1}]'></div>
+      <div class="h5p-bins" data-bins='["Front line (melody)","Rhythm section"]'></div>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Check</button>
+        <button class="am-btn am-btn--ghost" data-retry>Retry</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ============ ORDER ============ -->
+  <div class="h5p-act" data-widget="order">
+    <div class="h5p-act__head"><span>Put Them in Order</span><span class="h5p-act__type">Sequencing</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Arrange from earliest to latest, then check.</p>
+      <ol class="h5p-order" data-solution='["Storyville established in New Orleans (1897)","New Orleans jazz style takes shape (early 1900s)","Original Dixieland Jazz Band records \"Livery Stable Blues\" (1917)","Storyville is closed by federal pressure (1917)","Musicians migrate north to Chicago (late 1910s–1920s)"]'></ol>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Check order</button>
+        <button class="am-btn am-btn--ghost" data-retry>Shuffle &amp; retry</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <h2>Putting It Together</h2>
+  <p>New Orleans supplied jazz's raw ingredients — collective improvisation, a distinctive front-line-and-rhythm-section format, and a first commercial breakthrough — but the style still needed a musician who could push it past group improvisation toward the featured solo voice that would define jazz for the rest of the century. That musician, Louis Armstrong, grew up in New Orleans and carried the Dixieland tradition to Chicago himself, which is where the next page takes up his story.</p>
+</main>
+
+<main lang="es">
+  <h1><span class="am-kicker">Módulo 3 · Página 7 de 13</span>Nueva Orleans y el dixieland</h1>
+  <p class="am-lead">El jazz nació en una sola ciudad estadounidense, excepcionalmente mezclada, y luego viajó al norte cuando cerró el barrio que se había formado en torno a sus primeras actuaciones.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">En esta página vas a</p>
+    <ul style="margin:6px 0 0">
+      <li>Explicar por qué la población y la vida musical de Nueva Orleans la convirtieron en terreno fértil para el jazz.</li>
+      <li>Describir la instrumentación de una banda de dixieland, con su línea frontal y su sección rítmica.</li>
+      <li>Identificar a la Original Dixieland Jazz Band y su histórica primera grabación de jazz.</li>
+      <li>Rastrear cómo el jazz migró de Nueva Orleans a Chicago en los años cercanos a 1917.</li>
+    </ul>
+  </div>
+
+  <h2>Una ciudad hecha para la mezcla musical</h2>
+  <p>Nueva Orleans entró en el siglo XX como una de las ciudades con mayor diversidad musical de Estados Unidos. Su población incluía descendientes de colonos franceses y españoles, músicos criollos formados en la técnica europea académica, afroamericanos que traían las tradiciones de los espirituales y del blues, y comunidades con vínculos con el Caribe. Las bandas de metales estaban presentes en toda la vida pública de la ciudad: desfilaban en las celebraciones, tocaban en los días de campo y, lo más característico, acompañaban los cortejos fúnebres, en los que una marcha solemne rumbo al cementerio daba paso, de regreso, a una música animada y festiva. De esa densa mezcla de formación académica, ritmo vernáculo e interpretación pública constante surgió a principios del siglo XX un nuevo estilo de interpretación en conjunto, colectiva e improvisada: el jazz.</p>
+
+  <div class="am-context">
+    <p class="am-label">Contexto histórico</p>
+    Storyville, un distrito rojo autorizado legalmente que se creó en Nueva Orleans en 1897, empleaba a muchos de los músicos de la ciudad en sus bares y salones de baile. Cuando la Marina de Estados Unidos presionó a la ciudad para que cerrara el distrito en 1917, alegando preocupación por los marineros destacados en las cercanías, muchos músicos perdieron su trabajo estable en la ciudad y lo buscaron en otra parte: uno de varios factores que empujaron a los músicos de jazz hacia Chicago y otras ciudades del Norte en los años siguientes.
+  </div>
+
+  <h2>El sonido dixieland</h2>
+  <p>El estilo que salió de Nueva Orleans llegó a conocerse como <strong>dixieland</strong>, y se basaba en un conjunto pequeño con dos grupos funcionales. Una "línea frontal" de instrumentos melódicos (por lo general una corneta o una trompeta que llevaba la melodía principal, un clarinete que tejía por encima una rápida contramelodía y un trombón que se deslizaba por debajo con rellenos rítmicos) improvisaba de manera simultánea en lugar de turnarse, una textura llamada <strong>improvisación colectiva</strong>. Detrás de la línea frontal, una sección rítmica de piano o banjo, tuba o contrabajo, y batería marcaba el pulso y delineaba los acordes. El resultado era denso, enérgico y apenas arreglado: los músicos se ponían de acuerdo sobre una melodía y una estructura armónica, y luego construían sus partes individuales unos en torno a otros en tiempo real.</p>
+  <div class="am-keyterm"><strong>Dixieland:</strong> el estilo de jazz de Nueva Orleans basado en una línea frontal de corneta o trompeta, clarinete y trombón que tocan partes improvisadas simultáneas sobre una sección rítmica.</div>
+  <div class="am-keyterm"><strong>Improvisación colectiva (collective improvisation):</strong> una textura grupal, central en el jazz temprano, en la que varios músicos improvisan sus partes individuales al mismo tiempo, en lugar de que un solista toque mientras los demás acompañan.</div>
+
+  <figure>
+    <svg viewBox="0 0 720 210" role="img" aria-label="Diagrama de la línea frontal y la sección rítmica de una banda de dixieland">
+      <rect width="720" height="210" fill="#F5F7F9" rx="10"/>
+      <g font-family="Arial, Helvetica, sans-serif">
+        <text x="20" y="28" font-size="14" font-weight="bold" fill="#2B4A6F">Línea frontal (melodía improvisada)</text>
+        <circle cx="90" cy="90" r="42" fill="#2B4A6F"/><text x="90" y="95" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">Corneta</text>
+        <circle cx="200" cy="90" r="42" fill="#233C5C"/><text x="200" y="95" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">Clarinete</text>
+        <circle cx="310" cy="90" r="42" fill="#1C2F47"/><text x="310" y="95" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">Trombón</text>
+
+        <text x="420" y="28" font-size="14" font-weight="bold" fill="#2B4A6F">Sección rítmica (pulso y acordes)</text>
+        <rect x="420" y="55" width="80" height="70" rx="8" fill="#5E6B7C"/><text x="460" y="95" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Banjo</text>
+        <rect x="510" y="55" width="80" height="70" rx="8" fill="#5E6B7C"/><text x="550" y="95" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Tuba</text>
+        <rect x="600" y="55" width="80" height="70" rx="8" fill="#5E6B7C"/><text x="640" y="95" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Batería</text>
+      </g>
+      <text x="360" y="185" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5568">Tres instrumentos melódicos improvisan juntos sobre una sección rítmica constante.</text>
+    </svg>
+    <figcaption>Figura 1. Una formación típica de dixieland: una línea frontal de corneta, clarinete y trombón que improvisa simultáneamente, sostenida por una sección rítmica que marca el tiempo.</figcaption>
+  </figure>
+
+  <figure>
+    <svg viewBox="0 0 720 230" role="img" aria-label="Mapa que muestra la migración del jazz de Nueva Orleans a Chicago hacia 1917">
+      <rect width="720" height="230" fill="#DBE1E9" rx="10"/>
+      <g font-family="Arial, Helvetica, sans-serif">
+        <path d="M60 60 L260 50 L300 90 L270 150 L200 190 L120 170 L70 120 Z" fill="#EBEFF4" stroke="#2B4A6F" stroke-width="2"/>
+        <text x="228" y="125" text-anchor="middle" font-size="14" font-weight="bold" fill="#2B4A6F">Estados Unidos</text>
+        <circle cx="150" cy="175" r="7" fill="#5E6B7C"/>
+        <text x="150" y="200" text-anchor="middle" font-size="12" fill="#1B2A41">Nueva Orleans</text>
+        <circle cx="170" cy="75" r="7" fill="#5E6B7C"/>
+        <text x="170" y="55" text-anchor="middle" font-size="12" fill="#1B2A41">Chicago</text>
+        <path d="M150 168 C155 130, 165 100, 170 82" fill="none" stroke="#5E6B7C" stroke-width="4" marker-end="url(#no-arr-es)"/>
+        <defs><marker id="no-arr-es" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5E6B7C"/></marker></defs>
+
+        <rect x="420" y="40" width="270" height="160" rx="10" fill="#fff" stroke="#CDD4DD"/>
+        <text x="440" y="65" font-size="13" font-weight="bold" fill="#2B4A6F">Por qué migraron al norte</text>
+        <text x="440" y="90" font-size="12" fill="#1B2A41">• Storyville cierra en 1917</text>
+        <text x="452" y="106" font-size="12" fill="#1B2A41">y se pierde trabajo local</text>
+        <text x="440" y="128" font-size="12" fill="#1B2A41">• La Gran Migración atrae</text>
+        <text x="452" y="144" font-size="12" fill="#1B2A41">trabajadores al Norte</text>
+        <text x="440" y="166" font-size="12" fill="#1B2A41">• Chicago ofrece clubes nuevos</text>
+        <text x="452" y="182" font-size="12" fill="#1B2A41">y estudios de grabación</text>
+      </g>
+    </svg>
+    <figcaption>Figura 2. Los músicos de jazz llevaron el sonido de Nueva Orleans hacia el norte, a Chicago, en los años cercanos a 1917, siguiendo las mismas rutas migratorias descritas antes en este módulo.</figcaption>
+  </figure>
+
+  <h3>Adónde llevó la migración</h3>
+  <p>Chicago fue solo la primera parada. Durante la década siguiente, los músicos que dejaron Nueva Orleans, y la Gran Migración que los llevó, transformaron el mapa del jazz estadounidense: sembraron nuevas escenas en ciudades ribereñas y ferroviarias en el camino hacia el norte y convirtieron a Nueva York en la sede de la industria musical.</p>
+
+  <!-- ============ MAP ============ -->
+  <div class="h5p-act" data-widget="map">
+    <div class="h5p-act__head"><span>Explora el mapa: el jazz sale de Nueva Orleans</span><span class="h5p-act__type">Mapa interactivo</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Selecciona cada marcador numerado (o un nombre debajo del mapa) para saber qué ocurrió allí.</p>
+      <svg class="h5p-mapsvg" data-region="us" data-statelabels="1" role="img" aria-label="Mapa de Estados Unidos que muestra Nueva Orleans y las ciudades a las que se mudaron los músicos de jazz" viewBox="0 0 720 446"><g class="h5p-map-base" aria-hidden="true"><rect width="720" height="446" fill="#F5F7F9"/><path d="M497.5,349.8L497.5,349.8L497.5,349.8ZM589.2,331.5L593.8,345.1L599.8,355.3L606.2,362.7L607.5,370.3L616.9,385.8L618.8,392.2L619.4,406.2L618.2,406.1L616.7,414.8L607.8,417.3L603.4,409.0L597.3,407.4L593.6,399.6L587.4,394.5L579.4,384.0L583.0,378.1L576.6,378.6L575.7,373.1L577.8,369.3L576.6,362.1L565.6,353.9L561.6,348.6L555.9,345.8L552.6,346.3L543.0,355.6L538.8,354.9L538.2,351.2L530.0,346.7L520.2,345.2L508.4,348.2L505.1,348.8L501.3,342.4L500.0,348.3L496.4,347.8L489.7,347.9L481.4,351.9L477.6,354.3L479.9,357.0L482.1,353.4L483.2,360.0L480.0,360.5L482.5,364.4L486.7,364.7L487.9,370.2L478.0,365.7L473.0,369.7L469.9,365.8L464.9,370.9L457.5,367.2L453.3,360.5L449.6,359.1L443.8,364.1L432.0,360.8L423.0,362.3L419.0,363.0L410.1,367.5L411.3,361.4L407.0,363.0L408.7,368.5L410.9,368.1L402.0,375.5L390.4,381.4L379.5,390.5L380.6,387.6L387.4,383.8L382.5,383.1L373.6,399.7L373.4,412.8L377.1,421.1L373.8,422.8L367.8,419.3L362.1,419.2L358.4,416.5L349.2,413.0L344.8,403.6L344.6,396.3L339.3,391.2L338.6,388.3L333.8,383.4L329.1,370.3L318.8,359.0L310.9,358.5L307.6,356.8L302.8,358.7L298.8,366.7L295.5,370.0L281.8,362.7L277.3,358.2L275.3,348.6L272.0,341.1L267.0,338.0L260.4,329.2L253.5,321.8L231.3,319.1L230.4,326.2L219.2,324.7L192.3,320.7L146.7,293.8L148.6,290.6L117.0,286.8L116.4,277.2L114.9,273.4L108.0,264.8L104.9,264.4L104.4,259.4L100.9,259.2L96.3,255.7L93.1,250.5L81.8,247.0L80.2,244.4L82.5,236.1L77.1,225.9L72.2,211.0L75.5,206.5L69.8,198.5L71.0,189.1L74.7,195.6L72.8,186.6L71.0,188.5L66.1,184.0L67.7,180.4L61.9,167.0L64.6,153.3L60.8,145.0L61.1,142.1L65.6,136.8L69.6,128.1L70.5,119.1L69.5,117.3L71.2,109.9L70.7,105.2L78.4,93.9L87.6,72.3L93.0,57.1L97.2,56.9L91.6,55.1L96.3,49.1L93.7,47.9L94.5,30.6L93.7,24.7L95.5,21.5L101.3,27.0L110.5,31.1L113.6,31.0L114.8,37.8L111.2,45.4L114.6,44.2L115.9,37.1L118.5,34.2L119.0,22.7L117.3,18.1L175.3,33.1L185.4,35.3L309.4,53.7L380.6,57.2L402.3,57.3L402.3,51.3L405.7,52.6L407.7,61.2L416.3,62.9L416.7,64.6L425.2,62.7L438.8,68.7L440.5,71.1L447.5,67.6L449.0,69.8L455.6,69.2L461.6,70.6L451.7,75.9L445.7,80.9L442.1,85.4L435.7,91.0L436.6,92.2L442.0,91.2L447.7,88.0L450.5,91.8L454.1,93.5L460.6,89.2L464.4,88.6L477.1,77.9L482.2,78.4L476.9,82.0L475.0,89.1L477.1,86.2L483.4,87.1L486.9,91.7L495.7,91.9L500.2,88.1L507.2,87.2L512.8,85.2L512.5,89.8L517.3,90.3L521.0,87.9L523.5,94.5L525.9,95.9L528.9,94.0L529.5,96.7L520.6,97.5L517.3,96.0L515.7,99.0L513.5,97.1L507.9,96.4L506.5,98.6L500.7,99.3L497.2,101.4L491.9,102.1L486.7,114.3L482.9,120.6L483.2,123.6L489.0,117.1L492.3,110.7L492.7,113.9L488.8,122.7L488.8,128.6L486.8,133.6L487.4,136.7L485.6,143.9L487.9,155.5L487.8,158.6L492.2,167.6L495.8,168.6L500.3,166.0L502.4,163.7L505.7,154.6L505.1,145.6L500.6,135.8L500.2,129.6L502.5,124.7L502.1,119.2L506.6,114.7L508.3,110.7L509.3,117.3L511.2,114.5L510.9,109.1L515.7,106.6L513.1,104.0L516.5,100.3L522.9,101.9L524.9,104.0L531.3,105.2L534.5,110.1L532.8,111.7L535.1,115.0L535.3,120.9L533.1,125.7L530.4,127.1L529.5,131.0L532.9,133.2L536.8,126.5L540.5,124.5L544.0,127.5L548.4,140.3L548.1,146.8L544.7,147.0L541.8,157.3L539.3,162.0L551.4,166.0L556.5,163.1L559.7,163.0L567.2,156.0L572.5,153.1L580.4,147.1L586.6,141.5L589.3,137.3L585.5,130.3L591.7,127.3L600.6,126.5L602.8,127.4L609.2,125.6L616.4,119.9L616.1,113.4L613.3,109.7L617.2,106.2L622.2,97.5L626.8,93.6L642.9,89.9L662.7,84.8L663.1,81.0L666.0,79.2L668.8,79.7L669.0,75.0L672.4,67.9L671.1,61.1L671.7,55.0L676.4,41.2L681.0,44.5L687.1,39.8L693.0,42.7L699.2,63.6L703.3,63.6L704.4,68.6L708.4,69.3L712,73.9L709.0,76.6L707.2,81.4L704.8,80.5L702.8,84.7L698.1,87.3L698.3,91.3L694.5,87.5L693.9,84.5L692.0,94.7L684.9,99.0L681.3,104.0L679.4,112.3L678.9,115.5L682.3,118.1L678.9,123.2L684.2,127.0L686.4,130.9L693.8,130.8L686.3,135.4L685.9,132.7L681.2,137.5L679.6,135.0L679.2,134.5L677.0,133.9L677.6,140.5L673.6,142.4L662.1,146.6L654.3,152.7L666.1,149.9L668.6,146.6L672.1,148.2L660.8,156.9L652.7,160.3L651.0,158.3L650.8,158.8L649.2,161.8L653.0,163.0L653.8,172.8L652.1,178.6L646.4,187.9L646.7,184.3L638.0,181.3L637.2,179.1L637.1,178.7L637.5,177.7L637.3,181.4L640.9,187.1L645.4,190.3L647.2,195.7L646.4,202.8L643.5,208.1L642.1,217.6L639.5,216.8L639.6,211.2L641.5,205.1L638.9,206.2L638.5,201.5L634.5,201.8L631.7,198.4L635.1,196.4L630.1,192.9L630.8,185.1L628.1,187.7L629.4,198.1L631.5,203.8L627.0,203.5L621.8,198.1L621.1,203.1L629.5,204.4L634.9,207.5L634.3,215.5L637.1,220.1L635.1,223.6L641.0,221.9L643.8,227.4L641.8,228.4L644.1,232.3L635.9,239.0L646.5,236.4L648.2,242.2L644.4,247.1L632.8,246.4L640.6,249.0L638.0,255.0L641.6,252.0L643.9,253.5L641.9,259.6L635.4,259.7L629.6,264.9L626.9,269.5L626.1,274.6L618.8,276.1L612.9,283.1L610.6,291.2L603.4,298.8L597.5,302.2L598.2,304.2L593.3,309.7L590.9,315.1ZM125.0,386.3L125.0,386.3L125.0,386.3ZM124.0,396.3L124.0,396.3L124.0,396.3ZM122.0,397.4L122.0,397.4L122.0,397.4ZM121.4,397.5L121.4,397.5L121.4,397.5ZM121.0,397.4L121.0,397.4L121.0,397.4ZM121.1,402.6L121.1,402.6L121.1,402.6ZM120.5,398.7L120.5,398.7L120.5,398.7ZM120.2,390.9L120.2,390.9L120.2,390.9ZM119.7,398.8L119.7,398.8L119.7,398.8ZM118.7,391.9L118.7,391.9L118.7,391.9ZM116.7,403.6L117.4,403.4L118.8,400.8L119.8,400.4L119.3,401.5L120.8,401.9L120.6,403.0L119.1,402.9L118.0,404.0ZM116.2,396.2L116.2,396.2L116.2,396.2ZM114.5,411.1L114.5,411.1L114.5,411.1ZM113.9,412.0L113.9,412.0L113.9,412.0ZM112.7,407.4L114.3,405.8L115.1,405.8L116.6,404.1L119.5,404.1L119.5,406.1L120.4,405.9L119.9,407.0L118.7,406.6L118.8,407.9L118.0,407.5L115.1,410.8L115.6,408.6L114.1,410.3ZM112.6,412.5L112.6,412.5L112.6,412.5ZM109.6,415.8L109.6,415.8L109.6,415.8ZM106.6,414.6L106.6,414.6L106.6,414.6ZM106.4,413.7L106.4,413.7L106.4,413.7ZM104.9,411.7L104.9,411.7L104.9,411.7ZM103.1,412.7L103.1,412.7L103.1,412.7ZM99.9,415.4L99.9,415.4L99.9,415.4ZM99.1,415.0L99.1,415.0L99.1,415.0ZM98.2,420.4L98.2,420.4L98.2,420.4ZM98.3,415.7L98.3,415.7L98.3,415.7ZM97.8,420.0L97.8,420.0L97.8,420.0ZM97.2,420.7L97.2,420.7L97.2,420.7ZM97.2,418.7L97.2,418.7L97.2,418.7ZM96.6,420.6L96.6,420.6L96.6,420.6ZM96.6,419.4L96.6,419.4L96.6,419.4ZM95.9,417.8L95.9,417.8L95.9,417.8ZM95.3,419.9L96.0,418.5L96.5,419.1ZM97.0,399.2L97.0,399.2L97.0,399.2ZM95.2,417.2L95.2,417.2L95.2,417.2ZM96.7,399.2L96.7,399.2L96.7,399.2ZM93.6,417.6L94.5,417.6L94.5,418.7ZM94.8,399.6L96.0,398.5L95.3,399.7ZM91.7,418.0L91.7,418.0L91.7,418.0ZM90.9,417.9L90.9,417.9L90.9,417.9ZM90.2,418.3L90.2,418.3L90.2,418.3ZM88.4,419.2L88.4,419.2L88.4,419.2ZM93.8,371.7L93.8,371.7L93.8,371.7ZM86.8,421.6L86.8,421.6L86.8,421.6ZM86.4,416.1L86.4,416.1L86.4,416.1ZM80.1,422.0L80.1,422.0L80.1,422.0ZM78.9,422.4L78.9,422.4L78.9,422.4ZM78.0,422.4L78.0,422.4L78.0,422.4ZM77.7,422.5L77.7,422.5L77.7,422.5ZM77.6,421.3L77.6,421.3L77.6,421.3ZM76.1,421.6L76.1,421.6L76.1,421.6ZM75.7,422.4L75.7,422.4L75.7,422.4ZM78.6,388.0L80.0,388.3L80.7,387.7L82.3,387.4L83.4,388.5L83.3,390.6L81.5,391.2L78.7,388.8ZM69.6,425.0L71.4,424.7L73.2,423.5L72.5,422.7L74.3,422.0L75.8,423.2L73.3,425.0L72.1,424.9L70.3,425.5ZM83.1,358.2L87.2,356.3L90.4,355.1L92.3,354.7L93.6,355.1L93.0,357.0L93.2,357.8L95.5,357.9L97.5,358.6L98.2,357.5L99.5,357.6L98.4,356.6L97.5,356.8L97.7,355.9L96.3,353.8L97.0,353.4L97.6,354.4L97.4,355.1L98.3,356.4L98.9,356.2L97.8,354.8L98.4,353.5L98.2,353.0L96.7,353.2L94.1,352.0L93.9,349.7L91.6,346.7L90.6,346.0L90.0,345.0L89.1,344.4L90.3,343.3L90.6,341.7L92.4,342.1L94.5,342.1L96.1,341.2L96.8,340.4L97.7,337.7L99.2,335.9L100.2,335.2L101.2,335.5L102.2,335.2L104.6,333.1L105.5,332.8L105.9,333.2L107.6,333.2L108.6,332.6L109.9,330.8L112.2,331.6L111.4,332.6L112.0,333.4L113.1,331.7L113.9,332.3L114.0,333.4L114.7,333.7L115.2,333.1L116.4,332.9L118.3,333.4L118.0,334.6L119.3,334.8L119.0,335.5L120.4,335.7L121.5,335.1L121.9,335.5L123.5,334.8L127.0,336.2L130.5,336.0L132.3,336.9L134.8,335.5L135.4,335.4L139.3,337.2L140.1,337.3L150.1,387.7L151.5,387.4L153.0,387.8L153.6,386.8L155.2,386.4L155.2,387.9L156.7,388.5L157.3,389.3L160.6,391.4L161.5,393.1L162.8,391.3L163.5,391.1L163.5,388.6L165.5,386.9L167.1,387.8L167.7,389.2L168.4,389.2L170.3,390.9L171.6,391.2L173.4,392.4L174.4,393.7L179.4,398.4L179.5,399.4L180.4,399.5L180.9,400.5L181.6,400.2L183.4,400.8L186.7,401.3L187.3,403.1L188.7,405.4L188.4,407.7L187.7,409.1L186.7,408.9L185.6,407.1L182.9,406.5L182.6,404.1L182.5,406.4L181.4,405.6L181.2,404.2L180.7,405.0L179.2,404.0L179.9,402.4L178.5,400.4L176.8,399.4L175.1,399.1L174.9,398.1L173.5,396.1L171.6,394.3L170.2,394.4L167.8,391.7L166.5,389.5L165.9,389.8L166.9,390.6L168.2,392.9L169.1,395.1L167.7,394.3L166.5,394.8L165.3,392.6L165.0,393.0L166.1,394.9L164.8,396.2L161.2,394.8L158.9,392.9L154.1,391.2L154.7,390.7L154.3,389.3L152.7,390.7L151.0,390.7L148.9,389.9L145.2,389.8L141.8,390.9L141.4,390.0L139.7,389.9L139.7,388.7L138.7,389.6L137.3,388.8L134.9,390.2L135.4,389.1L137.1,388.2L135.2,387.9L133.4,385.7L132.7,387.1L132.2,386.1L131.8,387.5L130.6,387.6L131.5,385.6L130.5,386.3L130.1,388.0L130.8,388.1L131.4,389.7L131.0,390.8L131.9,391.7L130.8,392.5L127.9,392.6L127.5,391.7L127.1,393.9L126.3,394.3L125.2,395.8L125.2,394.9L123.4,397.0L122.3,396.7L121.8,397.4L120.7,396.9L120.9,396.0L122.6,394.9L123.3,393.9L121.9,394.8L120.9,394.0L122.0,391.5L122.4,389.7L122.0,388.7L124.6,386.8L125.7,387.8L126.3,386.9L125.6,385.7L123.8,385.5L122.5,386.9L121.7,387.1L119.6,390.0L119.8,390.6L117.6,394.5L116.5,394.8L115.8,395.8L114.7,396.4L114.3,397.6L116.7,398.6L116.7,399.8L115.3,400.6L114.4,403.2L112.1,403.8L111.8,404.6L110.5,405.0L109.9,406.3L109.0,406.2L107.4,407.7L108.1,408.3L107.4,409.4L106.3,409.4L105.4,410.5L104.9,409.9L101.3,412.6L102.4,413.3L101.1,414.6L97.1,415.0L94.6,416.9L93.6,416.5L92.4,417.3L91.6,417.1L92.2,415.8L91.4,415.8L90.0,418.4L86.5,418.8L84.5,420.4L82.4,420.2L82.0,420.8L80.4,420.8L80.3,419.8L82.1,418.2L85.0,418.0L85.6,419.1L85.8,417.7L87.2,417.6L89.4,415.1L91.0,414.1L94.1,413.7L94.1,414.5L95.8,415.0L94.8,414.0L95.6,412.5L97.4,411.2L100.1,409.7L100.9,410.1L101.1,408.8L102.0,407.7L104.2,406.0L105.1,400.9L106.2,399.8L106.2,398.9L103.2,400.1L102.0,399.0L102.3,398.0L101.2,399.6L101.5,400.8L100.5,401.1L99.8,399.2L98.8,398.1L98.2,398.9L97.1,397.8L97.2,397.1L94.1,398.7L92.8,399.6L92.4,398.9L93.0,397.3L92.5,395.5L93.6,394.4L92.2,390.5L91.7,391.4L88.4,392.0L87.2,391.6L87.2,390.6L86.0,388.9L84.3,387.2L85.7,386.4L85.4,385.2L86.0,384.8L85.3,383.8L84.5,384.2L84.5,383.1L83.4,381.6L84.4,380.9L83.8,380.0L85.0,380.0L85.2,378.4L87.8,375.8L88.7,373.6L90.3,373.0L91.9,374.4L92.5,374.4L94.8,372.3L96.4,372.7L97.5,372.5L98.6,371.2L98.4,368.6L97.6,366.8L98.4,367.1L99.1,366.0L98.2,364.8L94.8,366.5L94.1,367.6L94.1,366.6L92.4,366.0L90.5,365.8L89.0,366.2L86.3,364.9L86.1,363.2L85.3,361.6L85.9,361.8L86.5,360.7L84.5,359.9ZM65.2,426.6L66.5,425.1L68.2,423.8L69.4,423.5L69.7,424.6L68.2,425.1L67.2,426.0ZM64.4,426.9L64.4,426.9L64.4,426.9ZM63.1,425.4L63.1,425.4L63.1,425.4ZM67.7,405.9L67.7,405.9L67.7,405.9ZM63.1,424.8L63.1,424.8L63.1,424.8ZM62.1,425.9L62.1,425.9L62.1,425.9ZM61.8,425.5L61.8,425.5L61.8,425.5ZM61.3,426.4L61.3,426.4L61.3,426.4ZM66.6,402.5L66.6,402.5L66.6,402.5ZM59.1,426.5L59.1,426.5L59.1,426.5ZM58.0,426.4L58.0,426.4L58.0,426.4ZM57.4,426.7L57.4,426.7L57.4,426.7ZM71.8,367.4L72.6,366.9L74.1,367.9L75.2,367.5L76.0,368.8L77.1,369.7L79.0,370.6L78.4,371.3L77.2,371.0L76.3,372.0L75.0,369.7L73.4,368.5L72.4,368.9ZM52.8,426.5L52.8,426.5L52.8,426.5ZM64.2,382.7L66.1,384.4L64.9,383.8ZM64.4,381.7L64.4,381.7L64.4,381.7ZM47.9,426.0L51.4,427.3L49.6,427.2ZM43.6,425.2L47.3,425.3L47.9,424.4L48.4,425.2L45.5,426.0ZM42.9,425.3L42.9,425.3L42.9,425.3ZM43.2,424.2L43.2,424.2L43.2,424.2ZM42.2,425.1L42.2,425.1L42.2,425.1ZM41.5,424.8L41.5,424.8L41.5,424.8ZM40.9,424.0L40.9,424.0L40.9,424.0ZM40.3,425.3L40.3,425.3L40.3,425.3ZM37.5,425.4L38.8,424.0L40.2,425.0L38.1,425.7ZM36.5,423.4L36.5,423.4L36.5,423.4ZM35.4,424.2L37.8,424.0L37.2,424.9ZM34.0,422.7L35.0,422.8L34.6,423.8ZM32.0,423.5L32.0,423.5L32.0,423.5ZM31.4,423.4L31.4,423.4L31.4,423.4ZM31.8,422.3L31.8,422.3L31.8,422.3ZM30.6,424.3L30.6,424.3L30.6,424.3ZM29.9,424.6L29.9,424.6L29.9,424.6ZM27.0,419.2L27.0,419.2L27.0,419.2ZM23.5,419.8L23.5,419.8L23.5,419.8ZM23.7,417.9L23.7,417.9L23.7,417.9ZM22.7,418.3L22.7,418.3L22.7,418.3ZM22.7,417.1L22.7,417.1L22.7,417.1ZM19.7,416.5L19.7,416.5L19.7,416.5ZM16.7,412.2L16.7,412.2L16.7,412.2ZM12.2,407.7L12.2,407.7L12.2,407.7ZM11.9,407.5L11.9,407.5L11.9,407.5ZM11.7,407.2L11.7,407.2L11.7,407.2ZM9.2,408.2L10.3,408.1L10.2,409.0ZM8,404.2L10.0,405.0L10.5,406.3L8.6,405.5ZM185.4,407.8L185.4,407.8L185.4,407.8ZM184.9,408.8L184.9,408.8L184.9,408.8ZM184.5,408.9L184.5,408.9L184.5,408.9ZM184.3,408.5L184.1,407.1L185.1,408.4ZM183.0,407.0L183.0,407.0L183.0,407.0ZM179.2,401.7L179.2,401.7L179.2,401.7ZM179.2,402.4L179.2,402.4L179.2,402.4ZM178.7,402.0L178.7,402.0L178.7,402.0ZM180.7,410.1L180.7,410.1L180.7,410.1ZM178.1,403.6L178.1,403.6L178.1,403.6ZM177.8,403.0L179.0,402.4L178.5,403.4ZM178.6,408.1L178.6,408.1L178.6,408.1ZM178.8,411.3L178.8,411.3L178.8,411.3ZM177.3,407.4L177.3,407.4L177.3,407.4ZM177.0,407.2L177.0,407.2L177.0,407.2ZM177.1,408.4L178.1,407.5L178.4,408.4L177.7,409.1ZM176.2,405.8L176.7,404.5L176.3,403.5L177.5,403.3L178.8,404.6L179.8,404.9L182.0,406.8L180.7,406.6L183.0,408.1L183.7,410.6L181.0,409.8L179.5,408.9L181.8,411.4L179.9,410.4L179.2,409.1L179.3,408.0L176.9,406.6ZM173.8,398.8L173.8,398.8L173.8,398.8ZM175.9,406.2L175.9,406.2L175.9,406.2ZM174.7,406.6L174.7,406.6L174.7,406.6ZM173.1,401.7L173.3,401.1L174.6,401.2L174.2,399.9L176.5,399.6L178.9,401.3L175.9,403.1L175.6,402.6L175.6,405.2L174.7,405.4ZM169.0,393.9L170.5,394.7L171.6,394.5L173.2,396.8L171.9,395.9L173.6,397.9L173.6,398.8L172.5,400.8L171.8,399.9L172.0,398.8ZM168.7,393.3L168.7,393.3L168.7,393.3ZM167.0,390.9L167.0,390.9L167.0,390.9ZM168.6,400.0L169.1,398.7L170.9,399.1L172.6,402.5L173.4,405.5L170.6,403.0L170.0,402.9L169.7,400.4ZM167.0,394.7L167.0,394.7L167.0,394.7ZM168.3,400.8L169.2,400.7L168.7,402.1ZM165.5,393.8L165.5,393.8L165.5,393.8ZM165.9,395.5L165.9,395.5L165.9,395.5ZM165.3,397.7L165.1,396.9L166.9,395.2L169.6,395.8L170.8,398.6L170.2,399.0L168.5,398.2L168.5,400.0L166.7,399.2ZM137.6,389.4L137.6,389.4L137.6,389.4ZM136.6,389.4L136.6,389.4L136.6,389.4ZM132.8,387.1L132.8,387.1L132.8,387.1ZM132.5,388.4L132.5,388.4L132.5,388.4ZM132.7,390.6L132.7,390.6L132.7,390.6ZM131.8,393.3L133.7,389.8L134.2,390.4L132.9,392.4ZM131.5,390.8L132.3,388.8L132.0,391.2ZM131.0,388.1L131.0,388.1L131.0,388.1ZM613.1,420.6L613.1,420.6L613.1,420.6ZM611.8,421.6L611.8,421.6L611.8,421.6ZM608.1,423.7L608.1,423.7L608.1,423.7ZM598.6,427.4L603.3,422.8L606.5,424.5ZM595.8,428.2L595.8,428.2L595.8,428.2ZM593.6,428.2L593.6,428.2L593.6,428.2ZM587.3,395.5L587.3,395.5L587.3,395.5ZM582.4,428.7L582.4,428.7L582.4,428.7ZM547.8,351.7L547.8,351.7L547.8,351.7ZM699.9,87.8L699.9,87.8L699.9,87.8ZM698.7,88.7L698.7,88.7L698.7,88.7ZM697.6,86.0L697.6,86.0L697.6,86.0ZM694.7,88.7L694.7,88.7L694.7,88.7ZM695.6,94.7L695.6,94.7L695.6,94.7ZM694.1,90.9L694.1,90.9L694.1,90.9ZM693.3,88.8L693.3,88.8L693.3,88.8ZM691.5,137.7L691.5,137.7L691.5,137.7ZM685.1,138.8L687.1,136.1L689.4,137.7ZM647.6,236.5L647.6,236.5L647.6,236.5ZM646.9,250.8L646.9,250.8L646.9,250.8ZM101.5,267.9L101.5,267.9L101.5,267.9ZM99.8,274.7L99.8,274.7L99.8,274.7ZM95.8,266.2L95.8,266.2L95.8,266.2ZM93.1,256.8L93.1,256.8L93.1,256.8ZM88.4,267.9L88.4,267.9L88.4,267.9ZM87.2,254.5L87.2,254.5L87.2,254.5ZM82.8,254.6L82.8,254.6L82.8,254.6ZM80.4,253.4L80.4,253.4L80.4,253.4ZM259.8,413.7L263.3,409.2L262.5,405.4L271.3,409.2L278.4,417.1L275.9,419.8L268.0,423.2L265.6,426.6L262.5,424.7L262.4,419.9ZM250.3,395.3L255.8,394.8L260.6,397.2L259.7,399.4L254.2,400.2ZM250.2,401.3L250.2,401.3L250.2,401.3ZM244.9,395.5L244.9,395.5L244.9,395.5ZM241.2,392.4L241.9,390.6L250.1,391.5L247.7,393.2ZM227.0,384.9L231.6,382.8L236.2,389.3L229.4,389.3ZM204.8,377.7L207.8,374.7L212.1,376.6L207.5,379.9ZM198.0,380.4L198.0,380.4L198.0,380.4ZM637.0,206.0L637.6,205.9L637.0,206.0ZM635.8,203.5L635.8,203.5L635.8,203.5ZM630.1,194.2L630.1,194.2L630.1,194.2ZM517.7,99.0L517.7,99.0L517.7,99.0ZM509.7,101.2L509.7,101.2L509.7,101.2ZM508.2,100.6L508.2,100.6L508.2,100.6ZM507.5,104.3L507.5,104.3L507.5,104.3ZM506.5,102.2L506.5,102.2L506.5,102.2ZM505.0,107.0L505.0,107.0L505.0,107.0ZM503.5,112.0L503.5,112.0L503.5,112.0ZM502.7,114.1L502.7,114.1L502.7,114.1ZM495.8,105.2L495.8,105.2L495.8,105.2ZM465.2,72.3L471.2,67.7L471.2,69.7ZM495.1,350.3L495.1,350.3L495.1,350.3ZM491.5,350.1L491.5,350.1L491.5,350.1ZM488.6,350.8L488.6,350.8L488.6,350.8ZM486.3,350.6L486.3,350.6L486.3,350.6ZM671.8,143.9L671.8,143.9L671.8,143.9ZM671.2,146.7L671.2,146.7L671.2,146.7ZM670.1,145.6L670.1,145.6L670.1,145.6ZM613.7,114.9L613.7,114.9L613.7,114.9ZM612.8,114.8L612.8,114.8L612.8,114.8ZM547.9,162.9L547.9,162.9L547.9,162.9ZM546.6,162.4L546.6,162.4L546.6,162.4ZM637.9,207.5L637.9,207.5L637.9,207.5ZM112.6,43.5L112.6,43.5L112.6,43.5ZM116.5,25.2L116.5,25.2L116.5,25.2ZM116.5,22.3L116.5,22.3L116.5,22.3ZM115.7,24.4L115.7,24.4L115.7,24.4ZM113.9,29.7L117.1,33.7L116.0,35.4ZM114.2,20.6L114.2,20.6L114.2,20.6ZM112.9,21.7L112.9,21.7L112.9,21.7ZM114.0,17.2L114.0,17.2L114.0,17.2ZM111.1,22.9L116.0,23.3L114.4,26.6ZM111.2,21.4L111.2,21.4L111.2,21.4ZM493.3,109.7L493.3,109.7L493.3,109.7ZM488.9,112.5L488.9,112.5L488.9,112.5ZM453.1,86.7L453.1,86.7L453.1,86.7ZM452.6,88.8L452.6,88.8L452.6,88.8ZM451.2,88.1L451.2,88.1L451.2,88.1ZM450.1,89.5L450.1,89.5L450.1,89.5ZM450.2,87.5L450.2,87.5L450.2,87.5ZM449.8,86.6L449.8,86.6L449.8,86.6ZM449.8,90.3L449.8,90.3L449.8,90.3ZM447.6,87.3L447.6,87.3L447.6,87.3ZM490.3,353.3L490.3,353.3L490.3,353.3ZM484.0,353.6L484.0,353.6L484.0,353.6ZM480.7,362.1L480.7,362.1L480.7,362.1ZM470.8,369.5L470.8,369.5L470.8,369.5ZM468.3,369.8L468.3,369.8L468.3,369.8ZM465.7,370.6L465.7,370.6L465.7,370.6ZM448.0,363.0L448.0,363.0L448.0,363.0ZM677.8,135.7L677.8,135.7L677.8,135.7ZM678.2,138.9L678.2,138.9L678.2,138.9ZM677.0,144.1L677.0,144.1L677.0,144.1Z" fill="#DBE1E9" stroke="#8FA9C8" stroke-width="1"/><path d="M496.4,347.8L493.5,323.9L494.5,276.1L493.1,274.6L526.1,271.6L535.3,304.3L540.2,313.4L537.7,320.4L541.1,333.4L506.3,337.0L510.3,345.5L508.4,348.2M148.6,290.6L151.2,290.5L152.1,286.3L149.9,284.8L150.6,279.9L154.5,275.9L156.4,270.0L160.8,268.1L158.8,264.6L156.8,255.3L158.6,238.0L163.5,238.1L165.9,240.5L167.7,238.1L170.1,225.5L231.6,235.7L219.2,324.7M541.1,333.4L543.5,337.7L579.2,335.3L582.1,338.0L582.2,330.7L589.2,331.5M526.1,271.6L542.4,269.6L557.8,267.4L555.5,272.8L561.9,275.3L567.1,283.0L576.6,289.7L579.5,294.1L583.1,295.7L590.2,308.9L593.3,309.7M500.3,166.0L523.6,163.5L523.8,164.5L528.4,205.4L529.1,210.3L521.5,212.5L522.3,215.2L517.7,219.9L517.0,224.0L512.7,223.9L510.0,226.2L506.4,225.6L502.6,229.2L496.5,226.8L491.5,230.0L490.6,228.5L496.8,214.5L494.4,207.9L495.5,204.9L492.2,167.6M321.2,196.8L401.7,199.1L406.9,201.8L404.2,206.5L410.3,213.0L410.7,246.7L341.2,245.6L318.3,244.5M679.4,112.3L675.0,108.3L666.0,79.2M679.2,134.5L676.1,130.3L671.5,131.7L652.4,135.8L652.3,124.5L661.3,122.5L674.4,119.6L678.9,115.5M681.2,137.5L679.6,135.0M436.6,92.2L433.6,93.0L434.0,102.3L429.5,105.3L427.8,110.3L430.5,112.3L429.3,114.8L429.1,123.0L432.2,126.1L439.2,129.5L439.8,131.5L446.9,137.0L447.8,142.3L388.3,143.6L388.4,115.2L384.0,110.4L387.3,105.2L386.9,99.0L384.8,93.7L384.3,78.9L381.5,70.6L381.9,62.1L380.6,57.2M637.5,177.7L638.2,175.7L645.1,168.4L640.3,165.2L637.6,161.3L637.4,156.8L641.1,149.7L651.5,153.2L651.0,158.3M650.8,158.8L649.2,161.8M637.2,179.1L637.1,178.7M542.4,269.6L542.4,265.8L545.6,264.2L548.2,259.7L551.8,259.1L566.4,247.6L568.8,247.7L572.1,239.9L589.3,237.8L643.8,227.4M618.8,276.1L601.7,263.8L587.5,265.9L583.6,261.2L567.7,262.8L557.8,267.4M387.3,105.2L305.4,101.4L309.4,53.7M410.7,246.7L410.8,254.6L413.4,272.2L413.2,300.0L403.4,295.0L391.5,297.0L389.3,299.3L381.7,295.2L378.3,298.7L377.8,295.7L374.7,297.1L362.9,291.6L361.3,293.1L352.1,288.4L345.7,287.4L342.0,284.5L343.3,253.7L305.8,251.5L306.4,243.6M580.4,147.1L581.2,151.3L631.3,141.5L634.7,143.3L635.9,146.8L641.1,149.7M638.2,175.7L634.1,177.9L590.7,186.4L578.3,188.5L576.0,174.1L572.5,153.1M388.3,143.6L386.2,156.2L388.3,159.6L385.6,157.0L378.5,153.6L372.3,153.4L370.3,155.1L364.9,151.2L301.4,147.6L304.0,116.2L305.4,101.4M413.2,300.0L418.9,301.3L418.9,301.3L419.2,309.7L419.5,326.0L426.6,338.6L426.4,344.3L423.8,352.1L424.8,356.3L421.8,360.3L423.0,362.3M253.5,321.8L252.7,318.3L299.7,322.6L302.3,291.9L305.3,251.5L305.8,251.5M301.4,147.6L298.7,179.2M240.2,172.7L298.7,179.2L322.2,181.0L321.2,196.8L318.3,244.5L306.4,243.6L231.6,235.7L240.2,172.7L216.9,169.3L219.4,153.6L225.6,114.9L226.8,106.7L304.0,116.2M671.5,131.7L673.6,142.4M654.3,152.7L654.4,147.6L652.4,135.8M401.7,199.1L396.3,189.8L410.1,190.0L444.0,188.3L447.9,191.8L447.3,197.3L449.0,202.0L457.2,209.6L458.2,214.4L464.9,215.2L462.6,225.5L473.4,233.1L473.8,239.5L478.9,244.0L478.9,249.0L475.9,251.9L475.0,252.0L474.4,252.0L472.5,260.1L464.4,260.7L467.8,256.1L466.7,252.5L410.8,254.6M590.7,186.4L592.0,194.5L599.2,186.5L603.2,187.4L606.0,184.0L612.6,188.8L611.9,192.0L604.8,187.9L605.0,192.7L600.6,200.1L598.8,199.0L596.3,206.5L591.7,204.4L591.7,207.0L586.3,219.9L586.8,222.7L576.1,228.9L574.2,227.5L570.7,230.2L566.3,225.5L562.0,224.0L556.8,217.2L556.6,212.7L559.9,211.8L562.1,202.2L564.1,204.3L565.0,199.3L567.9,195.2L571.0,194.9L574.7,189.2L576.0,174.1M447.9,191.8L448.4,188.2L451.2,187.0L452.9,180.1L451.5,175.1L459.5,171.9L461.1,163.5L455.2,157.6L487.9,155.5M491.5,230.0L491.3,235.2L486.5,237.0L487.2,241.9L481.3,240.0L478.9,244.0M472.5,260.1L473.6,261.8L467.6,269.6L469.2,274.0L466.2,276.5L463.8,279.7L463.4,285.7L457.1,293.5L458.5,296.0L457.0,301.2L456.8,308.6L419.2,309.7M70.5,119.1L82.5,122.5L117.6,132.5L117.6,132.5L105.8,178.5L125.7,208.5L140.8,231.3L156.8,255.3M647.2,195.7L639.5,197.2L634.1,177.9M447.8,142.3L449.8,146.2L448.6,148.1L450.3,154.2L455.2,157.6M396.3,189.8L394.2,175.9L390.3,166.6L388.3,159.6M528.4,205.4L532.9,204.7L536.3,209.3L543.3,211.2L547.6,211.1L552.3,207.9L556.6,212.7M566.3,225.5L558.0,233.5L553.7,240.1L547.3,243.2L524.8,245.7L511.0,246.5L495.3,248.3L492.9,250.7L475.9,251.9M475.0,252.0L474.4,252.0M637.6,205.9L637.0,206.0M646.4,202.8L641.5,205.1M621.8,198.1L622.3,195.4M621.0,193.4L622.3,195.4L621.0,193.4L612.6,188.8M539.3,162.0L523.8,164.5M486.7,114.3L483.5,110.7L483.5,110.7L483.8,105.4L480.0,101.8L472.4,101.0L468.9,99.3L457.5,96.9L454.8,93.9L454.8,93.9L454.1,93.5M466.2,276.5L493.1,274.6M481.4,351.9L476.4,344.6L477.4,339.2L452.1,340.6L453.3,332.3L460.7,319.0L458.0,317.0L456.8,308.6M225.6,114.9L222.6,110.0L221.1,113.1L212.2,111.2L210.7,112.9L203.9,111.6L203.4,106.4L200.1,104.3L200.7,101.3L196.8,90.2L192.2,93.2L190.8,87.9L195.9,75.5L190.0,70.4L187.3,63.5L183.7,60.0L184.5,55.9L182.0,50.9L185.4,35.3M661.3,122.5L658.9,109.3L660.7,100.4L659.8,96.9L664.0,92.9L662.7,84.8M642.9,89.9L645.6,98.5L645.5,105.0L649.4,112.0L652.3,124.5M97.2,56.9L101.4,59.3L103.6,63.7L102.7,68.4L107.5,71.6L116.1,71.0L119.3,73.9L126.5,73.6L142.4,74.6L144.2,73.9L166.2,79.2L169.8,86.3L161.9,97.7L157.7,101.7L157.1,104.7L160.2,107.1L157.5,112.6L151.2,140.5L117.6,132.5M547.3,243.2L572.1,239.9M170.1,225.5L185.1,147.7L219.4,153.6M175.3,33.1L166.4,72.6L166.2,79.2M185.1,147.7L151.2,140.5" fill="none" stroke="#FFFFFF" stroke-width="1"/><text x="514.0" y="308.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">AL</text><text x="119.3" y="370.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">AK</text><text x="192.3" y="273.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">AZ</text><text x="278.1" y="209.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">CO</text><text x="580.2" y="366.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">FL</text><text x="558.7" y="305.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">GA</text><text x="509.6" y="194.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">IN</text><text x="364.4" y="222.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">KS</text><text x="685.5" y="73.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">ME</text><text x="412.0" y="99.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MN</text><text x="603.8" y="251.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NC</text><text x="345.7" y="79.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">ND</text><text x="374.5" y="268.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">OK</text><text x="607.0" y="164.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">PA</text><text x="346.1" y="127.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">SD</text><text x="349.3" y="334.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">TX</text><text x="261.6" y="143.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">WY</text><text x="436.9" y="224.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MO</text><text x="579.8" y="205.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">WV</text><text x="474.8" y="195.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">IL</text><text x="263.5" y="280.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NM</text><text x="439.1" y="279.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">AR</text><text x="104.9" y="207.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">CA</text><text x="422.5" y="165.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">IA</text><text x="525.5" y="231.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">KY</text><text x="512.6" y="124.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MI</text><text x="476.8" y="311.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MS</text><text x="247.0" y="76.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">MT</text><text x="626.9" y="127.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NY</text><text x="550.1" y="183.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">OH</text><text x="119.3" y="101.1" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">OR</text><text x="515.4" y="258.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">TN</text><text x="205.3" y="194.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">UT</text><text x="604.6" y="219.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">VA</text><text x="134.3" y="49.0" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">WA</text><text x="460.5" y="123.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">WI</text><text x="349.1" y="173.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NE</text><text x="588.9" y="280.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">SC</text><text x="186.0" y="109.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">ID</text><text x="146.6" y="182.8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">NV</text><text x="447.7" y="340.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1" fill="#7A8CA5">LA</text></g></svg>
+      <div class="h5p-map-data" data-cats='["Donde nació el jazz","Donde se establecieron los músicos"]' data-routes='[[0,1],[0,2],[0,3],[0,4],[0,5]]' data-markers='[{"n": "Nueva Orleans, Luisiana", "lat": 29.95, "lon": -90.07, "c": 0, "d": "Una cultura musical excepcionalmente mezclada, las tradiciones de bandas de metales y el cierre de Storyville en 1917 empujaron a los músicos profesionales a buscar trabajo estable en otra parte.", "x": 474.3, "y": 356}, {"n": "Memphis, Tennessee", "lat": 35.15, "lon": -90.05, "c": 1, "d": "Parada importante en la ruta del río Misisipi hacia el norte, Memphis construyó su propia escena de blues y jazz mientras músicos y trabajadores del Sur se trasladaban hacia las ciudades del Norte.", "x": 469.4, "y": 273.9}, {"n": "San Luis, Misuri", "lat": 38.63, "lon": -90.2, "c": 1, "d": "Centro de barcos fluviales y ferrocarriles sobre el Misisipi, San Luis llevó a músicos y migrantes todavía más al norte durante la Gran Migración de principios del siglo XX.", "x": 464.1, "y": 218.8}, {"n": "Kansas City, Misuri", "lat": 39.1, "lon": -94.58, "c": 1, "d": "Un centro ferroviario y de comercio de ganado que, durante la década siguiente, se convirtió en una de las escenas regionales más importantes del jazz.", "x": 410.7, "y": 213.4}, {"n": "Chicago, Illinois", "lat": 41.88, "lon": -87.63, "c": 1, "d": "Chicago atrajo a muchos músicos de Nueva Orleans después de 1917, entre ellos el cornetista King Oliver, cuya banda le dio al joven Louis Armstrong su primera gran oportunidad profesional a principios de la década de 1920.", "x": 490.8, "y": 165.1}, {"n": "Nueva York, Nueva York", "lat": 40.71, "lon": -74.0, "c": 1, "d": "A finales de la década de 1920, Nueva York se había convertido en el centro comercial y de grabación del jazz estadounidense y atraía a directores de orquesta y músicos de todo el país.", "x": 651.5, "y": 157.9}]'></div>
+      <div class="h5p-map-panel"></div>
+      <div class="h5p-controls"><span class="h5p-score"></span></div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <h2>La primera grabación de jazz</h2>
+  <p>La Original Dixieland Jazz Band, un grupo de músicos blancos de Nueva Orleans, hizo historia en 1917 al grabar "Livery Stable Blues", ampliamente reconocida como la primera grabación de jazz publicada. El disco fue una sensación comercial y dio a conocer la palabra "jazz" y el sonido de conjunto de Nueva Orleans a un público nacional que nunca había escuchado nada parecido. El éxito de la banda también pone de relieve un patrón incómodo en la historia comercial temprana del jazz: una tradición musical afroamericana, desarrollada en gran parte por músicos negros de Nueva Orleans, llegó a su primer público masivo a través de intérpretes blancos, la misma dinámica que se vio antes en este módulo con los bailes de animales y, de manera más general, a lo largo de la historia de la música popular estadounidense.</p>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Para ver: los orígenes del jazz dixieland</div><div class="am-listen__meta">Documental breve de ABC News: Nueva Orleans como cuna del jazz</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Observa:</strong></p>
+      <ol><li>Cómo se entrelazan los instrumentos de la línea frontal: corneta, clarinete y trombón.</li><li>La sección rítmica constante que marca el tiempo debajo de la línea frontal improvisada.</li><li>Por qué "Livery Stable Blues" (1917) se considera una grabación histórica.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=kJhiQp18jRs" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Vi este video</label></div>
+    </div>
+  </div>
+
+  <!-- ============ SORT ============ -->
+  <div class="h5p-act" data-widget="sort">
+    <div class="h5p-act__head"><span>Clasifica los instrumentos</span><span class="h5p-act__type">Arrastrar y soltar</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Toca un instrumento y luego toca el grupo al que pertenece en una banda de dixieland.</p>
+      <div class="h5p-sort-pool" data-items='[{"t":"Corneta","c":0},{"t":"Clarinete","c":0},{"t":"Trombón","c":0},{"t":"Banjo","c":1},{"t":"Tuba","c":1},{"t":"Batería","c":1}]'></div>
+      <div class="h5p-bins" data-bins='["Línea frontal (melodía)","Sección rítmica"]'></div>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Revisar</button>
+        <button class="am-btn am-btn--ghost" data-retry>Reintentar</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <!-- ============ ORDER ============ -->
+  <div class="h5p-act" data-widget="order">
+    <div class="h5p-act__head"><span>Ordénalos</span><span class="h5p-act__type">Secuencia</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Ordénalos del más antiguo al más reciente y luego revisa.</p>
+      <ol class="h5p-order" data-solution='["Se crea Storyville en Nueva Orleans (1897)","Toma forma el estilo de jazz de Nueva Orleans (principios del siglo XX)","La Original Dixieland Jazz Band graba “Livery Stable Blues” (1917)","Storyville cierra por presión federal (1917)","Los músicos migran al norte, a Chicago (finales de la década de 1910 y década de 1920)"]'></ol>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Revisar orden</button>
+        <button class="am-btn am-btn--ghost" data-retry>Mezclar y reintentar</button>
+        <span class="h5p-score"></span>
+      </div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+
+  <h2>En resumen</h2>
+  <p>Nueva Orleans aportó los ingredientes básicos del jazz (la improvisación colectiva, un formato característico de línea frontal y sección rítmica, y un primer gran éxito comercial), pero el estilo todavía necesitaba un músico capaz de llevarlo más allá de la improvisación grupal, hacia la voz solista destacada que definiría el jazz durante el resto del siglo. Ese músico, Louis Armstrong, creció en Nueva Orleans y él mismo llevó la tradición dixieland a Chicago, que es donde la siguiente página retoma su historia.</p>
+</main>
+
+<div class="am-pagefoot"><div class="rule"></div></div>
+<footer class="am-footband"><span class="am-l-en">Module 3: The Jazz Age: 1917–1935 &nbsp;·&nbsp; <span class="pg">Page 7 of 13</span> &nbsp;·&nbsp; American Music</span><span class="am-l-es">Módulo 3: La era del jazz: 1917–1935 &nbsp;·&nbsp; <span class="pg">Página 7 de 13</span> &nbsp;·&nbsp; Música estadounidense</span></footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Language (EN/ES) ---------- */
+  var ROOT=document.documentElement, BI=ROOT.classList.contains('am-bilingual');
+  var ES={"Answer every question first.": "Responde todas las preguntas primero.", "Score: ": "Puntuación: ", "Correct!": "¡Correcto!", "Not quite — the highlighted answer is correct.": "No exactamente: la respuesta resaltada es la correcta.", "Fill every blank first (tap a filled blank to clear it).": "Completa todos los espacios primero (toca un espacio lleno para vaciarlo).", "Perfect!": "¡Perfecto!", "Tap the red blanks to clear them and try again.": "Toca los espacios en rojo para vaciarlos e inténtalo de nuevo.", "Deck complete — you rated ": "Mazo terminado: marcaste ", " of ": " de ", " cards “Got it” on the first pass.": " tarjetas como “Lo sé” en la primera vuelta.", " (review)": " (repaso)", "Move up": "Subir", "Move down": "Bajar", "Exactly right!": "¡Exactamente!", "Red items are out of place — keep adjusting.": "Los elementos en rojo están fuera de lugar; sigue ajustando.", "Place every item in a category first.": "Coloca cada elemento en una categoría primero.", "All sorted correctly!": "¡Todo clasificado correctamente!", "Red items are in the wrong category — tap one to send it back and try again.": "Los elementos en rojo están en la categoría equivocada; toca uno para devolverlo e inténtalo de nuevo.", "Found ": "Encontraste ", " wrong": " incorrectas", "You found them all!": "¡Las encontraste todas!", "Dashed outlines show ones you missed; struck-through words were not targets.": "Los contornos punteados muestran las que te faltaron; las palabras tachadas no eran objetivos.", "Choose an answer for every blank first.": "Elige una respuesta para cada espacio primero.", "All correct!": "¡Todo correcto!", "Red choices are wrong — change them and check again.": "Las opciones en rojo son incorrectas; cámbialas y vuelve a revisar.", "<em>Tap a section to begin.</em>": "<em>Toca una sección para comenzar.</em>", "Tap a key to play.": "Toca una tecla para tocar.", "Now playing: ": "Sonando: ", "Playing: ": "Reproduciendo: ", "<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>": "<h4>Todas las tareas completas ✔</h4><div>Tocaste cada patrón correctamente. Vuelve a escuchar cualquier demostración o sigue explorando.</div>", "Nice work — every task complete.": "¡Buen trabajo! Completaste todas las tareas.", "All piano tasks complete.": "Todas las tareas de piano completas.", "Task ": "Tarea ", "Show me": "Muéstrame", "You played: ": "Tocaste: ", "Tasks: ": "Tareas: ", " correct.": " correcta.", "← Back": "← Atrás", "Start over": "Empezar de nuevo", "Strong outcome": "Buen resultado", "Mixed outcome": "Resultado mixto", "Rethink this path": "Reconsidera este camino", "Your path": "Tu camino", "Outcome": "Resultado", "Try another path": "Prueba otro camino", "Endings found: ": "Finales encontrados: ", "Outcome reached: ": "Resultado alcanzado: ", "Explored: ": "Explorados: ", "You explored every location on the map.": "Exploraste todos los lugares del mapa.", "<em>Select a numbered marker, or a name below the map.</em>": "<em>Selecciona un marcador numerado o un nombre debajo del mapa.</em>", "Image. Tap the spot, or use the arrow keys to move the circle and press Enter.": "Imagen. Toca el lugar, o usa las flechas del teclado para mover el círculo y presiona Enter.", "All found!": "¡Encontraste todo!", "You found every spot.": "Encontraste todos los lugares.", "All spots found.": "Todos los lugares encontrados.", "Found it!": "¡Lo encontraste!", "✖ Not quite — try again.": "✖ No exactamente; inténtalo de nuevo.", " (You can use “Show me.”)": " (Puedes usar “Muéstrame”.)", "Found: ": "Encontrados: ", "Events opened: ": "Eventos abiertos: ", "You opened every event on the timeline.": "Abriste todos los eventos de la línea de tiempo.", "Items to sort": "Elementos para clasificar", "Place selected item in ": "Colocar el elemento seleccionado en ", " selected. Choose a category.": " seleccionado. Elige una categoría.", "Correct: ": "Correctos: ", "All sorted correctly.": "Todo clasificado correctamente.", "Play video: ": "Reproducir video: ", "Play here": "Reproducir aquí", "Play audio: ": "Reproducir audio: ", "✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.": "✔ Los elementos correctos quedan fijos. ✖ Los marcados con una X volvieron a la bandeja; inténtalo de nuevo."};
+  function X(w,s){ var m=w&&w.closest?w.closest('main'):null; return (m&&m.lang==='es'&&ES[s])||s; }
+  function setLang(l){ if(!BI) l='en'; ROOT.setAttribute('data-lang',l); ROOT.lang=l;
+    var tt=ROOT.getAttribute(l==='es'?'data-title-es':'data-title-en'); if(tt) document.title=tt;
+    document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.setAttribute('aria-pressed',b.dataset.setlang===l?'true':'false'); });
+    try{ localStorage.setItem('amMusicLang',l); }catch(e){} }
+  window.amSetLang=setLang;
+  document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.setlang); window.scrollTo(0,0); }); });
+  (function(){ var saved=null; try{ saved=localStorage.getItem('amMusicLang'); }catch(e){} setLang(saved==='es'?'es':'en'); })();
+  function shuffle(a){ for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t;} return a; }
+  function fb(w,cls,msg){ var f=w.querySelector('.h5p-feedback'); if(!f) return; f.className='h5p-feedback'+(cls?' '+cls:''); f.textContent=msg||''; }
+  function score(w,txt){ var s=w.querySelector('.h5p-score'); if(s) s.textContent=txt||''; }
+  function on(w,sel,fn){ var el=w.querySelector(sel); if(el) el.addEventListener('click',fn); }
+
+  /* ---------- 1. MCQ ---------- */
+  document.querySelectorAll('[data-widget="mcq"]').forEach(function(w){
+    var qs=w.querySelectorAll('.h5p-q');
+    qs.forEach(function(q){
+      q.querySelectorAll('.h5p-opt').forEach(function(opt,i){
+        opt.type='button';
+        opt.addEventListener('click',function(){
+          if(q.dataset.locked) return;
+          q.querySelectorAll('.h5p-opt').forEach(function(o){o.classList.remove('sel');});
+          opt.classList.add('sel'); q.dataset.sel=i;
+        });
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, answered=0;
+      qs.forEach(function(q){ if(q.dataset.sel!==undefined) answered++; });
+      if(answered<qs.length){ score(w,X(w,'Answer every question first.')); return; }
+      qs.forEach(function(q){
+        q.dataset.locked="1";
+        var sel=+q.dataset.sel, cor=+q.dataset.correct, opts=q.querySelectorAll('.h5p-opt'), f=q.querySelector('.h5p-feedback'), why=q.querySelector('.h5p-why');
+        opts[cor].classList.add('ok');
+        if(sel===cor){sc++; f.className='h5p-feedback ok'; f.textContent=X(w,'Correct!');}
+        else {opts[sel].classList.add('bad'); f.className='h5p-feedback bad'; f.textContent=X(w,'Not quite — the highlighted answer is correct.');}
+        if(why) why.hidden=false;
+      });
+      score(w,X(w,'Score: ')+sc+' / '+qs.length);
+    });
+    on(w,'[data-retry]',function(){
+      qs.forEach(function(q){
+        delete q.dataset.locked; delete q.dataset.sel;
+        q.querySelectorAll('.h5p-opt').forEach(function(o){o.className='h5p-opt';});
+        var f=q.querySelector('.h5p-feedback'); f.className='h5p-feedback'; f.textContent='';
+        var why=q.querySelector('.h5p-why'); if(why) why.hidden=true;
+      });
+      score(w,'');
+    });
+  });
+
+  /* ---------- 2. Drag the words ---------- */
+  document.querySelectorAll('[data-widget="dragwords"]').forEach(function(w){
+    var bank=w.querySelector('.h5p-bank'), blanks=w.querySelectorAll('.h5p-blank'), selWord=null;
+    var words=[]; blanks.forEach(function(b){words.push(b.dataset.answer);});
+    (w.dataset.extra||'').split('|').forEach(function(x){ if(x) words.push(x); });
+    function makeBank(){
+      bank.innerHTML=''; selWord=null;
+      shuffle(words.slice()).forEach(function(word){
+        var b=document.createElement('button'); b.type='button'; b.className='h5p-word'; b.textContent=word;
+        b.addEventListener('click',function(){
+          bank.querySelectorAll('.h5p-word').forEach(function(x){x.classList.remove('sel');});
+          b.classList.add('sel'); selWord=b;
+        });
+        bank.appendChild(b);
+      });
+    }
+    makeBank();
+    blanks.forEach(function(blank){
+      blank.setAttribute('role','button'); blank.tabIndex=0;
+      blank.addEventListener('click',function(){
+        if(blank.textContent){
+          var t=blank.textContent; blank.textContent='';
+          var returned=false;
+          bank.querySelectorAll('.h5p-word').forEach(function(x){ if(!returned && x.textContent===t && x.classList.contains('used')){ x.classList.remove('used'); returned=true; } });
+          blank.classList.remove('ok','bad'); return;
+        }
+        if(!selWord) return;
+        blank.textContent=selWord.textContent;
+        selWord.classList.add('used'); selWord.classList.remove('sel'); selWord=null;
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      blanks.forEach(function(b){
+        if(!b.textContent){done=false; return;}
+        if(b.textContent.toLowerCase()===b.dataset.answer.toLowerCase()){b.classList.add('ok'); b.classList.remove('bad'); sc++;}
+        else {b.classList.add('bad'); b.classList.remove('ok');}
+      });
+      if(!done){fb(w,'bad',X(w,'Fill every blank first (tap a filled blank to clear it).')); return;}
+      score(w,X(w,'Score: ')+sc+' / '+blanks.length);
+      fb(w, sc===blanks.length?'ok':'bad', sc===blanks.length?X(w,'Perfect!'):X(w,'Tap the red blanks to clear them and try again.'));
+    });
+    on(w,'[data-retry]',function(){
+      blanks.forEach(function(b){b.textContent=''; b.classList.remove('ok','bad');});
+      makeBank(); score(w,''); fb(w,'','');
+    });
+  });
+
+  /* ---------- 3. Flashcards ---------- */
+  document.querySelectorAll('[data-widget="flashcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), cards=JSON.parse(card.dataset.cards), i=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    function render(){ card.classList.remove('flip'); setTimeout(function(){ front.textContent=cards[i].front; back.textContent=cards[i].back; },card.classList.contains('flip')?250:0); counter.textContent=(i+1)+' / '+cards.length; }
+    card.addEventListener('click',function(){card.classList.toggle('flip');});
+    on(w,'[data-prev]',function(){ i=(i-1+cards.length)%cards.length; render(); });
+    on(w,'[data-next]',function(){ i=(i+1)%cards.length; render(); });
+    front.textContent=cards[0].front; back.textContent=cards[0].back; counter.textContent='1 / '+cards.length;
+  });
+
+  /* ---------- 4. Dialog cards (self-assessed) ---------- */
+  document.querySelectorAll('[data-widget="dialogcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), all=JSON.parse(card.dataset.cards), queue=all.slice(), i=0, got=0, seen=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    var ctrl=w.querySelector('.h5p-dlg-ctrl'), bar=w.querySelector('.h5p-progress span'), restart=w.querySelector('[data-restart]');
+    function show(){
+      if(!queue.length){ card.style.display='none'; ctrl.classList.remove('show'); bar.style.width='100%'; fb(w,'ok',X(w,'Deck complete — you rated ')+got+X(w,' of ')+all.length+X(w,' cards “Got it” on the first pass.')); restart.hidden=false; counter.textContent=''; return; }
+      card.style.display=''; card.classList.remove('flip'); ctrl.classList.remove('show');
+      front.textContent=queue[0].front; back.textContent=queue[0].back;
+      counter.textContent=(all.length-queue.length+1)+' / '+all.length+(queue.length+seen>all.length?X(w,' (review)'):'');
+      bar.style.width=Math.round(100*(all.length-queue.length)/all.length)+'%';
+    }
+    card.addEventListener('click',function(){ card.classList.toggle('flip'); if(card.classList.contains('flip')) ctrl.classList.add('show'); });
+    on(w,'[data-gotit]',function(){ var c=queue.shift(); if(!c._again) got++; seen++; show(); });
+    on(w,'[data-again]',function(){ var c=queue.shift(); c._again=true; queue.push(c); seen++; show(); });
+    restart.addEventListener('click',function(){ all.forEach(function(c){delete c._again;}); queue=all.slice(); got=0; seen=0; restart.hidden=true; fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 5. Order the steps ---------- */
+  document.querySelectorAll('[data-widget="order"]').forEach(function(w){
+    var ol=w.querySelector('.h5p-order'), solution=JSON.parse(ol.dataset.solution);
+    function build(){
+      var items=shuffle(solution.slice()); if(items.join()===solution.join()) items.reverse();
+      ol.innerHTML='';
+      items.forEach(function(txt){
+        var li=document.createElement('li');
+        var up=document.createElement('button'); up.className='h5p-move'; up.type='button'; up.innerHTML='&#9650;'; up.setAttribute('aria-label',X(w,'Move up'));
+        var dn=document.createElement('button'); dn.className='h5p-move'; dn.type='button'; dn.innerHTML='&#9660;'; dn.setAttribute('aria-label',X(w,'Move down'));
+        var span=document.createElement('span'); span.textContent=txt;
+        up.addEventListener('click',function(){ var p=li.previousElementSibling; if(p) ol.insertBefore(li,p); clear(); });
+        dn.addEventListener('click',function(){ var n=li.nextElementSibling; if(n) ol.insertBefore(n,li); clear(); });
+        li.appendChild(up); li.appendChild(dn); li.appendChild(span); ol.appendChild(li);
+      });
+    }
+    function clear(){ ol.querySelectorAll('li').forEach(function(li){li.classList.remove('ok','bad');}); fb(w,'',''); score(w,''); }
+    build();
+    on(w,'[data-check]',function(){
+      var lis=ol.querySelectorAll('li'), sc=0;
+      lis.forEach(function(li,idx){ var ok=li.querySelector('span').textContent===solution[idx]; li.classList.toggle('ok',ok); li.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+lis.length);
+      fb(w, sc===lis.length?'ok':'bad', sc===lis.length?X(w,'Exactly right!'):X(w,'Red items are out of place — keep adjusting.'));
+    });
+    on(w,'[data-retry]',function(){ build(); clear(); });
+  });
+
+  /* ---------- 6. Sort into categories ---------- */
+  document.querySelectorAll('[data-widget="sort"]').forEach(function(w){
+    var pool=w.querySelector('.h5p-sort-pool'), binsEl=w.querySelector('.h5p-bins');
+    var items=JSON.parse(pool.dataset.items), bins=JSON.parse(binsEl.dataset.bins), sel=null;
+    function mkItem(it){
+      var b=document.createElement('button'); b.type='button'; b.className='h5p-item'; b.textContent=it.t; b.dataset.c=it.c;
+      b.addEventListener('click',function(){
+        if(b.parentNode!==pool){ pool.appendChild(b); b.className='h5p-item'; sel=null; return; }
+        w.querySelectorAll('.h5p-item').forEach(function(x){x.classList.remove('sel');}); b.classList.add('sel'); sel=b;
+      });
+      return b;
+    }
+    function build(){
+      pool.innerHTML=''; binsEl.innerHTML=''; sel=null;
+      shuffle(items.slice()).forEach(function(it){ pool.appendChild(mkItem(it)); });
+      bins.forEach(function(name,idx){
+        var d=document.createElement('div'); d.className='h5p-bin'; d.dataset.c=idx;
+        var t=document.createElement('div'); t.className='h5p-bin__title'; t.textContent=name; d.appendChild(t);
+        d.addEventListener('click',function(e){ if(e.target.classList.contains('h5p-item')) return; if(!sel) return; d.appendChild(sel); sel.classList.remove('sel'); sel=null; });
+        binsEl.appendChild(d);
+      });
+    }
+    build();
+    on(w,'[data-check]',function(){
+      if(pool.querySelectorAll('.h5p-item').length){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var sc=0, all=w.querySelectorAll('.h5p-bin .h5p-item');
+      all.forEach(function(it){ var ok=it.dataset.c===it.parentNode.dataset.c; it.classList.toggle('ok',ok); it.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+all.length);
+      fb(w, sc===all.length?'ok':'bad', sc===all.length?X(w,'All sorted correctly!'):X(w,'Red items are in the wrong category — tap one to send it back and try again.'));
+    });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 7. Mark the words ---------- */
+  document.querySelectorAll('[data-widget="markwords"]').forEach(function(w){
+    var p=w.querySelector('.h5p-mtw'), targets=p.dataset.targets.split(',').map(function(s){return s.trim().toLowerCase();});
+    var text=p.textContent; p.innerHTML='';
+    text.split(/(\s+)/).forEach(function(tok){
+      if(/^\s+$/.test(tok)||!tok){ p.appendChild(document.createTextNode(tok)); return; }
+      var s=document.createElement('span'); s.className='h5p-tok'; s.textContent=tok; s.tabIndex=0; s.setAttribute('role','button');
+      s.dataset.t = targets.indexOf(tok.replace(/[^\p{L}\p{N}’']/gu,'').toLowerCase())>-1 ? '1':'0';
+      s.addEventListener('click',function(){ if(w.dataset.locked) return; s.classList.toggle('sel'); });
+      p.appendChild(s);
+    });
+    on(w,'[data-check]',function(){
+      w.dataset.locked='1'; var hits=0, wrong=0, total=0;
+      p.querySelectorAll('.h5p-tok').forEach(function(s){
+        var t=s.dataset.t==='1', on=s.classList.contains('sel'); if(t) total++;
+        if(t&&on){s.classList.add('ok'); hits++;} else if(!t&&on){s.classList.add('bad'); wrong++;} else if(t&&!on){s.classList.add('missed');}
+      });
+      score(w,X(w,'Found ')+hits+X(w,' of ')+total+(wrong?' · '+wrong+X(w,' wrong'):''));
+      fb(w, (hits===total&&!wrong)?'ok':'bad', (hits===total&&!wrong)?X(w,'You found them all!'):X(w,'Dashed outlines show ones you missed; struck-through words were not targets.'));
+    });
+    on(w,'[data-retry]',function(){ delete w.dataset.locked; p.querySelectorAll('.h5p-tok').forEach(function(s){s.className='h5p-tok';}); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 8. Dropdown cloze ---------- */
+  document.querySelectorAll('[data-widget="dropdown"]').forEach(function(w){
+    var dds=w.querySelectorAll('.h5p-dd');
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      dds.forEach(function(d){ if(!d.value){done=false; return;} var ok=d.value===d.dataset.answer; d.classList.toggle('ok',ok); d.classList.toggle('bad',!ok); if(ok) sc++; });
+      if(!done){ fb(w,'bad',X(w,'Choose an answer for every blank first.')); return; }
+      score(w,X(w,'Score: ')+sc+' / '+dds.length);
+      fb(w, sc===dds.length?'ok':'bad', sc===dds.length?X(w,'All correct!'):X(w,'Red choices are wrong — change them and check again.'));
+    });
+    on(w,'[data-retry]',function(){ dds.forEach(function(d){ d.value=''; d.classList.remove('ok','bad'); }); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 9. Timeline stepper ---------- */
+  document.querySelectorAll('[data-widget="timeline"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-tl-panel'), ev=JSON.parse(panel.dataset.events), nav=w.querySelector('.h5p-tl-nav'), dot=w.querySelector('.h5p-tl-track span'), i=0, btns=[];
+    ev.forEach(function(e,idx){ var b=document.createElement('button'); b.type='button'; b.className='h5p-tl-btn'; b.textContent=e.y; b.addEventListener('click',function(){ i=idx; render(); }); nav.appendChild(b); btns.push(b); });
+    function render(){ btns.forEach(function(b,idx){ b.classList.toggle('on',idx===i); }); dot.style.left=(ev.length>1? (100*i/(ev.length-1)) : 50)+'%'; panel.innerHTML='<h4>'+ev[i].y+' · '+ev[i].t+'</h4><div>'+ev[i].d+'</div>'; }
+    on(w,'[data-prev]',function(){ i=Math.max(0,i-1); render(); }); on(w,'[data-next]',function(){ i=Math.min(ev.length-1,i+1); render(); });
+    render();
+  });
+
+  /* ---------- 10. Song form explorer ---------- */
+  document.querySelectorAll('[data-widget="songform"]').forEach(function(w){
+    var row=w.querySelector('.h5p-form-row'), secs=JSON.parse(row.dataset.sections), panel=w.querySelector('.h5p-form-panel'), els=[], timer=null;
+    secs.forEach(function(s,idx){ var d=document.createElement('div'); d.className='h5p-form-sec'; d.style.background=s.c; d.innerHTML=s.l+'<small>'+s.s+'</small>'; d.tabIndex=0; d.setAttribute('role','button'); d.addEventListener('click',function(){ stop(); show(idx); }); row.appendChild(d); els.push(d); });
+    function show(idx){ els.forEach(function(e,j){ e.classList.toggle('on',j===idx); }); panel.innerHTML='<strong>'+secs[idx].l+' — '+secs[idx].s+':</strong> '+secs[idx].t; }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    on(w,'[data-play]',function(){ stop(); var k=0; show(0); timer=setInterval(function(){ k++; if(k>=secs.length){ stop(); return; } show(k); },1800); });
+    panel.innerHTML=X(w,'<em>Tap a section to begin.</em>');
+  });
+
+  /* ---------- 11. Hotspots ---------- */
+  document.querySelectorAll('[data-widget="hotspots"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-hs-panel'), spots=w.querySelectorAll('[data-hs]');
+    spots.forEach(function(g){ g.setAttribute('tabindex','0'); g.setAttribute('role','button');
+      g.addEventListener('click',function(){ spots.forEach(function(x){x.classList.remove('on');}); g.classList.add('on'); panel.innerHTML='<h4>'+g.dataset.hs+'</h4><div>'+g.dataset.info+'</div>'; }); });
+  });
+
+  /* ================= ADDED WIDGETS (2026-09) ================= */
+  function el(tag,cls,txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!==undefined) e.textContent=txt; return e; }
+  function live(w,msg){ var r=w.querySelector('.am-sr[aria-live]'); if(!r){ r=el('div','am-sr'); r.setAttribute('aria-live','polite'); w.appendChild(r); } r.textContent=''; setTimeout(function(){ r.textContent=msg; },30); }
+  var SVGNS='http://www.w3.org/2000/svg';
+  function sv(tag,attrs){ var e=document.createElementNS(SVGNS,tag); for(var k in attrs) e.setAttribute(k,attrs[k]); return e; }
+  function svgPoint(svg,evt){ var pt=svg.createSVGPoint(); pt.x=evt.clientX; pt.y=evt.clientY; return pt.matrixTransform(svg.getScreenCTM().inverse()); }
+
+  /* ---------- 12. Piano (WebAudio) ---------- */
+  var ACtx=null;
+  function audio(){ if(!ACtx){ var C=window.AudioContext||window.webkitAudioContext; if(!C) return null; ACtx=new C(); } if(ACtx.state==='suspended') ACtx.resume(); return ACtx; }
+  var NAMES=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'], FLAT={'Db':'C#','Eb':'D#','Gb':'F#','Ab':'G#','Bb':'A#'};
+  function midi(n){ var m=/^([A-G][#b]?)(\d)$/.exec(n); if(!m) return null; var p=FLAT[m[1]]||m[1]; return NAMES.indexOf(p)+12*(+m[2]+1); }
+  function nname(m){ return NAMES[m%12]+(Math.floor(m/12)-1); }
+  function tone(m,when,dur,vol){
+    var ctx=audio(); if(!ctx) return; var t=when||ctx.currentTime, f=440*Math.pow(2,(m-69)/12), v=Math.max(vol||0.5,0.001), d=Math.max(dur||0.9,0.25);
+    var o=ctx.createOscillator(), o2=ctx.createOscillator(), g=ctx.createGain(), g2=ctx.createGain();
+    o.type='triangle'; o.frequency.value=f; o2.type='sine'; o2.frequency.value=f*2;
+    g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(v,t+0.012); g.gain.exponentialRampToValueAtTime(v*0.32,t+0.15); g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+    g2.gain.setValueAtTime(0.0001,t); g2.gain.exponentialRampToValueAtTime(v*0.22,t+0.012); g2.gain.exponentialRampToValueAtTime(0.0001,t+0.28);
+    o.connect(g); o2.connect(g2); g.connect(ctx.destination); g2.connect(ctx.destination);
+    o.start(t); o2.start(t); o.stop(t+d+0.05); o2.stop(t+0.3);
+  }
+  document.querySelectorAll('[data-widget="piano"]').forEach(function(w){
+    var host=w.querySelector('.h5p-piano'), start=midi(host.dataset.start||'C4'), oct=+(host.dataset.octaves||1), last=start+12*oct;
+    var labels=host.dataset.labels!=='0', demos=JSON.parse(host.dataset.demos||'[]'), tasks=JSON.parse(host.dataset.tasks||'[]');
+    var keysMap={}, KB='awsedftgyhujk'.split(''), ti=0, played=[], busy=[], ESL=(w.closest('main')||{}).lang==='es', SOL=['Do','Do♯','Re','Re♯','Mi','Fa','Fa♯','Sol','Sol♯','La','La♯','Si'];
+    function disp(m){ return ESL ? SOL[m%12]+(Math.floor(m/12)-1) : nname(m).replace('#','♯'); }
+    function sayk(m){ return ESL ? SOL[m%12].replace('♯',' sostenido')+' '+(Math.floor(m/12)-1) : nname(m).replace('#',' sharp '); }
+    if(demos.length){ var dm=el('div','h5p-pno-demos'); demos.forEach(function(d){ var b=el('button','am-btn am-btn--slate','▶ '+d.l); b.type='button'; b.addEventListener('click',function(){ playSeq(d); }); dm.appendChild(b); }); host.parentNode.insertBefore(dm,host); }
+    var wrap=el('div','h5p-pno-wrap'); host.parentNode.insertBefore(wrap,host); wrap.appendChild(host);
+    var kb=el('div','h5p-pno'); host.appendChild(kb);
+    var whites=[]; for(var m=start;m<=last;m++){ if(NAMES[m%12].length===1) whites.push(m); }
+    whites.forEach(function(m){ var k=el('button','h5p-pno-w',labels?disp(m).replace(/\d/,''):''); k.type='button'; k.dataset.m=m; k.dataset.n=nname(m); k.setAttribute('aria-label',sayk(m)); kb.appendChild(k); keysMap[m]=k; });
+    var ww=100/whites.length;
+    for(m=start;m<=last;m++){ if(NAMES[m%12].length===2){ var idx=whites.indexOf(m-1); if(idx<0) continue; var b=el('button','h5p-pno-b',labels?disp(m).replace(/\d/,''):''); b.type='button'; b.dataset.m=m; b.dataset.n=nname(m); b.setAttribute('aria-label',sayk(m)); b.style.left='calc('+(ww*(idx+1))+'% - '+(ww*0.3)+'%)'; b.style.width=(ww*0.6)+'%'; kb.appendChild(b); keysMap[m]=b; } }
+    var now=el('div','h5p-pno-now'); now.setAttribute('aria-live','polite'); now.textContent=X(w,'Tap a key to play.'); wrap.parentNode.insertBefore(now,wrap.nextSibling);
+    var tbox=null; if(tasks.length){ tbox=el('div','h5p-pno-task'); now.parentNode.insertBefore(tbox,now.nextSibling); }
+    function flash(m,ms){ var k=keysMap[m]; if(!k) return; k.classList.add('on'); setTimeout(function(){ k.classList.remove('on'); },ms||160); }
+    function press(m){ tone(m); flash(m); now.textContent=X(w,'Now playing: ')+disp(m); if(tasks.length && ti<tasks.length) check(m); }
+    Object.keys(keysMap).forEach(function(m){ keysMap[m].addEventListener('pointerdown',function(e){ e.preventDefault(); press(+m); }); keysMap[m].addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); press(+m); } }); });
+    w.addEventListener('keydown',function(e){ if(e.repeat||e.target.tagName==='INPUT') return; var i=KB.indexOf(e.key.toLowerCase()); if(i>-1 && start+i<=last && keysMap[start+i]){ e.preventDefault(); press(start+i); } });
+    function playSeq(d){ var ctx=audio(); if(!ctx) return; busy.forEach(clearTimeout); busy=[]; var beat=60/(d.bpm||100), t=ctx.currentTime+0.08, ms=0;
+      d.seq.forEach(function(s){ var ns=[].concat(s[0]), len=(s[1]||1)*beat; ns.forEach(function(n){ if(n==='r') return; var mm=midi(n); if(mm===null) return; tone(mm,t,Math.min(len*0.95+0.2,2.2),0.4); (function(mm,ms){ busy.push(setTimeout(function(){ flash(mm,Math.max(120,len*800)); },ms)); })(mm,ms); }); t+=len; ms+=len*1000; });
+      now.textContent=X(w,'Playing: ')+d.l; }
+    function renderTask(){ if(!tbox) return; if(ti>=tasks.length){ tbox.innerHTML=X(w,'<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>'); fb(w,'ok',X(w,'Nice work — every task complete.')); live(w,X(w,'All piano tasks complete.')); return; }
+      var t=tasks[ti]; tbox.innerHTML=''; tbox.appendChild(el('h4','',X(w,'Task ')+(ti+1)+X(w,' of ')+tasks.length)); tbox.appendChild(el('div','',t.p)); var pl=el('div','h5p-pno-played',''); pl.dataset.played=''; tbox.appendChild(pl);
+      var hb=el('button','am-btn am-btn--ghost',X(w,'Show me')); hb.type='button'; hb.style.marginTop='8px'; hb.addEventListener('click',function(){ t.n.forEach(function(n,i){ var mm=midi(n); setTimeout(function(){ tone(mm); var k=keysMap[mm]; if(k){ k.classList.add('hint'); setTimeout(function(){ k.classList.remove('hint'); },1400); } }, t.o?i*420:0); }); }); tbox.appendChild(hb); played=[]; }
+    function check(m){ var t=tasks[ti], want=t.n.map(midi); played.push(m); if(played.length>12) played.shift();
+      var pl=tbox.querySelector('.h5p-pno-played'); pl.textContent=X(w,'You played: ')+played.slice(-8).map(disp).join(' · ');
+      var ok=false; if(t.o){ var tail=played.slice(-want.length); ok=tail.length===want.length && tail.every(function(x,i){ return x===want[i]; }); }
+      else { var need=want.slice().sort().join(), got={}; played.slice(-want.length*2).forEach(function(x){ if(want.indexOf(x)>-1) got[x]=1; }); ok=Object.keys(got).length===want.length && Object.keys(got).map(Number).sort().join()===need; }
+      if(ok){ score(w,X(w,'Tasks: ')+(ti+1)+' / '+tasks.length); fb(w,'ok',t.ok||X(w,'Correct!')); live(w,X(w,'Task ')+(ti+1)+X(w,' correct.')); ti++; setTimeout(renderTask,650); } }
+    var rb=w.querySelector('[data-retry]'); if(rb) rb.addEventListener('click',function(){ ti=0; played=[]; score(w,''); fb(w,'',''); renderTask(); });
+    renderTask();
+  });
+
+  /* ---------- 13. Branching scenario ---------- */
+  document.querySelectorAll('[data-widget="branch"]').forEach(function(w){
+    var host=w.querySelector('.h5p-branch'), S=JSON.parse(host.dataset.scenes), hist=[], trail=[], cur='start', ends={}, nEnds=0;
+    Object.keys(S).forEach(function(k){ if(S[k].end) nEnds++; });
+    var tr=el('ol','h5p-br-trail'), card=el('div','h5p-br-card'), ctl=el('div','h5p-controls');
+    var back=el('button','am-btn am-btn--ghost',X(w,'← Back')), rs=el('button','am-btn am-btn--ghost',X(w,'Start over')), sc=el('span','h5p-score'); back.type=rs.type='button';
+    ctl.appendChild(back); ctl.appendChild(rs); ctl.appendChild(sc); host.appendChild(tr); host.appendChild(card); host.appendChild(ctl); card.setAttribute('aria-live','polite');
+    var TONE={good:X(w,'Strong outcome'),ok:X(w,'Mixed outcome'),review:X(w,'Rethink this path')};
+    function render(){ var s=S[cur]; tr.innerHTML=''; tr.appendChild(el('li','',X(w,'Your path'))); trail.forEach(function(t,i){ tr.appendChild(el('li','',(i+1)+'. '+t)); });
+      card.innerHTML=''; back.disabled=!hist.length;
+      if(s.end){ ends[cur]=1; var box=el('div','h5p-br-end '+s.end); box.appendChild(el('div','tone',TONE[s.end]||X(w,'Outcome'))); box.appendChild(el('h4','',s.t)); var ul=el('ul','h5p-br-pts'); (s.pts||[]).forEach(function(p){ ul.appendChild(el('li',p[0],p[1])); }); box.appendChild(ul); if(s.c) box.appendChild(el('p','',s.c)); card.appendChild(box);
+        var again=el('button','am-btn am-btn--slate',X(w,'Try another path')); again.type='button'; again.style.marginTop='12px'; again.addEventListener('click',restart); card.appendChild(again);
+        sc.textContent=X(w,'Endings found: ')+Object.keys(ends).length+' / '+nEnds; live(w,X(w,'Outcome reached: ')+s.t); return; }
+      card.appendChild(el('h4','',s.t)); [].concat(s.b||[]).forEach(function(p){ card.appendChild(el('p','',p)); });
+      var og=el('div','h5p-br-opts'); s.o.forEach(function(o,i){ var b=el('button','h5p-br-opt'); b.type='button'; b.appendChild(el('b','tag',String.fromCharCode(65+i))); var sp=el('span','',o.l); if(o.d) sp.appendChild(el('small','',o.d)); b.appendChild(sp); b.addEventListener('click',function(){ hist.push({cur:cur,trail:trail.slice()}); trail.push(o.l.length>42?o.l.slice(0,40)+'…':o.l); cur=o.n; render(); }); og.appendChild(b); }); card.appendChild(og); }
+    function restart(){ hist=[]; trail=[]; cur='start'; render(); }
+    back.addEventListener('click',function(){ var h=hist.pop(); if(!h) return; cur=h.cur; trail=h.trail; render(); });
+    rs.addEventListener('click',restart); render();
+  });
+
+  /* ---------- 14. Interactive map ---------- */
+  document.querySelectorAll('[data-widget="map"]').forEach(function(w){
+    var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
+    var COL=['#2B4A6F','#5E6B7C','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
+    var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
+    routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
+    M.forEach(function(m,i){ var g=sv('g',{'class':'h5p-map-m',tabindex:'0',role:'button','aria-label':(i+1)+'. '+m.n}); g.appendChild(sv('circle',{cx:m.x,cy:m.y,r:13,fill:COL[m.c||0]})); var t=sv('text',{x:m.x,y:m.y+4.5,'text-anchor':'middle',fill:'#fff'}); t.style.fill='#fff'; t.textContent=i+1; g.appendChild(t);
+      g.addEventListener('click',function(){ open(i); }); g.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(i); } }); svg.appendChild(g); gs.push(g);
+      var li=el('li'), b=el('button','',(i+1)+'. '+m.n); b.type='button'; b.addEventListener('click',function(){ open(i); }); li.appendChild(b); list.appendChild(li); btns.push(b); });
+    svg.parentNode.insertBefore(list,svg.nextSibling);
+    if(cats.length>1){ var lg=el('div','h5p-map-legend'); cats.forEach(function(c,i){ var s=el('span'); var d=el('i'); d.style.background=COL[i]; s.appendChild(d); s.appendChild(document.createTextNode(c)); lg.appendChild(s); }); list.parentNode.insertBefore(lg,list); }
+    function open(i){ var m=M[i]; seen[i]=1; gs.forEach(function(g,j){ g.classList.toggle('on',j===i); }); btns.forEach(function(b,j){ b.classList.toggle('on',j===i); b.classList.toggle('seen',!!seen[j]); });
+      panel.innerHTML=''; if(cats.length) panel.appendChild(el('div','cat',cats[m.c||0])); panel.appendChild(el('h4','',(i+1)+'. '+m.n)); var d=el('div'); d.innerHTML=m.d; panel.appendChild(d);
+      var k=Object.keys(seen).length; score(w,X(w,'Explored: ')+k+' / '+M.length); if(k===M.length) fb(w,'ok',X(w,'You explored every location on the map.')); }
+    panel.innerHTML=X(w,'<em>Select a numbered marker, or a name below the map.</em>'); score(w,'Explored: 0 / '+M.length);
+  });
+
+  /* ---------- 15. Find the spot ---------- */
+  document.querySelectorAll('[data-widget="findspot"]').forEach(function(w){
+    var frame=w.querySelector('.h5p-fs-frame'), svg=frame.querySelector('svg'), T=JSON.parse(frame.dataset.targets), i=0, miss=0;
+    var prompt=el('div','h5p-fs-prompt'); prompt.setAttribute('aria-live','polite'); frame.parentNode.insertBefore(prompt,frame);
+    var layer=sv('g',{}); svg.appendChild(layer); var vb=svg.viewBox.baseVal, cross=sv('circle',{'class':'h5p-fs-cross',r:10,cx:vb.width/2,cy:vb.height/2,visibility:'hidden'}); svg.appendChild(cross);
+    svg.setAttribute('tabindex','0'); svg.setAttribute('role','application'); svg.setAttribute('aria-label',X(w,'Image. Tap the spot, or use the arrow keys to move the circle and press Enter.'));
+    function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
+    function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
+      var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#9FACBD','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
+    svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
+    svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
+      if(mv){ e.preventDefault(); cross.setAttribute('visibility','visible'); cross.setAttribute('cx',Math.max(0,Math.min(vb.width,cx+mv[0]))); cross.setAttribute('cy',Math.max(0,Math.min(vb.height,cy+mv[1]))); }
+      else if(e.key==='Enter'||e.key===' '){ e.preventDefault(); cross.setAttribute('visibility','visible'); test(cx,cy); } });
+    on(w,'[data-showme]',function(){ if(i<T.length) test(T[i].x,T[i].y); });
+    on(w,'[data-retry]',function(){ layer.innerHTML=''; i=0; score(w,''); fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 16. Era timeline ---------- */
+  document.querySelectorAll('[data-widget="eratimeline"]').forEach(function(w){
+    var host=w.querySelector('.h5p-era'), E=JSON.parse(host.dataset.eras), seen={}, total=0, cur=0;
+    E.forEach(function(e){ total+=e.e.length; });
+    var tabs=el('div','h5p-era-tabs'), spine=el('ul','h5p-era-spine'), note=el('p','h5p-hint'); tabs.setAttribute('role','tablist'); host.appendChild(tabs); host.appendChild(note); host.appendChild(spine);
+    var tb=[]; E.forEach(function(e,i){ var b=el('button','h5p-era-tab',e.n); b.type='button'; b.setAttribute('role','tab'); b.appendChild(el('small','',e.s)); b.addEventListener('click',function(){ cur=i; render(); }); tabs.appendChild(b); tb.push(b); });
+    function render(){ tb.forEach(function(b,i){ b.classList.toggle('on',i===cur); b.setAttribute('aria-selected',i===cur); var all=E[i].e.every(function(_,j){ return seen[i+'.'+j]; }); b.classList.toggle('done',all); });
+      note.textContent=E[cur].d||''; note.hidden=!E[cur].d; spine.innerHTML='';
+      E[cur].e.forEach(function(ev,j){ var key=cur+'.'+j, li=el('li','h5p-era-ev'+(seen[key]?' seen':'')), b=el('button'); b.type='button'; b.setAttribute('aria-expanded','false'); b.appendChild(el('b','',ev.y)); b.appendChild(el('span','',ev.t)); var body=el('div','body'); body.innerHTML=ev.b;
+        b.addEventListener('click',function(){ var o=li.classList.toggle('open'); b.setAttribute('aria-expanded',o); if(o && !seen[key]){ seen[key]=1; li.classList.add('seen'); prog(); tb[cur].classList.toggle('done',E[cur].e.every(function(_,k){ return seen[cur+'.'+k]; })); } });
+        li.appendChild(b); li.appendChild(body); spine.appendChild(li); }); }
+    function prog(){ var k=Object.keys(seen).length; score(w,X(w,'Events opened: ')+k+' / '+total); if(k===total) fb(w,'ok',X(w,'You opened every event on the timeline.')); }
+    on(w,'[data-expand]',function(){ spine.querySelectorAll('.h5p-era-ev').forEach(function(li){ if(!li.classList.contains('open')) li.querySelector('button').click(); }); });
+    render(); prog();
+  });
+
+  /* ---------- 17. Drag sort (pointer drag + tap/keyboard fallback) ---------- */
+  document.querySelectorAll('[data-widget="dragsort"]').forEach(function(w){
+    var host=w.querySelector('.h5p-ds'), items=JSON.parse(host.dataset.items), bins=JSON.parse(host.dataset.bins), sel=null, drag=null;
+    var tray=el('div','h5p-ds-tray'), grid=el('div','h5p-ds-bins'); tray.setAttribute('aria-label',X(w,'Items to sort')); host.appendChild(tray); host.appendChild(grid);
+    var zones=bins.map(function(b,i){ var d=el('div','h5p-ds-bin'); d.appendChild(el('h5','',b)); var z=el('div','zone'); z.dataset.c=i; z.tabIndex=0; z.setAttribute('role','button'); z.setAttribute('aria-label',X(w,'Place selected item in ')+b); d.appendChild(z); grid.appendChild(d);
+      z.addEventListener('click',function(e){ if(e.target!==z && e.target.tagName!=='H5') return; place(z); }); d.addEventListener('click',function(e){ if(e.target===d||e.target.tagName==='H5') place(z); }); z.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); place(z); } }); return z; });
+    tray.addEventListener('click',function(e){ if(e.target===tray && sel){ tray.appendChild(sel); sel.classList.remove('sel'); sel=null; } });
+    function place(z){ if(!sel) return; z.appendChild(sel); sel.classList.remove('sel','shake'); sel=null; fb(w,'',''); }
+    function build(){ tray.innerHTML=''; zones.forEach(function(z){ z.innerHTML=''; }); sel=null; score(w,'');
+      shuffle(items.slice()).forEach(function(it){ var c=el('button','h5p-ds-card',it.t); c.type='button'; c.dataset.a=','+[].concat(it.a).join(',')+','; tray.appendChild(c);
+        c.addEventListener('click',function(){ if(c.disabled) return; if(c.dataset.dragged){ delete c.dataset.dragged; return; } if(sel===c){ c.classList.remove('sel'); sel=null; return; } if(sel) sel.classList.remove('sel'); sel=c; c.classList.add('sel'); live(w,c.textContent+X(w,' selected. Choose a category.')); });
+        c.addEventListener('pointerdown',function(e){ if(c.disabled||e.button>0) return; var r=c.getBoundingClientRect(); drag={c:c,sx:e.clientX,sy:e.clientY,ox:e.clientX-r.left,oy:e.clientY-r.top,moved:false}; c.setPointerCapture(e.pointerId); });
+        c.addEventListener('pointermove',function(e){ if(!drag||drag.c!==c) return; if(!drag.moved && Math.abs(e.clientX-drag.sx)+Math.abs(e.clientY-drag.sy)<6) return; if(!drag.moved){ drag.moved=true; c.classList.add('drag'); c.style.width=c.getBoundingClientRect().width+'px'; }
+          c.style.left=(e.clientX-drag.ox)+'px'; c.style.top=(e.clientY-drag.oy)+'px'; var t=document.elementFromPoint(e.clientX,e.clientY); zones.forEach(function(z){ z.parentNode.classList.toggle('hot',!!t && z.parentNode.contains(t)); }); });
+        c.addEventListener('pointerup',function(e){ if(!drag||drag.c!==c) return; var d=drag; drag=null; if(!d.moved) return; c.classList.remove('drag'); c.style.left=c.style.top=c.style.width=''; c.dataset.dragged='1';
+          var t=document.elementFromPoint(e.clientX,e.clientY), hit=null; zones.forEach(function(z){ z.parentNode.classList.remove('hot'); if(t && z.parentNode.contains(t)) hit=z; }); if(hit){ hit.appendChild(c); c.classList.remove('shake'); } else if(t && tray.contains(t)) tray.appendChild(c); if(sel){ sel.classList.remove('sel'); sel=null; } fb(w,'',''); });
+      }); }
+    build();
+    on(w,'[data-check]',function(){ if(tray.querySelector('.h5p-ds-card')){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var ok=0, all=host.querySelectorAll('.h5p-ds-card'); all.forEach(function(c){ var z=c.parentNode; if(c.dataset.a.indexOf(','+z.dataset.c+',')>-1){ c.classList.add('ok'); c.disabled=true; ok++; } else { c.classList.add('shake'); tray.appendChild(c); } });
+      score(w,X(w,'Correct: ')+ok+' / '+all.length); if(ok===all.length){ fb(w,'ok',X(w,'All sorted correctly!')); live(w,X(w,'All sorted correctly.')); } else fb(w,'bad',X(w,'✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.')); });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); });
+  });
+
+  /* ---------- Listening-guide video thumbnails (click to play) ---------- */
+  function ytId(u){ var m=/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{11})/.exec(u||''); return m?m[1]:null; }
+  document.querySelectorAll('.am-listen').forEach(function(card){
+    var a=card.querySelector('a.am-listen__link[href]'); var href=a?a.getAttribute('href'):'';
+    if(/dropbox\.com\/.*\.mp3/i.test(href)){ var au=document.createElement('audio'); au.controls=true; au.preload='none'; au.className='am-audio';
+      au.src=href.replace(/[?&]dl=\d/,'').replace(/\?$/,'')+(href.indexOf('?')>-1&&!/[?&]dl=\d$/.test(href)?'&':'?')+'raw=1';
+      au.setAttribute('aria-label',X(card,'Play audio: ')+((card.querySelector('.am-listen__title')||{}).textContent||'')); var bd=card.querySelector('.am-listen__body'); bd.insertBefore(au,bd.firstChild); return; }
+    var id=ytId(href); if(!id) return;
+    var body=card.querySelector('.am-listen__body'), ttl=(card.querySelector('.am-listen__title')||{}).textContent||'';
+    var b=document.createElement('button'); b.type='button'; b.className='am-yt'; b.setAttribute('aria-label',X(card,'Play video: ')+ttl);
+    var img=document.createElement('img'); img.alt=''; img.loading='lazy'; img.src='https://i.ytimg.com/vi/'+id+'/hqdefault.jpg';
+    var p=document.createElement('span'); p.className='am-yt__play'; p.textContent=X(card,'Play here');
+    b.appendChild(img); b.appendChild(p); body.insertBefore(b, body.firstChild);
+    b.addEventListener('click',function(){
+      var f=document.createElement('iframe'); f.className='am-yt-frame'; f.title=ttl;
+      f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen'); f.setAttribute('allowfullscreen','');
+      b.parentNode.replaceChild(f,b); f.focus();
+    });
+  });
+})();
+</script>
+</body>
+</html>

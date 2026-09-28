@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en" class="am-bilingual" data-title-en="Star Singers I: Sinatra and Nat King Cole — American Music" data-title-es="Cantantes estrella I: Sinatra y Nat King Cole — Música estadounidense">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Star Singers I: Sinatra and Nat King Cole — American Music</title>
+<!--
+  AMERICAN MUSIC — SELF-CONTAINED PAGE
+  ===================================================================
+  Palette: Navy #2B4A6F · Slate #9FACBD
+    Navy dark  #1C2F47  (header/footer bands)      Navy deep #233C5C (hover)
+    Navy tint  #EBEFF4 / #DBE1E9 (callouts)         Slate soft #EEF1F5  Slate dark #5E6B7C
+    Ink #1B2A41 · Muted #4A5568 · Border #CDD4DD
+    Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
+  RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
+  or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
+  Every content page: objectives box, 2+ SVG figures, 2–3 widgets, Listening Guide(s),
+  key-term boxes, Page X of Y footer. Neutral textbook voice. No course code.
+-->
+<style>
+  :root{
+    --am-navy:#2B4A6F; --am-navy-dark:#1C2F47; --am-navy-deep:#233C5C;
+    --am-slate:#9FACBD; --am-slate-dark:#5E6B7C; --am-slate-soft:#EEF1F5;
+    --am-tint:#EBEFF4; --am-tint2:#DBE1E9; --am-mist:#F5F7F9;
+    --am-ink:#1B2A41; --am-muted:#4A5568; --am-border:#CDD4DD;
+    --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
+    --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
+    --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:var(--body); color:var(--am-ink); line-height:1.65; background:#fff; font-size:17px}
+  .am-topbar{background:var(--am-navy-dark); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:16px}
+  .am-mark{width:38px; height:38px; flex:none}
+  .am-wordmark{font-family:var(--head); font-weight:700; letter-spacing:1.5px; font-size:1.05em; text-transform:uppercase; white-space:nowrap; line-height:1.1}
+  .am-wordmark span{display:block; font-size:.6em; letter-spacing:4px; font-weight:400; color:var(--am-slate)}
+  .am-coursebar{margin-left:auto; font-size:.78em; letter-spacing:1.5px; text-transform:uppercase; opacity:.9; text-align:right; line-height:1.4}
+  .am-accentbar{height:6px; background:linear-gradient(90deg,var(--am-slate) 0 70%,var(--am-navy) 70% 100%)}
+  main{max-width:880px; margin:0 auto; padding:32px 24px 12px}
+  h1{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:2em; line-height:1.2; margin:0 0 6px; border-bottom:4px solid var(--am-slate); padding-bottom:10px}
+  h1 .am-kicker{display:block; font-size:.5em; letter-spacing:3px; text-transform:uppercase; color:var(--am-slate-dark); font-weight:600; margin-bottom:4px}
+  h2{font-family:var(--head); font-weight:700; color:var(--am-navy); font-size:1.35em; margin:34px 0 10px; padding-left:12px; border-left:6px solid var(--am-slate)}
+  h3{font-family:var(--head); font-weight:600; color:var(--am-navy); font-size:1.1em; margin:24px 0 8px}
+  a{color:var(--am-navy-deep)}
+  .am-lead{font-size:1.08em; font-style:italic; color:#3d4a5c; margin:14px 0 20px}
+  /* Callouts */
+  .am-objectives{background:var(--am-tint); border-left:6px solid var(--am-navy); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-label{margin:0 0 6px; font-family:var(--head); font-weight:700; color:var(--am-navy); text-transform:uppercase; letter-spacing:1.5px; font-size:.82em}
+  .am-keyterm{background:var(--am-mist); border:1px solid var(--am-border); border-left:6px solid var(--am-slate); padding:12px 16px; margin:16px 0; border-radius:8px}
+  .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
+  .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
+  .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
+  .am-note{background:#F6F7F9; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  figure{margin:24px 0; text-align:center}
+  figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
+  figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
+  figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
+  /* Listening guide */
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(28,47,71,.08)}
+  .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
+  .am-listen__head svg{width:26px; height:26px; flex:none}
+  .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
+  .am-listen__meta{font-size:.82em; opacity:.9}
+  .am-listen__body{padding:14px 18px}
+  .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
+  .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
+  .am-listen__link:hover{background:#C7D0DB}
+  .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
+  .am-listen__log label{cursor:pointer}
+  /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#1C2F47; cursor:pointer}
+  .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
+  .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(28,47,71,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
+  .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
+  .am-audio{width:100%; margin:0 0 14px; display:block}
+  .am-yt-frame{width:100%; aspect-ratio:16/9; border:0; border-radius:8px; display:block; margin:0 0 14px; background:#000}
+  /* Buttons */
+  .am-btn{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em; background:var(--am-navy); color:#fff; border:0; padding:10px 18px; cursor:pointer; border-radius:6px}
+  .am-btn:hover{background:var(--am-navy-deep)}
+  .am-btn[disabled]{opacity:.45; cursor:default}
+  .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
+  .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
+  .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-btn--slate:hover{background:#C7D0DB}
+  /* ============ H5P-STYLE ACTIVITY SHELL ============ */
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(28,47,71,.1)}
+  .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
+  .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
+  .h5p-act__body{padding:18px 20px}
+  .h5p-feedback{margin-top:12px; padding:10px 14px; border-radius:6px; font-weight:600; display:none}
+  .h5p-feedback.ok{display:block; background:var(--ok-bg); color:var(--ok)}
+  .h5p-feedback.bad{display:block; background:var(--bad-bg); color:var(--bad)}
+  .h5p-feedback.info{display:block; background:var(--am-tint); color:var(--am-navy)}
+  .h5p-controls{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+  .h5p-score{margin-left:auto; font-family:var(--head); color:var(--am-navy); font-weight:700}
+  .h5p-hint{margin:0 0 10px; font-style:italic; color:var(--am-muted); font-size:.93em}
+  /* MCQ */
+  .h5p-mcq .h5p-q{margin-bottom:18px}
+  .h5p-mcq .h5p-stem{font-weight:600; margin:0 0 8px}
+  .h5p-opt{display:block; width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:10px 14px; margin:6px 0; cursor:pointer; font-family:var(--body); font-size:.95em; color:var(--am-ink)}
+  .h5p-opt:hover{border-color:var(--am-navy)}
+  .h5p-opt.sel{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-opt.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-opt.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-why{font-size:.9em; color:var(--am-muted); margin:4px 0 0 4px}
+  /* Drag the words (click-to-place) */
+  .h5p-bank{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px}
+  .h5p-word{background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 12px; cursor:pointer; font-weight:600; color:var(--am-navy-dark); font-family:var(--body); font-size:.95em}
+  .h5p-word.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-word.used{opacity:.3; pointer-events:none}
+  .h5p-blank{display:inline-block; min-width:110px; border-bottom:3px solid var(--am-navy); padding:2px 8px; margin:0 2px; cursor:pointer; text-align:center; font-weight:600; color:var(--am-navy); background:var(--am-tint); line-height:1.5}
+  .h5p-blank.ok{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-blank.bad{background:var(--bad-bg); border-color:var(--bad)}
+  /* Flashcards & dialog cards */
+  .h5p-flash{perspective:900px; max-width:460px; margin:0 auto}
+  .h5p-card{position:relative; width:100%; min-height:180px; transform-style:preserve-3d; transition:transform .5s; cursor:pointer}
+  .h5p-card.flip{transform:rotateY(180deg)}
+  .h5p-face{position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px; border-radius:10px}
+  .h5p-face--front{background:var(--am-navy); color:#fff; font-family:var(--head); font-size:1.2em; font-weight:600; border-bottom:5px solid var(--am-slate)}
+  .h5p-face--back{background:var(--am-tint); border:2px solid var(--am-navy); color:var(--am-ink); transform:rotateY(180deg); font-size:.97em}
+  .h5p-dlg-ctrl{display:none; justify-content:center; gap:10px; margin-top:12px}
+  .h5p-dlg-ctrl.show{display:flex}
+  .h5p-progress{height:8px; background:var(--am-tint2); border-radius:4px; overflow:hidden; margin:10px 0}
+  .h5p-progress span{display:block; height:100%; background:var(--am-slate); width:0; transition:width .3s}
+  /* Order steps */
+  .h5p-order{padding-left:0; margin:0}
+  .h5p-order li{background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; margin:7px 0; display:flex; align-items:center; gap:10px; list-style:none}
+  .h5p-order li.ok{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-order li.bad{border-color:var(--bad); background:var(--bad-bg)}
+  .h5p-move{border:1px solid var(--am-navy); background:#fff; color:var(--am-navy); border-radius:4px; width:30px; height:28px; cursor:pointer; font-weight:700; flex:none}
+  .h5p-move:hover{background:var(--am-tint)}
+  /* Sort (drag-and-drop categorize, click-to-bin) */
+  .h5p-sort-pool{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px; min-height:40px; padding:10px; border:2px dashed var(--am-border); border-radius:8px}
+  .h5p-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+  .h5p-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:110px; padding:8px; cursor:pointer; background:#fff}
+  .h5p-bin.hot{background:var(--am-tint)}
+  .h5p-bin__title{font-family:var(--head); font-weight:700; color:#fff; background:var(--am-navy); margin:-8px -8px 8px; padding:6px 10px; border-radius:6px 6px 0 0; font-size:.88em; letter-spacing:.5px}
+  .h5p-item{display:inline-block; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:5px 10px; margin:3px; cursor:pointer; font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-item.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-item.ok{border-color:var(--ok); background:var(--ok-bg); color:var(--ok)}
+  .h5p-item.bad{border-color:var(--bad); background:var(--bad-bg); color:var(--bad)}
+  /* Mark the words */
+  .h5p-mtw{line-height:2}
+  .h5p-tok{cursor:pointer; padding:2px 3px; border-radius:4px; border-bottom:2px dotted transparent}
+  .h5p-tok:hover{background:var(--am-tint)}
+  .h5p-tok.sel{background:var(--am-slate-soft); border-bottom-color:var(--am-slate-dark)}
+  .h5p-tok.ok{background:var(--ok-bg); border-bottom-color:var(--ok)}
+  .h5p-tok.bad{background:var(--bad-bg); border-bottom-color:var(--bad); text-decoration:line-through}
+  .h5p-tok.missed{outline:2px dashed var(--am-slate-dark)}
+  /* Dropdown cloze */
+  .h5p-dd{font:inherit; font-weight:600; color:var(--am-navy); border:0; border-bottom:3px solid var(--am-navy); background:var(--am-tint); padding:2px 6px; border-radius:4px 4px 0 0; margin:0 2px}
+  .h5p-dd.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok)}
+  .h5p-dd.bad{background:var(--bad-bg); border-color:var(--bad); color:var(--bad)}
+  /* Timeline stepper */
+  .h5p-tl-nav{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-tl-btn{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:20px; padding:5px 12px; cursor:pointer}
+  .h5p-tl-btn.on{background:var(--am-navy); color:#fff}
+  .h5p-tl-track{height:6px; background:var(--am-tint2); border-radius:3px; position:relative; margin:4px 0 16px}
+  .h5p-tl-track span{position:absolute; top:-5px; width:16px; height:16px; border-radius:50%; background:var(--am-slate); border:3px solid var(--am-navy); transform:translateX(-50%); transition:left .3s}
+  .h5p-tl-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:14px 18px; min-height:90px}
+  .h5p-tl-panel h4{margin:0 0 6px; font-family:var(--head); color:var(--am-navy); font-size:1.05em}
+  /* Song form explorer */
+  .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
+  .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
+  .h5p-form-sec:hover{transform:translateY(-2px)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(159,172,189,.35)}
+  .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
+  .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
+  /* Hotspots (inline SVG) */
+  .h5p-hs [data-hs]{cursor:pointer; transition:opacity .15s}
+  .h5p-hs [data-hs]:hover{opacity:.75}
+  .h5p-hs [data-hs].on{stroke:var(--am-slate); stroke-width:4}
+  .h5p-hs [data-hs].on text{stroke:none}
+  .h5p-hs-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:60px; margin-top:10px}
+  .h5p-hs-panel h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy)}
+  /* ============ ADDED 2026-09: piano, branching, map, find-the-spot, era timeline, drag sort ============ */
+  .am-sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+  .h5p-act :focus-visible{outline:3px solid var(--am-slate); outline-offset:2px; box-shadow:0 0 0 5px var(--am-navy-dark)}
+  /* Piano */
+  .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
+  .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F5F7F9); border:1px solid #9FB3CC; border-bottom:8px solid #CDD4DD; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2C3E57,#0F1B2B); border:1px solid #000; border-bottom:9px solid #1B2A41; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
+  .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(159,172,189,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(159,172,189,.8)}
+  .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
+  .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+  .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
+  .h5p-pno-task h4{margin:0 0 4px; font-family:var(--head); color:var(--am-navy); font-size:1em}
+  .h5p-pno-played{font-size:.9em; color:var(--am-muted); margin-top:4px}
+  /* Branching scenario */
+  .h5p-br-trail{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px; padding:0; list-style:none; font-size:.82em}
+  .h5p-br-trail li{background:var(--am-tint); color:var(--am-navy-dark); border-radius:14px; padding:3px 10px; font-weight:600}
+  .h5p-br-trail li:first-child{background:var(--am-navy); color:#fff}
+  .h5p-br-card h4{font-family:var(--head); color:var(--am-navy); font-size:1.12em; margin:0 0 8px}
+  .h5p-br-card p{margin:0 0 10px}
+  .h5p-br-opts{display:grid; gap:10px; margin-top:12px}
+  .h5p-br-opt{display:flex; gap:12px; align-items:flex-start; text-align:left; width:100%; background:#fff; border:2px solid var(--am-border); border-radius:10px; padding:12px 14px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink)}
+  .h5p-br-opt:hover{border-color:var(--am-navy); background:var(--am-tint)}
+  .h5p-br-opt b.tag{flex:none; width:30px; height:30px; border-radius:50%; background:var(--am-slate); color:var(--am-navy-dark); display:flex; align-items:center; justify-content:center; font-family:var(--head)}
+  .h5p-br-opt small{display:block; color:var(--am-muted); font-size:.88em; margin-top:2px}
+  .h5p-br-end{border-radius:10px; padding:14px 18px; border:2px solid}
+  .h5p-br-end.good{background:var(--ok-bg); border-color:var(--ok)}
+  .h5p-br-end.ok{background:var(--am-slate-soft); border-color:var(--am-slate-dark)}
+  .h5p-br-end.review{background:var(--bad-bg); border-color:var(--bad)}
+  .h5p-br-end .tone{font-family:var(--head); font-weight:700; text-transform:uppercase; letter-spacing:1.2px; font-size:.78em}
+  .h5p-br-pts{list-style:none; padding:0; margin:10px 0}
+  .h5p-br-pts li{margin:6px 0; padding-left:28px; position:relative}
+  .h5p-br-pts li::before{position:absolute; left:0; top:0; font-weight:700}
+  .h5p-br-pts li.ok::before{content:"✔"; color:var(--ok)}
+  .h5p-br-pts li.alert::before{content:"⚠"; color:var(--am-slate-dark)}
+  .h5p-br-pts li.no::before{content:"✖"; color:var(--bad)}
+  /* Interactive map */
+  .h5p-mapsvg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px; background:#F5F7F9}
+  .h5p-map-m{cursor:pointer}
+  .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
+  .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
+  .h5p-map-m.on circle{stroke:#1C2F47; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#9FACBD; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#5E6B7C; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
+  .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
+  .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
+  .h5p-map-list button.on{border-color:var(--am-navy); background:var(--am-navy); color:#fff}
+  .h5p-map-legend{display:flex; flex-wrap:wrap; gap:14px; font-size:.86em; margin:8px 0 0; color:var(--am-muted)}
+  .h5p-map-legend i{display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:5px; vertical-align:-1px}
+  .h5p-map-panel{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px; margin-top:10px}
+  .h5p-map-panel h4{margin:0 0 2px; font-family:var(--head); color:var(--am-navy)}
+  .h5p-map-panel .cat{font-size:.8em; text-transform:uppercase; letter-spacing:1.2px; color:var(--am-slate-dark); font-weight:700}
+  /* Find the spot */
+  .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
+  .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
+  .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
+  .h5p-fs-found circle{fill:none; stroke:#9FACBD; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#1C2F47; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
+  .h5p-fs-cross{fill:none; stroke:#1C2F47; stroke-width:2}
+  @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
+  /* Era timeline */
+  .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+  .h5p-era-tab{font-family:var(--head); font-weight:700; font-size:.82em; background:#fff; color:var(--am-navy); border:2px solid var(--am-navy); border-radius:8px; padding:6px 12px; cursor:pointer; text-align:left; line-height:1.25}
+  .h5p-era-tab small{display:block; font-weight:400; opacity:.85}
+  .h5p-era-tab.on{background:var(--am-navy); color:#fff}
+  .h5p-era-tab.done::after{content:" ✔"; color:var(--ok)}
+  .h5p-era-tab.on.done::after{color:var(--am-slate)}
+  .h5p-era-spine{position:relative; margin:0; padding:0 0 0 34px; list-style:none}
+  .h5p-era-spine::before{content:""; position:absolute; left:12px; top:6px; bottom:6px; width:4px; background:var(--am-tint2); border-radius:2px}
+  .h5p-era-ev{position:relative; margin:0 0 10px}
+  .h5p-era-ev::before{content:""; position:absolute; left:-29px; top:12px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--am-navy)}
+  .h5p-era-ev.seen::before{background:var(--am-slate)}
+  .h5p-era-ev button{width:100%; text-align:left; background:#fff; border:2px solid var(--am-border); border-radius:8px; padding:9px 12px; cursor:pointer; font-family:var(--body); font-size:.97em; color:var(--am-ink); display:flex; gap:10px; align-items:baseline}
+  .h5p-era-ev button:hover{border-color:var(--am-navy)}
+  .h5p-era-ev button b{font-family:var(--head); color:var(--am-navy); flex:none; min-width:58px}
+  .h5p-era-ev button::after{content:"+"; margin-left:auto; font-weight:700; color:var(--am-navy)}
+  .h5p-era-ev.open button::after{content:"–"}
+  .h5p-era-ev .body{display:none; background:var(--am-mist); border-left:4px solid var(--am-slate); border-radius:0 0 8px 8px; padding:10px 14px; margin-top:-2px; font-size:.95em}
+  .h5p-era-ev.open .body{display:block}
+  /* Drag sort (pointer drag + tap fallback) */
+  .h5p-ds-tray{display:flex; flex-wrap:wrap; gap:8px; min-height:52px; padding:10px; border:2px dashed var(--am-border); border-radius:8px; margin:10px 0 14px}
+  .h5p-ds-bins{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px}
+  .h5p-ds-bin{border:2px solid var(--am-navy); border-radius:8px; min-height:120px; padding:8px; background:#fff}
+  .h5p-ds-bin.hot{background:var(--am-tint); box-shadow:0 0 0 3px var(--am-slate)}
+  .h5p-ds-bin h5{margin:-8px -8px 8px; padding:6px 10px; background:var(--am-navy); color:#fff; font-family:var(--head); font-size:.88em; border-radius:6px 6px 0 0}
+  .h5p-ds-bin .zone{display:flex; flex-wrap:wrap; gap:6px; min-height:60px}
+  .h5p-ds-card{touch-action:none; user-select:none; -webkit-user-select:none; background:var(--am-slate-soft); border:2px solid var(--am-slate-dark); border-radius:6px; padding:6px 10px; cursor:grab; font-family:var(--body); font-weight:600; font-size:.92em; color:var(--am-navy-dark)}
+  .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
+  .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
+  .h5p-ds-card.ok::before{content:"✔ "}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(28,47,71,.3); cursor:grabbing}
+  .h5p-ds-card.shake{animation:h5pShake .4s}
+  .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
+  @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+  /* ============ BILINGUAL (EN/ES) ============ */
+  html:not([data-lang="es"]) .am-l-es, html[data-lang="es"] .am-l-en{display:none}
+  html[data-lang="es"] main[lang="en"], html:not([data-lang="es"]) main[lang="es"]{display:none}
+  .am-langtoggle{display:none; flex:none; margin-left:12px; border:2px solid var(--am-slate); border-radius:20px; overflow:hidden}
+  html.am-bilingual .am-langtoggle{display:flex}
+  .am-langtoggle button{font-family:var(--head); font-weight:700; font-size:.74em; letter-spacing:1px; text-transform:uppercase; background:transparent; color:#fff; border:0; padding:6px 12px; cursor:pointer}
+  .am-langtoggle button[aria-pressed="true"]{background:var(--am-slate); color:var(--am-navy-dark)}
+  .am-langtoggle button:focus-visible{outline:3px solid #fff; outline-offset:-3px}
+  @media (max-width:600px){ .am-langtoggle{margin-left:auto} .am-wordmark{white-space:normal} }
+  /* Footer */
+  .am-pagefoot{max-width:880px; margin:36px auto 0; padding:0 24px}
+  .am-pagefoot .rule{height:4px; background:var(--am-slate)}
+  .am-footband{background:var(--am-navy-dark); color:#fff; padding:16px 24px; text-align:center; font-size:.78em; letter-spacing:1.8px; text-transform:uppercase}
+  .am-footband .pg{color:var(--am-slate)}
+  details.am-answer{margin-top:8px}
+  details.am-answer summary{cursor:pointer; color:var(--am-navy); font-weight:600}
+  @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
+</style>
+</head>
+<body>
+<header class="am-topbar">
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#9FACBD"/><path d="M13 30V11l14 5v14" fill="none" stroke="#1C2F47" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#1C2F47"/><circle cx="24.5" cy="30" r="3.6" fill="#1C2F47"/></svg>
+  <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
+  <div class="am-coursebar"><span class="am-l-en">Module 7: Postwar America: 1945–1955<br>Page 5 of 10</span><span class="am-l-es">Módulo 7: Estados Unidos en la posguerra: 1945–1955<br>Página 5 de 10</span></div>
+  <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
+</header>
+<div class="am-accentbar"></div>
+
+<main lang="en">
+  <h1><span class="am-kicker">Module 7 · Page 5 of 10</span>Star Singers I: Sinatra and Nat King Cole</h1>
+  <p class="am-lead">By 1946, the spotlight had shifted from bandleaders to solo singers — and no two singers defined the new era more clearly than Frank Sinatra and Nat King Cole.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">On this page you will</p>
+    <ul style="margin:6px 0 0">
+      <li>Explain the shift in popular attention from bandleaders to solo star singers after 1946.</li>
+      <li>Describe Frank Sinatra's path from big-band singer to solo star.</li>
+      <li>Explain why Nat King Cole's career is considered especially significant, both musically and commercially.</li>
+      <li>Correctly place Nat King Cole's "Nature Boy" in the postwar timeline.</li>
+    </ul>
+  </div>
+
+  <h2>From bandleader to solo star</h2>
+  <p>Through the swing era, the biggest names in popular music had usually been bandleaders: Benny Goodman, Count Basie, Glenn Miller. By 1946, that had changed. Public attention shifted decisively toward a new generation of vocalists, many of whom had actually started their careers standing in front of a big band, singing between the instrumental numbers. Frank Sinatra, Perry Como, Doris Day, Jo Stafford, and Peggy Lee all came up this way, and all became far bigger stars once they stepped out as solo performers; Nat "King" Cole, who came up instead as a jazz pianist leading his own trio, made the same leap to solo stardom. Following the example set earlier by Bing Crosby, many of these singers went on to build careers in film and, soon enough, on television as well, becoming recognizable personalities rather than simply voices behind a band.</p>
+  <div class="am-keyterm"><strong>Crooner:</strong> a popular male singing style built on a warm, conversational, close-microphone delivery; also used loosely for the generation of postwar solo singers who rose to fame after leaving the big bands.</div>
+
+  <h2>Frank Sinatra: the titan of the era</h2>
+  <p>No singer dominated the transition from big-band vocalist to solo headliner more completely than Frank Sinatra. He had made his name fronting Tommy Dorsey's orchestra in the early 1940s before striking out on his own, becoming one of the first big-band singers to build a full solo career independent of any bandleader. Sinatra's career would go on to span decades, moving fluidly between records, film, and television, and setting a template that other singers of his generation, including Nat King Cole, would follow in their own ways.</p>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Listening Guide: "Nancy (With the Laughing Face)"</div><div class="am-listen__meta">Frank Sinatra · song from 1945 · 1965 TV special performance</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Listen for:</strong></p>
+      <ol><li>The relaxed, conversational phrasing typical of Sinatra's crooning style.</li><li>How closely the microphone technique shapes the intimate, warm tone of the voice.</li><li>How a song can stay in a singer's act for decades, sung in fresh performances long after its first recording.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=njJO9llIxSQ" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I listened to this example</label></div>
+    </div>
+  </div>
+
+  <h2>Nat King Cole: the greatest postwar crooner</h2>
+  <p>Nat "King" Cole (1917–1965) began his career as a jazz pianist leading a popular trio before shifting focus to singing, and by the postwar years he had become, in both musical and commercial terms, arguably the greatest crooner of the decade. That achievement is especially striking given how few African American artists managed to break onto the pop charts in the early 1950s; Cole did so repeatedly, building a mainstream audience that crossed racial lines at a moment when the country's popular culture was still deeply segregated. His smooth baritone, precise phrasing, and pianist's sense of timing set a standard other singers were measured against.</p>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Watch: Nat King Cole on Television</div><div class="am-listen__meta">Nat King Cole hosted his own television variety show</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Watch for:</strong></p>
+      <ol><li>How Cole blends popular song performance with the visual format of television.</li><li>The variety-show structure — song, banter, more music — common to hosted programs of the era.</li><li>What television could show an audience that a radio broadcast or a record could not.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=1VAFgcMKy7k" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I watched this example</label></div>
+    </div>
+  </div>
+
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Watch: Getting to Know Nat King Cole</div><div class="am-listen__meta">Two short biographical clips on Cole's life and career</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Watch for:</strong></p>
+      <ol><li>Cole's path from jazz pianist to the country's leading crooner.</li><li>The obstacles he faced as an African American star in a segregated entertainment industry.</li><li>How his musicianship as a pianist shaped his approach to singing.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/Pgcuk_R51HQ" target="_blank" rel="noopener">Open Part One ↗</a>
+      &nbsp;<a class="am-listen__link" href="https://youtu.be/hx_6ARC_R6M" target="_blank" rel="noopener">Open Part Two ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I watched these clips</label></div>
+    </div>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 190" role="img" aria-label="Diagram comparing the career paths of Frank Sinatra and Nat King Cole from big band to solo stardom">
+      <rect width="720" height="190" fill="#F5F7F9" rx="10"/>
+      <defs><marker id="ss-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5568"/></marker></defs>
+      <g font-family="Arial, Helvetica, sans-serif">
+        <text x="20" y="45" font-size="14" font-weight="bold" fill="#1C2F47">Sinatra</text>
+        <rect x="110" y="26" width="150" height="38" rx="6" fill="#2B4A6F"/><text x="185" y="50" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Dorsey Orchestra singer</text>
+        <path d="M262 45 L292 45" stroke="#4A5568" stroke-width="3" marker-end="url(#ss-arr)"/>
+        <rect x="296" y="26" width="150" height="38" rx="6" fill="#233C5C"/><text x="371" y="50" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Solo recording star</text>
+        <path d="M448 45 L478 45" stroke="#4A5568" stroke-width="3" marker-end="url(#ss-arr)"/>
+        <rect x="482" y="26" width="180" height="38" rx="6" fill="#1C2F47"/><text x="572" y="50" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Film and television star</text>
+
+        <text x="20" y="130" font-size="14" font-weight="bold" fill="#1C2F47">Cole</text>
+        <rect x="110" y="111" width="150" height="38" rx="6" fill="#2B4A6F"/><text x="185" y="135" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Jazz trio pianist</text>
+        <path d="M262 130 L292 130" stroke="#4A5568" stroke-width="3" marker-end="url(#ss-arr)"/>
+        <rect x="296" y="111" width="150" height="38" rx="6" fill="#233C5C"/><text x="371" y="135" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Solo crooner</text>
+        <path d="M448 130 L478 130" stroke="#4A5568" stroke-width="3" marker-end="url(#ss-arr)"/>
+        <rect x="482" y="111" width="180" height="38" rx="6" fill="#1C2F47"/><text x="572" y="135" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Television show host</text>
+      </g>
+      <text x="360" y="175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Both careers moved the same direction: ensemble singer to solo star to on-screen personality.</text>
+    </svg>
+    <figcaption>Figure 1. Sinatra and Cole took different routes into music — big-band vocals and jazz piano — but their careers followed a strikingly similar postwar arc.</figcaption>
+  </figure>
+
+  <h2>Correcting a common date</h2>
+  <p>Cole's ballad "Nature Boy" is often misremembered as a hit of the early 1950s, but it actually topped the charts in 1948, near the very start of the period this module covers. Its unusual, almost hymn-like melody and mysterious lyric made it one of the most distinctive hits of the immediate postwar years and a clear early sign of Cole's crossover appeal.</p>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Listening Guide: "Nature Boy"</div><div class="am-listen__meta">Nat King Cole (1948)</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Listen for:</strong></p>
+      <ol><li>The unusual, almost modal melody that made the song sound unlike a typical pop ballad.</li><li>Cole's smooth, unhurried vocal delivery.</li><li>The lush string arrangement supporting the voice.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=Iq0XJCJ1Srw&feature=youtu.be" target="_blank" rel="noopener">Open on YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> I listened to this example</label></div>
+    </div>
+  </div>
+
+  <div class="am-context">
+    <p class="am-label">Historical context</p>
+    Nat King Cole's success came despite an entertainment industry that still segregated audiences and, in many markets, refused to book or broadcast Black performers on equal terms with white ones. His crossover popularity did not erase those barriers, but it did prove that a mainstream, majority-white record-buying audience would embrace a Black artist as a headline star.
+  </div>
+
+  <h2>Sort it out: Sinatra or Cole?</h2>
+  <p>Sinatra and Cole took different routes to the same postwar stardom. Sorting the facts below by artist is a quick way to check how well you can tell their two career paths apart.</p>
+
+  <!-- ============ DRAG SORT ============ -->
+  <div class="h5p-act" data-widget="dragsort">
+    <div class="h5p-act__head"><span>Sort It Out: Sinatra or Cole</span><span class="h5p-act__type">Drag and drop</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Drag each card into a category — or tap a card, then tap a category.</p>
+      <div class="h5p-ds" data-bins='["Frank Sinatra","Nat King Cole"]' data-items='[{"t":"Sang with the Tommy Dorsey Orchestra","a":0},{"t":"Led a jazz piano trio first","a":1},{"t":"Had the 1948 hit “Nature Boy”","a":1},{"t":"Sang “Nancy (With the Laughing Face)”","a":0},{"t":"A rare Black crossover star of the era","a":1},{"t":"One of the first big-band singers to build a solo career","a":0},{"t":"Known for smooth baritone and pianist’s timing","a":1},{"t":"Recorded “Unforgettable” (1951)","a":1},{"t":"Moved fluidly between records, film, and television","a":0}]'></div>
+      <div class="h5p-controls"><button class="am-btn" data-check>Check</button><button class="am-btn am-btn--ghost" data-retry>Retry</button><span class="h5p-score"></span></div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+  <p>Both men left the swing era's big bands behind and became personalities in their own right — a pattern the next page traces through four more singers of the same postwar generation.</p>
+
+  <!-- ============ FLASHCARDS ============ -->
+  <div class="h5p-act" data-widget="flashcards">
+    <div class="h5p-act__head"><span>Key-Term Flashcards</span><span class="h5p-act__type">Flashcards</span></div>
+    <div class="h5p-act__body">
+      <div class="h5p-flash">
+        <div class="h5p-card" data-cards='[{"front":"Crooner","back":"A popular singing style built on a warm, conversational, close-microphone delivery; also the generation of postwar solo singers who rose after leaving the big bands."},{"front":"Frank Sinatra","back":"Former Tommy Dorsey band singer who became one of the first big-band vocalists to build a major solo career."},{"front":"Nat King Cole","back":"Jazz pianist turned crooner, arguably the greatest postwar crooner in musical and commercial terms, and a rare Black crossover star of the era."},{"front":"“Nature Boy”","back":"Nat King Cole’s distinctive hit ballad, topping the charts in 1948."}]'>
+          <div class="h5p-face h5p-face--front"></div>
+          <div class="h5p-face h5p-face--back"></div>
+        </div>
+      </div>
+      <div class="h5p-controls" style="justify-content:center">
+        <button class="am-btn am-btn--ghost" data-prev>&#8592; Prev</button>
+        <span class="h5p-score" data-counter style="margin:0"></span>
+        <button class="am-btn am-btn--ghost" data-next>Next &#8594;</button>
+      </div>
+      <p class="h5p-hint" style="text-align:center; margin:8px 0 0">Tap the card to flip it.</p>
+    </div>
+  </div>
+
+  <!-- ============ MCQ ============ -->
+  <div class="h5p-act h5p-mcq" data-widget="mcq">
+    <div class="h5p-act__head"><span>Check Your Understanding</span><span class="h5p-act__type">Multiple choice</span></div>
+    <div class="h5p-act__body">
+      <div class="h5p-q" data-correct="2">
+        <p class="h5p-stem">1. In what year did Nat King Cole's "Nature Boy" top the charts?</p>
+        <button class="h5p-opt">1945</button>
+        <button class="h5p-opt">1952</button>
+        <button class="h5p-opt">1948</button>
+        <button class="h5p-opt">1955</button>
+        <div class="h5p-feedback"></div>
+        <p class="h5p-why" hidden>"Nature Boy" was a 1948 hit, near the start of the postwar decade.</p>
+      </div>
+      <div class="h5p-q" data-correct="1">
+        <p class="h5p-stem">2. What instrument did Nat King Cole play before becoming known primarily as a singer?</p>
+        <button class="h5p-opt">Trumpet</button>
+        <button class="h5p-opt">Piano</button>
+        <button class="h5p-opt">Trombone</button>
+        <button class="h5p-opt">Clarinet</button>
+        <div class="h5p-feedback"></div>
+        <p class="h5p-why" hidden>Cole led a jazz piano trio before his singing career took off.</p>
+      </div>
+      <div class="h5p-q" data-correct="0">
+        <p class="h5p-stem">3. Frank Sinatra first built his reputation singing with which bandleader's orchestra?</p>
+        <button class="h5p-opt">Tommy Dorsey</button>
+        <button class="h5p-opt">Glenn Miller</button>
+        <button class="h5p-opt">Count Basie</button>
+        <button class="h5p-opt">Xavier Cugat</button>
+        <div class="h5p-feedback"></div>
+        <p class="h5p-why" hidden>Sinatra rose to fame as the featured vocalist with Tommy Dorsey's orchestra before going solo.</p>
+      </div>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Check answers</button>
+        <button class="am-btn am-btn--ghost" data-retry>Retry</button>
+        <span class="h5p-score"></span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Putting It Together</h2>
+  <p>Sinatra and Cole show how completely the solo singer had replaced the bandleader as the industry's central star by the late 1940s, and how television and film extended that stardom even further. They were not alone: the next page introduces four more singers of the era — Doris Day, Perry Como, Jo Stafford, and Peggy Lee — each of whom followed a similar path from big-band roots to independent stardom.</p>
+</main>
+
+<main lang="es">
+  <h1><span class="am-kicker">Módulo 7 · Página 5 de 10</span>Cantantes estrella I: Sinatra y Nat King Cole</h1>
+  <p class="am-lead">Hacia 1946, el foco de atención había pasado de los directores de orquesta a los cantantes solistas, y ningún par de cantantes definió la nueva época con más claridad que Frank Sinatra y Nat King Cole.</p>
+
+  <div class="am-objectives">
+    <p class="am-label">En esta página vas a</p>
+    <ul style="margin:6px 0 0">
+      <li>Explicar el desplazamiento de la atención del público de los directores de orquesta a los cantantes solistas estrella después de 1946.</li>
+      <li>Describir el camino de Frank Sinatra de cantante de big band a estrella solista.</li>
+      <li>Explicar por qué la carrera de Nat King Cole se considera especialmente importante, tanto en lo musical como en lo comercial.</li>
+      <li>Ubicar correctamente "Nature Boy" de Nat King Cole en la cronología de la posguerra.</li>
+    </ul>
+  </div>
+
+  <h2>De director de orquesta a estrella solista</h2>
+  <p>Durante la era del swing, los nombres más importantes de la música popular solían ser los directores de orquesta: Benny Goodman, Count Basie, Glenn Miller. Hacia 1946, eso había cambiado. La atención del público se desplazó de manera decisiva hacia una nueva generación de vocalistas, muchos de los cuales habían empezado su carrera de pie delante de una big band, cantando entre los números instrumentales. Frank Sinatra, Perry Como, Doris Day, Jo Stafford y Peggy Lee surgieron de esta manera, y todos se convirtieron en estrellas mucho más grandes cuando se lanzaron como solistas; Nat "King" Cole, que en cambio surgió como pianista de jazz al frente de su propio trío, dio el mismo salto al estrellato como solista. Siguiendo el ejemplo que antes había dado Bing Crosby, muchos de estos cantantes construyeron también carreras en el cine y, muy pronto, en la televisión, y se convirtieron en personalidades reconocibles y no simplemente en voces detrás de una banda.</p>
+  <div class="am-keyterm"><strong>Crooner:</strong> un estilo popular de canto masculino basado en una interpretación cálida, conversacional y muy cercana al micrófono; el término también se usa de manera más general para la generación de cantantes solistas de la posguerra que alcanzaron la fama tras dejar las big bands.</div>
+
+  <h2>Frank Sinatra: el titán de la época</h2>
+  <p>Ningún cantante dominó tan por completo la transición de vocalista de big band a figura principal como solista como Frank Sinatra. Se había hecho un nombre al frente de la orquesta de Tommy Dorsey a comienzos de la década de 1940 antes de independizarse, y fue uno de los primeros cantantes de big band en construir una carrera solista completa, independiente de cualquier director de orquesta. La carrera de Sinatra abarcaría décadas, moviéndose con soltura entre los discos, el cine y la televisión, y fijaría un modelo que otros cantantes de su generación, entre ellos Nat King Cole, seguirían a su manera.</p>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Guía de audición: "Nancy (With the Laughing Face)"</div><div class="am-listen__meta">Frank Sinatra · canción de 1945 · actuación en un especial de televisión de 1965</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Presta atención a:</strong></p>
+      <ol><li>El fraseo relajado y conversacional, típico del estilo crooner de Sinatra.</li><li>Cuánto moldea la técnica de micrófono el tono íntimo y cálido de la voz.</li><li>Cómo una canción puede permanecer décadas en el repertorio de un cantante, con nuevas interpretaciones mucho después de su primera grabación.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=njJO9llIxSQ" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Escuché este ejemplo</label></div>
+    </div>
+  </div>
+
+  <h2>Nat King Cole: el mayor crooner de la posguerra</h2>
+  <p>Nat "King" Cole (1917–1965) empezó su carrera como pianista de jazz al frente de un trío popular antes de concentrarse en el canto, y en los años de la posguerra ya se había convertido, en términos musicales y comerciales, en posiblemente el mayor crooner de la década. Ese logro resulta especialmente notable si se considera lo pocos que eran los artistas afroamericanos que lograban entrar en las listas del pop a comienzos de la década de 1950; Cole lo consiguió una y otra vez, y construyó un público masivo que atravesaba las divisiones raciales en un momento en que la cultura popular del país seguía profundamente segregada. Su suave voz de barítono, su fraseo preciso y su sentido del tiempo de pianista fijaron un estándar con el que se medía a los demás cantantes.</p>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Para ver: Nat King Cole en la televisión</div><div class="am-listen__meta">Nat King Cole presentó su propio programa de variedades en televisión</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Observa:</strong></p>
+      <ol><li>Cómo combina Cole la interpretación de canciones populares con el formato visual de la televisión.</li><li>La estructura del programa de variedades (canción, charla, más música), común en los programas con presentador de la época.</li><li>Lo que la televisión podía mostrarle al público y que una transmisión de radio o un disco no podían.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=1VAFgcMKy7k" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Vi este video</label></div>
+    </div>
+  </div>
+
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Para ver: conoce a Nat King Cole</div><div class="am-listen__meta">Dos breves fragmentos biográficos sobre la vida y la carrera de Cole</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Observa:</strong></p>
+      <ol><li>El camino de Cole de pianista de jazz a principal crooner del país.</li><li>Los obstáculos que enfrentó como estrella afroamericana en una industria del entretenimiento segregada.</li><li>Cómo su formación musical como pianista moldeó su manera de cantar.</li></ol>
+      <a class="am-listen__link" href="https://youtu.be/Pgcuk_R51HQ" target="_blank" rel="noopener">Abrir la primera parte ↗</a>
+      &nbsp;<a class="am-listen__link" href="https://youtu.be/hx_6ARC_R6M" target="_blank" rel="noopener">Abrir la segunda parte ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Vi estos videos</label></div>
+    </div>
+  </div>
+
+  <figure>
+<svg viewBox="0 0 720 190" role="img" aria-label="Diagrama que compara las trayectorias de Frank Sinatra y Nat King Cole desde la big band hasta el estrellato como solistas">
+      <rect width="720" height="190" fill="#F5F7F9" rx="10"/>
+      <defs><marker id="ss-arr-es" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5568"/></marker></defs>
+      <g font-family="Arial, Helvetica, sans-serif">
+        <text x="20" y="45" font-size="14" font-weight="bold" fill="#1C2F47">Sinatra</text>
+        <rect x="110" y="26" width="150" height="38" rx="6" fill="#2B4A6F"/><text x="185" y="50" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Cantante con Dorsey</text>
+        <path d="M262 45 L292 45" stroke="#4A5568" stroke-width="3" marker-end="url(#ss-arr-es)"/>
+        <rect x="296" y="26" width="150" height="38" rx="6" fill="#233C5C"/><text x="371" y="50" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Estrella discográfica</text>
+        <path d="M448 45 L478 45" stroke="#4A5568" stroke-width="3" marker-end="url(#ss-arr-es)"/>
+        <rect x="482" y="26" width="180" height="38" rx="6" fill="#1C2F47"/><text x="572" y="50" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Estrella de cine y TV</text>
+
+        <text x="20" y="130" font-size="14" font-weight="bold" fill="#1C2F47">Cole</text>
+        <rect x="110" y="111" width="150" height="38" rx="6" fill="#2B4A6F"/><text x="185" y="135" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Pianista de trío de jazz</text>
+        <path d="M262 130 L292 130" stroke="#4A5568" stroke-width="3" marker-end="url(#ss-arr-es)"/>
+        <rect x="296" y="111" width="150" height="38" rx="6" fill="#233C5C"/><text x="371" y="135" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Crooner solista</text>
+        <path d="M448 130 L478 130" stroke="#4A5568" stroke-width="3" marker-end="url(#ss-arr-es)"/>
+        <rect x="482" y="111" width="180" height="38" rx="6" fill="#1C2F47"/><text x="572" y="135" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Presentador de televisión</text>
+      </g>
+      <text x="360" y="175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#4A5568">Ambas carreras fueron en la misma dirección: del conjunto al estrellato solista y a la pantalla.</text>
+    </svg>
+    <figcaption>Figura 1. Sinatra y Cole llegaron a la música por caminos distintos (el canto con big band y el piano de jazz), pero sus carreras siguieron una trayectoria de posguerra asombrosamente parecida.</figcaption>
+  </figure>
+
+  <h2>Corregir una fecha común</h2>
+  <p>La balada "Nature Boy" de Cole suele recordarse erróneamente como un éxito de comienzos de la década de 1950, pero en realidad llegó al primer lugar de las listas en 1948, casi al principio del período que abarca este módulo. Su melodía inusual, casi de himno, y su letra misteriosa la convirtieron en uno de los éxitos más singulares de los años inmediatamente posteriores a la guerra y en una clara señal temprana del atractivo de Cole entre públicos diversos.</p>
+
+  <!-- ============ LISTENING GUIDE ============ -->
+  <div class="am-listen">
+    <div class="am-listen__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#9FACBD"/></svg>
+      <div><div class="am-listen__title">Guía de audición: "Nature Boy"</div><div class="am-listen__meta">Nat King Cole (1948)</div></div>
+    </div>
+    <div class="am-listen__body">
+      <p style="margin:0 0 4px"><strong>Presta atención a:</strong></p>
+      <ol><li>La melodía inusual, casi modal, que hacía que la canción no sonara como una balada pop típica.</li><li>La interpretación vocal suave y sin prisa de Cole.</li><li>El exuberante arreglo de cuerdas que acompaña la voz.</li></ol>
+      <a class="am-listen__link" href="https://www.youtube.com/watch?v=Iq0XJCJ1Srw&feature=youtu.be" target="_blank" rel="noopener">Abrir en YouTube ↗</a>
+      <div class="am-listen__log"><label><input type="checkbox"> Escuché este ejemplo</label></div>
+    </div>
+  </div>
+
+  <div class="am-context">
+    <p class="am-label">Contexto histórico</p>
+    El éxito de Nat King Cole llegó a pesar de una industria del entretenimiento que todavía segregaba al público y que, en muchos mercados, se negaba a contratar o a transmitir a artistas negros en igualdad de condiciones con los blancos. Su popularidad entre públicos de ambos lados de la división racial no borró esas barreras, pero sí demostró que un público masivo de compradores de discos, mayoritariamente blanco, podía adoptar a un artista negro como estrella principal.
+  </div>
+
+  <h2>Clasifícalos: ¿Sinatra o Cole?</h2>
+  <p>Sinatra y Cole tomaron caminos distintos hacia el mismo estrellato de la posguerra. Clasificar por artista los datos de abajo es una manera rápida de comprobar qué tan bien distingues sus dos trayectorias.</p>
+
+  <!-- ============ DRAG SORT ============ -->
+  <div class="h5p-act" data-widget="dragsort">
+    <div class="h5p-act__head"><span>Clasifícalos: ¿Sinatra o Cole?</span><span class="h5p-act__type">Arrastrar y soltar</span></div>
+    <div class="h5p-act__body">
+      <p class="h5p-hint">Arrastra cada tarjeta a una categoría, o toca una tarjeta y luego una categoría.</p>
+      <div class="h5p-ds" data-bins='["Frank Sinatra","Nat King Cole"]' data-items='[{"t":"Cantó con la orquesta de Tommy Dorsey","a":0},{"t":"Primero dirigió un trío de jazz con piano","a":1},{"t":"Tuvo el éxito de 1948 “Nature Boy”","a":1},{"t":"Cantó “Nancy (With the Laughing Face)”","a":0},{"t":"Una de las pocas estrellas negras de la época con éxito entre todos los públicos","a":1},{"t":"Uno de los primeros cantantes de big band en construir una carrera solista","a":0},{"t":"Conocido por su suave voz de barítono y su sentido del tiempo de pianista","a":1},{"t":"Grabó “Unforgettable” (1951)","a":1},{"t":"Se movía con soltura entre los discos, el cine y la televisión","a":0}]'></div>
+      <div class="h5p-controls"><button class="am-btn" data-check>Revisar</button><button class="am-btn am-btn--ghost" data-retry>Reintentar</button><span class="h5p-score"></span></div>
+      <div class="h5p-feedback"></div>
+    </div>
+  </div>
+  <p>Ambos dejaron atrás las big bands de la era del swing y se convirtieron en personalidades por derecho propio, un patrón que la siguiente página sigue a través de otros cuatro cantantes de la misma generación de la posguerra.</p>
+
+  <!-- ============ FLASHCARDS ============ -->
+  <div class="h5p-act" data-widget="flashcards">
+    <div class="h5p-act__head"><span>Tarjetas de términos clave</span><span class="h5p-act__type">Tarjetas</span></div>
+    <div class="h5p-act__body">
+      <div class="h5p-flash">
+        <div class="h5p-card" data-cards='[{"front":"Crooner","back":"Un estilo popular de canto basado en una interpretación cálida, conversacional y muy cercana al micrófono; también, la generación de cantantes solistas de la posguerra que surgió tras dejar las big bands."},{"front":"Frank Sinatra","back":"Excantante de la banda de Tommy Dorsey que se convirtió en uno de los primeros vocalistas de big band en construir una gran carrera solista."},{"front":"Nat King Cole","back":"Pianista de jazz convertido en crooner, posiblemente el mayor crooner de la posguerra en términos musicales y comerciales, y una de las pocas estrellas negras de la época con éxito entre todos los públicos."},{"front":"“Nature Boy”","back":"La singular balada de éxito de Nat King Cole, que llegó al primer lugar de las listas en 1948."}]'>
+          <div class="h5p-face h5p-face--front"></div>
+          <div class="h5p-face h5p-face--back"></div>
+        </div>
+      </div>
+      <div class="h5p-controls" style="justify-content:center">
+        <button class="am-btn am-btn--ghost" data-prev>&#8592; Anterior</button>
+        <span class="h5p-score" data-counter style="margin:0"></span>
+        <button class="am-btn am-btn--ghost" data-next>Siguiente &#8594;</button>
+      </div>
+      <p class="h5p-hint" style="text-align:center; margin:8px 0 0">Toca la tarjeta para darle la vuelta.</p>
+    </div>
+  </div>
+
+  <!-- ============ MCQ ============ -->
+  <div class="h5p-act h5p-mcq" data-widget="mcq">
+    <div class="h5p-act__head"><span>Comprueba lo que aprendiste</span><span class="h5p-act__type">Opción múltiple</span></div>
+    <div class="h5p-act__body">
+      <div class="h5p-q" data-correct="2">
+        <p class="h5p-stem">1. ¿En qué año llegó "Nature Boy" de Nat King Cole al primer lugar de las listas?</p>
+        <button class="h5p-opt">1945</button>
+        <button class="h5p-opt">1952</button>
+        <button class="h5p-opt">1948</button>
+        <button class="h5p-opt">1955</button>
+        <div class="h5p-feedback"></div>
+        <p class="h5p-why" hidden>"Nature Boy" fue un éxito de 1948, casi al comienzo de la década de posguerra.</p>
+      </div>
+      <div class="h5p-q" data-correct="1">
+        <p class="h5p-stem">2. ¿Qué instrumento tocaba Nat King Cole antes de hacerse conocido principalmente como cantante?</p>
+        <button class="h5p-opt">Trompeta</button>
+        <button class="h5p-opt">Piano</button>
+        <button class="h5p-opt">Trombón</button>
+        <button class="h5p-opt">Clarinete</button>
+        <div class="h5p-feedback"></div>
+        <p class="h5p-why" hidden>Cole dirigía un trío de jazz con piano antes de que despegara su carrera como cantante.</p>
+      </div>
+      <div class="h5p-q" data-correct="0">
+        <p class="h5p-stem">3. ¿Con la orquesta de qué director construyó Frank Sinatra su primera reputación como cantante?</p>
+        <button class="h5p-opt">Tommy Dorsey</button>
+        <button class="h5p-opt">Glenn Miller</button>
+        <button class="h5p-opt">Count Basie</button>
+        <button class="h5p-opt">Xavier Cugat</button>
+        <div class="h5p-feedback"></div>
+        <p class="h5p-why" hidden>Sinatra se hizo famoso como vocalista principal de la orquesta de Tommy Dorsey antes de lanzarse como solista.</p>
+      </div>
+      <div class="h5p-controls">
+        <button class="am-btn" data-check>Revisar respuestas</button>
+        <button class="am-btn am-btn--ghost" data-retry>Reintentar</button>
+        <span class="h5p-score"></span>
+      </div>
+    </div>
+  </div>
+
+  <h2>En resumen</h2>
+  <p>Sinatra y Cole muestran hasta qué punto, a finales de la década de 1940, el cantante solista había reemplazado al director de orquesta como la estrella central de la industria, y cómo la televisión y el cine ampliaron todavía más ese estrellato. No estaban solos: la siguiente página presenta a otros cuatro cantantes de la época (Doris Day, Perry Como, Jo Stafford y Peggy Lee), cada uno de los cuales siguió un camino parecido, de sus raíces en las big bands al estrellato independiente.</p>
+</main>
+
+<div class="am-pagefoot"><div class="rule"></div></div>
+<footer class="am-footband"><span class="am-l-en">Module 7: Postwar America: 1945–1955 &nbsp;·&nbsp; <span class="pg">Page 5 of 10</span> &nbsp;·&nbsp; American Music</span><span class="am-l-es">Módulo 7: Estados Unidos en la posguerra: 1945–1955 &nbsp;·&nbsp; <span class="pg">Página 5 de 10</span> &nbsp;·&nbsp; Música estadounidense</span></footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Language (EN/ES) ---------- */
+  var ROOT=document.documentElement, BI=ROOT.classList.contains('am-bilingual');
+  var ES={"Answer every question first.": "Responde todas las preguntas primero.", "Score: ": "Puntuación: ", "Correct!": "¡Correcto!", "Not quite — the highlighted answer is correct.": "No exactamente: la respuesta resaltada es la correcta.", "Fill every blank first (tap a filled blank to clear it).": "Completa todos los espacios primero (toca un espacio lleno para vaciarlo).", "Perfect!": "¡Perfecto!", "Tap the red blanks to clear them and try again.": "Toca los espacios en rojo para vaciarlos e inténtalo de nuevo.", "Deck complete — you rated ": "Mazo terminado: marcaste ", " of ": " de ", " cards “Got it” on the first pass.": " tarjetas como “Lo sé” en la primera vuelta.", " (review)": " (repaso)", "Move up": "Subir", "Move down": "Bajar", "Exactly right!": "¡Exactamente!", "Red items are out of place — keep adjusting.": "Los elementos en rojo están fuera de lugar; sigue ajustando.", "Place every item in a category first.": "Coloca cada elemento en una categoría primero.", "All sorted correctly!": "¡Todo clasificado correctamente!", "Red items are in the wrong category — tap one to send it back and try again.": "Los elementos en rojo están en la categoría equivocada; toca uno para devolverlo e inténtalo de nuevo.", "Found ": "Encontraste ", " wrong": " incorrectas", "You found them all!": "¡Las encontraste todas!", "Dashed outlines show ones you missed; struck-through words were not targets.": "Los contornos punteados muestran las que te faltaron; las palabras tachadas no eran objetivos.", "Choose an answer for every blank first.": "Elige una respuesta para cada espacio primero.", "All correct!": "¡Todo correcto!", "Red choices are wrong — change them and check again.": "Las opciones en rojo son incorrectas; cámbialas y vuelve a revisar.", "<em>Tap a section to begin.</em>": "<em>Toca una sección para comenzar.</em>", "Tap a key to play.": "Toca una tecla para tocar.", "Now playing: ": "Sonando: ", "Playing: ": "Reproduciendo: ", "<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>": "<h4>Todas las tareas completas ✔</h4><div>Tocaste cada patrón correctamente. Vuelve a escuchar cualquier demostración o sigue explorando.</div>", "Nice work — every task complete.": "¡Buen trabajo! Completaste todas las tareas.", "All piano tasks complete.": "Todas las tareas de piano completas.", "Task ": "Tarea ", "Show me": "Muéstrame", "You played: ": "Tocaste: ", "Tasks: ": "Tareas: ", " correct.": " correcta.", "← Back": "← Atrás", "Start over": "Empezar de nuevo", "Strong outcome": "Buen resultado", "Mixed outcome": "Resultado mixto", "Rethink this path": "Reconsidera este camino", "Your path": "Tu camino", "Outcome": "Resultado", "Try another path": "Prueba otro camino", "Endings found: ": "Finales encontrados: ", "Outcome reached: ": "Resultado alcanzado: ", "Explored: ": "Explorados: ", "You explored every location on the map.": "Exploraste todos los lugares del mapa.", "<em>Select a numbered marker, or a name below the map.</em>": "<em>Selecciona un marcador numerado o un nombre debajo del mapa.</em>", "Image. Tap the spot, or use the arrow keys to move the circle and press Enter.": "Imagen. Toca el lugar, o usa las flechas del teclado para mover el círculo y presiona Enter.", "All found!": "¡Encontraste todo!", "You found every spot.": "Encontraste todos los lugares.", "All spots found.": "Todos los lugares encontrados.", "Found it!": "¡Lo encontraste!", "✖ Not quite — try again.": "✖ No exactamente; inténtalo de nuevo.", " (You can use “Show me.”)": " (Puedes usar “Muéstrame”.)", "Found: ": "Encontrados: ", "Events opened: ": "Eventos abiertos: ", "You opened every event on the timeline.": "Abriste todos los eventos de la línea de tiempo.", "Items to sort": "Elementos para clasificar", "Place selected item in ": "Colocar el elemento seleccionado en ", " selected. Choose a category.": " seleccionado. Elige una categoría.", "Correct: ": "Correctos: ", "All sorted correctly.": "Todo clasificado correctamente.", "Play video: ": "Reproducir video: ", "Play here": "Reproducir aquí", "Play audio: ": "Reproducir audio: ", "✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.": "✔ Los elementos correctos quedan fijos. ✖ Los marcados con una X volvieron a la bandeja; inténtalo de nuevo."};
+  function X(w,s){ var m=w&&w.closest?w.closest('main'):null; return (m&&m.lang==='es'&&ES[s])||s; }
+  function setLang(l){ if(!BI) l='en'; ROOT.setAttribute('data-lang',l); ROOT.lang=l;
+    var tt=ROOT.getAttribute(l==='es'?'data-title-es':'data-title-en'); if(tt) document.title=tt;
+    document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.setAttribute('aria-pressed',b.dataset.setlang===l?'true':'false'); });
+    try{ localStorage.setItem('amMusicLang',l); }catch(e){} }
+  window.amSetLang=setLang;
+  document.querySelectorAll('.am-langtoggle button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.setlang); window.scrollTo(0,0); }); });
+  (function(){ var saved=null; try{ saved=localStorage.getItem('amMusicLang'); }catch(e){} setLang(saved==='es'?'es':'en'); })();
+  function shuffle(a){ for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t;} return a; }
+  function fb(w,cls,msg){ var f=w.querySelector('.h5p-feedback'); if(!f) return; f.className='h5p-feedback'+(cls?' '+cls:''); f.textContent=msg||''; }
+  function score(w,txt){ var s=w.querySelector('.h5p-score'); if(s) s.textContent=txt||''; }
+  function on(w,sel,fn){ var el=w.querySelector(sel); if(el) el.addEventListener('click',fn); }
+
+  /* ---------- 1. MCQ ---------- */
+  document.querySelectorAll('[data-widget="mcq"]').forEach(function(w){
+    var qs=w.querySelectorAll('.h5p-q');
+    qs.forEach(function(q){
+      q.querySelectorAll('.h5p-opt').forEach(function(opt,i){
+        opt.type='button';
+        opt.addEventListener('click',function(){
+          if(q.dataset.locked) return;
+          q.querySelectorAll('.h5p-opt').forEach(function(o){o.classList.remove('sel');});
+          opt.classList.add('sel'); q.dataset.sel=i;
+        });
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, answered=0;
+      qs.forEach(function(q){ if(q.dataset.sel!==undefined) answered++; });
+      if(answered<qs.length){ score(w,X(w,'Answer every question first.')); return; }
+      qs.forEach(function(q){
+        q.dataset.locked="1";
+        var sel=+q.dataset.sel, cor=+q.dataset.correct, opts=q.querySelectorAll('.h5p-opt'), f=q.querySelector('.h5p-feedback'), why=q.querySelector('.h5p-why');
+        opts[cor].classList.add('ok');
+        if(sel===cor){sc++; f.className='h5p-feedback ok'; f.textContent=X(w,'Correct!');}
+        else {opts[sel].classList.add('bad'); f.className='h5p-feedback bad'; f.textContent=X(w,'Not quite — the highlighted answer is correct.');}
+        if(why) why.hidden=false;
+      });
+      score(w,X(w,'Score: ')+sc+' / '+qs.length);
+    });
+    on(w,'[data-retry]',function(){
+      qs.forEach(function(q){
+        delete q.dataset.locked; delete q.dataset.sel;
+        q.querySelectorAll('.h5p-opt').forEach(function(o){o.className='h5p-opt';});
+        var f=q.querySelector('.h5p-feedback'); f.className='h5p-feedback'; f.textContent='';
+        var why=q.querySelector('.h5p-why'); if(why) why.hidden=true;
+      });
+      score(w,'');
+    });
+  });
+
+  /* ---------- 2. Drag the words ---------- */
+  document.querySelectorAll('[data-widget="dragwords"]').forEach(function(w){
+    var bank=w.querySelector('.h5p-bank'), blanks=w.querySelectorAll('.h5p-blank'), selWord=null;
+    var words=[]; blanks.forEach(function(b){words.push(b.dataset.answer);});
+    (w.dataset.extra||'').split('|').forEach(function(x){ if(x) words.push(x); });
+    function makeBank(){
+      bank.innerHTML=''; selWord=null;
+      shuffle(words.slice()).forEach(function(word){
+        var b=document.createElement('button'); b.type='button'; b.className='h5p-word'; b.textContent=word;
+        b.addEventListener('click',function(){
+          bank.querySelectorAll('.h5p-word').forEach(function(x){x.classList.remove('sel');});
+          b.classList.add('sel'); selWord=b;
+        });
+        bank.appendChild(b);
+      });
+    }
+    makeBank();
+    blanks.forEach(function(blank){
+      blank.setAttribute('role','button'); blank.tabIndex=0;
+      blank.addEventListener('click',function(){
+        if(blank.textContent){
+          var t=blank.textContent; blank.textContent='';
+          var returned=false;
+          bank.querySelectorAll('.h5p-word').forEach(function(x){ if(!returned && x.textContent===t && x.classList.contains('used')){ x.classList.remove('used'); returned=true; } });
+          blank.classList.remove('ok','bad'); return;
+        }
+        if(!selWord) return;
+        blank.textContent=selWord.textContent;
+        selWord.classList.add('used'); selWord.classList.remove('sel'); selWord=null;
+      });
+    });
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      blanks.forEach(function(b){
+        if(!b.textContent){done=false; return;}
+        if(b.textContent.toLowerCase()===b.dataset.answer.toLowerCase()){b.classList.add('ok'); b.classList.remove('bad'); sc++;}
+        else {b.classList.add('bad'); b.classList.remove('ok');}
+      });
+      if(!done){fb(w,'bad',X(w,'Fill every blank first (tap a filled blank to clear it).')); return;}
+      score(w,X(w,'Score: ')+sc+' / '+blanks.length);
+      fb(w, sc===blanks.length?'ok':'bad', sc===blanks.length?X(w,'Perfect!'):X(w,'Tap the red blanks to clear them and try again.'));
+    });
+    on(w,'[data-retry]',function(){
+      blanks.forEach(function(b){b.textContent=''; b.classList.remove('ok','bad');});
+      makeBank(); score(w,''); fb(w,'','');
+    });
+  });
+
+  /* ---------- 3. Flashcards ---------- */
+  document.querySelectorAll('[data-widget="flashcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), cards=JSON.parse(card.dataset.cards), i=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    function render(){ card.classList.remove('flip'); setTimeout(function(){ front.textContent=cards[i].front; back.textContent=cards[i].back; },card.classList.contains('flip')?250:0); counter.textContent=(i+1)+' / '+cards.length; }
+    card.addEventListener('click',function(){card.classList.toggle('flip');});
+    on(w,'[data-prev]',function(){ i=(i-1+cards.length)%cards.length; render(); });
+    on(w,'[data-next]',function(){ i=(i+1)%cards.length; render(); });
+    front.textContent=cards[0].front; back.textContent=cards[0].back; counter.textContent='1 / '+cards.length;
+  });
+
+  /* ---------- 4. Dialog cards (self-assessed) ---------- */
+  document.querySelectorAll('[data-widget="dialogcards"]').forEach(function(w){
+    var card=w.querySelector('.h5p-card'), all=JSON.parse(card.dataset.cards), queue=all.slice(), i=0, got=0, seen=0;
+    var front=card.querySelector('.h5p-face--front'), back=card.querySelector('.h5p-face--back'), counter=w.querySelector('[data-counter]');
+    var ctrl=w.querySelector('.h5p-dlg-ctrl'), bar=w.querySelector('.h5p-progress span'), restart=w.querySelector('[data-restart]');
+    function show(){
+      if(!queue.length){ card.style.display='none'; ctrl.classList.remove('show'); bar.style.width='100%'; fb(w,'ok',X(w,'Deck complete — you rated ')+got+X(w,' of ')+all.length+X(w,' cards “Got it” on the first pass.')); restart.hidden=false; counter.textContent=''; return; }
+      card.style.display=''; card.classList.remove('flip'); ctrl.classList.remove('show');
+      front.textContent=queue[0].front; back.textContent=queue[0].back;
+      counter.textContent=(all.length-queue.length+1)+' / '+all.length+(queue.length+seen>all.length?X(w,' (review)'):'');
+      bar.style.width=Math.round(100*(all.length-queue.length)/all.length)+'%';
+    }
+    card.addEventListener('click',function(){ card.classList.toggle('flip'); if(card.classList.contains('flip')) ctrl.classList.add('show'); });
+    on(w,'[data-gotit]',function(){ var c=queue.shift(); if(!c._again) got++; seen++; show(); });
+    on(w,'[data-again]',function(){ var c=queue.shift(); c._again=true; queue.push(c); seen++; show(); });
+    restart.addEventListener('click',function(){ all.forEach(function(c){delete c._again;}); queue=all.slice(); got=0; seen=0; restart.hidden=true; fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 5. Order the steps ---------- */
+  document.querySelectorAll('[data-widget="order"]').forEach(function(w){
+    var ol=w.querySelector('.h5p-order'), solution=JSON.parse(ol.dataset.solution);
+    function build(){
+      var items=shuffle(solution.slice()); if(items.join()===solution.join()) items.reverse();
+      ol.innerHTML='';
+      items.forEach(function(txt){
+        var li=document.createElement('li');
+        var up=document.createElement('button'); up.className='h5p-move'; up.type='button'; up.innerHTML='&#9650;'; up.setAttribute('aria-label',X(w,'Move up'));
+        var dn=document.createElement('button'); dn.className='h5p-move'; dn.type='button'; dn.innerHTML='&#9660;'; dn.setAttribute('aria-label',X(w,'Move down'));
+        var span=document.createElement('span'); span.textContent=txt;
+        up.addEventListener('click',function(){ var p=li.previousElementSibling; if(p) ol.insertBefore(li,p); clear(); });
+        dn.addEventListener('click',function(){ var n=li.nextElementSibling; if(n) ol.insertBefore(n,li); clear(); });
+        li.appendChild(up); li.appendChild(dn); li.appendChild(span); ol.appendChild(li);
+      });
+    }
+    function clear(){ ol.querySelectorAll('li').forEach(function(li){li.classList.remove('ok','bad');}); fb(w,'',''); score(w,''); }
+    build();
+    on(w,'[data-check]',function(){
+      var lis=ol.querySelectorAll('li'), sc=0;
+      lis.forEach(function(li,idx){ var ok=li.querySelector('span').textContent===solution[idx]; li.classList.toggle('ok',ok); li.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+lis.length);
+      fb(w, sc===lis.length?'ok':'bad', sc===lis.length?X(w,'Exactly right!'):X(w,'Red items are out of place — keep adjusting.'));
+    });
+    on(w,'[data-retry]',function(){ build(); clear(); });
+  });
+
+  /* ---------- 6. Sort into categories ---------- */
+  document.querySelectorAll('[data-widget="sort"]').forEach(function(w){
+    var pool=w.querySelector('.h5p-sort-pool'), binsEl=w.querySelector('.h5p-bins');
+    var items=JSON.parse(pool.dataset.items), bins=JSON.parse(binsEl.dataset.bins), sel=null;
+    function mkItem(it){
+      var b=document.createElement('button'); b.type='button'; b.className='h5p-item'; b.textContent=it.t; b.dataset.c=it.c;
+      b.addEventListener('click',function(){
+        if(b.parentNode!==pool){ pool.appendChild(b); b.className='h5p-item'; sel=null; return; }
+        w.querySelectorAll('.h5p-item').forEach(function(x){x.classList.remove('sel');}); b.classList.add('sel'); sel=b;
+      });
+      return b;
+    }
+    function build(){
+      pool.innerHTML=''; binsEl.innerHTML=''; sel=null;
+      shuffle(items.slice()).forEach(function(it){ pool.appendChild(mkItem(it)); });
+      bins.forEach(function(name,idx){
+        var d=document.createElement('div'); d.className='h5p-bin'; d.dataset.c=idx;
+        var t=document.createElement('div'); t.className='h5p-bin__title'; t.textContent=name; d.appendChild(t);
+        d.addEventListener('click',function(e){ if(e.target.classList.contains('h5p-item')) return; if(!sel) return; d.appendChild(sel); sel.classList.remove('sel'); sel=null; });
+        binsEl.appendChild(d);
+      });
+    }
+    build();
+    on(w,'[data-check]',function(){
+      if(pool.querySelectorAll('.h5p-item').length){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var sc=0, all=w.querySelectorAll('.h5p-bin .h5p-item');
+      all.forEach(function(it){ var ok=it.dataset.c===it.parentNode.dataset.c; it.classList.toggle('ok',ok); it.classList.toggle('bad',!ok); if(ok) sc++; });
+      score(w,X(w,'Score: ')+sc+' / '+all.length);
+      fb(w, sc===all.length?'ok':'bad', sc===all.length?X(w,'All sorted correctly!'):X(w,'Red items are in the wrong category — tap one to send it back and try again.'));
+    });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 7. Mark the words ---------- */
+  document.querySelectorAll('[data-widget="markwords"]').forEach(function(w){
+    var p=w.querySelector('.h5p-mtw'), targets=p.dataset.targets.split(',').map(function(s){return s.trim().toLowerCase();});
+    var text=p.textContent; p.innerHTML='';
+    text.split(/(\s+)/).forEach(function(tok){
+      if(/^\s+$/.test(tok)||!tok){ p.appendChild(document.createTextNode(tok)); return; }
+      var s=document.createElement('span'); s.className='h5p-tok'; s.textContent=tok; s.tabIndex=0; s.setAttribute('role','button');
+      s.dataset.t = targets.indexOf(tok.replace(/[^\p{L}\p{N}’']/gu,'').toLowerCase())>-1 ? '1':'0';
+      s.addEventListener('click',function(){ if(w.dataset.locked) return; s.classList.toggle('sel'); });
+      p.appendChild(s);
+    });
+    on(w,'[data-check]',function(){
+      w.dataset.locked='1'; var hits=0, wrong=0, total=0;
+      p.querySelectorAll('.h5p-tok').forEach(function(s){
+        var t=s.dataset.t==='1', on=s.classList.contains('sel'); if(t) total++;
+        if(t&&on){s.classList.add('ok'); hits++;} else if(!t&&on){s.classList.add('bad'); wrong++;} else if(t&&!on){s.classList.add('missed');}
+      });
+      score(w,X(w,'Found ')+hits+X(w,' of ')+total+(wrong?' · '+wrong+X(w,' wrong'):''));
+      fb(w, (hits===total&&!wrong)?'ok':'bad', (hits===total&&!wrong)?X(w,'You found them all!'):X(w,'Dashed outlines show ones you missed; struck-through words were not targets.'));
+    });
+    on(w,'[data-retry]',function(){ delete w.dataset.locked; p.querySelectorAll('.h5p-tok').forEach(function(s){s.className='h5p-tok';}); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 8. Dropdown cloze ---------- */
+  document.querySelectorAll('[data-widget="dropdown"]').forEach(function(w){
+    var dds=w.querySelectorAll('.h5p-dd');
+    on(w,'[data-check]',function(){
+      var sc=0, done=true;
+      dds.forEach(function(d){ if(!d.value){done=false; return;} var ok=d.value===d.dataset.answer; d.classList.toggle('ok',ok); d.classList.toggle('bad',!ok); if(ok) sc++; });
+      if(!done){ fb(w,'bad',X(w,'Choose an answer for every blank first.')); return; }
+      score(w,X(w,'Score: ')+sc+' / '+dds.length);
+      fb(w, sc===dds.length?'ok':'bad', sc===dds.length?X(w,'All correct!'):X(w,'Red choices are wrong — change them and check again.'));
+    });
+    on(w,'[data-retry]',function(){ dds.forEach(function(d){ d.value=''; d.classList.remove('ok','bad'); }); fb(w,'',''); score(w,''); });
+  });
+
+  /* ---------- 9. Timeline stepper ---------- */
+  document.querySelectorAll('[data-widget="timeline"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-tl-panel'), ev=JSON.parse(panel.dataset.events), nav=w.querySelector('.h5p-tl-nav'), dot=w.querySelector('.h5p-tl-track span'), i=0, btns=[];
+    ev.forEach(function(e,idx){ var b=document.createElement('button'); b.type='button'; b.className='h5p-tl-btn'; b.textContent=e.y; b.addEventListener('click',function(){ i=idx; render(); }); nav.appendChild(b); btns.push(b); });
+    function render(){ btns.forEach(function(b,idx){ b.classList.toggle('on',idx===i); }); dot.style.left=(ev.length>1? (100*i/(ev.length-1)) : 50)+'%'; panel.innerHTML='<h4>'+ev[i].y+' · '+ev[i].t+'</h4><div>'+ev[i].d+'</div>'; }
+    on(w,'[data-prev]',function(){ i=Math.max(0,i-1); render(); }); on(w,'[data-next]',function(){ i=Math.min(ev.length-1,i+1); render(); });
+    render();
+  });
+
+  /* ---------- 10. Song form explorer ---------- */
+  document.querySelectorAll('[data-widget="songform"]').forEach(function(w){
+    var row=w.querySelector('.h5p-form-row'), secs=JSON.parse(row.dataset.sections), panel=w.querySelector('.h5p-form-panel'), els=[], timer=null;
+    secs.forEach(function(s,idx){ var d=document.createElement('div'); d.className='h5p-form-sec'; d.style.background=s.c; d.innerHTML=s.l+'<small>'+s.s+'</small>'; d.tabIndex=0; d.setAttribute('role','button'); d.addEventListener('click',function(){ stop(); show(idx); }); row.appendChild(d); els.push(d); });
+    function show(idx){ els.forEach(function(e,j){ e.classList.toggle('on',j===idx); }); panel.innerHTML='<strong>'+secs[idx].l+' — '+secs[idx].s+':</strong> '+secs[idx].t; }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    on(w,'[data-play]',function(){ stop(); var k=0; show(0); timer=setInterval(function(){ k++; if(k>=secs.length){ stop(); return; } show(k); },1800); });
+    panel.innerHTML=X(w,'<em>Tap a section to begin.</em>');
+  });
+
+  /* ---------- 11. Hotspots ---------- */
+  document.querySelectorAll('[data-widget="hotspots"]').forEach(function(w){
+    var panel=w.querySelector('.h5p-hs-panel'), spots=w.querySelectorAll('[data-hs]');
+    spots.forEach(function(g){ g.setAttribute('tabindex','0'); g.setAttribute('role','button');
+      g.addEventListener('click',function(){ spots.forEach(function(x){x.classList.remove('on');}); g.classList.add('on'); panel.innerHTML='<h4>'+g.dataset.hs+'</h4><div>'+g.dataset.info+'</div>'; }); });
+  });
+
+  /* ================= ADDED WIDGETS (2026-09) ================= */
+  function el(tag,cls,txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!==undefined) e.textContent=txt; return e; }
+  function live(w,msg){ var r=w.querySelector('.am-sr[aria-live]'); if(!r){ r=el('div','am-sr'); r.setAttribute('aria-live','polite'); w.appendChild(r); } r.textContent=''; setTimeout(function(){ r.textContent=msg; },30); }
+  var SVGNS='http://www.w3.org/2000/svg';
+  function sv(tag,attrs){ var e=document.createElementNS(SVGNS,tag); for(var k in attrs) e.setAttribute(k,attrs[k]); return e; }
+  function svgPoint(svg,evt){ var pt=svg.createSVGPoint(); pt.x=evt.clientX; pt.y=evt.clientY; return pt.matrixTransform(svg.getScreenCTM().inverse()); }
+
+  /* ---------- 12. Piano (WebAudio) ---------- */
+  var ACtx=null;
+  function audio(){ if(!ACtx){ var C=window.AudioContext||window.webkitAudioContext; if(!C) return null; ACtx=new C(); } if(ACtx.state==='suspended') ACtx.resume(); return ACtx; }
+  var NAMES=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'], FLAT={'Db':'C#','Eb':'D#','Gb':'F#','Ab':'G#','Bb':'A#'};
+  function midi(n){ var m=/^([A-G][#b]?)(\d)$/.exec(n); if(!m) return null; var p=FLAT[m[1]]||m[1]; return NAMES.indexOf(p)+12*(+m[2]+1); }
+  function nname(m){ return NAMES[m%12]+(Math.floor(m/12)-1); }
+  function tone(m,when,dur,vol){
+    var ctx=audio(); if(!ctx) return; var t=when||ctx.currentTime, f=440*Math.pow(2,(m-69)/12), v=Math.max(vol||0.5,0.001), d=Math.max(dur||0.9,0.25);
+    var o=ctx.createOscillator(), o2=ctx.createOscillator(), g=ctx.createGain(), g2=ctx.createGain();
+    o.type='triangle'; o.frequency.value=f; o2.type='sine'; o2.frequency.value=f*2;
+    g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(v,t+0.012); g.gain.exponentialRampToValueAtTime(v*0.32,t+0.15); g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+    g2.gain.setValueAtTime(0.0001,t); g2.gain.exponentialRampToValueAtTime(v*0.22,t+0.012); g2.gain.exponentialRampToValueAtTime(0.0001,t+0.28);
+    o.connect(g); o2.connect(g2); g.connect(ctx.destination); g2.connect(ctx.destination);
+    o.start(t); o2.start(t); o.stop(t+d+0.05); o2.stop(t+0.3);
+  }
+  document.querySelectorAll('[data-widget="piano"]').forEach(function(w){
+    var host=w.querySelector('.h5p-piano'), start=midi(host.dataset.start||'C4'), oct=+(host.dataset.octaves||1), last=start+12*oct;
+    var labels=host.dataset.labels!=='0', demos=JSON.parse(host.dataset.demos||'[]'), tasks=JSON.parse(host.dataset.tasks||'[]');
+    var keysMap={}, KB='awsedftgyhujk'.split(''), ti=0, played=[], busy=[], ESL=(w.closest('main')||{}).lang==='es', SOL=['Do','Do♯','Re','Re♯','Mi','Fa','Fa♯','Sol','Sol♯','La','La♯','Si'];
+    function disp(m){ return ESL ? SOL[m%12]+(Math.floor(m/12)-1) : nname(m).replace('#','♯'); }
+    function sayk(m){ return ESL ? SOL[m%12].replace('♯',' sostenido')+' '+(Math.floor(m/12)-1) : nname(m).replace('#',' sharp '); }
+    if(demos.length){ var dm=el('div','h5p-pno-demos'); demos.forEach(function(d){ var b=el('button','am-btn am-btn--slate','▶ '+d.l); b.type='button'; b.addEventListener('click',function(){ playSeq(d); }); dm.appendChild(b); }); host.parentNode.insertBefore(dm,host); }
+    var wrap=el('div','h5p-pno-wrap'); host.parentNode.insertBefore(wrap,host); wrap.appendChild(host);
+    var kb=el('div','h5p-pno'); host.appendChild(kb);
+    var whites=[]; for(var m=start;m<=last;m++){ if(NAMES[m%12].length===1) whites.push(m); }
+    whites.forEach(function(m){ var k=el('button','h5p-pno-w',labels?disp(m).replace(/\d/,''):''); k.type='button'; k.dataset.m=m; k.dataset.n=nname(m); k.setAttribute('aria-label',sayk(m)); kb.appendChild(k); keysMap[m]=k; });
+    var ww=100/whites.length;
+    for(m=start;m<=last;m++){ if(NAMES[m%12].length===2){ var idx=whites.indexOf(m-1); if(idx<0) continue; var b=el('button','h5p-pno-b',labels?disp(m).replace(/\d/,''):''); b.type='button'; b.dataset.m=m; b.dataset.n=nname(m); b.setAttribute('aria-label',sayk(m)); b.style.left='calc('+(ww*(idx+1))+'% - '+(ww*0.3)+'%)'; b.style.width=(ww*0.6)+'%'; kb.appendChild(b); keysMap[m]=b; } }
+    var now=el('div','h5p-pno-now'); now.setAttribute('aria-live','polite'); now.textContent=X(w,'Tap a key to play.'); wrap.parentNode.insertBefore(now,wrap.nextSibling);
+    var tbox=null; if(tasks.length){ tbox=el('div','h5p-pno-task'); now.parentNode.insertBefore(tbox,now.nextSibling); }
+    function flash(m,ms){ var k=keysMap[m]; if(!k) return; k.classList.add('on'); setTimeout(function(){ k.classList.remove('on'); },ms||160); }
+    function press(m){ tone(m); flash(m); now.textContent=X(w,'Now playing: ')+disp(m); if(tasks.length && ti<tasks.length) check(m); }
+    Object.keys(keysMap).forEach(function(m){ keysMap[m].addEventListener('pointerdown',function(e){ e.preventDefault(); press(+m); }); keysMap[m].addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); press(+m); } }); });
+    w.addEventListener('keydown',function(e){ if(e.repeat||e.target.tagName==='INPUT') return; var i=KB.indexOf(e.key.toLowerCase()); if(i>-1 && start+i<=last && keysMap[start+i]){ e.preventDefault(); press(start+i); } });
+    function playSeq(d){ var ctx=audio(); if(!ctx) return; busy.forEach(clearTimeout); busy=[]; var beat=60/(d.bpm||100), t=ctx.currentTime+0.08, ms=0;
+      d.seq.forEach(function(s){ var ns=[].concat(s[0]), len=(s[1]||1)*beat; ns.forEach(function(n){ if(n==='r') return; var mm=midi(n); if(mm===null) return; tone(mm,t,Math.min(len*0.95+0.2,2.2),0.4); (function(mm,ms){ busy.push(setTimeout(function(){ flash(mm,Math.max(120,len*800)); },ms)); })(mm,ms); }); t+=len; ms+=len*1000; });
+      now.textContent=X(w,'Playing: ')+d.l; }
+    function renderTask(){ if(!tbox) return; if(ti>=tasks.length){ tbox.innerHTML=X(w,'<h4>All tasks complete ✔</h4><div>You played every pattern correctly. Replay any demo or keep exploring.</div>'); fb(w,'ok',X(w,'Nice work — every task complete.')); live(w,X(w,'All piano tasks complete.')); return; }
+      var t=tasks[ti]; tbox.innerHTML=''; tbox.appendChild(el('h4','',X(w,'Task ')+(ti+1)+X(w,' of ')+tasks.length)); tbox.appendChild(el('div','',t.p)); var pl=el('div','h5p-pno-played',''); pl.dataset.played=''; tbox.appendChild(pl);
+      var hb=el('button','am-btn am-btn--ghost',X(w,'Show me')); hb.type='button'; hb.style.marginTop='8px'; hb.addEventListener('click',function(){ t.n.forEach(function(n,i){ var mm=midi(n); setTimeout(function(){ tone(mm); var k=keysMap[mm]; if(k){ k.classList.add('hint'); setTimeout(function(){ k.classList.remove('hint'); },1400); } }, t.o?i*420:0); }); }); tbox.appendChild(hb); played=[]; }
+    function check(m){ var t=tasks[ti], want=t.n.map(midi); played.push(m); if(played.length>12) played.shift();
+      var pl=tbox.querySelector('.h5p-pno-played'); pl.textContent=X(w,'You played: ')+played.slice(-8).map(disp).join(' · ');
+      var ok=false; if(t.o){ var tail=played.slice(-want.length); ok=tail.length===want.length && tail.every(function(x,i){ return x===want[i]; }); }
+      else { var need=want.slice().sort().join(), got={}; played.slice(-want.length*2).forEach(function(x){ if(want.indexOf(x)>-1) got[x]=1; }); ok=Object.keys(got).length===want.length && Object.keys(got).map(Number).sort().join()===need; }
+      if(ok){ score(w,X(w,'Tasks: ')+(ti+1)+' / '+tasks.length); fb(w,'ok',t.ok||X(w,'Correct!')); live(w,X(w,'Task ')+(ti+1)+X(w,' correct.')); ti++; setTimeout(renderTask,650); } }
+    var rb=w.querySelector('[data-retry]'); if(rb) rb.addEventListener('click',function(){ ti=0; played=[]; score(w,''); fb(w,'',''); renderTask(); });
+    renderTask();
+  });
+
+  /* ---------- 13. Branching scenario ---------- */
+  document.querySelectorAll('[data-widget="branch"]').forEach(function(w){
+    var host=w.querySelector('.h5p-branch'), S=JSON.parse(host.dataset.scenes), hist=[], trail=[], cur='start', ends={}, nEnds=0;
+    Object.keys(S).forEach(function(k){ if(S[k].end) nEnds++; });
+    var tr=el('ol','h5p-br-trail'), card=el('div','h5p-br-card'), ctl=el('div','h5p-controls');
+    var back=el('button','am-btn am-btn--ghost',X(w,'← Back')), rs=el('button','am-btn am-btn--ghost',X(w,'Start over')), sc=el('span','h5p-score'); back.type=rs.type='button';
+    ctl.appendChild(back); ctl.appendChild(rs); ctl.appendChild(sc); host.appendChild(tr); host.appendChild(card); host.appendChild(ctl); card.setAttribute('aria-live','polite');
+    var TONE={good:X(w,'Strong outcome'),ok:X(w,'Mixed outcome'),review:X(w,'Rethink this path')};
+    function render(){ var s=S[cur]; tr.innerHTML=''; tr.appendChild(el('li','',X(w,'Your path'))); trail.forEach(function(t,i){ tr.appendChild(el('li','',(i+1)+'. '+t)); });
+      card.innerHTML=''; back.disabled=!hist.length;
+      if(s.end){ ends[cur]=1; var box=el('div','h5p-br-end '+s.end); box.appendChild(el('div','tone',TONE[s.end]||X(w,'Outcome'))); box.appendChild(el('h4','',s.t)); var ul=el('ul','h5p-br-pts'); (s.pts||[]).forEach(function(p){ ul.appendChild(el('li',p[0],p[1])); }); box.appendChild(ul); if(s.c) box.appendChild(el('p','',s.c)); card.appendChild(box);
+        var again=el('button','am-btn am-btn--slate',X(w,'Try another path')); again.type='button'; again.style.marginTop='12px'; again.addEventListener('click',restart); card.appendChild(again);
+        sc.textContent=X(w,'Endings found: ')+Object.keys(ends).length+' / '+nEnds; live(w,X(w,'Outcome reached: ')+s.t); return; }
+      card.appendChild(el('h4','',s.t)); [].concat(s.b||[]).forEach(function(p){ card.appendChild(el('p','',p)); });
+      var og=el('div','h5p-br-opts'); s.o.forEach(function(o,i){ var b=el('button','h5p-br-opt'); b.type='button'; b.appendChild(el('b','tag',String.fromCharCode(65+i))); var sp=el('span','',o.l); if(o.d) sp.appendChild(el('small','',o.d)); b.appendChild(sp); b.addEventListener('click',function(){ hist.push({cur:cur,trail:trail.slice()}); trail.push(o.l.length>42?o.l.slice(0,40)+'…':o.l); cur=o.n; render(); }); og.appendChild(b); }); card.appendChild(og); }
+    function restart(){ hist=[]; trail=[]; cur='start'; render(); }
+    back.addEventListener('click',function(){ var h=hist.pop(); if(!h) return; cur=h.cur; trail=h.trail; render(); });
+    rs.addEventListener('click',restart); render();
+  });
+
+  /* ---------- 14. Interactive map ---------- */
+  document.querySelectorAll('[data-widget="map"]').forEach(function(w){
+    var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
+    var COL=['#2B4A6F','#5E6B7C','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
+    var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
+    routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
+    M.forEach(function(m,i){ var g=sv('g',{'class':'h5p-map-m',tabindex:'0',role:'button','aria-label':(i+1)+'. '+m.n}); g.appendChild(sv('circle',{cx:m.x,cy:m.y,r:13,fill:COL[m.c||0]})); var t=sv('text',{x:m.x,y:m.y+4.5,'text-anchor':'middle',fill:'#fff'}); t.style.fill='#fff'; t.textContent=i+1; g.appendChild(t);
+      g.addEventListener('click',function(){ open(i); }); g.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(i); } }); svg.appendChild(g); gs.push(g);
+      var li=el('li'), b=el('button','',(i+1)+'. '+m.n); b.type='button'; b.addEventListener('click',function(){ open(i); }); li.appendChild(b); list.appendChild(li); btns.push(b); });
+    svg.parentNode.insertBefore(list,svg.nextSibling);
+    if(cats.length>1){ var lg=el('div','h5p-map-legend'); cats.forEach(function(c,i){ var s=el('span'); var d=el('i'); d.style.background=COL[i]; s.appendChild(d); s.appendChild(document.createTextNode(c)); lg.appendChild(s); }); list.parentNode.insertBefore(lg,list); }
+    function open(i){ var m=M[i]; seen[i]=1; gs.forEach(function(g,j){ g.classList.toggle('on',j===i); }); btns.forEach(function(b,j){ b.classList.toggle('on',j===i); b.classList.toggle('seen',!!seen[j]); });
+      panel.innerHTML=''; if(cats.length) panel.appendChild(el('div','cat',cats[m.c||0])); panel.appendChild(el('h4','',(i+1)+'. '+m.n)); var d=el('div'); d.innerHTML=m.d; panel.appendChild(d);
+      var k=Object.keys(seen).length; score(w,X(w,'Explored: ')+k+' / '+M.length); if(k===M.length) fb(w,'ok',X(w,'You explored every location on the map.')); }
+    panel.innerHTML=X(w,'<em>Select a numbered marker, or a name below the map.</em>'); score(w,'Explored: 0 / '+M.length);
+  });
+
+  /* ---------- 15. Find the spot ---------- */
+  document.querySelectorAll('[data-widget="findspot"]').forEach(function(w){
+    var frame=w.querySelector('.h5p-fs-frame'), svg=frame.querySelector('svg'), T=JSON.parse(frame.dataset.targets), i=0, miss=0;
+    var prompt=el('div','h5p-fs-prompt'); prompt.setAttribute('aria-live','polite'); frame.parentNode.insertBefore(prompt,frame);
+    var layer=sv('g',{}); svg.appendChild(layer); var vb=svg.viewBox.baseVal, cross=sv('circle',{'class':'h5p-fs-cross',r:10,cx:vb.width/2,cy:vb.height/2,visibility:'hidden'}); svg.appendChild(cross);
+    svg.setAttribute('tabindex','0'); svg.setAttribute('role','application'); svg.setAttribute('aria-label',X(w,'Image. Tap the spot, or use the arrow keys to move the circle and press Enter.'));
+    function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
+    function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
+      var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#9FACBD','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
+    svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
+    svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
+      if(mv){ e.preventDefault(); cross.setAttribute('visibility','visible'); cross.setAttribute('cx',Math.max(0,Math.min(vb.width,cx+mv[0]))); cross.setAttribute('cy',Math.max(0,Math.min(vb.height,cy+mv[1]))); }
+      else if(e.key==='Enter'||e.key===' '){ e.preventDefault(); cross.setAttribute('visibility','visible'); test(cx,cy); } });
+    on(w,'[data-showme]',function(){ if(i<T.length) test(T[i].x,T[i].y); });
+    on(w,'[data-retry]',function(){ layer.innerHTML=''; i=0; score(w,''); fb(w,'',''); show(); });
+    show();
+  });
+
+  /* ---------- 16. Era timeline ---------- */
+  document.querySelectorAll('[data-widget="eratimeline"]').forEach(function(w){
+    var host=w.querySelector('.h5p-era'), E=JSON.parse(host.dataset.eras), seen={}, total=0, cur=0;
+    E.forEach(function(e){ total+=e.e.length; });
+    var tabs=el('div','h5p-era-tabs'), spine=el('ul','h5p-era-spine'), note=el('p','h5p-hint'); tabs.setAttribute('role','tablist'); host.appendChild(tabs); host.appendChild(note); host.appendChild(spine);
+    var tb=[]; E.forEach(function(e,i){ var b=el('button','h5p-era-tab',e.n); b.type='button'; b.setAttribute('role','tab'); b.appendChild(el('small','',e.s)); b.addEventListener('click',function(){ cur=i; render(); }); tabs.appendChild(b); tb.push(b); });
+    function render(){ tb.forEach(function(b,i){ b.classList.toggle('on',i===cur); b.setAttribute('aria-selected',i===cur); var all=E[i].e.every(function(_,j){ return seen[i+'.'+j]; }); b.classList.toggle('done',all); });
+      note.textContent=E[cur].d||''; note.hidden=!E[cur].d; spine.innerHTML='';
+      E[cur].e.forEach(function(ev,j){ var key=cur+'.'+j, li=el('li','h5p-era-ev'+(seen[key]?' seen':'')), b=el('button'); b.type='button'; b.setAttribute('aria-expanded','false'); b.appendChild(el('b','',ev.y)); b.appendChild(el('span','',ev.t)); var body=el('div','body'); body.innerHTML=ev.b;
+        b.addEventListener('click',function(){ var o=li.classList.toggle('open'); b.setAttribute('aria-expanded',o); if(o && !seen[key]){ seen[key]=1; li.classList.add('seen'); prog(); tb[cur].classList.toggle('done',E[cur].e.every(function(_,k){ return seen[cur+'.'+k]; })); } });
+        li.appendChild(b); li.appendChild(body); spine.appendChild(li); }); }
+    function prog(){ var k=Object.keys(seen).length; score(w,X(w,'Events opened: ')+k+' / '+total); if(k===total) fb(w,'ok',X(w,'You opened every event on the timeline.')); }
+    on(w,'[data-expand]',function(){ spine.querySelectorAll('.h5p-era-ev').forEach(function(li){ if(!li.classList.contains('open')) li.querySelector('button').click(); }); });
+    render(); prog();
+  });
+
+  /* ---------- 17. Drag sort (pointer drag + tap/keyboard fallback) ---------- */
+  document.querySelectorAll('[data-widget="dragsort"]').forEach(function(w){
+    var host=w.querySelector('.h5p-ds'), items=JSON.parse(host.dataset.items), bins=JSON.parse(host.dataset.bins), sel=null, drag=null;
+    var tray=el('div','h5p-ds-tray'), grid=el('div','h5p-ds-bins'); tray.setAttribute('aria-label',X(w,'Items to sort')); host.appendChild(tray); host.appendChild(grid);
+    var zones=bins.map(function(b,i){ var d=el('div','h5p-ds-bin'); d.appendChild(el('h5','',b)); var z=el('div','zone'); z.dataset.c=i; z.tabIndex=0; z.setAttribute('role','button'); z.setAttribute('aria-label',X(w,'Place selected item in ')+b); d.appendChild(z); grid.appendChild(d);
+      z.addEventListener('click',function(e){ if(e.target!==z && e.target.tagName!=='H5') return; place(z); }); d.addEventListener('click',function(e){ if(e.target===d||e.target.tagName==='H5') place(z); }); z.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); place(z); } }); return z; });
+    tray.addEventListener('click',function(e){ if(e.target===tray && sel){ tray.appendChild(sel); sel.classList.remove('sel'); sel=null; } });
+    function place(z){ if(!sel) return; z.appendChild(sel); sel.classList.remove('sel','shake'); sel=null; fb(w,'',''); }
+    function build(){ tray.innerHTML=''; zones.forEach(function(z){ z.innerHTML=''; }); sel=null; score(w,'');
+      shuffle(items.slice()).forEach(function(it){ var c=el('button','h5p-ds-card',it.t); c.type='button'; c.dataset.a=','+[].concat(it.a).join(',')+','; tray.appendChild(c);
+        c.addEventListener('click',function(){ if(c.disabled) return; if(c.dataset.dragged){ delete c.dataset.dragged; return; } if(sel===c){ c.classList.remove('sel'); sel=null; return; } if(sel) sel.classList.remove('sel'); sel=c; c.classList.add('sel'); live(w,c.textContent+X(w,' selected. Choose a category.')); });
+        c.addEventListener('pointerdown',function(e){ if(c.disabled||e.button>0) return; var r=c.getBoundingClientRect(); drag={c:c,sx:e.clientX,sy:e.clientY,ox:e.clientX-r.left,oy:e.clientY-r.top,moved:false}; c.setPointerCapture(e.pointerId); });
+        c.addEventListener('pointermove',function(e){ if(!drag||drag.c!==c) return; if(!drag.moved && Math.abs(e.clientX-drag.sx)+Math.abs(e.clientY-drag.sy)<6) return; if(!drag.moved){ drag.moved=true; c.classList.add('drag'); c.style.width=c.getBoundingClientRect().width+'px'; }
+          c.style.left=(e.clientX-drag.ox)+'px'; c.style.top=(e.clientY-drag.oy)+'px'; var t=document.elementFromPoint(e.clientX,e.clientY); zones.forEach(function(z){ z.parentNode.classList.toggle('hot',!!t && z.parentNode.contains(t)); }); });
+        c.addEventListener('pointerup',function(e){ if(!drag||drag.c!==c) return; var d=drag; drag=null; if(!d.moved) return; c.classList.remove('drag'); c.style.left=c.style.top=c.style.width=''; c.dataset.dragged='1';
+          var t=document.elementFromPoint(e.clientX,e.clientY), hit=null; zones.forEach(function(z){ z.parentNode.classList.remove('hot'); if(t && z.parentNode.contains(t)) hit=z; }); if(hit){ hit.appendChild(c); c.classList.remove('shake'); } else if(t && tray.contains(t)) tray.appendChild(c); if(sel){ sel.classList.remove('sel'); sel=null; } fb(w,'',''); });
+      }); }
+    build();
+    on(w,'[data-check]',function(){ if(tray.querySelector('.h5p-ds-card')){ fb(w,'bad',X(w,'Place every item in a category first.')); return; }
+      var ok=0, all=host.querySelectorAll('.h5p-ds-card'); all.forEach(function(c){ var z=c.parentNode; if(c.dataset.a.indexOf(','+z.dataset.c+',')>-1){ c.classList.add('ok'); c.disabled=true; ok++; } else { c.classList.add('shake'); tray.appendChild(c); } });
+      score(w,X(w,'Correct: ')+ok+' / '+all.length); if(ok===all.length){ fb(w,'ok',X(w,'All sorted correctly!')); live(w,X(w,'All sorted correctly.')); } else fb(w,'bad',X(w,'✔ Correct items are locked in. ✖ Items marked with an X went back to the tray — try them again.')); });
+    on(w,'[data-retry]',function(){ build(); fb(w,'',''); });
+  });
+
+  /* ---------- Listening-guide video thumbnails (click to play) ---------- */
+  function ytId(u){ var m=/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{11})/.exec(u||''); return m?m[1]:null; }
+  document.querySelectorAll('.am-listen').forEach(function(card){
+    var a=card.querySelector('a.am-listen__link[href]'); var href=a?a.getAttribute('href'):'';
+    if(/dropbox\.com\/.*\.mp3/i.test(href)){ var au=document.createElement('audio'); au.controls=true; au.preload='none'; au.className='am-audio';
+      au.src=href.replace(/[?&]dl=\d/,'').replace(/\?$/,'')+(href.indexOf('?')>-1&&!/[?&]dl=\d$/.test(href)?'&':'?')+'raw=1';
+      au.setAttribute('aria-label',X(card,'Play audio: ')+((card.querySelector('.am-listen__title')||{}).textContent||'')); var bd=card.querySelector('.am-listen__body'); bd.insertBefore(au,bd.firstChild); return; }
+    var id=ytId(href); if(!id) return;
+    var body=card.querySelector('.am-listen__body'), ttl=(card.querySelector('.am-listen__title')||{}).textContent||'';
+    var b=document.createElement('button'); b.type='button'; b.className='am-yt'; b.setAttribute('aria-label',X(card,'Play video: ')+ttl);
+    var img=document.createElement('img'); img.alt=''; img.loading='lazy'; img.src='https://i.ytimg.com/vi/'+id+'/hqdefault.jpg';
+    var p=document.createElement('span'); p.className='am-yt__play'; p.textContent=X(card,'Play here');
+    b.appendChild(img); b.appendChild(p); body.insertBefore(b, body.firstChild);
+    b.addEventListener('click',function(){
+      var f=document.createElement('iframe'); f.className='am-yt-frame'; f.title=ttl;
+      f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen'); f.setAttribute('allowfullscreen','');
+      b.parentNode.replaceChild(f,b); f.focus();
+    });
+  });
+})();
+</script>
+</body>
+</html>
