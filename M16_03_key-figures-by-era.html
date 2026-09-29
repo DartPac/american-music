@@ -7,10 +7,10 @@
 <!--
   AMERICAN MUSIC — SELF-CONTAINED PAGE
   ===================================================================
-  Palette: Navy #154734 · Slate #FFB81C
-    Navy dark  #0E3326  (header/footer bands)      Navy deep #103B2B (hover)
-    Navy tint  #E7F1EB / #D5E6DC (callouts)         Slate soft #FFF5DC  Slate dark #7A5A00
-    Ink #1B2A22 · Muted #4A5550 · Border #C9D8CE
+  Palette (Dartmouth): Green #00693E · Accent #A5D75F
+    Navy dark  #12312B  (header/footer bands)      Navy deep #00522F (hover)
+    Navy tint  #E8F2ED / #D5E6DC (callouts)         Slate soft #F0F7E6  Slate dark #00693E
+    Ink #0D1E1C · Muted #4A5550 · Border #C9DBD2
     Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
   RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
   or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
@@ -19,13 +19,13 @@
 -->
 <style>
   :root{
-    --am-navy:#154734; --am-navy-dark:#0E3326; --am-navy-deep:#103B2B;
-    --am-slate:#FFB81C; --am-slate-dark:#7A5A00; --am-slate-soft:#FFF5DC;
-    --am-tint:#E7F1EB; --am-tint2:#D5E6DC; --am-mist:#F4F8F5;
-    --am-ink:#1B2A22; --am-muted:#4A5550; --am-border:#C9D8CE;
+    --am-navy:#00693E; --am-navy-dark:#12312B; --am-navy-deep:#00522F;
+    --am-slate:#A5D75F; --am-slate-dark:#00693E; --am-slate-soft:#F0F7E6;
+    --am-tint:#E8F2ED; --am-tint2:#D5E6DC; --am-mist:#F4F8F5;
+    --am-ink:#0D1E1C; --am-muted:#4A5550; --am-border:#C9DBD2;
     --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
-    --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
-    --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    --head:'National 2','Aptos','Helvetica Neue',Arial,sans-serif;
+    --body:'National 2','Aptos','Helvetica Neue',Arial,sans-serif;
   }
   *{box-sizing:border-box}
   body{margin:0; font-family:var(--body); color:var(--am-ink); line-height:1.65; background:#fff; font-size:17px}
@@ -49,13 +49,13 @@
   .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
   .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
   .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
-  .am-note{background:#FFF8E6; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  .am-note{background:#F6FAEF; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
   figure{margin:24px 0; text-align:center}
   figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
   figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
   figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
   /* Listening guide */
-  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(14,51,38,.08)}
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(18,49,43,.08)}
   .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
   .am-listen__head svg{width:26px; height:26px; flex:none}
   .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
@@ -63,14 +63,14 @@
   .am-listen__body{padding:14px 18px}
   .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
   .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
-  .am-listen__link:hover{background:#FFD266}
+  .am-listen__link:hover{background:#C4DD88}
   .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
   .am-listen__log label{cursor:pointer}
   /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
-  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#0E3326; cursor:pointer}
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#12312B; cursor:pointer}
   .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
   .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
-  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(14,51,38,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(18,49,43,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
   .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
   .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
   .am-audio{width:100%; margin:0 0 14px; display:block}
@@ -82,9 +82,9 @@
   .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
   .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
   .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
-  .am-btn--slate:hover{background:#FFD266}
+  .am-btn--slate:hover{background:#C4DD88}
   /* ============ H5P-STYLE ACTIVITY SHELL ============ */
-  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(14,51,38,.1)}
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(18,49,43,.1)}
   .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
   .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
   .h5p-act__body{padding:18px 20px}
@@ -164,7 +164,7 @@
   .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
   .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
   .h5p-form-sec:hover{transform:translateY(-2px)}
-  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(255,184,28,.35)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(165,215,95,.35)}
   .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
   .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
   /* Hotspots (inline SVG) */
@@ -180,12 +180,12 @@
   /* Piano */
   .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
   .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
-  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F4F8F5); border:1px solid #A9C2B3; border-bottom:8px solid #C9D8CE; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
-  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2B3A33,#0F1B15); border:1px solid #000; border-bottom:9px solid #1B2A22; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F4F8F5); border:1px solid #A9C2B3; border-bottom:8px solid #C9DBD2; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2B3A33,#0F1B15); border:1px solid #000; border-bottom:9px solid #0D1E1C; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
   .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
   .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
-  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(255,184,28,.55)}
-  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(255,184,28,.8)}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(165,215,95,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(165,215,95,.8)}
   .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
   .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
   .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
@@ -218,9 +218,9 @@
   .h5p-map-m{cursor:pointer}
   .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
   .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
-  .h5p-map-m.on circle{stroke:#0E3326; stroke-width:4}
-  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#FFB81C; stroke-width:5}
-  .h5p-map-route{fill:none; stroke:#7A5A00; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-m.on circle{stroke:#12312B; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#A5D75F; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#00693E; stroke-width:2.5; stroke-dasharray:7 5}
   .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
   .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
   .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
@@ -234,10 +234,10 @@
   .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
   .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
   .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
-  .h5p-fs-found circle{fill:none; stroke:#FFB81C; stroke-width:5}
-  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#0E3326; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-found circle{fill:none; stroke:#A5D75F; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#12312B; paint-order:stroke; stroke:#fff; stroke-width:4px}
   .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
-  .h5p-fs-cross{fill:none; stroke:#0E3326; stroke-width:2}
+  .h5p-fs-cross{fill:none; stroke:#12312B; stroke-width:2}
   @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
   /* Era timeline */
   .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
@@ -269,7 +269,7 @@
   .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
   .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
   .h5p-ds-card.ok::before{content:"✔ "}
-  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(14,51,38,.3); cursor:grabbing}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(18,49,43,.3); cursor:grabbing}
   .h5p-ds-card.shake{animation:h5pShake .4s}
   .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
   @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
@@ -292,7 +292,7 @@
   @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
   .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
-/* header wrap fix 2026-09 */ /* Baylor colors 2026-09 */
+/* header wrap fix 2026-09 */ /* Dartmouth colors 2026-09 */
 .am-topbar{flex-wrap:wrap; row-gap:10px}
 .am-wordmark{min-width:0}
 .am-coursebar{flex:1 1 160px; min-width:0}
@@ -301,7 +301,7 @@
 </head>
 <body>
 <header class="am-topbar">
-  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#FFB81C"/><path d="M13 30V11l14 5v14" fill="none" stroke="#0E3326" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#0E3326"/><circle cx="24.5" cy="30" r="3.6" fill="#0E3326"/></svg>
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#A5D75F"/><path d="M13 30V11l14 5v14" fill="none" stroke="#12312B" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#12312B"/><circle cx="24.5" cy="30" r="3.6" fill="#12312B"/></svg>
   <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
   <div class="am-coursebar"><span class="am-l-en">Module 16: Course Review<br>Page 4 of 8</span><span class="am-l-es">Módulo 16: Repaso del curso<br>Página 4 de 8</span></div>
   <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
@@ -330,20 +330,20 @@
   <figure>
     <svg viewBox="0 0 720 280" role="img" aria-label="Twelve key figures placed along a timeline from ragtime to the streaming era">
       <rect width="720" height="280" fill="#F4F8F5" rx="10"/>
-      <line x1="45" y1="140" x2="675" y2="140" stroke="#0E3326" stroke-width="4"/>
-      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="bold" fill="#1B2A22" text-anchor="middle">
-        <circle cx="70" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="70" y="120" font-size="10">1899</text><text x="70" y="160">Joplin</text>
-        <circle cx="127" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="127" y="120" font-size="10">1920s</text><text x="127" y="160">Armstrong</text>
-        <circle cx="184" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="184" y="120" font-size="10">1930s</text><text x="184" y="160">Gershwin</text>
-        <circle cx="241" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="241" y="120" font-size="10">1936</text><text x="241" y="160">R. Johnson</text>
-        <circle cx="298" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="298" y="120" font-size="10">1939</text><text x="298" y="160">Basie</text>
-        <circle cx="355" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="355" y="120" font-size="10">1953</text><text x="355" y="160">H. Williams</text>
-        <circle cx="412" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="412" y="120" font-size="10">1955</text><text x="412" y="160">C. Berry</text>
-        <circle cx="469" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="469" y="120" font-size="10">1964</text><text x="469" y="160">Beatles</text>
-        <circle cx="526" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="526" y="120" font-size="10">1967</text><text x="526" y="160">Franklin</text>
-        <circle cx="583" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="583" y="120" font-size="10">1982</text><text x="583" y="160">Jackson</text>
-        <circle cx="627" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="627" y="120" font-size="10">1991</text><text x="627" y="160">Nirvana</text>
-        <circle cx="670" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="670" y="120" font-size="10">Today</text><text x="670" y="160">Beyoncé</text>
+      <line x1="45" y1="140" x2="675" y2="140" stroke="#12312B" stroke-width="4"/>
+      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="bold" fill="#0D1E1C" text-anchor="middle">
+        <circle cx="70" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="70" y="120" font-size="10">1899</text><text x="70" y="160">Joplin</text>
+        <circle cx="127" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="127" y="120" font-size="10">1920s</text><text x="127" y="160">Armstrong</text>
+        <circle cx="184" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="184" y="120" font-size="10">1930s</text><text x="184" y="160">Gershwin</text>
+        <circle cx="241" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="241" y="120" font-size="10">1936</text><text x="241" y="160">R. Johnson</text>
+        <circle cx="298" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="298" y="120" font-size="10">1939</text><text x="298" y="160">Basie</text>
+        <circle cx="355" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="355" y="120" font-size="10">1953</text><text x="355" y="160">H. Williams</text>
+        <circle cx="412" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="412" y="120" font-size="10">1955</text><text x="412" y="160">C. Berry</text>
+        <circle cx="469" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="469" y="120" font-size="10">1964</text><text x="469" y="160">Beatles</text>
+        <circle cx="526" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="526" y="120" font-size="10">1967</text><text x="526" y="160">Franklin</text>
+        <circle cx="583" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="583" y="120" font-size="10">1982</text><text x="583" y="160">Jackson</text>
+        <circle cx="627" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="627" y="120" font-size="10">1991</text><text x="627" y="160">Nirvana</text>
+        <circle cx="670" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="670" y="120" font-size="10">Today</text><text x="670" y="160">Beyoncé</text>
       </g>
       <text x="360" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5550">Twelve of the thirty names below, spaced across the full course timeline.</text>
       <text x="360" y="225" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5550">Study the full table for the other eighteen and their exact modules.</text>
@@ -355,43 +355,43 @@
   <div style="overflow-x:auto">
   <table style="width:100%; border-collapse:collapse; margin:12px 0; font-size:.92em">
     <thead>
-      <tr style="background:#154734; color:#fff">
-        <th style="text-align:left; padding:7px 10px; border:1px solid #C9D8CE">Name</th>
-        <th style="text-align:left; padding:7px 10px; border:1px solid #C9D8CE">Era / Module</th>
-        <th style="text-align:left; padding:7px 10px; border:1px solid #C9D8CE">Why they matter</th>
+      <tr style="background:#00693E; color:#fff">
+        <th style="text-align:left; padding:7px 10px; border:1px solid #C9DBD2">Name</th>
+        <th style="text-align:left; padding:7px 10px; border:1px solid #C9DBD2">Era / Module</th>
+        <th style="text-align:left; padding:7px 10px; border:1px solid #C9DBD2">Why they matter</th>
       </tr>
     </thead>
     <tbody>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>J. S. Bach</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Foundational traditions (M1)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Baroque composer exemplifying the European-American concert tradition.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Mississippi John Hurt</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Foundational traditions (M1)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Country blues guitarist representing an orally transmitted African-American folk tradition.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Scott Joplin</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">1865–1910 (M2)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">"Maple Leaf Rag" (1899) made ragtime, and syncopation, a national craze.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Fisk Jubilee Singers</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">1865–1910 (M2)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Carried the spiritual from oral tradition to the international concert stage.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Louis Armstrong</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Jazz Age (M3)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Shifted jazz from collective improvisation to the featured soloist.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Duke Ellington</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Jazz Age (M3)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Composed for his orchestra as an instrument; a career spanning the Jazz Age and Swing Era alike.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>George Gershwin</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Tin Pan Alley (M4)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Bridged Tin Pan Alley and the concert hall; wrote "Rhapsody in Blue" and <em>Porgy and Bess</em>.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Cole Porter</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Tin Pan Alley (M4)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Wealthy songwriter who wrote both music and lyrics himself, unusual for the era.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Robert Johnson</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Race &amp; hillbilly records (M5)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Delta blues guitarist recorded only in 1936–37, hugely influential decades later.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Jimmie Rodgers</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Race &amp; hillbilly records (M5)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">"The Singing Brakeman"; founding star of commercial country music.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Count Basie</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Swing Era (M6)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Kansas City bandleader whose style stayed rooted in blues and boogie-woogie.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Benny Goodman</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Swing Era (M6)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">1935 Palomar Ballroom engagement is treated as swing's founding moment.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Frank Sinatra</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Postwar America (M7)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Former big-band singer who became the defining postwar solo crooner.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Hank Williams</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Postwar America (M7)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Honky-tonk's defining star; died in 1953 at twenty-nine.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Chuck Berry</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Rock and roll (M8)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Guitar-driven storyteller often called the "father of rock and roll."</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Elvis Presley</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Rock and roll (M8)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Sun Records-turned-RCA superstar of rock and roll's country-rooted wing.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Berry Gordy Jr.</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Early 1960s (M9)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Founded Motown Records and organized it into an assembly-line hit-making operation.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>The Beatles</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Early 1960s (M9)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Reached #1 in America in February 1964, triggering the British Invasion.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Aretha Franklin</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Soul &amp; counterculture (M10)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">"Lady Soul"; "Respect" (1967) became a civil-rights and feminist anthem.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Bob Dylan</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Soul &amp; counterculture (M10)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Went electric in 1965, creating folk-rock and reshaping rock lyric-writing.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Stevie Wonder</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Album Era (M11)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Gained creative control around 1971 and fused soul, funk, and synthesizer technology.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Led Zeppelin</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Album Era (M11)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Blues-rooted hard rock behind "Stairway to Heaven," the defining AOR track.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Bob Marley</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Outlaws, punk, funk, hip-hop (M12)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Carried reggae to a worldwide audience through Island Records.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>DJ Kool Herc</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Outlaws, punk, funk, hip-hop (M12)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">1973 Bronx breakbeat technique is widely credited as hip-hop's founding moment.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Michael Jackson</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">The 1980s (M13)</td><td style="padding:7px 10px; border:1px solid #C9D8CE"><em>Thriller</em> (1982) sold over 60 million copies and spent 37 weeks at #1 in 1983–84.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Madonna</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">The 1980s (M13)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Built a career on repeated reinvention of image and sound, starting with <em>Like a Virgin</em> (1984).</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Queen Latifah</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">The 1990s (M14)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Hip-hop's most commercially successful woman MC; "U.N.I.T.Y." (1993) confronted misogyny in the genre.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Nirvana</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">The 1990s (M14)</td><td style="padding:7px 10px; border:1px solid #C9D8CE"><em>Nevermind</em> (1991) turned grunge from a regional Seattle sound into a national phenomenon.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Beyoncé</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">2000 to today (M15)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Moved from Destiny's Child to solo superstardom through visual, genre-absorbing reinvention.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Jay-Z</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">2000 to today (M15)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Embodied hip-hop's "hustler" persona and converted it into a broad business portfolio.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>J. S. Bach</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Foundational traditions (M1)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Baroque composer exemplifying the European-American concert tradition.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Mississippi John Hurt</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Foundational traditions (M1)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Country blues guitarist representing an orally transmitted African-American folk tradition.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Scott Joplin</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">1865–1910 (M2)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">"Maple Leaf Rag" (1899) made ragtime, and syncopation, a national craze.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Fisk Jubilee Singers</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">1865–1910 (M2)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Carried the spiritual from oral tradition to the international concert stage.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Louis Armstrong</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Jazz Age (M3)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Shifted jazz from collective improvisation to the featured soloist.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Duke Ellington</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Jazz Age (M3)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Composed for his orchestra as an instrument; a career spanning the Jazz Age and Swing Era alike.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>George Gershwin</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Tin Pan Alley (M4)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Bridged Tin Pan Alley and the concert hall; wrote "Rhapsody in Blue" and <em>Porgy and Bess</em>.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Cole Porter</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Tin Pan Alley (M4)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Wealthy songwriter who wrote both music and lyrics himself, unusual for the era.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Robert Johnson</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Race &amp; hillbilly records (M5)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Delta blues guitarist recorded only in 1936–37, hugely influential decades later.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Jimmie Rodgers</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Race &amp; hillbilly records (M5)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">"The Singing Brakeman"; founding star of commercial country music.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Count Basie</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Swing Era (M6)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Kansas City bandleader whose style stayed rooted in blues and boogie-woogie.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Benny Goodman</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Swing Era (M6)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">1935 Palomar Ballroom engagement is treated as swing's founding moment.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Frank Sinatra</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Postwar America (M7)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Former big-band singer who became the defining postwar solo crooner.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Hank Williams</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Postwar America (M7)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Honky-tonk's defining star; died in 1953 at twenty-nine.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Chuck Berry</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Rock and roll (M8)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Guitar-driven storyteller often called the "father of rock and roll."</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Elvis Presley</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Rock and roll (M8)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Sun Records-turned-RCA superstar of rock and roll's country-rooted wing.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Berry Gordy Jr.</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Early 1960s (M9)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Founded Motown Records and organized it into an assembly-line hit-making operation.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>The Beatles</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Early 1960s (M9)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Reached #1 in America in February 1964, triggering the British Invasion.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Aretha Franklin</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Soul &amp; counterculture (M10)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">"Lady Soul"; "Respect" (1967) became a civil-rights and feminist anthem.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Bob Dylan</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Soul &amp; counterculture (M10)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Went electric in 1965, creating folk-rock and reshaping rock lyric-writing.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Stevie Wonder</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Album Era (M11)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Gained creative control around 1971 and fused soul, funk, and synthesizer technology.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Led Zeppelin</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Album Era (M11)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Blues-rooted hard rock behind "Stairway to Heaven," the defining AOR track.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Bob Marley</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Outlaws, punk, funk, hip-hop (M12)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Carried reggae to a worldwide audience through Island Records.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>DJ Kool Herc</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Outlaws, punk, funk, hip-hop (M12)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">1973 Bronx breakbeat technique is widely credited as hip-hop's founding moment.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Michael Jackson</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">The 1980s (M13)</td><td style="padding:7px 10px; border:1px solid #C9DBD2"><em>Thriller</em> (1982) sold over 60 million copies and spent 37 weeks at #1 in 1983–84.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Madonna</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">The 1980s (M13)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Built a career on repeated reinvention of image and sound, starting with <em>Like a Virgin</em> (1984).</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Queen Latifah</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">The 1990s (M14)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Hip-hop's most commercially successful woman MC; "U.N.I.T.Y." (1993) confronted misogyny in the genre.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Nirvana</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">The 1990s (M14)</td><td style="padding:7px 10px; border:1px solid #C9DBD2"><em>Nevermind</em> (1991) turned grunge from a regional Seattle sound into a national phenomenon.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Beyoncé</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">2000 to today (M15)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Moved from Destiny's Child to solo superstardom through visual, genre-absorbing reinvention.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Jay-Z</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">2000 to today (M15)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Embodied hip-hop's "hustler" persona and converted it into a broad business portfolio.</td></tr>
     </tbody>
   </table>
   </div>
@@ -418,14 +418,14 @@
   <figure>
     <svg viewBox="0 0 720 190" role="img" aria-label="Four roles that key figures in this course typically played">
       <rect width="720" height="190" fill="#F4F8F5" rx="10"/>
-      <text x="360" y="26" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#154734">Four roles a key figure usually plays</text>
+      <text x="360" y="26" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#00693E">Four roles a key figure usually plays</text>
       <g font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#fff">
-        <rect x="20" y="50" width="160" height="100" rx="8" fill="#154734"/><text x="100" y="76" text-anchor="middle">Performer</text>
-        <rect x="200" y="50" width="160" height="100" rx="8" fill="#103B2B"/><text x="280" y="76" text-anchor="middle">Songwriter /</text><text x="280" y="94" text-anchor="middle">composer</text>
-        <rect x="380" y="50" width="160" height="100" rx="8" fill="#0E3326"/><text x="460" y="76" text-anchor="middle">Producer /</text><text x="460" y="94" text-anchor="middle">label founder</text>
-        <rect x="560" y="50" width="140" height="100" rx="8" fill="#7A5A00"/><text x="630" y="76" text-anchor="middle">Culture</text><text x="630" y="94" text-anchor="middle">shaper</text>
+        <rect x="20" y="50" width="160" height="100" rx="8" fill="#00693E"/><text x="100" y="76" text-anchor="middle">Performer</text>
+        <rect x="200" y="50" width="160" height="100" rx="8" fill="#00522F"/><text x="280" y="76" text-anchor="middle">Songwriter /</text><text x="280" y="94" text-anchor="middle">composer</text>
+        <rect x="380" y="50" width="160" height="100" rx="8" fill="#12312B"/><text x="460" y="76" text-anchor="middle">Producer /</text><text x="460" y="94" text-anchor="middle">label founder</text>
+        <rect x="560" y="50" width="140" height="100" rx="8" fill="#00693E"/><text x="630" y="76" text-anchor="middle">Culture</text><text x="630" y="94" text-anchor="middle">shaper</text>
       </g>
-      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#E7F1EB">
+      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#E8F2ED">
         <text x="100" y="116" text-anchor="middle">Armstrong, Berry,</text><text x="100" y="130" text-anchor="middle">Franklin, Jackson</text>
         <text x="280" y="116" text-anchor="middle">Joplin, Gershwin,</text><text x="280" y="130" text-anchor="middle">Dylan, Wonder</text>
         <text x="460" y="116" text-anchor="middle">Gordy, Kool Herc,</text><text x="460" y="130" text-anchor="middle">Rick Rubin</text>
@@ -483,20 +483,20 @@
   <figure>
     <svg viewBox="0 0 720 280" role="img" aria-label="Doce figuras clave ubicadas a lo largo de una línea de tiempo que va del ragtime a la era del streaming">
       <rect width="720" height="280" fill="#F4F8F5" rx="10"/>
-      <line x1="45" y1="140" x2="675" y2="140" stroke="#0E3326" stroke-width="4"/>
-      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="bold" fill="#1B2A22" text-anchor="middle">
-        <circle cx="70" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="70" y="120" font-size="10">1899</text><text x="70" y="160">Joplin</text>
-        <circle cx="127" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="127" y="120" font-size="10">Años 20</text><text x="127" y="160">Armstrong</text>
-        <circle cx="184" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="184" y="120" font-size="10">Años 30</text><text x="184" y="160">Gershwin</text>
-        <circle cx="241" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="241" y="120" font-size="10">1936</text><text x="241" y="160">R. Johnson</text>
-        <circle cx="298" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="298" y="120" font-size="10">1939</text><text x="298" y="160">Basie</text>
-        <circle cx="355" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="355" y="120" font-size="10">1953</text><text x="355" y="160">H. Williams</text>
-        <circle cx="412" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="412" y="120" font-size="10">1955</text><text x="412" y="160">C. Berry</text>
-        <circle cx="469" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="469" y="120" font-size="10">1964</text><text x="469" y="160">Beatles</text>
-        <circle cx="526" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="526" y="120" font-size="10">1967</text><text x="526" y="160">Franklin</text>
-        <circle cx="583" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="583" y="120" font-size="10">1982</text><text x="583" y="160">Jackson</text>
-        <circle cx="627" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="627" y="120" font-size="10">1991</text><text x="627" y="160">Nirvana</text>
-        <circle cx="670" cy="140" r="7" fill="#FFB81C" stroke="#154734" stroke-width="2"/><text x="670" y="120" font-size="10">Hoy</text><text x="670" y="160">Beyoncé</text>
+      <line x1="45" y1="140" x2="675" y2="140" stroke="#12312B" stroke-width="4"/>
+      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="bold" fill="#0D1E1C" text-anchor="middle">
+        <circle cx="70" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="70" y="120" font-size="10">1899</text><text x="70" y="160">Joplin</text>
+        <circle cx="127" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="127" y="120" font-size="10">Años 20</text><text x="127" y="160">Armstrong</text>
+        <circle cx="184" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="184" y="120" font-size="10">Años 30</text><text x="184" y="160">Gershwin</text>
+        <circle cx="241" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="241" y="120" font-size="10">1936</text><text x="241" y="160">R. Johnson</text>
+        <circle cx="298" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="298" y="120" font-size="10">1939</text><text x="298" y="160">Basie</text>
+        <circle cx="355" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="355" y="120" font-size="10">1953</text><text x="355" y="160">H. Williams</text>
+        <circle cx="412" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="412" y="120" font-size="10">1955</text><text x="412" y="160">C. Berry</text>
+        <circle cx="469" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="469" y="120" font-size="10">1964</text><text x="469" y="160">Beatles</text>
+        <circle cx="526" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="526" y="120" font-size="10">1967</text><text x="526" y="160">Franklin</text>
+        <circle cx="583" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="583" y="120" font-size="10">1982</text><text x="583" y="160">Jackson</text>
+        <circle cx="627" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="627" y="120" font-size="10">1991</text><text x="627" y="160">Nirvana</text>
+        <circle cx="670" cy="140" r="7" fill="#A5D75F" stroke="#00693E" stroke-width="2"/><text x="670" y="120" font-size="10">Hoy</text><text x="670" y="160">Beyoncé</text>
       </g>
       <text x="360" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5550">Doce de los treinta nombres de abajo, repartidos a lo largo de toda la línea de tiempo del curso.</text>
       <text x="360" y="225" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#4A5550">Estudia la tabla completa para conocer los otros dieciocho y sus módulos exactos.</text>
@@ -508,43 +508,43 @@
   <div style="overflow-x:auto">
   <table style="width:100%; border-collapse:collapse; margin:12px 0; font-size:.92em">
     <thead>
-      <tr style="background:#154734; color:#fff">
-        <th style="text-align:left; padding:7px 10px; border:1px solid #C9D8CE">Nombre</th>
-        <th style="text-align:left; padding:7px 10px; border:1px solid #C9D8CE">Época / módulo</th>
-        <th style="text-align:left; padding:7px 10px; border:1px solid #C9D8CE">Por qué es importante</th>
+      <tr style="background:#00693E; color:#fff">
+        <th style="text-align:left; padding:7px 10px; border:1px solid #C9DBD2">Nombre</th>
+        <th style="text-align:left; padding:7px 10px; border:1px solid #C9DBD2">Época / módulo</th>
+        <th style="text-align:left; padding:7px 10px; border:1px solid #C9DBD2">Por qué es importante</th>
       </tr>
     </thead>
     <tbody>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>J. S. Bach</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Tradiciones fundacionales (M1)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Compositor barroco que ejemplifica la tradición de concierto euroamericana.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Mississippi John Hurt</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Tradiciones fundacionales (M1)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Guitarrista de country blues que representa una tradición folclórica afroamericana transmitida oralmente.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Scott Joplin</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">1865–1910 (M2)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">"Maple Leaf Rag" (1899) convirtió el ragtime, y la síncopa, en una moda nacional.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Fisk Jubilee Singers</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">1865–1910 (M2)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Llevaron el espiritual de la tradición oral a los escenarios de concierto internacionales.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Louis Armstrong</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Era del jazz (M3)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Hizo que el jazz pasara de la improvisación colectiva al solista destacado.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Duke Ellington</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Era del jazz (M3)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Componía pensando en su orquesta como un instrumento; su carrera abarcó tanto la era del jazz como la era del swing.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>George Gershwin</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Tin Pan Alley (M4)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Tendió un puente entre Tin Pan Alley y la sala de conciertos; escribió "Rhapsody in Blue" y <em>Porgy and Bess</em>.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Cole Porter</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Tin Pan Alley (M4)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Compositor adinerado que escribía él mismo la música y la letra, algo poco común en su época.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Robert Johnson</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Discos raciales y discos hillbilly (M5)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Guitarrista de blues del delta que grabó solo en 1936–37 y tuvo una enorme influencia décadas después.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Jimmie Rodgers</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Discos raciales y discos hillbilly (M5)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">"The Singing Brakeman" (el guardafrenos cantante); estrella fundadora de la música country comercial.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Count Basie</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Era del swing (M6)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Director de banda de Kansas City cuyo estilo se mantuvo arraigado en el blues y el boogie-woogie.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Benny Goodman</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Era del swing (M6)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Su presentación de 1935 en el Palomar Ballroom se considera el momento fundacional del swing.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Frank Sinatra</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Estados Unidos en la posguerra (M7)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Antiguo cantante de big band que se convirtió en el crooner solista emblemático de la posguerra.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Hank Williams</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Estados Unidos en la posguerra (M7)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">La estrella emblemática del honky-tonk; murió en 1953, a los veintinueve años.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Chuck Berry</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Rock and roll (M8)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Narrador de historias con la guitarra como protagonista, a menudo llamado el "padre del rock and roll".</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Elvis Presley</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Rock and roll (M8)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Superestrella que pasó de Sun Records a RCA y encabezó la vertiente del rock and roll con raíces en el country.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Berry Gordy Jr.</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Principios de la década de 1960 (M9)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Fundó Motown Records y la organizó como una fábrica de éxitos al estilo de una línea de montaje.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>The Beatles</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Principios de la década de 1960 (M9)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Llegaron al n.º 1 en Estados Unidos en febrero de 1964 y desencadenaron la invasión británica.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Aretha Franklin</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Soul y contracultura (M10)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">"Lady Soul" (la dama del soul); "Respect" (1967) se convirtió en un himno de los derechos civiles y del feminismo.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Bob Dylan</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Soul y contracultura (M10)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Se pasó a la guitarra eléctrica en 1965, creó el folk-rock y transformó la manera de escribir letras de rock.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Stevie Wonder</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Era del álbum (M11)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Obtuvo el control creativo hacia 1971 y fusionó el soul, el funk y la tecnología del sintetizador.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Led Zeppelin</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Era del álbum (M11)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Hard rock con raíces en el blues, autor de "Stairway to Heaven", el tema emblemático del AOR.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Bob Marley</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Outlaws, punk, funk y hip-hop (M12)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Llevó el reggae a un público mundial a través de Island Records.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>DJ Kool Herc</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">Outlaws, punk, funk y hip-hop (M12)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Su técnica de breakbeats de 1973, en el Bronx, suele considerarse el momento fundacional del hip-hop.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Michael Jackson</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">La década de 1980 (M13)</td><td style="padding:7px 10px; border:1px solid #C9D8CE"><em>Thriller</em> (1982) vendió más de 60 millones de copias y pasó 37 semanas en el n.º 1 en 1983–84.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Madonna</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">La década de 1980 (M13)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Construyó su carrera reinventando una y otra vez su imagen y su sonido, a partir de <em>Like a Virgin</em> (1984).</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Queen Latifah</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">La década de 1990 (M14)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">La MC con más éxito comercial del hip-hop; "U.N.I.T.Y." (1993) confrontó la misoginia dentro del género.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Nirvana</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">La década de 1990 (M14)</td><td style="padding:7px 10px; border:1px solid #C9D8CE"><em>Nevermind</em> (1991) convirtió el grunge, un sonido regional de Seattle, en un fenómeno nacional.</td></tr>
-      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Beyoncé</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">De 2000 a hoy (M15)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Pasó de Destiny’s Child al estrellato como solista mediante una reinvención visual que absorbe distintos géneros.</td></tr>
-      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9D8CE"><strong>Jay-Z</strong></td><td style="padding:7px 10px; border:1px solid #C9D8CE">De 2000 a hoy (M15)</td><td style="padding:7px 10px; border:1px solid #C9D8CE">Encarnó la figura del "hustler" (el buscavidas) del hip-hop y la convirtió en un amplio portafolio de negocios.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>J. S. Bach</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Tradiciones fundacionales (M1)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Compositor barroco que ejemplifica la tradición de concierto euroamericana.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Mississippi John Hurt</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Tradiciones fundacionales (M1)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Guitarrista de country blues que representa una tradición folclórica afroamericana transmitida oralmente.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Scott Joplin</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">1865–1910 (M2)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">"Maple Leaf Rag" (1899) convirtió el ragtime, y la síncopa, en una moda nacional.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Fisk Jubilee Singers</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">1865–1910 (M2)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Llevaron el espiritual de la tradición oral a los escenarios de concierto internacionales.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Louis Armstrong</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Era del jazz (M3)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Hizo que el jazz pasara de la improvisación colectiva al solista destacado.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Duke Ellington</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Era del jazz (M3)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Componía pensando en su orquesta como un instrumento; su carrera abarcó tanto la era del jazz como la era del swing.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>George Gershwin</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Tin Pan Alley (M4)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Tendió un puente entre Tin Pan Alley y la sala de conciertos; escribió "Rhapsody in Blue" y <em>Porgy and Bess</em>.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Cole Porter</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Tin Pan Alley (M4)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Compositor adinerado que escribía él mismo la música y la letra, algo poco común en su época.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Robert Johnson</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Discos raciales y discos hillbilly (M5)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Guitarrista de blues del delta que grabó solo en 1936–37 y tuvo una enorme influencia décadas después.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Jimmie Rodgers</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Discos raciales y discos hillbilly (M5)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">"The Singing Brakeman" (el guardafrenos cantante); estrella fundadora de la música country comercial.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Count Basie</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Era del swing (M6)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Director de banda de Kansas City cuyo estilo se mantuvo arraigado en el blues y el boogie-woogie.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Benny Goodman</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Era del swing (M6)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Su presentación de 1935 en el Palomar Ballroom se considera el momento fundacional del swing.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Frank Sinatra</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Estados Unidos en la posguerra (M7)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Antiguo cantante de big band que se convirtió en el crooner solista emblemático de la posguerra.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Hank Williams</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Estados Unidos en la posguerra (M7)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">La estrella emblemática del honky-tonk; murió en 1953, a los veintinueve años.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Chuck Berry</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Rock and roll (M8)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Narrador de historias con la guitarra como protagonista, a menudo llamado el "padre del rock and roll".</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Elvis Presley</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Rock and roll (M8)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Superestrella que pasó de Sun Records a RCA y encabezó la vertiente del rock and roll con raíces en el country.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Berry Gordy Jr.</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Principios de la década de 1960 (M9)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Fundó Motown Records y la organizó como una fábrica de éxitos al estilo de una línea de montaje.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>The Beatles</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Principios de la década de 1960 (M9)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Llegaron al n.º 1 en Estados Unidos en febrero de 1964 y desencadenaron la invasión británica.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Aretha Franklin</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Soul y contracultura (M10)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">"Lady Soul" (la dama del soul); "Respect" (1967) se convirtió en un himno de los derechos civiles y del feminismo.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Bob Dylan</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Soul y contracultura (M10)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Se pasó a la guitarra eléctrica en 1965, creó el folk-rock y transformó la manera de escribir letras de rock.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Stevie Wonder</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Era del álbum (M11)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Obtuvo el control creativo hacia 1971 y fusionó el soul, el funk y la tecnología del sintetizador.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Led Zeppelin</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Era del álbum (M11)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Hard rock con raíces en el blues, autor de "Stairway to Heaven", el tema emblemático del AOR.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Bob Marley</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Outlaws, punk, funk y hip-hop (M12)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Llevó el reggae a un público mundial a través de Island Records.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>DJ Kool Herc</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">Outlaws, punk, funk y hip-hop (M12)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Su técnica de breakbeats de 1973, en el Bronx, suele considerarse el momento fundacional del hip-hop.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Michael Jackson</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">La década de 1980 (M13)</td><td style="padding:7px 10px; border:1px solid #C9DBD2"><em>Thriller</em> (1982) vendió más de 60 millones de copias y pasó 37 semanas en el n.º 1 en 1983–84.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Madonna</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">La década de 1980 (M13)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Construyó su carrera reinventando una y otra vez su imagen y su sonido, a partir de <em>Like a Virgin</em> (1984).</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Queen Latifah</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">La década de 1990 (M14)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">La MC con más éxito comercial del hip-hop; "U.N.I.T.Y." (1993) confrontó la misoginia dentro del género.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Nirvana</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">La década de 1990 (M14)</td><td style="padding:7px 10px; border:1px solid #C9DBD2"><em>Nevermind</em> (1991) convirtió el grunge, un sonido regional de Seattle, en un fenómeno nacional.</td></tr>
+      <tr style="background:#fff"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Beyoncé</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">De 2000 a hoy (M15)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Pasó de Destiny’s Child al estrellato como solista mediante una reinvención visual que absorbe distintos géneros.</td></tr>
+      <tr style="background:#F4F8F5"><td style="padding:7px 10px; border:1px solid #C9DBD2"><strong>Jay-Z</strong></td><td style="padding:7px 10px; border:1px solid #C9DBD2">De 2000 a hoy (M15)</td><td style="padding:7px 10px; border:1px solid #C9DBD2">Encarnó la figura del "hustler" (el buscavidas) del hip-hop y la convirtió en un amplio portafolio de negocios.</td></tr>
     </tbody>
   </table>
   </div>
@@ -571,14 +571,14 @@
   <figure>
     <svg viewBox="0 0 720 190" role="img" aria-label="Cuatro papeles que solían cumplir las figuras clave de este curso">
       <rect width="720" height="190" fill="#F4F8F5" rx="10"/>
-      <text x="360" y="26" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#154734">Cuatro papeles que suele cumplir una figura clave</text>
+      <text x="360" y="26" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#00693E">Cuatro papeles que suele cumplir una figura clave</text>
       <g font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#fff">
-        <rect x="20" y="50" width="160" height="100" rx="8" fill="#154734"/><text x="100" y="76" text-anchor="middle">Intérprete</text>
-        <rect x="200" y="50" width="160" height="100" rx="8" fill="#103B2B"/><text x="280" y="76" text-anchor="middle">Compositor /</text><text x="280" y="94" text-anchor="middle">autor de canciones</text>
-        <rect x="380" y="50" width="160" height="100" rx="8" fill="#0E3326"/><text x="460" y="76" text-anchor="middle">Productor /</text><text x="460" y="94" text-anchor="middle">fundador de disquera</text>
-        <rect x="560" y="50" width="140" height="100" rx="8" fill="#7A5A00"/><text x="630" y="76" text-anchor="middle">Referente</text><text x="630" y="94" text-anchor="middle">cultural</text>
+        <rect x="20" y="50" width="160" height="100" rx="8" fill="#00693E"/><text x="100" y="76" text-anchor="middle">Intérprete</text>
+        <rect x="200" y="50" width="160" height="100" rx="8" fill="#00522F"/><text x="280" y="76" text-anchor="middle">Compositor /</text><text x="280" y="94" text-anchor="middle">autor de canciones</text>
+        <rect x="380" y="50" width="160" height="100" rx="8" fill="#12312B"/><text x="460" y="76" text-anchor="middle">Productor /</text><text x="460" y="94" text-anchor="middle">fundador de disquera</text>
+        <rect x="560" y="50" width="140" height="100" rx="8" fill="#00693E"/><text x="630" y="76" text-anchor="middle">Referente</text><text x="630" y="94" text-anchor="middle">cultural</text>
       </g>
-      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#E7F1EB">
+      <g font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#E8F2ED">
         <text x="100" y="116" text-anchor="middle">Armstrong, Berry,</text><text x="100" y="130" text-anchor="middle">Franklin, Jackson</text>
         <text x="280" y="116" text-anchor="middle">Joplin, Gershwin,</text><text x="280" y="130" text-anchor="middle">Dylan, Wonder</text>
         <text x="460" y="116" text-anchor="middle">Gordy, Kool Herc,</text><text x="460" y="130" text-anchor="middle">Rick Rubin</text>
@@ -954,7 +954,7 @@
   /* ---------- 14. Interactive map ---------- */
   document.querySelectorAll('[data-widget="map"]').forEach(function(w){
     var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
-    var COL=['#154734','#7A5A00','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var COL=['#00693E','#00693E','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
     var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
     var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
     routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
@@ -978,7 +978,7 @@
     function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
     function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
       var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
-      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#FFB81C','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#A5D75F','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
       else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
     svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
     svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
