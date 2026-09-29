@@ -7,10 +7,10 @@
 <!--
   AMERICAN MUSIC — SELF-CONTAINED PAGE
   ===================================================================
-  Palette: Navy #154734 · Slate #FFB81C
-    Navy dark  #0E3326  (header/footer bands)      Navy deep #103B2B (hover)
-    Navy tint  #E7F1EB / #D5E6DC (callouts)         Slate soft #FFF5DC  Slate dark #7A5A00
-    Ink #1B2A22 · Muted #4A5550 · Border #C9D8CE
+  Palette (Dartmouth): Green #00693E · Accent #A5D75F
+    Navy dark  #12312B  (header/footer bands)      Navy deep #00522F (hover)
+    Navy tint  #E8F2ED / #D5E6DC (callouts)         Slate soft #F0F7E6  Slate dark #00693E
+    Ink #0D1E1C · Muted #4A5550 · Border #C9DBD2
     Correct #EDF7ED/#2E7D32 · Incorrect #FDECEA/#C62828
   RULES: fully self-contained — no external CSS/JS/fonts/images (images as data URIs
   or inline SVG). All interactivity is inline vanilla JS (H5P-style widgets).
@@ -19,13 +19,13 @@
 -->
 <style>
   :root{
-    --am-navy:#154734; --am-navy-dark:#0E3326; --am-navy-deep:#103B2B;
-    --am-slate:#FFB81C; --am-slate-dark:#7A5A00; --am-slate-soft:#FFF5DC;
-    --am-tint:#E7F1EB; --am-tint2:#D5E6DC; --am-mist:#F4F8F5;
-    --am-ink:#1B2A22; --am-muted:#4A5550; --am-border:#C9D8CE;
+    --am-navy:#00693E; --am-navy-dark:#12312B; --am-navy-deep:#00522F;
+    --am-slate:#A5D75F; --am-slate-dark:#00693E; --am-slate-soft:#F0F7E6;
+    --am-tint:#E8F2ED; --am-tint2:#D5E6DC; --am-mist:#F4F8F5;
+    --am-ink:#0D1E1C; --am-muted:#4A5550; --am-border:#C9DBD2;
     --ok-bg:#EDF7ED; --ok:#2E7D32; --bad-bg:#FDECEA; --bad:#C62828;
-    --head:'Montserrat','Segoe UI','Trebuchet MS',Arial,sans-serif;
-    --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    --head:'National 2','Aptos','Helvetica Neue',Arial,sans-serif;
+    --body:'National 2','Aptos','Helvetica Neue',Arial,sans-serif;
   }
   *{box-sizing:border-box}
   body{margin:0; font-family:var(--body); color:var(--am-ink); line-height:1.65; background:#fff; font-size:17px}
@@ -49,13 +49,13 @@
   .am-keyterm strong{font-family:var(--head); color:var(--am-navy)}
   .am-tryit{background:var(--am-slate-soft); border-left:6px solid var(--am-slate-dark); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0}
   .am-context{background:var(--am-tint2); border-left:6px solid var(--am-navy-deep); padding:14px 18px; margin:20px 0; border-radius:0 8px 8px 0; font-size:.97em}
-  .am-note{background:#FFF8E6; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
+  .am-note{background:#F6FAEF; border:1px dashed var(--am-slate-dark); padding:12px 16px; margin:18px 0; border-radius:8px; font-size:.92em}
   figure{margin:24px 0; text-align:center}
   figure svg{width:100%; max-width:720px; height:auto; display:block; margin:0 auto}
   figure img{max-width:100%; border:1px solid var(--am-border); border-radius:6px}
   figcaption{font-size:.86em; color:#555; margin-top:8px; font-style:italic}
   /* Listening guide */
-  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(14,51,38,.08)}
+  .am-listen{border:1px solid var(--am-border); border-radius:10px; margin:22px 0; overflow:hidden; box-shadow:0 1px 4px rgba(18,49,43,.08)}
   .am-listen__head{background:linear-gradient(90deg,var(--am-navy),var(--am-navy-deep)); color:#fff; padding:10px 16px; display:flex; align-items:center; gap:12px}
   .am-listen__head svg{width:26px; height:26px; flex:none}
   .am-listen__title{font-family:var(--head); font-weight:700; letter-spacing:.5px}
@@ -63,14 +63,14 @@
   .am-listen__body{padding:14px 18px}
   .am-listen__body ol{margin:6px 0 10px 20px; padding:0}
   .am-listen__link{display:inline-block; background:var(--am-slate); color:var(--am-navy-dark); font-family:var(--head); font-weight:700; text-decoration:none; padding:8px 16px; border-radius:6px; font-size:.85em; letter-spacing:.8px; text-transform:uppercase}
-  .am-listen__link:hover{background:#FFD266}
+  .am-listen__link:hover{background:#C4DD88}
   .am-listen__log{margin-top:10px; font-size:.9em; color:var(--am-muted)}
   .am-listen__log label{cursor:pointer}
   /* Listening-guide video (click-to-play thumbnail; loads YouTube only on click) */
-  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#0E3326; cursor:pointer}
+  .am-yt{position:relative; display:block; width:100%; aspect-ratio:16/9; margin:0 0 14px; padding:0; border:0; border-radius:8px; overflow:hidden; background:#12312B; cursor:pointer}
   .am-yt img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s, filter .25s}
   .am-yt:hover img{transform:scale(1.03); filter:brightness(.85)}
-  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(14,51,38,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
+  .am-yt__play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:10px; background:rgba(18,49,43,.88); color:#fff; font-family:var(--head); font-weight:700; letter-spacing:1px; text-transform:uppercase; font-size:.82em; padding:12px 20px 12px 16px; border-radius:40px; border:3px solid var(--am-slate); box-shadow:0 4px 14px rgba(0,0,0,.35)}
   .am-yt__play::before{content:""; width:0; height:0; border-left:16px solid var(--am-slate); border-top:10px solid transparent; border-bottom:10px solid transparent}
   .am-yt:focus-visible{outline:4px solid var(--am-slate); outline-offset:3px}
   .am-audio{width:100%; margin:0 0 14px; display:block}
@@ -82,9 +82,9 @@
   .am-btn--ghost{background:transparent; color:var(--am-navy); border:2px solid var(--am-navy)}
   .am-btn--ghost:hover{background:var(--am-tint); color:var(--am-navy)}
   .am-btn--slate{background:var(--am-slate); color:var(--am-navy-dark)}
-  .am-btn--slate:hover{background:#FFD266}
+  .am-btn--slate:hover{background:#C4DD88}
   /* ============ H5P-STYLE ACTIVITY SHELL ============ */
-  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(14,51,38,.1)}
+  .h5p-act{border:1px solid var(--am-border); border-radius:10px; margin:30px 0; overflow:hidden; box-shadow:0 1px 5px rgba(18,49,43,.1)}
   .h5p-act__head{background:var(--am-navy); color:#fff; padding:10px 16px; font-family:var(--head); letter-spacing:1.2px; text-transform:uppercase; font-size:.84em; display:flex; justify-content:space-between; align-items:center; border-bottom:4px solid var(--am-slate)}
   .h5p-act__type{opacity:.8; font-size:.85em; font-weight:400}
   .h5p-act__body{padding:18px 20px}
@@ -164,7 +164,7 @@
   .h5p-form-row{display:flex; gap:6px; flex-wrap:wrap; margin:10px 0}
   .h5p-form-sec{flex:1 1 0; min-width:54px; text-align:center; font-family:var(--head); font-weight:700; font-size:1.05em; padding:16px 4px; border-radius:8px; cursor:pointer; border:3px solid transparent; color:#fff; transition:transform .15s}
   .h5p-form-sec:hover{transform:translateY(-2px)}
-  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(255,184,28,.35)}
+  .h5p-form-sec.on{border-color:var(--am-slate); box-shadow:0 0 0 3px rgba(165,215,95,.35)}
   .h5p-form-sec small{display:block; font-weight:400; font-size:.72em; opacity:.9}
   .h5p-form-panel{background:var(--am-mist); border-left:6px solid var(--am-navy); border-radius:0 8px 8px 0; padding:12px 16px; min-height:70px}
   /* Hotspots (inline SVG) */
@@ -180,12 +180,12 @@
   /* Piano */
   .h5p-pno-wrap{overflow-x:auto; padding:4px 0 8px}
   .h5p-pno{position:relative; height:190px; min-width:520px; display:flex; background:var(--am-navy-dark); padding:10px 10px 12px; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:manipulation}
-  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F4F8F5); border:1px solid #A9C2B3; border-bottom:8px solid #C9D8CE; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
-  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2B3A33,#0F1B15); border:1px solid #000; border-bottom:9px solid #1B2A22; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-w{flex:1 1 0; position:relative; margin:0 2px; background:linear-gradient(#fff,#F4F8F5); border:1px solid #A9C2B3; border-bottom:8px solid #C9DBD2; border-radius:0 0 7px 7px; cursor:pointer; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px; font-family:var(--head); font-weight:700; font-size:.78em; color:var(--am-navy); -webkit-tap-highlight-color:transparent; touch-action:manipulation}
+  .h5p-pno-b{position:absolute; top:10px; width:0; height:58%; z-index:2; background:linear-gradient(#2B3A33,#0F1B15); border:1px solid #000; border-bottom:9px solid #0D1E1C; border-radius:0 0 5px 5px; cursor:pointer; color:#fff; font-family:var(--head); font-size:.62em; display:flex; align-items:flex-end; justify-content:center; padding-bottom:5px; -webkit-tap-highlight-color:transparent; touch-action:manipulation}
   .h5p-pno-w.on,.h5p-pno-w:active{background:var(--am-slate-soft); border-bottom-width:4px; transform:translateY(3px)}
   .h5p-pno-b.on,.h5p-pno-b:active{background:var(--am-slate-dark); border-bottom-width:4px}
-  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(255,184,28,.55)}
-  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(255,184,28,.8)}
+  .h5p-pno-w.hint{box-shadow:inset 0 -46px 0 rgba(165,215,95,.55)}
+  .h5p-pno-b.hint{box-shadow:inset 0 -30px 0 rgba(165,215,95,.8)}
   .h5p-pno-now{font-family:var(--head); color:var(--am-navy); font-weight:700; min-height:1.6em; margin:6px 0}
   .h5p-pno-demos{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
   .h5p-pno-task{background:var(--am-mist); border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:12px 16px; margin-top:10px}
@@ -218,9 +218,9 @@
   .h5p-map-m{cursor:pointer}
   .h5p-map-m circle{stroke:#fff; stroke-width:2.5}
   .h5p-map-m text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:13px; pointer-events:none}
-  .h5p-map-m.on circle{stroke:#0E3326; stroke-width:4}
-  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#FFB81C; stroke-width:5}
-  .h5p-map-route{fill:none; stroke:#7A5A00; stroke-width:2.5; stroke-dasharray:7 5}
+  .h5p-map-m.on circle{stroke:#12312B; stroke-width:4}
+  .h5p-map-m:focus{outline:none} .h5p-map-m:focus circle{stroke:#A5D75F; stroke-width:5}
+  .h5p-map-route{fill:none; stroke:#00693E; stroke-width:2.5; stroke-dasharray:7 5}
   .h5p-map-list{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0; list-style:none}
   .h5p-map-list button{font-family:var(--body); font-size:.86em; font-weight:600; background:#fff; color:var(--am-navy-dark); border:2px solid var(--am-border); border-radius:16px; padding:4px 10px; cursor:pointer}
   .h5p-map-list button.seen{border-color:var(--ok); background:var(--ok-bg)}
@@ -234,10 +234,10 @@
   .h5p-fs-frame{position:relative; cursor:crosshair; touch-action:manipulation; border-radius:8px}
   .h5p-fs-frame svg{width:100%; height:auto; display:block; border:1px solid var(--am-border); border-radius:8px}
   .h5p-fs-prompt{background:var(--am-navy); color:#fff; border-left:6px solid var(--am-slate); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:10px; font-weight:600}
-  .h5p-fs-found circle{fill:none; stroke:#FFB81C; stroke-width:5}
-  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#0E3326; paint-order:stroke; stroke:#fff; stroke-width:4px}
+  .h5p-fs-found circle{fill:none; stroke:#A5D75F; stroke-width:5}
+  .h5p-fs-found text{font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:14px; fill:#12312B; paint-order:stroke; stroke:#fff; stroke-width:4px}
   .h5p-fs-miss{fill:none; stroke:#C62828; stroke-width:3; animation:h5pRipple .7s ease-out forwards}
-  .h5p-fs-cross{fill:none; stroke:#0E3326; stroke-width:2}
+  .h5p-fs-cross{fill:none; stroke:#12312B; stroke-width:2}
   @keyframes h5pRipple{from{r:4; opacity:1} to{r:28; opacity:0}}
   /* Era timeline */
   .h5p-era-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
@@ -269,7 +269,7 @@
   .h5p-ds-card.sel{background:var(--am-navy); border-color:var(--am-navy); color:#fff}
   .h5p-ds-card.ok{background:var(--ok-bg); border-color:var(--ok); color:var(--ok); cursor:default}
   .h5p-ds-card.ok::before{content:"✔ "}
-  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(14,51,38,.3); cursor:grabbing}
+  .h5p-ds-card.drag{position:fixed; z-index:50; pointer-events:none; box-shadow:0 6px 16px rgba(18,49,43,.3); cursor:grabbing}
   .h5p-ds-card.shake{animation:h5pShake .4s}
   .h5p-ds-card.shake::before{content:"✖ "; color:var(--bad)}
   @keyframes h5pShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
@@ -292,7 +292,7 @@
   @media (max-width:600px){ .am-coursebar{display:none} main{padding:22px 16px} h1{font-size:1.6em} }
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
   .am-wordmark--solo span{font-size:1em; letter-spacing:1.5px; font-weight:700; color:#fff}
-/* header wrap fix 2026-09 */ /* Baylor colors 2026-09 */
+/* header wrap fix 2026-09 */ /* Dartmouth colors 2026-09 */
 .am-topbar{flex-wrap:wrap; row-gap:10px}
 .am-wordmark{min-width:0}
 .am-coursebar{flex:1 1 160px; min-width:0}
@@ -301,7 +301,7 @@
 </head>
 <body>
 <header class="am-topbar">
-  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#FFB81C"/><path d="M13 30V11l14 5v14" fill="none" stroke="#0E3326" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#0E3326"/><circle cx="24.5" cy="30" r="3.6" fill="#0E3326"/></svg>
+  <svg class="am-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#A5D75F"/><path d="M13 30V11l14 5v14" fill="none" stroke="#12312B" stroke-width="3.2" stroke-linejoin="round"/><circle cx="10.5" cy="30" r="3.6" fill="#12312B"/><circle cx="24.5" cy="30" r="3.6" fill="#12312B"/></svg>
   <div class="am-wordmark am-wordmark--solo"><span class="am-l-en">American Music</span><span class="am-l-es">Música estadounidense</span></div>
   <div class="am-coursebar"><span class="am-l-en">Module 3: The Jazz Age: 1917–1935<br>Page 9 of 13</span><span class="am-l-es">Módulo 3: La era del jazz: 1917–1935<br>Página 9 de 13</span></div>
   <div class="am-langtoggle" role="group" aria-label="Language / Idioma"><button type="button" data-setlang="en" lang="en" aria-pressed="true">English</button><button type="button" data-setlang="es" lang="es" aria-pressed="false">Español</button></div>
@@ -339,19 +339,19 @@
     <svg viewBox="0 0 720 210" role="img" aria-label="Diagram showing high culture and popular culture blending into Jazz Age identity">
       <rect width="720" height="210" fill="#F4F8F5" rx="10"/>
       <g font-family="Arial, Helvetica, sans-serif">
-        <rect x="30" y="30" width="280" height="70" rx="10" fill="#154734"/>
+        <rect x="30" y="30" width="280" height="70" rx="10" fill="#00693E"/>
         <text x="170" y="58" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">"High culture"</text>
         <text x="170" y="78" text-anchor="middle" fill="#D5E6DC" font-size="12">Fitzgerald · Picasso · O'Neill</text>
 
-        <rect x="410" y="30" width="280" height="70" rx="10" fill="#103B2B"/>
+        <rect x="410" y="30" width="280" height="70" rx="10" fill="#00522F"/>
         <text x="550" y="58" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Popular culture</text>
         <text x="550" y="78" text-anchor="middle" fill="#D5E6DC" font-size="12">jazz dancing · slang · fashion</text>
 
         <path d="M170 100 C170 140, 280 150, 330 168" fill="none" stroke="#4A5550" stroke-width="2.5"/>
         <path d="M550 100 C550 140, 440 150, 390 168" fill="none" stroke="#4A5550" stroke-width="2.5"/>
 
-        <rect x="220" y="170" width="280" height="34" rx="10" fill="#FFB81C"/>
-        <text x="360" y="192" text-anchor="middle" fill="#0E3326" font-size="13" font-weight="bold">The "Jazz Age" identity</text>
+        <rect x="220" y="170" width="280" height="34" rx="10" fill="#A5D75F"/>
+        <text x="360" y="192" text-anchor="middle" fill="#12312B" font-size="13" font-weight="bold">The "Jazz Age" identity</text>
       </g>
     </svg>
     <figcaption>Figure 1. The Jazz Age blended elite artistic movements with popular fashion and dance, both drawing heavily on African-American musical models.</figcaption>
@@ -364,22 +364,22 @@
   <figure>
     <svg viewBox="0 0 720 170" role="img" aria-label="Timeline of Jazz Age cultural milestones">
       <rect width="720" height="170" fill="#F4F8F5" rx="10"/>
-      <line x1="60" y1="90" x2="660" y2="90" stroke="#7A5A00" stroke-width="4"/>
+      <line x1="60" y1="90" x2="660" y2="90" stroke="#00693E" stroke-width="4"/>
       <g font-family="Arial, Helvetica, sans-serif">
-        <circle cx="120" cy="90" r="8" fill="#154734"/>
-        <text x="120" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#154734">1921</text>
-        <text x="120" y="115" text-anchor="middle" font-size="12" fill="#1B2A22">Shuffle Along</text>
-        <text x="120" y="131" text-anchor="middle" font-size="12" fill="#1B2A22">opens</text>
+        <circle cx="120" cy="90" r="8" fill="#00693E"/>
+        <text x="120" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#00693E">1921</text>
+        <text x="120" y="115" text-anchor="middle" font-size="12" fill="#0D1E1C">Shuffle Along</text>
+        <text x="120" y="131" text-anchor="middle" font-size="12" fill="#0D1E1C">opens</text>
 
-        <circle cx="360" cy="90" r="8" fill="#154734"/>
-        <text x="360" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#154734">Mid-1920s</text>
-        <text x="360" y="115" text-anchor="middle" font-size="12" fill="#1B2A22">Valentino films</text>
-        <text x="360" y="131" text-anchor="middle" font-size="12" fill="#1B2A22">define the "sheik"</text>
+        <circle cx="360" cy="90" r="8" fill="#00693E"/>
+        <text x="360" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#00693E">Mid-1920s</text>
+        <text x="360" y="115" text-anchor="middle" font-size="12" fill="#0D1E1C">Valentino films</text>
+        <text x="360" y="131" text-anchor="middle" font-size="12" fill="#0D1E1C">define the "sheik"</text>
 
-        <circle cx="600" cy="90" r="8" fill="#154734"/>
-        <text x="600" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#154734">1925</text>
-        <text x="600" y="115" text-anchor="middle" font-size="12" fill="#1B2A22">Fitzgerald's</text>
-        <text x="600" y="131" text-anchor="middle" font-size="12" fill="#1B2A22">The Great Gatsby</text>
+        <circle cx="600" cy="90" r="8" fill="#00693E"/>
+        <text x="600" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#00693E">1925</text>
+        <text x="600" y="115" text-anchor="middle" font-size="12" fill="#0D1E1C">Fitzgerald's</text>
+        <text x="600" y="131" text-anchor="middle" font-size="12" fill="#0D1E1C">The Great Gatsby</text>
       </g>
     </svg>
     <figcaption>Figure 2. Three markers of Jazz Age culture, spanning both the Broadway stage and the era's most iconic novel.</figcaption>
@@ -388,7 +388,7 @@
   <!-- ============ LISTENING GUIDE (Search) ============ -->
   <div class="am-listen">
     <div class="am-listen__head">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#FFB81C"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#A5D75F"/></svg>
       <div><div class="am-listen__title">Listening Guide: "I'm Just Wild About Harry"</div><div class="am-listen__meta">Noble Sissle &amp; Eubie Blake song, from Shuffle Along (1921) · Paul Whiteman Orchestra recording, 1922</div></div>
     </div>
     <div class="am-listen__body">
@@ -466,19 +466,19 @@
     <svg viewBox="0 0 720 210" role="img" aria-label="Diagrama que muestra cómo la alta cultura y la cultura popular se combinan en la identidad de la era del jazz">
       <rect width="720" height="210" fill="#F4F8F5" rx="10"/>
       <g font-family="Arial, Helvetica, sans-serif">
-        <rect x="30" y="30" width="280" height="70" rx="10" fill="#154734"/>
+        <rect x="30" y="30" width="280" height="70" rx="10" fill="#00693E"/>
         <text x="170" y="58" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">"Alta cultura"</text>
         <text x="170" y="78" text-anchor="middle" fill="#D5E6DC" font-size="12">Fitzgerald · Picasso · O'Neill</text>
 
-        <rect x="410" y="30" width="280" height="70" rx="10" fill="#103B2B"/>
+        <rect x="410" y="30" width="280" height="70" rx="10" fill="#00522F"/>
         <text x="550" y="58" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Cultura popular</text>
         <text x="550" y="78" text-anchor="middle" fill="#D5E6DC" font-size="12">baile de jazz · jerga · moda</text>
 
         <path d="M170 100 C170 140, 280 150, 330 168" fill="none" stroke="#4A5550" stroke-width="2.5"/>
         <path d="M550 100 C550 140, 440 150, 390 168" fill="none" stroke="#4A5550" stroke-width="2.5"/>
 
-        <rect x="200" y="170" width="320" height="34" rx="10" fill="#FFB81C"/>
-        <text x="360" y="192" text-anchor="middle" fill="#0E3326" font-size="13" font-weight="bold">La identidad de la "era del jazz"</text>
+        <rect x="200" y="170" width="320" height="34" rx="10" fill="#A5D75F"/>
+        <text x="360" y="192" text-anchor="middle" fill="#12312B" font-size="13" font-weight="bold">La identidad de la "era del jazz"</text>
       </g>
     </svg>
     <figcaption>Figura 1. La era del jazz combinó movimientos artísticos de élite con la moda y el baile populares, y ambos se inspiraron en gran medida en modelos musicales afroamericanos.</figcaption>
@@ -491,22 +491,22 @@
   <figure>
     <svg viewBox="0 0 720 170" role="img" aria-label="Línea de tiempo de hitos culturales de la era del jazz">
       <rect width="720" height="170" fill="#F4F8F5" rx="10"/>
-      <line x1="60" y1="90" x2="660" y2="90" stroke="#7A5A00" stroke-width="4"/>
+      <line x1="60" y1="90" x2="660" y2="90" stroke="#00693E" stroke-width="4"/>
       <g font-family="Arial, Helvetica, sans-serif">
-        <circle cx="120" cy="90" r="8" fill="#154734"/>
-        <text x="120" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#154734">1921</text>
-        <text x="120" y="115" text-anchor="middle" font-size="12" fill="#1B2A22">Se estrena</text>
-        <text x="120" y="131" text-anchor="middle" font-size="12" fill="#1B2A22">Shuffle Along</text>
+        <circle cx="120" cy="90" r="8" fill="#00693E"/>
+        <text x="120" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#00693E">1921</text>
+        <text x="120" y="115" text-anchor="middle" font-size="12" fill="#0D1E1C">Se estrena</text>
+        <text x="120" y="131" text-anchor="middle" font-size="12" fill="#0D1E1C">Shuffle Along</text>
 
-        <circle cx="360" cy="90" r="8" fill="#154734"/>
-        <text x="360" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#154734">Mediados de los años 20</text>
-        <text x="360" y="115" text-anchor="middle" font-size="12" fill="#1B2A22">Las películas de Valentino</text>
-        <text x="360" y="131" text-anchor="middle" font-size="12" fill="#1B2A22">definen al "sheik"</text>
+        <circle cx="360" cy="90" r="8" fill="#00693E"/>
+        <text x="360" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#00693E">Mediados de los años 20</text>
+        <text x="360" y="115" text-anchor="middle" font-size="12" fill="#0D1E1C">Las películas de Valentino</text>
+        <text x="360" y="131" text-anchor="middle" font-size="12" fill="#0D1E1C">definen al "sheik"</text>
 
-        <circle cx="600" cy="90" r="8" fill="#154734"/>
-        <text x="600" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#154734">1925</text>
-        <text x="600" y="115" text-anchor="middle" font-size="12" fill="#1B2A22">The Great Gatsby,</text>
-        <text x="600" y="131" text-anchor="middle" font-size="12" fill="#1B2A22">de Fitzgerald</text>
+        <circle cx="600" cy="90" r="8" fill="#00693E"/>
+        <text x="600" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#00693E">1925</text>
+        <text x="600" y="115" text-anchor="middle" font-size="12" fill="#0D1E1C">The Great Gatsby,</text>
+        <text x="600" y="131" text-anchor="middle" font-size="12" fill="#0D1E1C">de Fitzgerald</text>
       </g>
     </svg>
     <figcaption>Figura 2. Tres hitos de la cultura de la era del jazz, que abarcan tanto el escenario de Broadway como la novela más emblemática de la época.</figcaption>
@@ -515,7 +515,7 @@
   <!-- ============ LISTENING GUIDE (Search) ============ -->
   <div class="am-listen">
     <div class="am-listen__head">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#FFB81C"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v5a3 3 0 0 0 3 3h1v-7H6v-1a6 6 0 0 1 12 0v1h-3v7h1a3 3 0 0 0 3-3v-5a7 7 0 0 0-7-7z" fill="#A5D75F"/></svg>
       <div><div class="am-listen__title">Guía de audición: "I'm Just Wild About Harry"</div><div class="am-listen__meta">Canción de Noble Sissle y Eubie Blake, de Shuffle Along (1921) · grabación de la orquesta de Paul Whiteman, 1922</div></div>
     </div>
     <div class="am-listen__body">
@@ -902,7 +902,7 @@
   /* ---------- 14. Interactive map ---------- */
   document.querySelectorAll('[data-widget="map"]').forEach(function(w){
     var svg=w.querySelector('svg.h5p-mapsvg'), data=w.querySelector('.h5p-map-data'), M=JSON.parse(data.dataset.markers), cats=JSON.parse(data.dataset.cats||'[]'), routes=JSON.parse(data.dataset.routes||'[]');
-    var COL=['#154734','#7A5A00','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
+    var COL=['#00693E','#00693E','#2E7D32','#7B3F99','#C62828'], seen={}, gs=[], btns=[];
     var panel=w.querySelector('.h5p-map-panel'), list=el('ul','h5p-map-list');
     var rg=sv('g',{'aria-hidden':'true'}); svg.appendChild(rg);
     routes.forEach(function(r){ var a=M[r[0]], b=M[r[1]]; if(!a||!b) return; var mx=(a.x+b.x)/2, my=(a.y+b.y)/2, dx=b.x-a.x, dy=b.y-a.y, L=Math.sqrt(dx*dx+dy*dy)||1, off=Math.min(60,L*0.18); rg.appendChild(sv('path',{'class':'h5p-map-route',d:'M'+a.x+' '+a.y+' Q'+(mx-dy/L*off)+' '+(my+dx/L*off)+' '+b.x+' '+b.y})); });
@@ -926,7 +926,7 @@
     function show(){ if(i>=T.length){ prompt.textContent=X(w,'All found!'); fb(w,'ok',X(w,'You found every spot.')); live(w,X(w,'All spots found.')); return; } prompt.textContent=(i+1)+X(w,' of ')+T.length+': '+T[i].p; miss=0; var sm=w.querySelector('[data-showme]'); if(sm) sm.hidden=true; }
     function test(x,y){ if(i>=T.length) return; var t=T[i], dx=x-t.x, dy=y-t.y;
       var hit=t.w?(Math.abs(dx)<=t.w/2&&Math.abs(dy)<=t.h/2):(Math.sqrt(dx*dx+dy*dy)<=t.r), rr=Math.min(t.r||22,22);
-      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#FFB81C','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
+      if(hit){ var g=sv('g',{'class':'h5p-fs-found'}); if(t.w) g.appendChild(sv('rect',{x:t.x-t.w/2,y:t.y-t.h/2,width:t.w,height:t.h,rx:10,fill:'none',stroke:'#A5D75F','stroke-width':5})); else g.appendChild(sv('circle',{cx:t.x,cy:t.y,r:rr})); var tx=sv('text',{x:t.w?t.x-t.w/2+10:t.x+rr+4,y:t.w?t.y-t.h/2+20:t.y+5}); tx.textContent=(i+1)+(t.lbl?' '+t.lbl:''); g.appendChild(tx); layer.appendChild(g); fb(w,'ok','✔ '+(t.ok||X(w,'Found it!'))); i++; score(w,X(w,'Found: ')+i+' / '+T.length); show(); }
       else { miss++; var c=sv('circle',{'class':'h5p-fs-miss',cx:x,cy:y,r:4}); layer.appendChild(c); setTimeout(function(){ if(c.parentNode) c.parentNode.removeChild(c); },800); fb(w,'bad',X(w,'✖ Not quite — try again.')+(miss>=3?X(w,' (You can use “Show me.”)'):'')); var sm=w.querySelector('[data-showme]'); if(sm && miss>=3) sm.hidden=false; } }
     svg.addEventListener('click',function(e){ var p=svgPoint(svg,e); test(p.x,p.y); });
     svg.addEventListener('keydown',function(e){ var st=20, cx=+cross.getAttribute('cx'), cy=+cross.getAttribute('cy'); var mv={ArrowLeft:[-st,0],ArrowRight:[st,0],ArrowUp:[0,-st],ArrowDown:[0,st]}[e.key];
